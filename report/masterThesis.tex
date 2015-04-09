@@ -168,7 +168,7 @@ Date \line(1,0){40}/\line(1,0){40}/\line(1,0){40}\\
 
 \chapter{Data}
 
-
+For this report we downloaded 2 TB of Tweets from the archive over a span of  October 2011 - September 2014.
 
 \section{Lexicon}
 
@@ -435,7 +435,7 @@ We see in the bellow Figure \textbf{\ref{fig:tpu}} that the distribution of the 
 
 \section{Processing and Storage}
 
-For this report we collected 2000 GB of Tweets from the archive over a span of  October 2011 - September 2014. To facilitate the storage and processing of this large amount of data we used an AMD supercomputer with 64 cores. Inspired by the  map reduce paradigm we split the dataset into 64 parts and assigned each to a single core. To efficiently use the hardware resources we manually controlled for the memory assignment using numactl. As illustrated in\textbf{ \ref{fig:dataProcessing}} eight cores directly access one out of eight memory blocks. Each dataset was filtered in parallel reducing the 64 dataset to two lexicons. 
+ To facilitate the storage and processing of this large amount of data we used an AMD supercomputer with 64 cores. Inspired by the  map reduce paradigm we split the dataset into 64 parts and assigned each to a single core. To efficiently use the hardware resources we manually controlled for the memory assignment using numactl. As illustrated in\textbf{ \ref{fig:dataProcessing}} eight cores directly access one out of eight memory blocks. Each dataset was filtered in parallel reducing the 64 dataset to two lexicons. 
 
  \begin{figure}[H]
 \centerline{ \noindent\includegraphics[width=1\textwidth]{img/abs/hw_model}}
