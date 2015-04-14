@@ -167,16 +167,22 @@ Date \line(1,0){40}/\line(1,0){40}/\line(1,0){40}\\
 
 
 \chapter{Data}
-In this section we describe the filtering process of the tweets and the creation of three lexicons. The food lexicon contains tweets with food related terms (e.g. rice, wheat, milk) where the predictor lexicon contains tweets with factors influencing the price and supply of the goods (e.g. pricy, cheap, available) . The external factors lexicon similar to the second lexicon tries to capture the price and supply of different food commodities (e.g. oil, unemployment, flood). They differ that the former looks explicitly at keywords directly associated with food which give indication about the price fluctuation. The later is concerned with keywords describing external factors such as oil. We downloaded two TB of Tweets from the archive over a span of  October 2011 - September 2014.  The filtering process resulted with 1047698 food relevant tweets and 523549 tweets of influencing factors. 
+In this section we describe the filtering process of the tweets and the creation of three lexicons. The food lexicon contains keywords with food related terms (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains keywords with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). The external factors lexicon similar to the former predictor lexicon tries to capture the price and supply of different food commodities (e.g. \emph{oil, unemployment, flood}). They differ that the former looks explicitly at keywords directly associated with food terms which give an indication about the price fluctuation. The later is concerned with keywords describing external factors such as \emph{oil}. We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream} over a span of October 2011 - September 2014.  The filtering process resulted with 1047698 food relevant tweets and 523549 tweets of influencing factors. 
 
-Firstly, we detail an algorithm Hyperspace analogue to language (HAL)  \cite{lund96} which was used to find relevant keywords for our lexicon. We then describe our framework for retrieving food related keywords that build our food lexicon. The subsection Feature Definition describes how we define different predictor categories, followed by an illustration of the procedure we applied to retrieve predictor keywords. In Factors Keyword Selection we motivate the design of the external factors lexicon. Lastly we describe the filtering algorithm used to create our dataset. 
+Firstly, we detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} which was used to find relevant keywords for our lexicon. We then describe our framework for retrieving food related keywords that form our food lexicon. The subsection Feature Definition describes how we define different predictor categories, followed by an illustration of the procedure we applied to retrieve the predictor keywords. In the chapter Factors Keyword Selection we motivate the term selection of the external factors lexicon. Lastly, we describe the filtering algorithm used to create our dataset. 
 
 
-\section{Hyperspace analogue to language}
+\section{Hyperspace Analogue to Language}
 
-HAL creates a semantic space from word co-occurrences. For each word in some corpus HAL records the frequencies that other words in the corpus tend to occur before and after the word within a given window size. This is achieved  by storing a vector for each word with the number of co-occurences of every other word in the corpus. Hence if our corpus contains N different words the resulting HAL space would be an N x N square matrix of co-occurences. For each appearance of a word in the corpus, these co-occurnence vectors are updated. It is important to note that only the context before the word is recorded because the context after the word will appear in the column in the matrix that corresponds to that word. For each co-occurence HAL applies a scoring function. Words that appear closer receive an inversely proportionated score to its distance. To illustrate the idea Table \ref{tab:halex} gives an example of a simple sentence \emph {"The horse raced past the barn fell."} with a sliding window of five. 
+HAL creates a semantic space from word co-occurrences \cite{lund96}. By using a sliding window parsing mechanism, the frequency of each term co-occurring within a fixed window size is recorded.  It is important to note that HAL only records the terms before the word we wish to analyse the context from. The terms after the word will appear in the column in the matrix that corresponds to that word.  The matrix is created by storing a vector for each word with the number of co-occurrences of every other word in the corpus. Hence, if our corpus contains $N$ different words the resulting HAL space would be an $N \times N$ square matrix of co-occurrences. Every time a specific word appears within the fixed window size the co-occurrence vectors are updated. For each co-occurrence HAL applies a scoring function. Words that appear closer, receive an inversely proportional score to its distance.
 
-Following the creation of the matrix we take both the column and row vector of a word, thus including both the preceding and following contexts of the words, and concatenate them. The result is a meaning vector that now can be compared. This can be simply done by using some distance measure. In this paper we use the cosine similarity. 
+ To illustrate the idea \cite{burgess98} gives an example of a simple sentence \emph {"The horse raced past the barn fell."} in Table \ref{tab:halex} with a sliding window of five. Let's consider the first row.  \emph{"The"} precedes \emph{"Barn"} twice. Once within a distance of five and the other time it directly precedes the word  \emph{"Barn"}. Hence, that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
+
+Following the creation of the matrix we concatenate both the column and row vector of a word, where the former represents the preceding words and the later the following. To compare the distance of the vectors we used the cosine similarity function. 
+
+ 
+
+
 
 \begin{table}[h]
 \centering
@@ -195,30 +201,33 @@ Following the creation of the matrix we take both the column and row vector of a
 \label{tab:halex}
 \end{table}
 
-Let's consider the first row.  \emph{"The"} precedes \emph{"Barn"} twice. Once within a distance of five and the other time it directly precedes the word  \emph{"Barn"}. Hence that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
+
 
 
 
 
 \section{Food Keyword Selection}
 
-The filtering of the dataset was initially performed with a simple list of food related keywords. To avoid ambiguities we will refer to the initial keyword list as $K_i$. As a first source for our set $K_i$ we used the most common traded food commodities as it would easily allow us to verify our results using the price dataset made available by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx}. We further decided to include the ten most important staple foods that feed the world as defined by Allianz\footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. Tweets were retrieved through exact term matching i.e. a tweet containing foods would not match on the keyword food where the reverse is also true. We mimic the term matching twitter performs. In the initial round we aimed for maximum coverage and hence avoided further filtering steps. The result was a collection of 1047698 tweets posted by 949085 user. 
+The filtering of the dataset was initially performed with a simple list of food related keywords. To avoid ambiguities we will refer to the initial keyword list as $K_i$. As a first source for our set $K_i$ we used the most common traded food commodities as it would easily allow us to verify our results using the price dataset made available by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx}. We further decided to include the ten most important staple foods that feed the world as defined by Allianz\footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. Tweets were retrieved through exact term matching, i.e. a tweet containing the term \emph{foods} would not match on the keyword \emph {food} where the reverse is also true. We mimic the term matching twitter performs. In the initial round we optimised for coverage and hence avoided further filtering steps. The result was a collection of 1047698 tweets posted by 949085 user. 
 
 
-Looking at the distribution of the food related tweets we realised that we would have to categorise our lexicon in order to have sufficient data for further analysis. Where global keywords such as food are highly represented, more specific keywords such as beef only occur very infrequently. Other then the sparsity of the data we also have the problem of ambiguous keywords. Soy is such a keyword that refers in english to the "bean" and in spanish to the verb "to be". To create categories we chose to mimic the categorisation of the FAO  \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. The FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. The weighted average of those five categories defines the international food price index. We additionally created a further category named \emph{Other Food of Interest}. This category contains general keywords (e.g. food, dinner or lunch) and food keywords that can not be assigned to one of the five categories but frequently occur (e.g. coffee, tea). To be considered frequently the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. Those six subsets  $s$ are $\in K_e$. C is a fictional set that contains the five categories \emph{meat, dairy products, cereals, vegetable oil, sugar}  each building a subset containing all possible food items belonging to a specific category (e.g. the subset dairy would contain all possible dairy products). If the following relationship holds  $k \in C$ for any  keyword $k \in K_i$, we consdier $k \in K_e$. For all keyword $k \notin C$ the condition of it being frequent is evaluated and if true added to $K_e$.  Food commodities that could not be assigned to one of the six categories were discarded. Upon manual examination of the dataset we realised that people are much more likely to talk about a specific food product rather then the raw material. Cereals are not a public interest, however products such as bread or flower occur much more frequently. The set $K_e$  was further enriched by using food products that have been identified by \cite{AbbarMW14} in set $K_f$ only $\forall$ $k   \in K_f$ that are also $\in C$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. What we mean by contextual similar and how HAL retrieves those keywords is further described in Section 3.3.1.
+Looking at the distribution of the food related tweets we realised that we would have to categorise our lexicon in order to have sufficient data for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. Other than the sparsity of the data we also have the problem of ambiguous keywords. \emph {Soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{Soy} $\to$  \emph{Soy Bean}). 
 
-\subsection{Our approach}
+To create categories we chose to mimic the categorisation of the FAO  \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index. We additionally created a further category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequently the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. 
+
+The six subsets  $s$ are $\in K_e$ where $s$ is one of the six categories mentioned above. $C$ is an imaginary set that contains the five categories \emph{meat, dairy products, cereals, vegetable oil, sugar}  each being a subset containing all possible food items belonging to a specific category (e.g. the subset dairy would contain all possible dairy products). If the following relationship holds  $k \in C$, where $k$ is a keyword, for any keyword $k \in K_i$, we consider $k \in K_e$. For all keyword $k \notin C$ the condition of it being frequent is evaluated and if true added to $K_e$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Upon manual examination of the dataset we realised that people are much more likely to talk about a specific food product rather than the raw material. \emph{Cereals} are not a public interest. However products such as \emph{bread} or \emph {flower} occur much more frequently. The set $K_e$  was further enriched by using food products that have been identified by \cite{AbbarMW14} in set $K_f$ only $\forall$ $k   \in K_f$ that are also $\in C$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
+\subsection{Our Approach}
 
 We took several  steps in order to improve our detection of the desired food commodities. $K_e$ was created as follows: 
 \begin{description}
   \item[1.)] We add all keywords $k \in K_i$ to  $K_e$ only if $k \in C $ or $k$ is frequent 
-  \item[2.)] Further add all keywords $ k \in K_f$ to $K_e$ only if $k \in C$
-  \item[3.)] From a subsample of 10\% we create a HAL space with all keywords that occur $> 100$. $\forall c \in C $ we pick the keyword $k\in K_e$ that most frequently occurs and retrieve the top 500 similar terms. We hand select those that are $\in C$.
+  \item[2.)] Further we add all keywords $ k \in K_f$ to $K_e$ only if $k \in C$
+  \item[3.)] We create a HAL space using a random subsample of 10\% from our initial collection with all keywords that occur $> 100$. $\forall c \in C $ we pick the keyword $k\in K_e$ that most frequently occurs over the entire sample and retrieve the top 500 similar terms. We hand select those that are $\in C$.
 \end{description}
 
 % We took several  steps in order to improve our detection of the desired food commodities. The first step we took was a simple context analysis. The basic premise our approach relies on is that words with similar meaning repeatedly occur with similar words preceding and following it. We took a sample of 10 \% and counted the frequency of the 500 most occurring nouns and hand selected those unambiguously related to food. Looking at the distribution of the food related tweets \textbf{ \ref{fig:keywordDistribution}} we realised that we would have to categorise our lexicon in order to have sufficient data for further analysis.
  
-The keyword set $K_e$ was used to perform exact term matching on the tweets collected from the archive. The resulting set of keywords in $K_e$ forms our Food Lexicon.  
+The keyword set $K_e$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_e$ forms our Food Lexicon.  
 
 
 
@@ -275,7 +284,7 @@ The keyword set $K_e$ was used to perform exact term matching on the tweets coll
  \bottomrule
 
 \end{tabular}
-\caption{ A summary of the evolution of our Food Lexicon}
+\caption{ A Summary of the Evolution of our Food Lexicon}
 \label{tab:abc}
 \end{table}
  
@@ -287,42 +296,39 @@ The keyword set $K_e$ was used to perform exact term matching on the tweets coll
 From our basic food lexicon we proceeded to extract features that we could use to predict the price and the global food security index. The FAO measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of the food and lastly \emph{Stability} is a measure of the other three dimensions over time. For food security objectives to be realised, all four dimensions must be fulfilled simultaneously \cite{fao2008}. 
 
 
-To model food security we focus our work on those four dimension namely \emph{Access, Availability, Utilisation} and \emph{Stability}. Together those predictor categories build the set $C_p$. Attempts have been made to capture Availability by the UN \cite{ungp2013}. Bellow we will describe an algorithm that builds on the UN's idea namely selecting tweets that match a certain pattern of keyword categories. 
+To model food security we focus our work on those four dimension namely \emph{Access, Availability, Utilisation} and \emph{Stability}. Together those predictor categories build the set $C_p$. Attempts have been made to capture Availability by the UN \cite{ungp2013}. 
 
+We define the predictor category \emph{Access} by looking for tweets containing price as a keyword as in \cite{ungp2013} but improve the recall by including synonyms of \emph{price} that appear in the same context. \emph{Availability} was defined in similar fashion by matching keywords that appear in the context of food availability as in \cite{hum14}, however a different set of keywords was selected as described in the following chapters. Unlike \cite{AbbarMW14} we don't measure food Utilisation by observing the exact diet but capture the people's food needs. Lastly as a measure of \emph{Stability} we focused our attention on economic stability. Keywords in the context of  poverty were selected to match this predictor category similar to \cite{RePEc} \cite{hum14}.
 
-We define the predictor category \emph{Access} by looking for tweets containing price as a keyword as in \cite{ungp2013} but improve the recall by including synonyms of price that appear in the same context. \emph{Availability} was defined in similar fashion by matching keywords that appear in the context of food availability. Unlike \cite{AbbarMW14} we don't measure food Utilisation by observing the exact diet but capture the people's food needs. Lastly as a measure of \emph{Stability} we focused our attention on economic stability. Keywords in the context of  poverty were selected to match this predictor category. 
-
-\subsection{Motivating a semantic approach}
+\subsection{Motivating a Semantic Approach}
 \label{subsec:hal}
 
-In this section we try to comprehend which words are associated with the above mentioned categories in $C_p$. More specifically what words are represented in the context of food supply, food price, food needs and food poverty. To achieve this we need a plausible methodology for representing the meaning of a word. The reason why we analyse the context of a word is to identify new words that have a similar meaning or given the same context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example let's look at the word \emph {"mold"} and  \emph {"available"}. Those two words seem unrelate but given the context of food the express the same thing.  Namely an abundance of food. Through the role  of the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It's important to stress that they are not similar because they occur frequently locally but because the occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms however the seldomly locally co-occur. They do, however occur in the same contexts. This observation motivated us to deviate from the commonly used co-occurence analysis an take a step further to improve the precision of our filtering framework. 
+In this section we try to comprehend which words are associated with the above-mentioned categories in $C_p$. More specifically what words are represented in the context of \emph{food supply, food price, food needs} and \emph{food poverty}. To achieve this we need a methodology for representing the meaning of a word. The reason that we analyse the context of a word is to identify new words that have a similar meaning or given the same context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let's look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the role  of the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It's important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms however the seldom locally co-occur. They do, however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis an take a step further to improve the precision of our filtering framework. 
 
 
 
-\subsection{Our approach}
+\subsection{Our Approach}
 
-We use a large text corpus of around 23860931 words. As a source we used a random sample of 10 \% from our food related tweets. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpras that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer proximation on how people would talk in the context of our predictor categories. 
+We use a large text corpus of around 23860931 words. As a source we used a random sample of 10 \% from our food related tweets. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
 
-The vocabulary of the HAL model contains 14084 words. The initial set of words in our corpus was filtered only to contain those words that appear at leat 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. We shall refer to this set of words as $F_c$. Using the words $w \in F_c$ we produced a 14084 by 14084 matrix wit the co-occurences within a window size of five. Since vector similarity measures are sensitive to the magnitude of the vectors we normalized all the vectors to a constant length. Once the HAL space was created we performed the following steps to retrieve the desired keywords for our four categories. 
+The vocabulary of the HAL model contains 14084 words. The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. We will refer to this set of words as $F_c$. Using the words $w \in F_c$ we produced a 14084 by 14084 matrix with the co-occurrences within a window size of five. Since vector similarity measures are sensitive to the magnitude of the vectors we normalised all the vectors to a constant length. Once the HAL space was created we performed the following steps to retrieve the desired keywords for our four categories. 
 
 
 \begin{description}
-  \item[1.)] $\forall k \in K_e$ choose the keyword k with the highest occurrence. Let's call it $k_{max}$  
-  \item[2.)] $\forall w \in F_c $ perfomre a similarity meassure with $k_{max}$
-  \item[3.)] Retrieve the 500 most similar words and handselect one word for each element of $C_p$ (e.g. since we have four categories the result should be four words)
-  \item[4.)] For each of those handselected words  apply HAL and compare it $\forall$ $w \in F_c $
-  \item[5.)] For each predictor category retrieve the 500 most similar words and manually select relevant keywords. 
+  \item[1.)] $\forall k \in K_e$ choose the keyword k with the highest occurrence form the entire sample. Let's call it $k_{max}$  
+  \item[2.)] $\forall w \in F_c $ perform a similarity measure with $k_{max}$
+  \item[3.)] Retrieve the 500 most similar words and hand-select one word for each element of $C_p$ (e.g. since we have four categories the result should be four words)
+  \item[4.)] For each of those hand-selected words  apply HAL and compare it $\forall$ $w \in F_c $
+  \item[5.)] For each predictor category retrieve the 500 most similar words and manually select relevant keywords. Elements were selected that could be clearly related to the given topic (e.g. \emph{available} and \emph {production} for supply). Ambiguous ones were also included if they had a clear relationship to food related terms (e.g \emph{rise}, \emph {increase}).
   \end{description}
 
-The high-level intuition of this procedure is as follows. The first step will give us the most prominent food term. This is most likely going to be something general such as the keyword \emph{"Food"}. Step 2 and 3 will allow us the identify the most contextual similar keywords for each category. So the keyword is retrieved that is most likely used to describe supply in the context of food. In step 4 and 5 we aim to retrieve similar words that could describe supply but maybe appear more frequently in different contexts. In other words we aim to find synonyms here.   
+The high-level intuition of this procedure is as follows. The first step will give us the most prominent food term. This is most likely going to be something general such as the keyword \emph{"Food"}. Step 2 and 3 will allow us to identify the most contextual similar keywords for each category. So the keyword is retrieved that is most likely used to describe supply in the context of food. In step 4 and 5 we aim to retrieve similar words that could describe supply but maybe appear more frequently in different contexts. In other words, we aim to find synonyms here.   
 
-\subsection{Results}
+\subsection{Results [Not finished] }
 
+Other than the words for our categories of interest HAL highlights some clear topics associated around food. As expected other contextual similar words were other food items building the clear majority of the retrieved words. Interestingly there was also a high percentage of country names in the retrieved results. Looking more closely at the retrieved countries we could see that most of them have a clear association to food. Where the majority of the retrieved countries such as Thailand, Bali \footnote{http://www.nomad4ever.com/2008/08/24/top-10-popular-foods-of-asia-explained/} or the cities Singapore and Paris \footnote{http://www.hellotravel.com/stories/best-food-cities-in-world} are considered to be famous holiday destinations for food lovers other retrieved countries such as Pakistan, Syria, Jakarta India or the Philippines \footnote{http://foodsecurityindex.eiu.com/Country} are cities with a clear history of food insecurity and political unrest. 
 
-Other then the words for our categories of interest HAL highlights some clear topics associated around food. As expected other contextual similar words were other food items building the clear majority of the retrieved words. Interestingly there was also a high percentage of country names in the retrieved results. Looking more closely at the retrieved countries we could see that most of them have a clear association to food. Where the majority of the retrieved countries such as Thailand, Bali or the cities Sinagpore and Paris are considered to be famous holiday destinations for food lovers other retrieved countries such as Pakistan, Syria, Jakarta India or the Philippines are cities with a clear history of food insecurity and political unrest. 
-
-Words that fell into our categories of interests were words such as available, profit, price, sustainability, progress, sales,  war, easy. The four words we used to model the predictor categories were \emph{available} for supply, \emph{price} for price, \emph{children} for poverty and \emph{help} for needs. In table 
-
+Words that fell into our categories of interests were words such as available, profit, price, sustainability, progress, sales,  war, easy. The four words we used to model the predictor categories were \emph{available} for supply, \emph{price} for price, \emph{children} for poverty and \emph{help} for needs. Where the first two terms are self explanatory the term children was selected because in \cite{brick02} anthropological studies have shown that children are seen as a symbol of poverty and social exclusion . For the category needs keywords such as \emph{yum} or \emph{foodporn} had a high similarity with the term \emph{food} but those terms are nearly exclusively used to express a positive sentiment. Words that also showed high similarity such as \emph{abuse} and \emph{protest} only retrieved a small amount of relevant keywords. We hence explored the results of the other categories and found \emph{help} which was retrieved from the results of \emph{ price}. It was deemed as a good indicator as it can express both a positive and negative sentiment associated with \emph{needs}.
 
  
 \begin{table}[h]   
@@ -370,6 +376,8 @@ Words that fell into our categories of interests were words such as available, p
 
 
 
+\begin{comment}
+Commented code
 
 
 \section{Filtering}
@@ -382,6 +390,8 @@ After that, we choose the stem with minimal edit distance, and check if the resu
 
 Furthermore we had to account for negation words, which subverts the meaning: "increases" $\to$ "doesn't increase", "have food" $\to$ "have no food".  To deal with this problem, we employed the following method: we added a special 'negation' category with a list of negation words ("not", "haven't", "won't", etc.), and if there is a word with "negative" category before some relative word (to be more precise, within some constant distance from it, say 2), then we change the polarity of relative word's category. For example, if a word is from category "poverty" and has a "high" polarity (e.g. "starving"), then a negative category word right before it (such as "aren't") will turn the polarity to "low".
 
+
+\end{comment}
 
 \section {Discussion}
 
@@ -439,36 +449,9 @@ We see in the bellow Figure \textbf{\ref{fig:tpu}} that the distribution of the 
 
 
 
-\textbf{function get\_category(w):}
-
-\indent
-\begin{algorithm}[H]
-Compute a stem $s$ from $w$ \par
-Check if $s$ is present in $RI$.
-
-  \eIf{yes}{\textbf{return} the corresponding tuple.
-   }{
-		ask spell checker for a suggestion \par
-		is suggestion stem returned? \par
-		\eIf{yes}{
-			\textbf{return} the corresponding tuple from $RI$
-		}{
-			\textbf{return} None;
-		}
-  	}
-% \caption{Algo}
-\end{algorithm}
-\noindent \\
 
 
 
-
-
- \begin{figure}[H]
-\centerline{ \noindent\includegraphics[width=1\textwidth]{img/abs/ini_lex}}
- \caption{Keywords: Food Lexicion}
- \label{fig:flex}
-\end{figure}
 
  \color{red} Initial Keywords: \\
  \color{blue}Extended Keywords:  \\
