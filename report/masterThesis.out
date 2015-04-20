@@ -1,13 +1,17 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Data}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Lexicon}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Keyword Selection}{section.2.1}% 4
-\BOOKMARK [2][-]{subsection.2.1.2}{Factors Lexicion}{section.2.1}% 5
-\BOOKMARK [0][-]{chapter.3}{Filtering}{}% 6
-\BOOKMARK [1][-]{section.3.1}{Feature Definition}{chapter.3}% 7
-\BOOKMARK [2][-]{subsection.3.1.1}{Food in Context}{section.3.1}% 8
-\BOOKMARK [2][-]{subsection.3.1.2}{Filtering Implemenation}{section.3.1}% 9
-\BOOKMARK [0][-]{chapter.4}{Analysis}{}% 10
-\BOOKMARK [1][-]{section.4.1}{General Stats}{chapter.4}% 11
-\BOOKMARK [0][-]{section*.8}{Bibliography}{}% 12
-\BOOKMARK [1][-]{section.4.2}{Processing and Storage}{section*.8}% 13
+\BOOKMARK [1][-]{section.2.1}{Hyperspace Analogue to Language}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Food Keyword Selection}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{Our Approach}{section.2.2}% 5
+\BOOKMARK [1][-]{section.2.3}{Predictor Keyword Selection}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.3.1}{Motivating a Semantic Approach}{section.2.3}% 7
+\BOOKMARK [2][-]{subsection.2.3.2}{Our Approach}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.3}{Results [Not finished] }{section.2.3}% 9
+\BOOKMARK [1][-]{section.2.4}{Factor Keyword Selection}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{Filtering}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.5.1}{Evaluation}{section.2.5}% 12
+\BOOKMARK [1][-]{section.2.6}{Discussion}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 14
+\BOOKMARK [1][-]{section.3.1}{General Stats}{chapter.3}% 15
+\BOOKMARK [0][-]{section*.8}{Bibliography}{}% 16
+\BOOKMARK [1][-]{section.3.2}{Processing and Storage}{section*.8}% 17

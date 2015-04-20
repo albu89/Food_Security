@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  9 APR 2015 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  16 APR 2015 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,12 +1254,12 @@ LaTeX Info: Redefining \addtolength on input line 76.
 )
 \pb@xlen=\skip130
 )
-Package hyperref Info: Option `unicode' set `false' on input line 70.
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 70.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 70.
-Package hyperref Info: Option `pdffitwindow' set `false' on input line 70.
-Package hyperref Info: Option `pdfnewwindow' set `true' on input line 70.
-Package hyperref Info: Option `colorlinks' set `true' on input line 70.
+Package hyperref Info: Option `unicode' set `false' on input line 68.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 68.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 68.
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 68.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 68.
+Package hyperref Info: Option `colorlinks' set `true' on input line 68.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
@@ -1269,25 +1269,28 @@ File: lstlang2.sty 2014/03/04 1.5c listings language file
 )
 (./masterThesis.aux
 
-LaTeX Warning: Label `fig:flex' multiply defined.
+LaTeX Warning: Label `tab:abc' multiply defined.
+
+
+LaTeX Warning: Label `fig:tpu' multiply defined.
 
 )
 \openout1 = `masterThesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1324,7 +1327,7 @@ LaTeX Font Info:    ... okay on input line 87.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box79
-Package hyperref Info: Link coloring ON on input line 87.
+Package hyperref Info: Link coloring ON on input line 85.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1333,9 +1336,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (./masterThesis.out) (./masterThesis.out)
 \@outlinefile=\write5
@@ -1371,17 +1374,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count306
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 87.
+Package xypdf Info: Line width: 0.47998pt on input line 85.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
@@ -1398,10 +1401,10 @@ File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 \c__siunitx_mathsf_int=\count307
 \c__siunitx_mathtt_int=\count308
 
-<epfl_logo.png, id=59, 945.5325pt x 457.71pt>
+<epfl_logo.png, id=75, 945.5325pt x 457.71pt>
 File: epfl_logo.png Graphic file (type png)
  <use epfl_logo.png>
-Package pdftex.def Info: epfl_logo.png used on input line 110.
+Package pdftex.def Info: epfl_logo.png used on input line 108.
 (pdftex.def)             Requested size: 189.10315pt x 91.54037pt.
  [1
 
@@ -1428,7 +1431,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 \chapter
+l.140 \chapter
               {Introduction} [1]
 Chapter 1.
 
@@ -1441,14 +1444,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 \chapter
+l.169 \chapter
               {Data} [1
 
 ]
 Chapter 2.
-
-LaTeX Warning: Citation `AbbarMW14' on page 2 undefined on input line 191.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1465,10 +1465,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1476,24 +1472,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Chapter 3.
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
 
-LaTeX Warning: Citation `fao2008' on page 5 undefined on input line 279.
-
-
-LaTeX Warning: Citation `ungp2013' on page 5 undefined on input line 282.
+ []
 
 
-LaTeX Warning: Citation `ungp2013' on page 5 undefined on input line 285.
-
-
-LaTeX Warning: Citation `AbbarMW14' on page 5 undefined on input line 285.
-
-
-LaTeX Warning: Citation `burgess98' on page 5 undefined on input line 291.
-
-
-LaTeX Warning: Citation `lund96' on page 5 undefined on input line 291.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1501,9 +1485,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5
-
-]
+[5]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1518,25 +1500,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 353--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1544,17 +1507,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
@@ -1566,26 +1519,82 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+LaTeX Warning: Citation `sent10' on page 10 undefined on input line 380.
+
+
+LaTeX Warning: Citation `stanford2011' on page 10 undefined on input line 380.
+
+
+LaTeX Warning: Citation `hutton14' on page 10 undefined on input line 382.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Chapter 4.
-<img/anal/loglog_users_tweets.jpg, id=152, 562.1pt x 421.575pt>
-File: img/anal/loglog_users_tweets.jpg Graphic file (type jpg)
 
-<use img/anal/loglog_users_tweets.jpg>
-Package pdftex.def Info: img/anal/loglog_users_tweets.jpg used on input line 41
-5.
-(pdftex.def)             Requested size: 418.25368pt x 313.69101pt.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-<img/anal/n_food_tweets.png, id=153, 961.9137pt x 787.743pt>
+[11]
+Chapter 3.
+<img/anal/exp_dist.png, id=210, 413.3844pt x 489.9906pt>
+File: img/anal/exp_dist.png Graphic file (type png)
+
+<use img/anal/exp_dist.png>
+Package pdftex.def Info: img/anal/exp_dist.png used on input line 410.
+(pdftex.def)             Requested size: 209.12683pt x 247.88068pt.
+
+<img/anal/exp_dist_cat.png, id=211, 688.974pt x 816.651pt>
+File: img/anal/exp_dist_cat.png Graphic file (type png)
+
+<use img/anal/exp_dist_cat.png>
+Package pdftex.def Info: img/anal/exp_dist_cat.png used on input line 417.
+(pdftex.def)             Requested size: 209.12683pt x 247.87569pt.
+
+Overfull \hbox (5.22215pt too wide) in paragraph at lines 409--423
+ [][]  [] 
+ []
+
+File: img/anal/exp_dist.png Graphic file (type png)
+<use img/anal/exp_dist.png>
+Package pdftex.def Info: img/anal/exp_dist.png used on input line 432.
+(pdftex.def)             Requested size: 418.25368pt x 495.76883pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12
+
+]
+Overfull \vbox (106.51366pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13 <./img/anal/exp_dist.png> <./img/anal/exp_dist_cat.png>]
+File: img/anal/exp_dist_cat.png Graphic file (type png)
+
+<use img/anal/exp_dist_cat.png>
+Package pdftex.def Info: img/anal/exp_dist_cat.png used on input line 439.
+(pdftex.def)             Requested size: 418.25368pt x 495.76385pt.
+
+<img/anal/n_food_tweets.png, id=225, 961.9137pt x 787.743pt>
 File: img/anal/n_food_tweets.png Graphic file (type png)
 
 <use img/anal/n_food_tweets.png>
-Package pdftex.def Info: img/anal/n_food_tweets.png used on input line 421.
+Package pdftex.def Info: img/anal/n_food_tweets.png used on input line 445.
 (pdftex.def)             Requested size: 418.25368pt x 342.5212pt.
 
 
@@ -1594,22 +1603,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11
-
- <./img/anal/loglog_users_tweets.jpg>]
+[14]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./img/anal/n_food_tweets.png>]
-No file masterThesis.bbl.
-<img/abs/hw_model.png, id=167, 562.1pt x 549.05125pt>
+[15 <./img/anal/n_food_tweets.png>] (./masterThesis.bbl)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16
+
+
+] <img/abs/hw_model.png, id=243, 562.1pt x 549.05125pt>
 File: img/abs/hw_model.png Graphic file (type png)
 
 <use img/abs/hw_model.png>
-Package pdftex.def Info: img/abs/hw_model.png used on input line 450.
+Package pdftex.def Info: img/abs/hw_model.png used on input line 474.
 (pdftex.def)             Requested size: 418.25368pt x 408.5452pt.
 
 
@@ -1618,26 +1633,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13
+[17
 
 
-
-] <img/abs/ini_lex.png, id=175, 1242.6425pt x 200.75pt>
-File: img/abs/ini_lex.png Graphic file (type png)
-
-<use img/abs/ini_lex.png>
-Package pdftex.def Info: img/abs/ini_lex.png used on input line 462.
-(pdftex.def)             Requested size: 418.25368pt x 67.56793pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 467--470
+]
+Underfull \hbox (badness 10000) in paragraph at lines 485--488
 
  []
 
-<img/abs/hyrach_lex.png, id=176, 835.12pt x 991.705pt>
+<img/abs/hyrach_lex.png, id=251, 835.12pt x 991.705pt>
 File: img/abs/hyrach_lex.png Graphic file (type png)
 
 <use img/abs/hyrach_lex.png>
-Package pdftex.def Info: img/abs/hyrach_lex.png used on input line 473.
+Package pdftex.def Info: img/abs/hyrach_lex.png used on input line 491.
 (pdftex.def)             Requested size: 418.25368pt x 496.68356pt.
 
 
@@ -1646,61 +1654,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./img/abs/hw_model.png> <./img/abs/ini_lex.png>]
+[18 <./img/abs/hw_model.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./img/abs/hyrach_lex.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
+[19 <./img/abs/hyrach_lex.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 499.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 499.
  (./masterThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 499.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 499.
+Package rerunfilecheck Info: File `masterThesis.out' has not changed.
+(rerunfilecheck)             Checksum: 8CCDD355E9358F3F0C79715C4DA7022D;1064.
 
-
-Package rerunfilecheck Warning: File `masterThesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `masterThesis.out':
-(rerunfilecheck)             Before: 4AFEC839CAFB21E90A7320EC1A577660;753
-(rerunfilecheck)             After:  4008EEE6FA80CEBC8067F5939A7A3BA9;753.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 499.
  ) 
 Here is how much of TeX's memory you used:
- 32264 strings out of 493117
- 605236 string characters out of 6135432
- 734951 words of memory out of 5000000
- 35183 multiletter control sequences out of 15000+600000
- 19054 words of font info for 78 fonts, out of 8000000 for 9000
+ 32302 strings out of 493117
+ 605637 string characters out of 6135432
+ 738951 words of memory out of 5000000
+ 35199 multiletter control sequences out of 15000+600000
+ 19706 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,17n,54p,10379b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.4} has been referenced but does not
- exist, replaced by a fixed one
-
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on masterThesis.pdf (18 pages, 616619 bytes).
+ 55i,17n,54p,10399b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on masterThesis.pdf (22 pages, 798090 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 147 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

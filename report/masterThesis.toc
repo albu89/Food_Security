@@ -1,16 +1,17 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Data}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Lexicon}{2}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Keyword Selection}{2}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Factors Lexicion}{4}{subsection.2.1.2}
-\contentsline {chapter}{\numberline {3}Filtering}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Feature Definition}{5}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Food in Context}{6}{subsection.3.1.1}
-\contentsline {subsubsection}{The algorithm}{6}{subsubsection*.2}
-\contentsline {subsubsection}{Our approach}{7}{subsubsection*.4}
-\contentsline {subsubsection}{Result}{8}{subsubsection*.5}
-\contentsline {subsection}{\numberline {3.1.2}Filtering Implemenation}{8}{subsection.3.1.2}
-\contentsline {chapter}{\numberline {4}Analysis}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}General Stats}{11}{section.4.1}
-\contentsline {chapter}{Bibliography}{13}{section*.8}
-\contentsline {section}{\numberline {4.2}Processing and Storage}{13}{section.4.2}
+\contentsline {section}{\numberline {2.1}Hyperspace Analogue to Language}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Food Keyword Selection}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Our Approach}{5}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Predictor Keyword Selection}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Motivating a Semantic Approach}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Our Approach}{7}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Results [Not finished] }{8}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Factor Keyword Selection}{10}{section.2.4}
+\contentsline {section}{\numberline {2.5}Filtering}{10}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Evaluation}{11}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Discussion}{11}{section.2.6}
+\contentsline {chapter}{\numberline {3}Analysis}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}General Stats}{12}{section.3.1}
+\contentsline {chapter}{Bibliography}{16}{section*.8}
+\contentsline {section}{\numberline {3.2}Processing and Storage}{17}{section.3.2}

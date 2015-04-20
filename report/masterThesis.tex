@@ -339,7 +339,7 @@ Words that fell into our categories of interests were words such as available, p
 \hline
 
 & & \\
-\pbox{1.3cm}{$Food$ \\ Supply }  & \pbox{10.7cm}{  \emph{available}, giveaway, coupons, , growth, sustainability, nomnom, receive, indonessia, berlin, program, institute, survey, news, farming, journal, strategy, price, india, check, canada, production, campaign, protection, imports, launched, rating, storage, nutrition, restaurant, resources, trends, container, stall, government, distribution, processing, impact, policy, consumption, stores, exports, opportunities, harvest,price,savings,discount, budget, profits, increase, rise,relief
+\pbox{1.3cm}{$Food$ \\ Supply }  & \pbox{10.7cm}{  \emph{available}, giveaway, coupons, told, growth, sustainability, nomnom, receive, indonessia, berlin, program, institute, survey, news, farming, journal, strategy, price, india, check, canada, production, campaign, protection, imports, launched, rating, storage, nutrition, restaurant, resources, trends, container, stall, government, distribution, processing, impact, policy, consumption, stores, exports, opportunities, harvest,price,savings,discount, budget, profits, increase, rise,relief
 }  \\
  & & \\
 \hline
@@ -358,10 +358,6 @@ Words that fell into our categories of interests were words such as available, p
 \emph{help},power, amazing, thanks, future, children, beyond, yummy, issue, death, killing, helping, brilliant, delicious, awesome, tasty, freedom, kill, needed, nice, healthier, benefits helps, feeding, love, tax often, health, incredible, politics, destroy, expensive, increase, yum, heavenly, trash, necessary, cheap, enjoy, smiling, struggle, disaster, stress   }  \\
 & & \\
 
-
-
-
-
 \bottomrule
 
 \end{tabular}
@@ -374,24 +370,24 @@ Words that fell into our categories of interests were words such as available, p
 \section{Factor Keyword Selection}
 
 
-
-
-\begin{comment}
-Commented code
-
-
 \section{Filtering}
 
-Following the creation of the four categories we used polarities to model the price variation. For example, the category \emph{"price"} has two polarities: \emph{"high"} and \emph{"low"}. In \cite{hum14} we worked on a filtering mechanism to extract relevant tweets and to assign them to the relevant polarities.  In order to achieve this goal, a prediction lexicon with a total of four categories was built (\emph{ "price", "poverty", "needs", "supply"}), let's call it $D$.
 
-Then, for each tweet a feature vector is built, representing the amount of words from each category and polarity. Several cases have to be taken into account. First of all, a word may be not in its base form ("price" $\to$ "prices", "increase" $\to$ "increasing"), which will prevent an incoming word from matching one from $D$. Therefore, we use stemming technique to reduce each word to its stem (or root) form. Another problem is misspelled words ("increase" $\to$ "incrase", "incraese"), and for tweets it happens more than usual due to widespread use of mobile devices with tiny keyboards. To allow for an efficient execution of the filtering  we decided to use a simple approach which involved computing edit distances between a given word and words from predictor categories dictionary ($D$).
-For each given word $w$ we compute its stem $s$ and then edit distance (also known as Levenshtein distance) to each word (stem) from $D$.
-After that, we choose the stem with minimal edit distance, and check if the resulting number of "errors" (which is equal to distance) is excusable for the length of word $w$. For example, we don't allow errors for words of length 5 or less, only one error is allowed for lengths from 6 to 8, etc. If everything is alright, then the suggestion is returned, otherwise the word is discarded. 
+Following the creation of the four categories we will use polarities to model the price variation. For example, the category \emph{price} has two polarities: \emph{high} and \emph{low}. In \cite{hum14} we worked on a filtering mechanism to extract relevant tweets and to assign them to the relevant polarities.  In order to achieve this goal, a prediction lexicon with a total of four categories was built (\emph{ price, poverty, needs, supply}). We will refer to it as $D$.
 
-Furthermore we had to account for negation words, which subverts the meaning: "increases" $\to$ "doesn't increase", "have food" $\to$ "have no food".  To deal with this problem, we employed the following method: we added a special 'negation' category with a list of negation words ("not", "haven't", "won't", etc.), and if there is a word with "negative" category before some relative word (to be more precise, within some constant distance from it, say 2), then we change the polarity of relative word's category. For example, if a word is from category "poverty" and has a "high" polarity (e.g. "starving"), then a negative category word right before it (such as "aren't") will turn the polarity to "low".
+For every word in a tweet and for every word in D the stem is computed. This is necessary to capture tweets that may contain a predictor term that is not in its base form. Fore example a tweet containing the word \emph{pricey} would not match the term \emph{price}. Furthermore the framework also accounts for misspelt words. To do this in a computationally efficient way the algorithm computes the edit distance between a given word and terms from the predictor set D. If the error is within a fixed threshold the predictor term with the minimal edit distance is returned. 
+
+Experiments showed that sentiment analysers such as SentiStrength \cite{sent10} or Stanford CoreNLP \cite{stanford2011} performed  poorly on microblog content. Hence, the decision was made to extract the sentiment by having specific terms for each sentiment (polarity). In addition one had to account for changes in polarity through negations such as \emph{never} and \emph{not} which inverted the polarity of a predictor category term. 
+
+We however choose to deviate from this approach and use a sentiment analyser despite the bad results. There were two reasons for doing so. 1.) Hutto et. al recently published a new sentiment analyser VADER \cite{hutton14} with an F1 Classification Accuracy = 0.96 which  outperformed human evaluators. 2.) Often keywords can not be manually assigned to a polarity without knowing it's context. Besides the above mentioned benefits VADER allows us to obtain a degree of sentiment by analysing grammatical and syntactical conventions that humans use when expressing sentiment intensity. For example it accounts for emoticons which are commonly used to express a sentiment or even acronyms such as \emph{LOL, WTF}. It's further worth mentioning that VADER is an unsupervised approach and is well suited for streaming data. 
 
 
-\end{comment}
+\subsection{Evaluation}
+
+
+
+
+
 
 \section {Discussion}
 
@@ -404,10 +400,43 @@ Furthermore we had to account for negation words, which subverts the meaning: "i
 
 We see in the bellow Figure \textbf{\ref{fig:tpu}} that the distribution of the number of tweets per user follows a power law where a lot of individuals have sent only a few tweets about the subject and only a small number of users have sent a large amount of tweets. 
 
+Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 2.6 M tweets we raised the entire volume by 110\% to a total of 5.6 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in orange the added volume alongside the initial size in blue. The most popular food terms on twitter are general terms such as food, dinner and lunch. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{others} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords has the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% Vegetable Oils. Interestingly the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and empty	{chocolate} which caused alone 70 \% of the sugar related tweets. 
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/anal/exp_dist}
+                \caption{Overall Distribution}
+                \label{fig:world}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/anal/exp_dist_cat}
+                \caption{Category Distribution}
+                \label{fig:cat}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+      
+        \caption{Volume of Tweets per Keyword and per Category}\label{fig:distribution}
+\end{figure}
+
+
+
 
  
  \begin{figure}[H]
-\centerline{ \noindent\includegraphics[width=1\textwidth]{img/anal/loglog_users_tweets}}
+\centerline{ \noindent\includegraphics[width=1\textwidth]{img/anal/exp_dist}}
+ \caption{Distribution of Tweets per User}
+ \label{fig:tpu}
+\end{figure}
+
+ 
+ \begin{figure}[H]
+\centerline{ \noindent\includegraphics[width=1\textwidth]{img/anal/exp_dist_cat}}
  \caption{Distribution of Tweets per User}
  \label{fig:tpu}
 \end{figure}
