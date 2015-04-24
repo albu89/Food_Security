@@ -198,6 +198,10 @@ Words that fell into our categories of interests were words such as available, p
 \end{table}
  
  \newpage
+ 
+\subsection{Discussion}
+
+for 40 we had 119024420 words  
 
 \section{Factor Keyword Selection}
 
@@ -231,7 +235,8 @@ We however choose to deviate from this approach and use a sentiment analyser des
 \section{General Stats}
 
 Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user slightly deviates from a normal power law. A lot of individuals have sent only a few tweets about the subject and only a small number of users have sent a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is very flat. About 40 \% of the tweets are caused by 20 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
-\begin{figure}[H]
+
+\begin{figure}[ht]
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/anal/linear_user}
@@ -286,7 +291,28 @@ Our framework for the data acquisition successfully increased the total volume o
 \end{figure}
 
 
+\section{Food  Category Analysis}
 
 
+We observed the general popularity of food in our initial analysis and that certain food categories have a much stronger presence then others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of our correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. For each food category (e.g. meat, dairy ) we correlated the tweet volumes of the subcategories( e.g. beef, chicken for meat), products (e.g. bacon, salami) and the price quotes for each category.  
 
+Between the meat categories there is a strong positive linear relationship in the range of 0.9914 and 0.9980. Likewise a p value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. A negative relationship exists between the tweet volume and the meat price index ranging from -.469 lamb to -.4855 beef. Generally speaking we observer a stronger correlation for the meat categories (e.g. beef, chicken) as for meat products (e.g. chorizo, salami). With a p value of ca. 0.003 we again conclude that the correlation is real. 
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/meat_heatplot_price}
+              
+        \caption{Heatplot Meat: Volume of Tweets per Keyword and per Category}
+        \label{fig:distribution}
+\end{figure}
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/cereals_heatplot}
+              
+        \caption{Heatplot Cereals: Volume of Tweets per Keyword and per Category}
+        \label{fig:distribution}
+\end{figure}
  

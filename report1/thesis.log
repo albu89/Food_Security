@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  19 APR 2015 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  24 APR 2015 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1154,7 +1154,14 @@ Package caption Info: listings package is loaded.
 \c@subfigure=\count282
 \c@subtable=\count283
 )
-(./thesis.aux
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks57
+\float@box=\box35
+\@float@everytoks=\toks58
+\@floatcapt=\box36
+) (./thesis.aux
 
 LaTeX Warning: Label `tab:abc' multiply defined.
 
@@ -1162,7 +1169,7 @@ LaTeX Warning: Label `tab:abc' multiply defined.
 LaTeX Warning: Label `fig:distribution' multiply defined.
 
 
-LaTeX Warning: Label `fig:tpu' multiply defined.
+LaTeX Warning: Label `fig:distribution' multiply defined.
 
 )
 \openout1 = `thesis.aux'.
@@ -1188,17 +1195,17 @@ File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
+\scratchcounter=\count285
 \scratchdimen=\dimen192
-\scratchbox=\box35
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks57
-\MPscratchCnt=\count287
+\scratchbox=\box37
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count288
 \MPscratchDim=\dimen193
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks58
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks60
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1214,8 +1221,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box36
-\c@lstlisting=\count290
+\AtBeginShipoutBox=\box38
+\c@lstlisting=\count291
 LaTeX Font Info:    Font shape `OT1/pplx/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pplx/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/pplx/bx/n' in size <12> not available
@@ -1418,7 +1425,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count291
+\c@section@level=\count292
 LaTeX Info: Redefining \Ref on input line 513.
 )
 Redoing nameref's sectioning
@@ -1433,8 +1440,9 @@ LaTeX Info: Redefining \nameref on input line 94.
 
 LaTeX Info: Redefining \Ref on input line 94.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
- <epfl_logo.png, id=76, 945.5325pt x 457.71pt>
+ <epfl_logo.png, id=60, 945.5325pt x 457.71pt>
 File: epfl_logo.png Graphic file (type png)
 
 <use epfl_logo.png>
@@ -1555,53 +1563,64 @@ LaTeX Warning: Citation `hutton14' on page 11 undefined on input line 214.
 
 [11] [12
 
-] <img/anal/linear_user.jpg, id=231, 562.1pt x 421.575pt>
+] <img/anal/linear_user.jpg, id=221, 562.1pt x 421.575pt>
 File: img/anal/linear_user.jpg Graphic file (type jpg)
 
 <use img/anal/linear_user.jpg>
-Package pdftex.def Info: img/anal/linear_user.jpg used on input line 237.
+Package pdftex.def Info: img/anal/linear_user.jpg used on input line 238.
 (pdftex.def)             Requested size: 184.5pt x 138.37398pt.
 
-<img/anal/loglog_users_tweets.jpg, id=232, 562.1pt x 421.575pt>
+<img/anal/loglog_users_tweets.jpg, id=222, 562.1pt x 421.575pt>
 File: img/anal/loglog_users_tweets.jpg Graphic file (type jpg)
 
 <use img/anal/loglog_users_tweets.jpg>
 Package pdftex.def Info: img/anal/loglog_users_tweets.jpg used on input line 24
-4.
+5.
 (pdftex.def)             Requested size: 184.5pt x 138.37398pt.
 
-<img/anal/no_power.jpg, id=233, 562.1pt x 421.575pt>
+<img/anal/no_power.jpg, id=223, 562.1pt x 421.575pt>
 File: img/anal/no_power.jpg Graphic file (type jpg)
 
 <use img/anal/no_power.jpg>
-Package pdftex.def Info: img/anal/no_power.jpg used on input line 251.
+Package pdftex.def Info: img/anal/no_power.jpg used on input line 252.
 (pdftex.def)             Requested size: 184.5pt x 138.37398pt.
 
-Overfull \hbox (4.8399pt too wide) in paragraph at lines 236--257
+Overfull \hbox (4.8399pt too wide) in paragraph at lines 237--258
  [][]  [] 
  []
 
-<img/anal/exp_dist.png, id=237, 413.3844pt x 489.9906pt>
+<img/anal/exp_dist.png, id=227, 413.3844pt x 489.9906pt>
 File: img/anal/exp_dist.png Graphic file (type png)
 
 <use img/anal/exp_dist.png>
-Package pdftex.def Info: img/anal/exp_dist.png used on input line 271.
+Package pdftex.def Info: img/anal/exp_dist.png used on input line 272.
 (pdftex.def)             Requested size: 184.5pt x 218.69185pt.
 
-<img/anal/exp_dist_cat.png, id=238, 688.974pt x 816.651pt>
+<img/anal/exp_dist_cat.png, id=228, 688.974pt x 816.651pt>
 File: img/anal/exp_dist_cat.png Graphic file (type png)
 
 <use img/anal/exp_dist_cat.png>
-Package pdftex.def Info: img/anal/exp_dist_cat.png used on input line 278.
+Package pdftex.def Info: img/anal/exp_dist_cat.png used on input line 279.
 (pdftex.def)             Requested size: 184.5pt x 218.6794pt.
 
-Overfull \hbox (4.8399pt too wide) in paragraph at lines 270--284
+Overfull \hbox (4.8399pt too wide) in paragraph at lines 271--285
  [][]  [] 
  []
 
-) (./appendix.tex [13] [14 <./img/anal/linear_user.jpg> <./img/anal/loglog_user
-s_tweets.jpg> <./img/anal/no_power.jpg>] [15 <./img/anal/exp_dist.png> <./img/a
-nal/exp_dist_cat.png>] [16
+[13]
+Overfull \vbox (43.43953pt too high) has occurred while \output is active []
+
+
+[14 <./img/anal/linear_user.jpg> <./img/anal/loglog_users_tweets.jpg> <./img/an
+al/no_power.jpg> <./img/anal/exp_dist.png> <./img/anal/exp_dist_cat.png>]
+<img/anal/meat_heatplot_price.jpg, id=245, 1178.4025pt x 568.1225pt>
+File: img/anal/meat_heatplot_price.jpg Graphic file (type jpg)
+
+<use img/anal/meat_heatplot_price.jpg>
+Package pdftex.def Info: img/anal/meat_heatplot_price.jpg used on input line 30
+0.
+(pdftex.def)             Requested size: 369.0pt x 177.90193pt.
+) (./appendix.tex [15 <./img/anal/meat_heatplot_price.jpg>] [16
 
 ]) [17] [18
 
@@ -1629,8 +1648,8 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: FF8CA11CE094A2AB6C6346575CAC3230;1076
-(rerunfilecheck)             After:  CF28022104A91B8EE77E2A6C7F1D896B;1075.
+(rerunfilecheck)             Before: F6486AAE51E9D030BA097B9F2C1A8482;802
+(rerunfilecheck)             After:  037DA82D1D8444E4765844239D698309;1144.
 
 LaTeX Warning: There were undefined references.
 
@@ -1639,30 +1658,27 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16519 strings out of 493117
- 239162 string characters out of 6135432
- 417889 words of memory out of 5000000
- 19554 multiletter control sequences out of 15000+600000
+ 16567 strings out of 493117
+ 239897 string characters out of 6135432
+ 419090 words of memory out of 5000000
+ 19595 multiletter control sequences out of 15000+600000
  46299 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,17n,67p,1547b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.11} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (26 pages, 463516 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (26 pages, 569358 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 12463 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 12436 words of extra memory for PDF output out of 14400 (max. 10000000)
 
