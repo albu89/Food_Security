@@ -141,6 +141,10 @@ In this section we try to comprehend which words are associated with the above-m
 
 \subsection{Our Approach}
 
+Here we describe the framework applied to create the predictor lexicon. In order to optimise the recall of HAL we evaluated the performance of the protocol on three different sample sizes (10, 20, 40) constituting a corpus of around 23M, 47M, 93M respectively. 
+
+
+
 We use a large text corpus of around 23860931 words. As a source we used a random sample of 10 \% from our food related tweets. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
 
 The vocabulary of the HAL model contains 14084 words. The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. We will refer to this set of words as $F_c$. Using the words $w \in F_c$ we produced a 14084 by 14084 matrix with the co-occurrences within a window size of five. Since vector similarity measures are sensitive to the magnitude of the vectors we normalised all the vectors to a constant length. Once the HAL space was created we performed the following steps to retrieve the desired keywords for our four categories. 
