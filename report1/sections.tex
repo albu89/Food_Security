@@ -139,26 +139,37 @@ In this section we try to comprehend which words are associated with the above-m
 
 
 
-\subsection{Our Approach}
+\subsection{Evaluating HAL}
 
-Here we describe the framework applied to create the predictor lexicon. In order to optimise the recall of HAL we evaluated the performance of the protocol on three different sample sizes (10, 20, 40) constituting a corpus of around 23M, 47M, 93M respectively. 
+Here we describe an evaluation of HAL and two different frameworks we applied to create the predictor lexicon. In order to increase the recall of HAL we evaluated the performance on three different sample sizes (10 \%, 20 \%, 40 \%) constituting a corpus of around 23M, 47M, 93M words respectively. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
 
+The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. On a test sample of 10 \% we observed that around 10 \% of the tweets contain equal or less then 4 words which could impact the quality of the results. Hence, on the 40 \% sample we further excluded tweets that contain less or equal to 4 words. We will refer to this set of words as $F_c$. Using the words $w \in F_c$ we produced a N by N matrix with the co-occurrences for three different window sizes namely five, eight and ten to investigate if the window size has an impact on the result. According to \cite{lund96} a window size of 8 should yield the best results. However the nature of a tweet is very different from a classical text so it remains to see if this observation also holds for microbologs. Since vector similarity measures are sensitive to the magnitude of the vectors we normalised all the vectors to a constant length. Once the HAL space was created we evaluated the following two frameworks to retrieve the desired keywords for our four categories. The manual selection of the keywords was done through crowd flower \footnote{http://www.crowdflower.com/}. The works were presented with four different tasks, one for each category. For every task we asked the workers to classify the term as A. Relevant, B. Likely, C. Unlikely and D. Not in English. Since Overlaps may occur, particularly for the category pice and supply as well as poverty and need we asked the workers to classify them as likely in order to detect to which category the word has a stronger association. 
 
-
-We use a large text corpus of around 23860931 words. As a source we used a random sample of 10 \% from our food related tweets. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
-
-The vocabulary of the HAL model contains 14084 words. The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. We will refer to this set of words as $F_c$. Using the words $w \in F_c$ we produced a 14084 by 14084 matrix with the co-occurrences within a window size of five. Since vector similarity measures are sensitive to the magnitude of the vectors we normalised all the vectors to a constant length. Once the HAL space was created we performed the following steps to retrieve the desired keywords for our four categories. 
-
+\textbf{Framework 1}
 
 \begin{description}
   \item[1.)] $\forall k \in K_e$ choose the keyword k with the highest occurrence form the entire sample. Let's call it $k_{max}$  
   \item[2.)] $\forall w \in F_c $ perform a similarity measure with $k_{max}$
-  \item[3.)] Retrieve the 500 most similar words and hand-select one word for each element of $C_p$ (e.g. since we have four categories the result should be four words)
-  \item[4.)] For each of those hand-selected words  apply HAL and compare it $\forall$ $w \in F_c $
-  \item[5.)] For each predictor category retrieve the 500 most similar words and manually select relevant keywords. Elements were selected that could be clearly related to the given topic (e.g. \emph{available} and \emph {production} for supply). Ambiguous ones were also included if they had a clear relationship to food related terms (e.g \emph{rise}, \emph {increase}).
-  \end{description}
+  \item[3.)] Retrieve the 500 most similar words and hand select the words that occurs in the synonym lexicon thesaurus for supply, price, poverty and needs. 
+    \item[4.)] For each of those hand-selected words  apply HAL 
+  \item[5.)] For each predictor category retrieve the 500 most similar words and let crowd workers select the relevant terms. 
+    \end{description}
 
 The high-level intuition of this procedure is as follows. The first step will give us the most prominent food term. This is most likely going to be something general such as the keyword \emph{"Food"}. Step 2 and 3 will allow us to identify the most contextual similar keywords for each category. So the keyword is retrieved that is most likely used to describe supply in the context of food. In step 4 and 5 we aim to retrieve similar words that could describe supply but maybe appear more frequently in different contexts. In other words, we aim to find synonyms here.   
+
+
+\textbf{Framework 2}
+
+
+\begin{description}
+   \item[1.)] $\forall w \in F_c $ perform a similarity measure with the keywords supply, price, needs and poverty
+  \item[2.)]  Retrieve the 500 most similar words and let crowd workers select the relevant terms  
+  \end{description}
+
+Instead of finding a keyword that is a synonym of a predictor category as in Framework 1 we simply use our predefined category names as a base to retrieve contextually similar words. 
+
+In our evaluation we will proceed with Framework 2 for three reasons. Firstly Framework 1 did not retrieve us the desired keywords for all categories. Secondly, between the results of Framework 1 and 2 there was a substantial overlap and lastly Framework 2 is more efficient to execute. This is particularly important since creating the HAL space is computationally very expensive. 
+ 
 
 \subsection{Results  }
 
@@ -312,6 +323,9 @@ Between the meat categories there is a strong positive linear relationship in th
 \end{figure}
 
 
+
+For cereals similar to meat we likewise see a high correlation in volume of around 0.95 between the different products, the only exception being flower. Interestingly both bread and noodles are made from flower. We can only assume that flour producers hedge the price of wheat and do not pass the price on to bread or noodle producers. Unlike meat products, when we observe an increase in tweet volume for cereals we also observe an increase in the price. The correlation of around 0.65 suggests a stronger relationship between tweet volume and price of cereals then those of meat. 
+
 \begin{figure}[H]
         \centering
          \includegraphics[width=1\textwidth ]{img/anal/cereals_heatplot}
@@ -319,4 +333,42 @@ Between the meat categories there is a strong positive linear relationship in th
         \caption{Heatplot Cereals: Volume of Tweets per Keyword and per Category}
         \label{fig:distribution}
 \end{figure}
+ 
+ 
+ 
+The heat plot of the dairy products is very similar to the one we observed for meet and has been added to the appendix for reference. An increase in volume of tweets suggests a decrease in price for dairy prices with a correlation of around 0.68. The heat plots of sugar and oil reflect a positive correlation of around 0.37
+
+\subsection{Discussion} 
+
+A smilier correlation analysis has been made in \cite{ungp2013}. They however used more contextual sensitive tweets i.e. instead of just using tweets containing food they performed an n-match on different criteria. The tweet had to contain a food item, the word price and a quantification such as high or low. Overall a pearson correlation of around 0.42 was detected with a significance of 0.04. By looking at the simple raw volume of the tweets we perform significantly better with an average correlation of 0.65 and a p - value of 0.015. Where the correlation for the category prices is significant there is hardly any correlation between the international Food Price Index and the tweet volume of the different categories. This was expected since the International Food Price Index is calculated by a weighted average of the price indices of the five food categories. 
+ 
+ 
+ \begin{center}
+ \begin{tabular}{ l | c  | c  }
+			
+   & \textbf{Category Price Index}  & \textbf{Food Price Index} \\
+  \hline
+  \\
+  Meat & -0.4802 **    & 0.1611  \\
+  
+  Dairy & -0.7256 ***  & 0.1388\\
+
+  Cereals & 0.6489 *** & 0.1543 \\
+
+  Oil & 0.3804 * &  0.1485  \\
+
+  Sugar & 0.3897 * &0.1881 \\
+
+  General & - & 0.1685 \\
+\hline 
+
+\multicolumn{3}{c}{\null}\\
+
+\multicolumn{3}{c}{\textbf{Significance:} p $<$ .0005 ***, p $<$ 0.005 **, p $<$ 0.05 *}\\
+\hline  
+\end{tabular}
+\end{center}
+
+
+ 
  
