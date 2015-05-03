@@ -3,13 +3,25 @@
 \BOOKMARK [0][-]{chapter.2}{Data}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Hyperspace Analogue to Language}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Food Keyword Selection}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.3}{Predictor Keyword Selection}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.4}{Factor Keyword Selection}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.5}{Filtering}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.6}{Discussion}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 10
-\BOOKMARK [1][-]{section.3.1}{General Stats}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Food Category Analysis}{chapter.3}% 12
-\BOOKMARK [0][-]{appendix.A}{Data}{}% 13
-\BOOKMARK [1][-]{section.A.1}{Crowd Flower}{appendix.A}% 14
-\BOOKMARK [0][-]{section*.10}{Bibliography}{}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Our Approach}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Predictor Keyword Selection}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Motivating a Semantic Approach}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{Evaluating HAL}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.3}{Results }{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.4}{Discussion}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{Factor Keyword Selection}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{Filtering}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.5.1}{Evaluation}{section.2.5}% 14
+\BOOKMARK [1][-]{section.2.6}{Discussion}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 16
+\BOOKMARK [1][-]{section.3.1}{General Stats}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Price Correlation}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Discussion}{section.3.2}% 19
+\BOOKMARK [0][-]{appendix.A}{Data}{}% 20
+\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 21
+\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 22
+\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 23
+\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 24
+\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 25
+\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 26
+\BOOKMARK [0][-]{section*.14}{Bibliography}{}% 27

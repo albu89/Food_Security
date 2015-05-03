@@ -306,7 +306,7 @@ Our framework for the data acquisition successfully increased the total volume o
 \end{figure}
 
 
-\section{Food  Category Analysis}
+\section{Price Correlation}
 
 
 We observed the general popularity of food in our initial analysis and that certain food categories have a much stronger presence then others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of our correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. For each food category (e.g. meat, dairy ) we correlated the tweet volumes of the subcategories( e.g. beef, chicken for meat), products (e.g. bacon, salami) and the price quotes for each category.  
@@ -336,7 +336,34 @@ For cereals similar to meat we likewise see a high correlation in volume of arou
  
  
  
-The heat plot of the dairy products is very similar to the one we observed for meet and has been added to the appendix for reference. An increase in volume of tweets suggests a decrease in price for dairy prices with a correlation of around 0.68. The heat plots of sugar and oil reflect a positive correlation of around 0.37
+The heat plot of the dairy products is very similar to the one we observed for meet and has been added to the appendix for reference. An increase in volume of tweets suggests a decrease in price for dairy prices with a correlation of around 0.68. 
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/dairy_heatplot}
+              
+        \caption{Heatplot Dairy: Volume of Tweets per Keyword and per Category}
+        \label{fig:distribution}
+\end{figure}
+ 
+The heat plots of sugar and oil reflect a positive correlation of around 0.37. 
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/sugar_heatplot}
+              
+        \caption{Heatplot Sugar: Volume of Tweets per Keyword and per Category}
+        \label{fig:sugar_heat}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/oil_heatplot}
+              
+        \caption{Heatplot Oil: Volume of Tweets per Keyword and per Category}
+        \label{fig:oil_heat}
+\end{figure}
+
 
 \subsection{Discussion} 
 
