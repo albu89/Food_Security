@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{olt15}
+N.~Diakopoulos K.~Aberer A.~Olteanu, C.~Castillo.
+\newblock Comparing events coverage in online news and social media: The case
+  of climate change.
+\newblock {\em In Proceedings of the AAAI Conference on Web and Social Media
+  (ICWSM'15)}, 2015.
+
 \bibitem{AbbarMW14}
 Sofiane Abbar, Yelena Mejova, and Ingmar Weber.
 \newblock You tweet what you eat: Studying food consumption through twitter.
@@ -36,10 +43,6 @@ K.~{LUND} and C.~{BURGESS}.
   {CO-OCCURRENCE}.
 \newblock {\em Behavior research methods, instruments \& computers},
   28(2):203--208, 1996.
-
-\bibitem{brick02}
-C.~Panter-Brick.
-\newblock Street children, human rights and public health, 2002.
 
 \bibitem{fao2008}
 EC~FAO Food~Security Programme.

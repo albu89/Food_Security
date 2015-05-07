@@ -2,28 +2,33 @@
 \select@language {english}
 \contentsline {chapter}{Contents}{iii}{section*.1}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\chapternumberline {2}Data}{3}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Social Media Data Acquisition}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Hyperspace Analogue to Language}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Food Keyword Selection}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Our Approach}{5}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}Predictor Keyword Selection}{5}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Motivating a Semantic Approach}{5}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Evaluating HAL}{6}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Results }{8}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Discussion}{9}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Factor Keyword Selection}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Filtering}{9}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Evaluation}{10}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Discussion}{10}{section.2.6}
-\contentsline {chapter}{\chapternumberline {3}Analysis}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}General Stats}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Price Correlation}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Discussion}{15}{subsection.3.2.1}
-\contentsline {appendix}{\chapternumberline {A}Data}{17}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{17}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{18}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{18}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{18}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{19}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{20}{subsection.A.2.4}
-\contentsline {chapter}{Bibliography}{21}{section*.14}
+\contentsline {subsection}{\numberline {2.1.1}Motivating a Semantic Approach}{4}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Food Lexicon}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Candidate Food Term Selection}{5}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Predictor Lexicon}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Candidate Predictor Term Selection}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Annotation and False Positive Removal of HAL Results}{8}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Experimental Evaluation}{8}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Results}{9}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Discussion}{10}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Filtering}{11}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Food related Tweets}{12}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Predictor related Tweets}{12}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Sentiment Extraction}{12}{subsection.2.5.3}
+\contentsline {chapter}{\chapternumberline {3}Analysis}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Data Analysis}{13}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}User Distribution}{13}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Food Term Distribution}{13}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Price Correlation}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Discussion}{17}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Anomalie Detection}{18}{section.3.3}
+\contentsline {appendix}{\chapternumberline {A}Data}{21}{appendix.A}
+\contentsline {section}{\numberline {A.1}Processing and Storage}{21}{section.A.1}
+\contentsline {section}{\numberline {A.2}Crowd Flower}{22}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{22}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{22}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{23}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{24}{subsection.A.2.4}
+\contentsline {chapter}{Bibliography}{25}{section*.16}
