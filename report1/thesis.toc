@@ -24,6 +24,9 @@
 \contentsline {section}{\numberline {3.2}Price Correlation}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Discussion}{17}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Anomalie Detection}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Methodology}{18}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Social Attention}{19}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Event Identification [Not finished]}{20}{subsection.3.3.3}
 \contentsline {appendix}{\chapternumberline {A}Data}{21}{appendix.A}
 \contentsline {section}{\numberline {A.1}Processing and Storage}{21}{section.A.1}
 \contentsline {section}{\numberline {A.2}Crowd Flower}{22}{section.A.2}
@@ -31,4 +34,4 @@
 \contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{22}{subsection.A.2.2}
 \contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{23}{subsection.A.2.3}
 \contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{24}{subsection.A.2.4}
-\contentsline {chapter}{Bibliography}{25}{section*.16}
+\contentsline {chapter}{Bibliography}{25}{section*.17}

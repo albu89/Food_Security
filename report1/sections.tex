@@ -317,7 +317,7 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 
 \subsection {User Distribution}
 
-Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user slightly deviates from a normal power law. A lot of individuals have sent only a few tweets about the subject and only a small number of users have sent a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is very flat. About 40 \% of the tweets are caused by 20 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
+Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user slightly deviates from a normal power law. A lot of individuals  send only a few tweets about the subject and only a small number of users transmit a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is very flat. About 40 \% of the tweets are caused by 20 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
 
 \begin{figure}[ht]
         \centering
@@ -477,25 +477,108 @@ Traditional market fundamentals such as demand and supply factors were found to 
 
 According to \cite{Tadesse2014} , exogenous shocks are expected to generate food price spikes and volatility. The other factors determine the magnitude of the volatility and rely heavily on the political and economic condition of the country. 
 
-Motivated by this research we try to discover spikes in our twitter conversations entered around Food Security and create a link to events that might have caused them. Such events can play a significant role in explaining food price volatility and spikes. 
+Motivated by this research we try to discover spikes in our twitter conversations centered around Food Security and create a link to events that might have 	caused them. Such events can play a significant role in explaining food price volatility. 
 
 
-We define a spike to be 
+\subsection{Methodology} 
 
-IF abs(x-mu) $>$ 3*std  THEN  x is outlier where mu is the mean of the data and std the standard deviation. 
+We investigate the four food categorie's temporal behaviour on a granularity of one day. This scale was chosen in order to be in accordance with the temporal quotations of the commodity market. Lehmann et al. \cite{Lehmann2012} defines there categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Where continues activities are topics that are of daily  interest such as weather periodic actives reoccur with a fixed pattern such as the release of a new episode of a popular tv show. The later is event driven and usually occurs once during a very short period such as a national holiday. 
+
+In order to detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. A fixed window size of 2m + 1 was defined where $m = 15$ to build a month long time window. Within the window we identified the median and calculated the mean of the twitter volume. From those values we calculated the Median absolute deviation (MAD) as follows: 
+
+\begin{equation} \label{eq:solve}
+\overline{ MAD } = median_i (|X_i - median_j(X_j)|)\end{equation}
 
 
+$X_j$ is the set of data points within the fixed window and $X_i \in X_j$
 
+A peak is declared if $v_i$ deviates more then 1.5 MAD from the mean. For this analysis we only consider rapid increases and ignore anomalies in form of a steep descent. 
 
-Headey Martin and Anderson have shown that the sequence of export restrictions by India Thailand China and Rusia created panics in the international food market. While domestic prices stayed stable domestic prices are shielded from the full impact. 
-
-
-The paper differentiates between price spikes and volatility. A price spike is a large and temporary fall in price. Price volatility is a long-term price movement indicating the risk associated with price changes. It is usually measured in terms of price dispersion from the mean.
-
-The finding were that exogenous shocks as well as the linkages between food, energy, and financial markets play a significant role in explaining food price volatility and spikes. Furthermore to demand and supply shocks speculation is an important factor in explaining and triggering extreme price spikes. 
-
-The effect of oil prices on food price spikes has emerged as significant only in recent years. Financial crisis exerts a strong impact on food price volatility, which confirms the increas- ing link between financial and commodity markets.
+The discussion centred around food price showed 147 events, tweet activities for food supply resulted in 160 spikes. 159 anomalies were detected for food needs and lastly 153 for food poverty. 
  
 
+\subsection{Social Attention}
+
+For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent event (boost) where the discussion about food supply is followed by a boost in food price. 
+
+
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/topic_dist}
+              
+        \caption{Topic Distribution - Food Security}
+        \label{fig:oil_heat}
+\end{figure}
+
  
+\subsection{Event Identification [Not finished]}
+
+
+
+The time series data measured in volume per
+
+
+Burst: 
+
+Investigatng 16092014
+
+Food prices drop to four-year low ? UN agency 
+
+\footnote{http://www.un.org/apps/news/story.asp}
+
+
+Peak ing at this news article 
+16/09/2014: UK Inflation rate down to 1.5 \% \footnote{http://www.bbc.co.uk/news/business-29218855}
+
+investigating 12 and 13.08.14 (exact match)
+
+Oil prices dip to nine-month low: \% \footnote{Oil prices dip to nine-month low}
+
+
+ 
+ 25/08/12  (exact match)
+ 
+ UPDATE 1-USDA raises beef, pork prices forecasts on drought, disease
+ 
+ 
+ 
+ Food supply: 
+ 
+ 
+
+exact match(2012/02/23/)
+Bill Gates Calls for More Accountability on Food Programs
+ \footnote{http://green.blogs.nytimes.com/2012/02/23/bill-gates-calls-for-more-accountability-on-food-programs/}
+ 
+ exact match(05/10/12)
+ \footnote{http://www.cnbc.com/id/49301763}
+ 
+ Food Is the New Oil and Land the New Gold: Lester Brown
+ 
+ 
+21/11/2013
+1.7 million in Pa. brace for food stamp reform
+
+
+
+%\footnote{http://triblive.com/state/pennsylvania/4741187-74/stamps-stamp-bill#axzz3Zj6QIUuL}
+ 
+ 
+17/03/2014
+
+Califorinian drought affects food supply	
+
+ \footnote{http://www.latimes.com/food/dailydish/la-dd-california-drought-affecting-food-20140311-story.html}
+ 
+
+
+At peak of food supply we have a local high FAO food price
+
+
+
+
+
+
  
