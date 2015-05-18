@@ -7,7 +7,7 @@ Created on May 18, 2015
 
 import json,sys,os, unicodedata,csv, glob
 from pytz import timezone
-from src.top import food_categories as fc
+from src import food_categories as fc
 from datetime import datetime
 
 
