@@ -8,7 +8,7 @@ Sofiane Abbar, Yelena Mejova, and Ingmar Weber.
 \bibitem{abbott2009}
 Philip~C. Abbott, Christopher Hurt, and Wallace~E. Tyner.
 \newblock {What's Driving Food Prices? March 2009 Update}.
-\newblock Issue Reports 48495, Farm Foundation, March 2009.
+\newblock Number 48495, March 2009.
 
 \bibitem{olt15}
 A.~Olteanu C. Castillo N. Diakopoulos~K. Aberer.
@@ -48,6 +48,11 @@ Pulse~Lab Jakarta.
 \newblock Mining indonesian tweets to understand food price crises.
 \newblock {\em Food and Agriculture}, 2013.
 
+\bibitem{Julian10}
+Sarah~Macnaughton Julian~Parfitt, Mark~Barthel.
+\newblock Food waste within food supply chains: quantification and potential
+  for change to 2050.
+
 \bibitem{Lehmann2012}
 Janette Lehmann, Bruno Gon\c{c}alves, Jos{\'e}~J. Ramasco, and Ciro Cattuto.
 \newblock Dynamical classes of collective attention in twitter.
@@ -71,8 +76,7 @@ K.~{LUND} and C.~{BURGESS}.
 
 \bibitem{fao2008}
 EC~FAO Food~Security Programme.
-\newblock An introduction to the basic concepts of food security.
-\newblock {\em EC - FAO Food Security Programme}, 2008.
+\newblock An introduction to the basic concepts of food security, 2008.
 
 \bibitem{RePEc}
 Pavel Savor and Mungo Wilson.
@@ -90,7 +94,7 @@ Stanford.
 Getaw Tadesse, Bernardina Algieri, Matthias Kalkuhl, and Joachim von Braun.
 \newblock Drivers and triggers of international food price spikes and
   volatility.
-\newblock {\em Food Policy}, 47(0):117 -- 128, 2014.
+\newblock Number~0, pages 117 -- 128, 2014.
 
 \bibitem{sent10}
 Mike Thelwall, Kevan Buckley, Georgios Paltoglou, Di~Cai, and Arvid Kappas.

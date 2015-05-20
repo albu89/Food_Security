@@ -260,7 +260,11 @@ With decreasing similarityt HAL highlighted some topics indirectly associated wi
 & & \\
 \hline
 & & \\
-\pbox{1.3cm}{$Food $ \\Poverty }  & \pbox{10.7cm}{\emph{poverty},  appetite (h), rich (h), shelter (h), homeless (h), shortage (h), control (h), provide (h), feed (h), needy (h), edible (h), nutrition (h), donate (h), expensive (h), economy (h), thought (h), budget (h), poor (h), service (h), supplies (h), crisis (h), demand (h), poverty (h), pantry (h), cravings (h), agricultural, resources, assistance, insecurity, storage (h), issue (h), bank (h), safety (h), prices (h), funding (h), health (h), drug (h), challenges (h), distribution (h), helping (h), government (h), affected (h), scraps (h), fair (h), children (h), support (h), waste (h), program (h), crops (h), restrictions (h), parcels (h), industry (h), healthcare (h), culture (h), catering (h), delicious (h), writer (h), sustainability (h), revolution (h),inflation (h), policy (h), daily (h), bankruptcy (t), debt (t), deficit (t), difficulty (t), famine (t), hardship (t), lack (t), scarcity (t), shortage (t), starvation (t),underdevelopment (t),abundance (t), affluence (t), bounty (t), myriad (t),plenty (t), plethora (t), profusion (t), prosperity (t), riches (t), wealth (t)  }  \\
+\pbox{1.3cm}{$Food $ \\Poverty }  & \pbox{10.7cm}{\emph{poverty},  appetite (h), rich (h), shelter (h), homeless (h), shortage (h), control (h), provide (h), feed (h), needy (h), edible (h), nutrition (h), donate (h), 
+expensive (h), economy (h), thought (h), budget (h), poor (h), service (h), supplies (h), crisis (h), demand (h), poverty (h), pantry (h), cravings (h),
+ agricultural, resources, assistance, insecurity, storage (h), issue (h), bank (h), safety (h), prices (h), funding (h), health (h), drug (h), challenges (h), distribution (h), helping (h), government (h), affected (h), scraps (h), fair (h), children (h), support (h), waste (h), program (h), crops (h), restrictions (h), parcels (h), industry (h), healthcare (h), culture (h), catering (h), delicious (h), writer (h), sustainability (h), revolution (h),inflation (h), policy (h), daily (h), bankruptcy (t), debt (t), deficit (t), difficulty (t), famine (t), hardship (t), lack (t), scarcity (t), shortage (t), starvation (t),underdevelopment (t),
+abundance (t), affluence (t), bounty (t), myriad (t),plenty (t), plethora (t), profusion (t), prosperity (t), riches (t), wealth (t)
+  }  \\
 & & \\
 \hline
 & & \\
@@ -317,26 +321,26 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 
 \subsection {User Distribution}
 
-Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user slightly deviates from a normal power law. A lot of individuals  send only a few tweets about the subject and only a small number of users transmit a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is very flat. About 40 \% of the tweets are caused by 20 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
+Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user deviates from a normal power law. A lot of individuals  send only a few tweets about the subject and only a small number of users transmit a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is almost linear. About 50 \% of the tweets are caused by 50 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
 
 \begin{figure}[ht]
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/linear_user}
+                \includegraphics[width=\textwidth]{img/anal/linear_user_1}
                 \caption{Linear: Number of Tweets per User}
                 \label{fig:u_linear}
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/loglog_users_tweets}
+                \includegraphics[width=\textwidth]{img/anal/loglog_users_tweets_1}
                 \caption{LogLog: Number of Tweets per User}
                 \label{fig:u_log}
         \end{subfigure}
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
       \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/no_power}
+                \includegraphics[width=\textwidth]{img/anal/no_power_1}
                 \caption{Distribution: Number of Tweets per User}
                 \label{fig:no_power}
         \end{subfigure}
@@ -349,21 +353,21 @@ Twitter is a social network and in general such networks follow a power law dist
 
 \subsection {Food Term Distribution}
 
-Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 2.6 M tweets we raised the entire volume by 110\% to a total of 5.6 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in orange the added volume alongside the initial size in blue. The most popular food terms on twitter are general terms such as food, dinner and lunch. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{others} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords has the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% Vegetable Oils. Interestingly the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and empty	{chocolate} which caused alone 70 \% of the sugar related tweets. 
+Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 13.7 M tweets we raised the entire volume by 110\% to a total of 29.9 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in orange the added volume alongside the initial size in blue. The most popular food terms on twitter are general terms such as food, dinner and lunch. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{others} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords has the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% Vegetable Oils. Interestingly the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and empty	{chocolate} which caused alone 70 \% of the sugar related tweets. 
 
 
 
 \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/exp_dist}
+                \includegraphics[width=\textwidth]{img/anal/exp_dist_1}
                 \caption{Overall Distribution}
                 \label{fig:world}
         \end{subfigure}%
         ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/exp_dist_cat}
+                \includegraphics[width=\textwidth]{img/anal/exp_dist_cat_1}
                 \caption{Category Distribution}
                 \label{fig:cat}
         \end{subfigure}
@@ -467,7 +471,7 @@ A smilier correlation analysis has been made in \cite{ungp2013}. They however us
 \end{center}
 
 
- \section{Anomalie Detection}
+ \section{Conversation Drivers}
 
 
 Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations.  
@@ -499,8 +503,26 @@ The discussion centred around food price showed 147 events, tweet activities for
 
 \subsection{Social Attention}
 
-For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent event (boost) where the discussion about food supply is followed by a boost in food price. 
 
+To gain an overview about the social attention of our food topics we plotted the relative distribution of food supply, price poverty and needs in Figure \ref{fig:topic_dist}. By far the highest attention is attributed to food needs with around 70 \% , poverty and supply receive a similar attention distribution with price taking the smallest interest among twitter users. 
+
+For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent event (boost) where the discussion about food supply is followed by a boost in food price.  Both of the peaks show abnormal activities for around 9 days before and after the most prominent peak.  The discussion for the price category was driven by a popular Korean pop band \emph{T-ara } and the high volume was causesd by the tweet \emph{[T?R? - Sugar Free] SBSPopAsiaTARA  }. The music video was released on the 10th of September which caused the first anomaly. It reaches the global maximum on the 16th when they  released an announcement about collaborating with a famous european DJ  \footnote{http://www.kpopstarz.com/articles/112632/20140916/t-ara-sugar-free.htm}. In the boost from conversations about food supply we observed \emph {coffee, get, fat} to be the most popular terms. A health a lifestyle promoting coffee as a beverage to lose weight caused a high amount of retweets. We see that both boosts contain misleading indicators about pop culture and health \& life style. 
+
+The topics needs and poverty do not exhibit any extreme outliers and similar to price and supply can be categriesd according to Lehman et al's. framework as of continues interest. 
+
+
+
+
+
+ The spikes do not show any obvious seasonal patterns indicating that the conversation is very much event driven.
+ 
+ To investigate the content further we counted the top 50 terms of that day, ignoring stop words. The most frequent terms for the prominent price peak are \emph{Sugar, Free, sbspopasiatara}.
+
+Further observation on the other dominant pattern showed more promising indicators. In topic catered around supply and price we detected national holidays such as Thanks giving on the 22h of November 2012. Protests regarding food waste were found on the 16h of October 2013. 
+
+Supply: 
+Thanks giving: 2012
+October 16: 
 
 
 
@@ -509,73 +531,146 @@ For price and supply we observe a similar temporal pattern. Both show a continuo
          \includegraphics[width=1\textwidth ]{img/anal/topic_dist}
               
         \caption{Topic Distribution - Food Security}
-        \label{fig:oil_heat}
+        \label{fig:topic_dist}
 \end{figure}
 
  
-\subsection{Event Identification [Not finished]}
+\subsection{Peak Identification}
+
+As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to Food Security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to exogenous or conditional causes. For this analysis we consider discussion around food supply, price and poverty. Food price and supply are by the definition of \cite{Tadesse2014} exogenous shocks and poverty is a conditional indicator. We excluded needs because it does not fit into the taxonomy. 
+
+To identify what topics spikes the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all tweets occurring during a peak. We then manually investigate the tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more then two events caused the peak we marked it as ambiguous.  
+
+\subsection{Event Annotation}
+
+We annotate each peak according to the definitions given bellow. Some events show causal relationships i.e. a breach in the food supply can be a cause for riots and political unrests. In such cases we annotated both. 
+
+\textbf{Food Supply - Exogenous:} Events entered around the food supply chain are considered including indicators of food waste. We define Food Loss and Food waste according to Parfitt et al. 's \cite{Julian10} definition. Food Waste refers to Food Loss that occurs at the retailers and consumers side where as the term Food Loss refers to the decrease in food volume that leads to edible food for consumption. 
+
+\textbf{Economic Access - Exogenous:} We define Economic Access according to FAO's \cite{fao2008} definition. Price, expenditure or market indicators fall into this domain. 
+
+\textbf{Government - Conditional:} The classification Government takes topics such as legislation and policy changes into account. An example is restrictive trade policies such as export or import restrictions  \cite{Tadesse2014}. 
+
+\textbf{Stability - Conditional:} Poverty,  political unrest and topics concerning extreme weather \cite{fao2008} fall into this classification. Factors that cause insecurity such as riots or severe draughts are considered. 
+
+\textbf{Unrelated:} Viral jokes,  advertisements, health \& lifestyle are example topics that we consider unrelated. 
+
+
+Our findings showed that for price only 7 (8.4 \%) out of 83 fell into the above given categories, for  supply 4 (4.3 \%) out of 92 and poverty 13 ( 13 \%) out of 100. 
 
 
 
-The time series data measured in volume per
+\subsection{Results}
+
+The distribution of the annotations is visualised in Figure \ref{fig:annotation_dist}. Surprisingly the conversations mostly peaked outside their domain, i.e. the price conversation was more intrinsic for supply indicators then for economic access indicators. We now give examples to each annotation topic of events that we classified as Food Security relevant to illustrate what kind of discussion caused a peak . Topics that caught the social media audience were especially safety threats to the food supply. In April 2012 a newly discovered case of cow disease threatened the safety of america's beef supply and heavy import restrictions were imposed from major beef importers such as South Korea \footnote{http://www.theguardian.com/science/2012/apr/25/mad-cow-disease-us-mutation}. In 2014 sharp rising food prices caused a lot of discussion on twitter. Wholesale prices were suffering due to a severe drought in the previous year, which thinned the cattle herds and increased consumer prices \footnote{http://www.cnbc.com/id/101588110}. As a consequence there was also a sharp increase in discussion around food banks. The UK observed a 51 \% increase in food bank users \footnote{http://www.bbc.com/news/business-27032642}. Most discussions around legislation changes were focused on Food Bank reforms. A high amount of attention can be attributed to the UK rejecting the European Union food bank funding. The population heavily criticised the British government to deny EU fund to be spent on the poor \footnote{http://www.theguardian.com/society/2013/dec/17/government-under-fire-eu-funding-food-banks}. Lastly, discussion around stability were usually headlined by extreme poverty causing riots. A food program that provided free lunch to underprivileged school kids used poisened crops in their dishes. 20 children died as a consequence causing riots and closed shops all over the city. \footnote{http://www.usatoday.com/story/news/world/2013/07/17/india-children-deaths/2523727/}
 
 
-Burst: 
-
-Investigatng 16092014
-
-Food prices drop to four-year low ? UN agency 
-
-\footnote{http://www.un.org/apps/news/story.asp}
-
-
-Peak ing at this news article 
-16/09/2014: UK Inflation rate down to 1.5 \% \footnote{http://www.bbc.co.uk/news/business-29218855}
-
-investigating 12 and 13.08.14 (exact match)
-
-Oil prices dip to nine-month low: \% \footnote{Oil prices dip to nine-month low}
-
-
- 
- 25/08/12  (exact match)
- 
- UPDATE 1-USDA raises beef, pork prices forecasts on drought, disease
- 
- 
- 
- Food supply: 
- 
- 
-
-exact match(2012/02/23/)
-Bill Gates Calls for More Accountability on Food Programs
- \footnote{http://green.blogs.nytimes.com/2012/02/23/bill-gates-calls-for-more-accountability-on-food-programs/}
- 
- exact match(05/10/12)
- \footnote{http://www.cnbc.com/id/49301763}
- 
- Food Is the New Oil and Land the New Gold: Lester Brown
- 
- 
-21/11/2013
-1.7 million in Pa. brace for food stamp reform
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/anal/annotation_dist}
+              
+        \caption{Annotation Distribution - Relevant to Food Security}
+        \label{fig:annotation_dist}
+\end{figure}
 
 
 
-%\footnote{http://triblive.com/state/pennsylvania/4741187-74/stamps-stamp-bill#axzz3Zj6QIUuL}
- 
- 
-17/03/2014
 
-Califorinian drought affects food supply	
+\chapter {Model Building}
 
- \footnote{http://www.latimes.com/food/dailydish/la-dd-california-drought-affecting-food-20140311-story.html}
- 
+\section{Motivating a Fuzzy Approach}
 
 
-At peak of food supply we have a local high FAO food price
+Fuzzy logic based modeling techniques are appealing because of their interpretability and potential to address a broad spectrum of problems. In particular, fuzzy inference systems exhibit a combined description and prediction capability a s a consequence of their rule based structure [27, 49]
 
+Non linear system better results in time series predicitons. 
+
+M. De Choudhury, H. Sundaram, A. John, and D. D. Seligmann, ?Can blog communication 
+20
+dynamics be correlated with stock market activity?,? in Proceedings of the nineteenth ACM 
+
+
+Commodities are traded over 5 days. The markets are closed during weekends and national holidays. Given the sparsity of the datasets available for commodities we were forced to hand selected quotes from different markets. We observed that some of them had different closing days i.e. some markets considered a day a holiday, some others not. For wheat, corn and cattle we removed the 12/11/12 and the 8/10/12 which are the veteran day and the columbus day respectively. We preprocessed the time series of the tweets to exclude weekends and national holidays to match the time series of the commodities. The period considered is the 03/01/2012 - 26/09/2014. 
+
+
+
+$http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
+
+
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}| p{3cm}|  }
+ \hline
+ \multicolumn{5}{|c|}{Benchmark Prediction - $RMSE_{Test}$ $(RMSE_{Train}$) } \\
+ \hline
+ Horizon & 7 Days & 14 Days & 30 Days  & 45 Days  \\
+
+ \hline
+  \multicolumn{5}{|c|}{Wheat} \\
+  \hline
+ 4 Days & 0.0576  (0.0495)  & 0.0485 (0.0455)   & 0.0456 (0.0434) & 0.1929  (0.0381) \\
+ 7 Days &0.0639 (0.0633) & 0.0689 (0.0593) &   0.0704 (0.0573) & 0.3387  (0.0464)\\
+ 14 Days & 0.1185 (0.0911)  & 0.1147  (0.0877 ) & 0.1116 (0.0824) & 1.0089 (0.0486)  \\
+ \hline
+  \multicolumn{5}{|c|}{Beef} \\
+  \hline
+   4 Days & 0.0514 (0.0240)  & 0.0385 (0.0241)   & 0.0477 (0.0221) & $1.03 x 10^5$ (2.77) \\
+ 7 Days & 0.0577 (0.0315) & 0.0538 (0.0307) &   0.0638 ( 0.0282) & 0.0992  (0.0097)\\
+ 14 Days & 0.0816 (0.0418)  & 0.0979  (0.0391 ) & 0.0666 (0.0366) & 0.0664 (0.0144)  \\
+   \hline
+  \multicolumn{5}{|c|}{Milk} \\
+  \hline
+    4 Days & 0.0587 (0.0439)  &  0.0553 (0.0445)   & 0.0448 (0.0423) & 0.0667  (0.0344) \\
+ 7 Days & 0.0824 (0.0583) &  0.0645 (0.0574) &   0.0599 ( 0.0568) & 0.1128  (0.0446)\\
+ 14 Days & 0.1136  (0.0808)  & 0.1053  (0.0779 ) & 0.0989 (0.0717) & 0.2628 (0.0654)  \\
+  
+ \hline
+\end{tabular}
+
+
+
+
+\subsection{Curse of of Dimensionality}
+
+For Fuzzy interference systems there are generally three types of input space partitionings. We can classify them as grid, true and scattered portionin. We first applied grid pertaining which generates rules by enumerating all possible combinations of membership functions. However for three membership functions and x features this leads to $3^x$ possible combinations. Instead of enumerating all possible rules we used a sub clustering method to provide a fast, one pas method to take input-output training data and generate a Fuzzy Interference System. 
+
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/model/bench_mark}
+              
+        \caption{50 \% train / 50 \% test }
+        \label{fig:annotation_dist}
+\end{figure}
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/model/bench_mark_70_30}
+              
+        \caption{70 \% train / 30 \% test }
+        \label{fig:annotation_dist}
+\end{figure}
+
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/model/bench_mark_85_15}
+              
+        \caption{85 \% train / 15 \% test }
+        \label{fig:annotation_dist}
+\end{figure}
+
+
+
+
+Data Source: 
+
+Cattle \footnote{$https://www.quandl.com/data/OFDP/FUTURE_DA1-CME-Class-III-Milk-Futures-Continuous-Contract-1-DA1-Front-Month$}
+Milk \footnote{$https://www.quandl.com/data/WSJ/MILK-Milk-Non-Fat-Dry-Chicago$}
+
+Corn \footnote{$https://www.quandl.com/data/OFDP/FUTURE_C1-CBOT-Corn-Futures-Continuous-Contract-1-C1-Front-Month$}
+Wheat \footnote{$https://www.quandl.com/data/OFDP/FUTURE_W1-CBOT-Wheat-Futures-Continuous-Contract-1-W1-Front-Month$}
 
 
 

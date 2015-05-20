@@ -23,15 +23,20 @@
 \contentsline {subsection}{\numberline {3.1.2}Food Term Distribution}{13}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Price Correlation}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Discussion}{17}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Anomalie Detection}{18}{section.3.3}
+\contentsline {section}{\numberline {3.3}Conversation Drivers}{18}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Methodology}{18}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Social Attention}{19}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Event Identification [Not finished]}{20}{subsection.3.3.3}
-\contentsline {appendix}{\chapternumberline {A}Data}{21}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{21}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{22}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{22}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{22}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{23}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{24}{subsection.A.2.4}
-\contentsline {chapter}{Bibliography}{25}{section*.17}
+\contentsline {subsection}{\numberline {3.3.3}Peak Identification}{20}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Event Annotation}{21}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Results}{21}{subsection.3.3.5}
+\contentsline {chapter}{\chapternumberline {4}Model Building}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Motivating a Fuzzy Approach}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Curse of of Dimensionality}{24}{subsection.4.1.1}
+\contentsline {appendix}{\chapternumberline {A}Data}{29}{appendix.A}
+\contentsline {section}{\numberline {A.1}Processing and Storage}{29}{section.A.1}
+\contentsline {section}{\numberline {A.2}Crowd Flower}{30}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{30}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{30}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{31}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{32}{subsection.A.2.4}
+\contentsline {chapter}{Bibliography}{33}{section*.21}
