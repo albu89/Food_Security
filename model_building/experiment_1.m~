@@ -4,7 +4,7 @@ filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
 
 %Set number of features and define how far into the future prediction
 n_feature = 31;
-pred = 6; 
+pred = 14; 
 
 
 X = csvread( filename_x, 1,1);
@@ -116,7 +116,11 @@ chk_RMSE = norm( fuzout_chk - out_dat_chk) / sqrt(length(fuzout_chk) );
 
 ind = i_start : i_end; 
 
-plot(ind, [Y_N(ind) anfis_output]);
+plot(ind, [Y_N(1:a) fuzout_trn ]);
+hold on; 
+plot(a+1:a+b, [Y_N(a+1:a+b) fuzout_chk])
+hold off
+
 xlabel('Time (sec)','fontsize',10);
 %dateFormat = t;
 dateaxis('x', 12, '03/03/1999') 
