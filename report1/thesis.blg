@@ -3,52 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: refs.bib
-Warning--entry type for "stanford2011" isn't style-file defined
---line 114 of file refs.bib
-You're missing an entry type---line 128 of file refs.bib
- : @
- :  {hutton14,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "hutton14"
-You've used 13 entries,
+A bad cross reference---entry "Jang91"
+refers to entry "conf/aaai/1991-2", which doesn't exist
+Warning--I didn't find a database entry for "conf/aaai/1991-2"
+Warning--empty booktitle in abbott2009
+Warning--there's a number but no series in abbott2009
+Warning--empty journal in hutton14
+Warning--empty booktitle in Julian10
+Warning--empty year in Julian10
+Warning--empty journal in stanford2011
+Warning--empty booktitle in Tadesse2014
+Warning--there's a number but no series in Tadesse2014
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            574 strings with 5925 characters,
-and the built_in function-call counts, 3841 in all, are:
-= -- 367
-> -- 184
-< -- 1
-+ -- 77
-- -- 60
-* -- 248
-:= -- 649
-add.period$ -- 35
-call.type$ -- 13
-change.case$ -- 69
+            669 strings with 8848 characters,
+and the built_in function-call counts, 8525 in all, are:
+= -- 827
+> -- 383
+< -- 8
++ -- 156
+- -- 122
+* -- 515
+:= -- 1403
+add.period$ -- 81
+call.type$ -- 28
+change.case$ -- 141
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 132
-empty$ -- 312
-format.name$ -- 60
-if$ -- 795
+cite$ -- 36
+duplicate$ -- 338
+empty$ -- 707
+format.name$ -- 122
+if$ -- 1818
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 8
-newline$ -- 63
-num.names$ -- 26
-pop$ -- 84
+int.to.str$ -- 28
+missing$ -- 21
+newline$ -- 134
+num.names$ -- 59
+pop$ -- 189
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 116
 quote$ -- 0
-skip$ -- 112
+skip$ -- 270
 stack$ -- 0
-substring$ -- 206
-swap$ -- 22
-text.length$ -- 1
+substring$ -- 428
+swap$ -- 74
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
-warning$ -- 0
-while$ -- 36
-width$ -- 15
-write$ -- 131
+type$ -- 107
+warning$ -- 8
+while$ -- 79
+width$ -- 30
+write$ -- 288
 (There was 1 error message)

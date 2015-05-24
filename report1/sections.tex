@@ -578,7 +578,27 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
 
 \chapter {Model Building}
 
-\section{Motivating a Fuzzy Approach}
+\section{A fuzzy approach for Time Series Modeling}
+
+Compared to other approaches, Fuzzy Logic has seen only a few applications in forcasting despite it's promising results. We hence want to motivate the use of this technique in further detail. 
+
+Fuzzy Logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy Logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathmatical models.\cite{Jang91}.  
+In some areas such as Time Series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us understand the determinants of food security risks in social media. 
+
+\section{}
+
+We now describe the network like structure of ANFIS
+
+\subsection {Fuzzy Variables }
+
+Zadeh defined fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects, which fall into a specific wavelength, scope or how it?s commonly labelled a defined fuzzy set. Red or blue describe the object?s colour, but it?s by no means a precise definition. By applying a membership function of the corresponding fuzzy set (red or blue) we can precisely define the colour. With regard to our Fuzzy Logic system we will distinguish between Input variable and Output variable. The Output variable or Crisp Value depends on the Input value?s corresponding membership function and a decision matrix, which we will both describe in more detail in the following sections.
+
+
+\subsection{Fuzzy Sets}
+
+Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the membership function not only give 0 or 1, but can also give values between 0 and 1. The process of changing a real scalar value into a fuzzy value is called fuzzification.
+
+
 
 
 Fuzzy logic based modeling techniques are appealing because of their interpretability and potential to address a broad spectrum of problems. In particular, fuzzy inference systems exhibit a combined description and prediction capability a s a consequence of their rule based structure [27, 49]
@@ -590,11 +610,54 @@ M. De Choudhury, H. Sundaram, A. John, and D. D. Seligmann, ?Can blog communicat
 dynamics be correlated with stock market activity?,? in Proceedings of the nineteenth ACM 
 
 
-Commodities are traded over 5 days. The markets are closed during weekends and national holidays. Given the sparsity of the datasets available for commodities we were forced to hand selected quotes from different markets. We observed that some of them had different closing days i.e. some markets considered a day a holiday, some others not. For wheat, corn and cattle we removed the 12/11/12 and the 8/10/12 which are the veteran day and the columbus day respectively. We preprocessed the time series of the tweets to exclude weekends and national holidays to match the time series of the commodities. The period considered is the 03/01/2012 - 26/09/2014. 
-
 
 
 $http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
+
+\section{Data Source and Data Preprocessing}
+
+Before feeding the data to the Fuzzy Interfere System we analysed and cleaned the data. The representation of the data is of great importance in order to assist ANFIS in learning the relevant patterns. In a first instance we had to mach both the time series of the twitter data with the time series of the price data. The markets are closed during weekends and national holidays, hence we had to remove such instances from the twitter data. Given the sparsity of the datasets available for commodities we were forced to hand selected quotes from different markets. We observed that some of them had different closing days i.e. some markets considered a day a holiday, some others not. For wheat and cattle we removed the 12/11/12 and the 8/10/12 which are the veteran day and the columbus day respectively in order to match the price data of milk.  Secondly, we proceeded to interpolate zero values. Some of the price data-sets showed values of zero on days which were neither weekends nor holidays. Similarly, the twitter archive did not contain  twitter data for some time periods. We linearly interpolated such missing values by solving and approximation to the partial differential equations \cite{john2012}.  Fuzzy Interference Systems expect an input of a unit interval i.e. between 0 and 1. We hence normalised the data as illustrated in Equation 4.1. Min and Max are the lower and upper bounds of data set where $\alpha$ is a small constant we introduced to avoid zero divisions. It is is generally advised to normalise the data else the training algorithm might loose its sensitivity towards smaller scaled features. 
+
+\begin{equation} \label{eq:solve}
+\overline{ y } = \frac{x - min}{max - min}  + \alpha \end{equation}
+
+
+Lastly we performed a scaling of the data which is in accordance of our objective, namely to be more sensitive to long-term than to short-term fluctuations. As we can see in Figure 4.1 a) there are some extreme price increases and drops. By applying the Hodrick-Prescott decomposition \cite{edward81} filter we receive a distribution which is more normal by avoiding such outliers. Additionally the Figure 4.1 illustrates nicely the characteristics of commodities, namely that it's mostly driven by small price changes. 
+
+
+
+
+
+
+\begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/p_increase_n}
+                \caption{Price Increase Distribution without Scailing}
+                \label{fig:u_linear}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/p_increase_w}
+                \caption{Price Increase Distribution with Scailing}
+                \label{fig:u_log}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+      
+        \caption{Volume of Tweets per Keyword and per Category}\label{fig:distribution}
+\end{figure}
+
+
+
+
+
+\section{Training the Model}
+
+For training ant testing our model we choose the time period 03.01.2012 - 26.09.2014. We thought of numerous ways to test and train our model. Different approaches have been suggested by Ibeling Kaastra \cite{Kaastra96designinga}. Most commonly the data is split into a train set, validation set and lastly a test set. The model is trained once in a batch fashion and used for all future predictions. Such an approach can be dangerous particularly when one considers historical data reaching far into the past. Market conditions might have been different then and might not apply for future predictions. Choosing a particular time frame can be a bad idea as well. Consider the training data only exhibiting an upwards trend the model will then not generalise well for declining prices. Yao et al. \cite{Yao00acase} proposed to use statistical methods to investigate the best time period for training the network. However to make any statistically significant claims we need more then 2.5 years of historical data. Lastly Ibeling Kaastra describes a method called the walk-forward or sliding window approach. This approach involves creating overlapping sets of train and test data. Each set is moved forward through the time series to test the robustness of the model. This framework addresses the concern raised regarding including data form far in the past that might not reflect the current market conditions and is widely used for commodity predictions. We decided to apply a variant of the sliding window approach and train or model in an online fashion. Given the limited amount of data we choose not to exclude any data from future prediction, however to be able to adapt to new market conditions we increase the training and validation window as we move along the time line. To achieve a good generalisation the proportion of train and validation set always remain the same as we add additional data. We used the first 50 \% of the data to train the model. From that set we excluded 15 \% for validation purposes. These values were obtained empirically. 
+
 
 
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}| p{3cm}|  }
@@ -623,6 +686,38 @@ $http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This
  14 Days & 0.1136  (0.0808)  & 0.1053  (0.0779 ) & 0.0989 (0.0717) & 0.2628 (0.0654)  \\
   
  \hline
+\end{tabular}
+
+
+
+
+\begin{tabular}{ |p{3cm}|p{8cm}|p{3cm}|  }
+ \hline
+ \multicolumn{3}{|c|}{Features } \\
+ \hline
+ Feature Type & Feature Example & Reference   \\
+\hline
+Attention & \#Commodity  & give ref \\
+\hline
+Context & \#Price f. Commodity   & give re \\
+		& \#Supply f. Commodity   & give ref \\
+		& \#Poverty f. Commodity   & give ref \\
+		& \#Need f. Commodity   & give ref \\
+
+
+
+  \hline
+   Sentiment Ratio & \#positive : \#negative tweets  & give ref\\
+      			     & \#positive : \#(positive + negative) tweets   &  give ref\\
+ 			     & \#negative: \#(positive + negative) tweets &  give ref  \\
+			     & \#neutral : \#(positive + negative) tweets & give ref  \\
+			     & \#(positive+negative) : \#all tweets & give  \\			     
+			     & \#neutral : \#all tweets & give ref\\
+                          
+   \hline
+   
+
+
 \end{tabular}
 
 

@@ -29,13 +29,34 @@ David~R. Bild, Yue Liu, Robert~P. Dick, Z.~Morley Mao, and Dan~S. Wallach.
   of the retweet graph.
 \newblock {\em ACM Trans. Internet Technol.}, 15(1):4:1--4:24, March 2015.
 
+\bibitem{box90}
+George Edward~Pelham Box and Gwilym Jenkins.
+\newblock {\em Time Series Analysis, Forecasting and Control}.
+\newblock Holden-Day, Incorporated, 1990.
+
 \bibitem{burgess98}
 Curt Burgess and Kevin Lund.
 \newblock The dynamics of meaning in memory, 1998.
 
+\bibitem{chap04}
+Christopher Chatfield.
+\newblock {\em The analysis of time series : an introduction}.
+\newblock Texts in statistical science. Chapman \& Hall/CRC, Boca Raton (Fl.),
+  2004.
+
+\bibitem{john2012}
+John D’Errico.
+\newblock Interpolates and extrapolates nan elements in a 2d array, 2012.
+
 \bibitem{fao13}
 Food and Agriculture~Organisation of~the United~Nations.
 \newblock Faos food price index revisited, 2013.
+
+\bibitem{edward81}
+Robert Hodrick and Edward Prescott.
+\newblock Post-war u.s. business cycles: An empirical investigation.
+\newblock Discussion Papers 451, Northwestern University, Center for
+  Mathematical Studies in Economics and Management Science, 1981.
 
 \bibitem{hutton14}
 C.~J. Hutto and Eric Gilbert.
@@ -48,10 +69,22 @@ Pulse~Lab Jakarta.
 \newblock Mining indonesian tweets to understand food price crises.
 \newblock {\em Food and Agriculture}, 2013.
 
+\bibitem{Jang91}
+Jyh-Shing~Roger Jang.
+\newblock Fuzzy modeling using generalized neural networks and kalman filter
+  algorithm.
+\newblock In Thomas~L. Dean and Kathleen McKeown, editors, {\em AAAI}, pages
+  762--767. AAAI Press / The MIT Press, 1991.
+
 \bibitem{Julian10}
 Sarah~Macnaughton Julian~Parfitt, Mark~Barthel.
 \newblock Food waste within food supply chains: quantification and potential
   for change to 2050.
+
+\bibitem{Kaastra96designinga}
+Iebeling Kaastra and Milton Boyd.
+\newblock Designing a neural network for forecasting financial and economic
+  time series, 1996.
 
 \bibitem{Lehmann2012}
 Janette Lehmann, Bruno Gon\c{c}alves, Jos{\'e}~J. Ramasco, and Ciro Cattuto.
@@ -102,10 +135,28 @@ Mike Thelwall, Kevan Buckley, Georgios Paltoglou, Di~Cai, and Arvid Kappas.
 \newblock {\em J. Am. Soc. Inf. Sci. Technol.}, 61(12):2544--2558, December
   2010.
 
+\bibitem{neil93}
+Andreas~S. Weigend and Neil~A. Gershenfeld, editors.
+\newblock {\em Time series prediction : forecasting the future and
+  understanding the past : proceedings of the {NATO} advanced research workshop
+  on comparative Time series analysis held in Santa Fe, New Mexico, May, 1992},
+  Santa Fe Institute studies in the sciences of complexity. Proceedings
+  volumes, 1992, Santa Fe, 1993. Addison-Wesley.
+
 \bibitem{Whittaker:1998}
 Steve Whittaker, Loren Terveen, Will Hill, and Lynn Cherny.
 \newblock The dynamics of mass interaction.
 \newblock In {\em Proceedings of the 1998 ACM Conference on Computer Supported
   Cooperative Work}, CSCW '98, pages 257--264, New York, NY, USA, 1998. ACM.
+
+\bibitem{Yao00acase}
+Jingtao Yao and Chew~Lim Tan.
+\newblock A case study on using neural networks to perform technical
+  forecasting of forex, 2000.
+
+\bibitem{Zadeh65}
+{L.A.} Zadeh.
+\newblock Fuzzy sets.
+\newblock {\em Information Control}, 8:338--353, 1965.
 
 \end{thebibliography}
