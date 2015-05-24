@@ -1,0 +1,22 @@
+
+filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
+
+Y = csvread(filename_y,1,4, [1 4 689 4]);
+
+
+
+
+%Normalize [0 1]
+maxVec = max(Y);
+minVec = min(Y);
+Y_T  = (Y - min(Y)) / ( max(Y) - min(Y) ); 
+
+hist(
+
+xlabel('Percent of the twitter users', 'fontweight','bold','fontsize',16)
+ylabel('Amount of Tweets','fontweight','bold','fontsize',16)
+
+
+[Y_N, gnpcycle16] = hpfilter(Y_T,1600);
+
+

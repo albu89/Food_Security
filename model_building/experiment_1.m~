@@ -3,13 +3,14 @@ filename_x = '/Users/alexanderbusser/Food_Security/features/wheat/wheat_daily_vo
 filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
 
 %Set number of features and define how far into the future prediction
-n_feature = 31;
-pred = 14; 
+n_feature = 70;
+pred = 10; 
 
 
 X = csvread( filename_x, 1,1);
-Y = csvread(filename_y,1,1, [1 1 689 1]);
+Y = csvread(filename_y,1,4, [1 4 689 4]);
 
+disp(Y)
 
 
 %Normalize [0 1]
@@ -45,10 +46,20 @@ chk_data(:, 5) =  Y_N(602:689);
 
 data = window(n_feature, pred, Y_N,i_start, i_end );
 
+%{
+
+for t=i_start:i_end,
+    disp(t)
+    test(t-(i_start - 1),:) = [Y_N(t-18) Y_N(t-12) Y_N(t-6) Y_N(t) Y_N(t+6)];
+end
+
+%}
+
+
 %trn_data = zeros(585, n_feature + 1);
 %chk_data = zeros(104, n_feature + 1);
 
-%%%%%%%%%%%%%%%%%%%%%Create Train and Test Set 85 % 15 %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Create Train and Test Set 85 % 15 %%%%%%%%%%%%%%%
 
 
 
@@ -65,7 +76,7 @@ chk_data = data(a+1:a+b,:);
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%Generate FIS Matrix%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% Generate FIS Matrix %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 in_dat = trn_data(:,1:n_feature);
 out_dat = trn_data(:,n_feature+1);
@@ -84,7 +95,7 @@ fismat = genfis2(in_dat,out_dat, 1);
 
 
 % error curves plot
-
+%{
 epoch_n = 10;
 plot([trn_error chk_error ]);
 hold on; plot([trn_error chk_error], 'o'); hold off;
@@ -92,7 +103,7 @@ xlabel('Epochs','fontsize',10);
 ylabel('RMSE (Root Mean Squared Error)','fontsize',10);
 title('Error Curves','fontsize',10);
 
-
+%}
 
 input = [trn_data(:, 1:n_feature); chk_data(:, 1:n_feature)];
 anfis_output = evalfis(input, fis);
@@ -101,14 +112,15 @@ anfis_output = evalfis(input, fis);
 %%%%%%%%%%%%%%%%%%%%% RMSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-fuzout_trn = evalfis(trn_data(:, 1:n_feature), fis);
-fuzout_chk = evalfis(chk_data(:, 1:n_feature),fis);
+fuzout_trn = evalfis(trn_data(:, 1:n_feature), chkFis);
+fuzout_chk = evalfis(chk_data(:, 1:n_feature),chkFis);  
 
 %trn_RMSE=norm(fuzout-datout)/sqrt(length(fuzout))
 trn_RMSE = norm( fuzout_trn - out_dat) / sqrt(length(fuzout_trn) );
 chk_RMSE = norm( fuzout_chk - out_dat_chk) / sqrt(length(fuzout_chk) );
 
-
+disp(trn_RMSE);
+disp(chk_RMSE);
 
 
 
@@ -116,11 +128,7 @@ chk_RMSE = norm( fuzout_chk - out_dat_chk) / sqrt(length(fuzout_chk) );
 
 ind = i_start : i_end; 
 
-plot(ind, [Y_N(1:a) fuzout_trn ]);
-hold on; 
-plot(a+1:a+b, [Y_N(a+1:a+b) fuzout_chk])
-hold off
-
+plot(ind, [Y_N(ind) anfis_output]);
 xlabel('Time (sec)','fontsize',10);
 %dateFormat = t;
 dateaxis('x', 12, '03/03/1999') 

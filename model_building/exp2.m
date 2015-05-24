@@ -3,20 +3,22 @@ filename_x = '/Users/alexanderbusser/Food_Security/features/wheat/wheat_daily_vo
 filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
 
 %Set number of features and define how far into the future prediction
-n_feature = 5;
-pred = 2; 
+n_feature = 1;
+pred = 4; 
 
 
 X = csvread( filename_x, 1,1);
 Y = csvread(filename_y,1,4, [1 4 689 4]);
 
-disp(Y)
+
 
 
 %Normalize [0 1]
 maxVec = max(Y);
 minVec = min(Y);
-Y_N  = (Y - min(Y)) / ( max(Y) - min(Y) ); 
+Y_T  = (Y - min(Y)) / ( max(Y) - min(Y) ); 
+[Y_N, gnpcycle16] = hpfilter(Y_T,1600);
+
 
 
 %Y_N = [0.1;0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 0.11; 0.22; 0.33; 0.44; 0.55; 0.66]; 
@@ -61,70 +63,52 @@ end
 
 %%%%%%%%%%%%%%%%%%%%% Create Train and Test Set 85 % 15 %%%%%%%%%%%%%%%
 
+x = floor(.5 * size(data));
+data_k = data(1:x,:);
+data_x = data_k;
+data_y = data(x+1:end,:);
+fuzout_bla = zeros(1)
+for i = 1:size(data_y)
+    
+    
+    
+    a = floor(.85 * size(data_x));
+    b = ceil(.15 *size(data_x)); 
+
+    trn_data = data_x(1:a,:);
+
+    chk_data = data_x(a+1:a+b,:);
+   
+    in_dat = trn_data(:,1:n_feature);
+    out_dat = trn_data(:,n_feature+1);
+
+    in_dat_chk = chk_data(:,1:n_feature);
+    out_dat_chk = chk_data(:,n_feature+1);
+
+    
+    
+    if mod(i-1,28) == 0
+        fismat = genfis2(in_dat,out_dat, 0.5);
+        [fis,trn_error,stepsize,chkFis,chk_error] = anfis([in_dat out_dat], fismat,[100],[],[in_dat_chk out_dat_chk], 1);
+     
+    end
+    
+    fuzout_train = evalfis([trn_data(:, 1:n_feature); chk_data(:, 1:n_feature)],chkFis);  
+    
+    
+    
+    fuzout_t =  evalfis(data_y(i,1:n_feature),chkFis);
 
 
-a = floor(.85 * size(data));
-b = ceil(.15 *size(data)); 
+    fuzout_bla = [fuzout_bla; fuzout_t]; 
 
-trn_data = data(1:a,:);
+    
+    data_x = [data_x; data_y(i,:)];
+    
+end
 
-chk_data = data(a+1:a+b,:);
-
-
-%chk_data = window(n_feature,1,chk);
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%% Generate FIS Matrix %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-in_dat = trn_data(:,1:n_feature);
-out_dat = trn_data(:,n_feature+1);
-
-in_dat_chk = chk_data(:,1:n_feature);
-out_dat_chk = chk_data(:,n_feature+1);
-
-
-fismat = genfis2(in_dat,out_dat, 1);
-
-[fis,trn_error,stepsize,chkFis,chk_error] = anfis([in_dat out_dat], fismat,[],[],[in_dat_chk out_dat_chk], 0);
-
-
-
-
-
-
-% error curves plot
-%{
-epoch_n = 10;
-plot([trn_error chk_error ]);
-hold on; plot([trn_error chk_error], 'o'); hold off;
-xlabel('Epochs','fontsize',10);
-ylabel('RMSE (Root Mean Squared Error)','fontsize',10);
-title('Error Curves','fontsize',10);
-
-%}
-
-input = [trn_data(:, 1:n_feature); chk_data(:, 1:n_feature)];
-anfis_output = evalfis(input, fis);
-
-
-%%%%%%%%%%%%%%%%%%%%% RMSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-fuzout_trn = evalfis(trn_data(:, 1:n_feature), chkFis);
-fuzout_chk = evalfis(chk_data(:, 1:n_feature),chkFis);  
-
-%trn_RMSE=norm(fuzout-datout)/sqrt(length(fuzout))
-trn_RMSE = norm( fuzout_trn - out_dat) / sqrt(length(fuzout_trn) );
-chk_RMSE = norm( fuzout_chk - out_dat_chk) / sqrt(length(fuzout_chk) );
-
-disp(trn_RMSE);
-disp(chk_RMSE);
-
-
-
-
+anfis_output = evalfis(data_k(:, 1:n_feature), chkFis);
+anfis_output = [anfis_output; fuzout_bla(2:end)]
 
 ind = i_start : i_end; 
 
@@ -134,10 +118,12 @@ xlabel('Time (sec)','fontsize',10);
 dateaxis('x', 12, '03/03/1999') 
 
 
-%Y_N(1:585) - anfis_output(1:585)
 
-%plot(t(index), x(index)- anfis_output);
+%trn_RMSE = norm( fuzout_trn - out_dat) / sqrt(length(fuzout_trn) );
+test_RMSE = norm( data_y(:,n_feature+1) - fuzout_bla(2:end)) / sqrt(length(fuzout_bla(2:end)) );
 
+%disp(trn_RMSE);
+disp(test_RMSE);
 
 
 

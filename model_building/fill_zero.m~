@@ -1,0 +1,12 @@
+function [ Y_n ] = fill_zero( Y )
+
+[a, b] = 
+
+
+for i = 1:size(Y)
+    disp('jello')
+   
+end
+
+disp('jello')
+Y_n = Y;
