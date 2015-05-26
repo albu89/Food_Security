@@ -578,6 +578,8 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
 
 \chapter {Model Building}
 
+Intro goes here ......
+
 \section{A fuzzy approach for Time Series Modeling}
 
 Compared to other approaches, Fuzzy Logic has seen only a few applications in forcasting despite it's promising results. We hence want to motivate the use of this technique in further detail. 
@@ -585,9 +587,9 @@ Compared to other approaches, Fuzzy Logic has seen only a few applications in fo
 Fuzzy Logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy Logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathmatical models.\cite{Jang91}.  
 In some areas such as Time Series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us understand the determinants of food security risks in social media. 
 
-\section{}
+\section{Adaptive Neuro Fuzzy Inference System }
 
-We now describe the network like structure of ANFIS
+This subsection presents briefly the concept of an Adaptive Neuro Fuzzy Inference System (ANFIS). Before we commence with explaining the interworking of the network we present some basic terminologies and concepts of Fuzzy Logic. First, we explain the basics of Fuzzy variables and Fuzzy Sets. Then  we explain how Fuzzy Interference is performed traditionally before lastly deriving a neural network with an underlining Fuzzy Interference System. 
 
 \subsection {Fuzzy Variables }
 
@@ -596,23 +598,64 @@ Zadeh defined fuzzy variables as attributes that distinguish between elements of
 
 \subsection{Fuzzy Sets}
 
-Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the membership function not only give 0 or 1, but can also give values between 0 and 1. The process of changing a real scalar value into a fuzzy value is called fuzzification.
+Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the element can take any value between 0 and 1. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use Gaussian membership function in Equation 4.1 as they are differentiable and for our second part desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set. 
+
+
+\begin{equation} \label{eq:gaus}
+\mu_A(x) =  \frac{1}{ 1 + |\frac{x- c_i }{a_i}|^{2b_i}  }\end{equation}
+
+
+\subsection{Fuzzy Interference through a Generalised Neural Network}
+
+We first describe the components of the Fuzzy Interference System (FIS) and then give intuition on how the system can be modelled as a Generalisde Neural Network (GNN). 
+
+FIS evaluates a decision matrix composed of rules in the following semantic: 
+
+\centerline {$ \textbf{IF} <  A  > \textbf{AND} <  B  > \textbf{THEN} < Conclusion > $}
+
+The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined as the multiplication of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
+ \begin{equation} \label{eq:gaus}
+ w_i =  \mu_{A\cup B(x,y)} =   \mu_A (x) \times \mu_B(y)
+ \end{equation}
+
+The intersection is defined as the probabilistic or of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ 
+\begin{equation} \label{eq:gaus}
+ w_i =  \mu_{A\cap B(x,y)} =   \mu_A (x)  + \mu_B(y) -  \mu_A (x)  \times \mu_B(y)
+ \end{equation}
+
+The output of the Fuzzy Interference system is computed by Equation 
+
+
+\begin{equation} \label{eq:gaus}
+ z = dx + ey + f  \end{equation}
+
+The final output of the system is the weighted average of all rules computed by Equation 
+
+\begin{equation} \label{eq:gaus}
+Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{equation}
+
+where $N$ is the number of rules. We now model this process as a neural network  shown in Figure 4.1. In \textbf{Layer 1} every node maps the input variables x1 and x2 to the membership function described in 4.2.2. The parameter set is optimised to best reflect the train data. \textbf{Layer 2} applies equation 4.2 or 4.3 which multiplies in the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation 
+
+\begin{equation} \label{eq:gaus}
+\overline{w_i} =  \frac{w_i}{w_1 + w_2}, i = 1,2 \end{equation}
+
+ \textbf{Layer 4} applies Equation, which is similar to Equation 4.4 with an added factor from \textbf{Layer 3}. Finally, \textbf{Layer 5 }computes the overall output as the summation of all incoming signals through Equation 4.5. The construction yields a network with 5 layer,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). The parameters are optimised through a hybrid algorithm. In a forward pass the system uses least-squares to find the parameters in \textbf{Layer 4}. In the backward pass the errors are propogated backwards and the parameters in \textbf{Layer 1} are optimised by gradient descent.  
+ 
+ \begin{equation} \label{eq:gaus}
+ \overline{w_i} f_i =  \overline{w_i }(dx + ey + f) \end{equation}
+
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/model/gnn_fuzz}      
+        \caption{Annotation Distribution - Relevant to Food Security}
+        \label{fig:gnn_fuzz}
+\end{figure}
 
 
 
 
-Fuzzy logic based modeling techniques are appealing because of their interpretability and potential to address a broad spectrum of problems. In particular, fuzzy inference systems exhibit a combined description and prediction capability a s a consequence of their rule based structure [27, 49]
-
-Non linear system better results in time series predicitons. 
-
-M. De Choudhury, H. Sundaram, A. John, and D. D. Seligmann, ?Can blog communication 
-20
-dynamics be correlated with stock market activity?,? in Proceedings of the nineteenth ACM 
-
-
-
-
-$http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
 
 \section{Data Source and Data Preprocessing}
 
@@ -657,6 +700,34 @@ Lastly we performed a scaling of the data which is in accordance of our objectiv
 \section{Training the Model}
 
 For training ant testing our model we choose the time period 03.01.2012 - 26.09.2014. We thought of numerous ways to test and train our model. Different approaches have been suggested by Ibeling Kaastra \cite{Kaastra96designinga}. Most commonly the data is split into a train set, validation set and lastly a test set. The model is trained once in a batch fashion and used for all future predictions. Such an approach can be dangerous particularly when one considers historical data reaching far into the past. Market conditions might have been different then and might not apply for future predictions. Choosing a particular time frame can be a bad idea as well. Consider the training data only exhibiting an upwards trend the model will then not generalise well for declining prices. Yao et al. \cite{Yao00acase} proposed to use statistical methods to investigate the best time period for training the network. However to make any statistically significant claims we need more then 2.5 years of historical data. Lastly Ibeling Kaastra describes a method called the walk-forward or sliding window approach. This approach involves creating overlapping sets of train and test data. Each set is moved forward through the time series to test the robustness of the model. This framework addresses the concern raised regarding including data form far in the past that might not reflect the current market conditions and is widely used for commodity predictions. We decided to apply a variant of the sliding window approach and train or model in an online fashion. Given the limited amount of data we choose not to exclude any data from future prediction, however to be able to adapt to new market conditions we increase the training and validation window as we move along the time line. To achieve a good generalisation the proportion of train and validation set always remain the same as we add additional data. We used the first 50 \% of the data to train the model. From that set we excluded 15 \% for validation purposes. These values were obtained empirically. 
+
+
+
+\section{Methodology for forecasting with Fuzzy Logic}
+
+The goal of our research is to predict the price of a commodity in the future. The prediction model takes different features $y_t - y_{t-M+1}$ and an input. The problem of predicting the future value $y_{t_1}$ can be formulated as: 
+
+
+\begin{equation} \label{eq:solve}
+y_{t + 1} = fp(y_{t}, y_{t-1}, y_{t-M+1})
+ \end{equation}
+
+where M is the number of features and fp is our fuzzy prediction model. Consider the case where we predict $y_{t +4}$ , so four days into the future. A recursive way would be to predicted values $y_{t+2}$ and $y_{t+3}$ and then use them as regressors in predicting $y_{t +4}$. However this approach accumulates prediction errors. The further the prediction value is the more prediction outputs are used as regressors. We deviate from this approach by building a direct prediction model, so for each prediction horizon one direct model. 
+
+Translating the Equation 4.9 into the fuzzy system a prediction would take the following form: 
+
+\centerline {$ \textbf{IF} <  y_t  \in High> \textbf{AND} < y_{t-1} \in Medium > \textbf{THEN} <  y_{t+1} \in Increase > $}
+
+where High, Medium and Increase are Fuzzy Sets. 
+
+
+
+
+\section{Benchmark Model}
+
+Yao et al. [ref] suggests that the market can be categorised using the major trend the intermediate trend and the minor trend. Where the major trend lasts more then a year, intermediate trends are anything between 3 weeks to three months. We capture such trends by taking the moving average of 1 week, 2 weeks and 1 month respectively to capture minor ant intermediate trends. Given the limited time frame we chose to exclude major trends. 
+
+
 
 
 
@@ -769,6 +840,22 @@ Wheat \footnote{$https://www.quandl.com/data/OFDP/FUTURE_W1-CBOT-Wheat-Futures-C
 
 
 
+
+
+
+
+Fuzzy logic based modeling techniques are appealing because of their interpretability and potential to address a broad spectrum of problems. In particular, fuzzy inference systems exhibit a combined description and prediction capability a s a consequence of their rule based structure [27, 49]
+
+Non linear system better results in time series predicitons. 
+
+M. De Choudhury, H. Sundaram, A. John, and D. D. Seligmann, ?Can blog communication 
+20
+dynamics be correlated with stock market activity?,? in Proceedings of the nineteenth ACM 
+
+
+
+
+$http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
 
 
  

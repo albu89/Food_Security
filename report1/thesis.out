@@ -29,17 +29,19 @@
 \BOOKMARK [2][-]{subsection.3.3.5}{Results}{section.3.3}% 29
 \BOOKMARK [0][-]{chapter.4}{Model Building}{}% 30
 \BOOKMARK [1][-]{section.4.1}{A fuzzy approach for Time Series Modeling}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.2}{}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.2}{Adaptive Neuro Fuzzy Inference System }{chapter.4}% 32
 \BOOKMARK [2][-]{subsection.4.2.1}{Fuzzy Variables }{section.4.2}% 33
 \BOOKMARK [2][-]{subsection.4.2.2}{Fuzzy Sets}{section.4.2}% 34
-\BOOKMARK [1][-]{section.4.3}{Data Source and Data Preprocessing}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.4.1}{Curse of of Dimensionality}{section.4.4}% 37
-\BOOKMARK [0][-]{appendix.A}{Data}{}% 38
-\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 39
-\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 40
-\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 41
-\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 42
-\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 43
-\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 44
-\BOOKMARK [0][-]{section*.22}{Bibliography}{}% 45
+\BOOKMARK [2][-]{subsection.4.2.3}{Fuzzy Interference through a Generalised Neural Network}{section.4.2}% 35
+\BOOKMARK [1][-]{section.4.3}{Data Source and Data Preprocessing}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.5}{Methodology for forecasting with Fuzzy Logic}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.5.1}{Curse of of Dimensionality}{section.4.5}% 39
+\BOOKMARK [0][-]{appendix.A}{Data}{}% 40
+\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 42
+\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 43
+\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 44
+\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 45
+\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 46
+\BOOKMARK [0][-]{section*.23}{Bibliography}{}% 47

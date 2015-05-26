@@ -31,17 +31,19 @@
 \contentsline {subsection}{\numberline {3.3.5}Results}{21}{subsection.3.3.5}
 \contentsline {chapter}{\chapternumberline {4}Model Building}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}A fuzzy approach for Time Series Modeling}{23}{section.4.1}
-\contentsline {section}{\numberline {4.2}}{23}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables }{23}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.2}Adaptive Neuro Fuzzy Inference System }{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables }{24}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Fuzzy Sets}{24}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Data Source and Data Preprocessing}{24}{section.4.3}
-\contentsline {section}{\numberline {4.4}Training the Model}{25}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Curse of of Dimensionality}{26}{subsection.4.4.1}
-\contentsline {appendix}{\chapternumberline {A}Data}{31}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{31}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{32}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{32}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{32}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{33}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{34}{subsection.A.2.4}
-\contentsline {chapter}{Bibliography}{35}{section*.22}
+\contentsline {subsection}{\numberline {4.2.3}Fuzzy Interference through a Generalised Neural Network}{24}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Data Source and Data Preprocessing}{26}{section.4.3}
+\contentsline {section}{\numberline {4.4}Training the Model}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Methodology for forecasting with Fuzzy Logic}{28}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Curse of of Dimensionality}{29}{subsection.4.5.1}
+\contentsline {appendix}{\chapternumberline {A}Data}{33}{appendix.A}
+\contentsline {section}{\numberline {A.1}Processing and Storage}{33}{section.A.1}
+\contentsline {section}{\numberline {A.2}Crowd Flower}{34}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{34}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{34}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{35}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{36}{subsection.A.2.4}
+\contentsline {chapter}{Bibliography}{37}{section*.23}
