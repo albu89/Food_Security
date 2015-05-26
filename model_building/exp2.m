@@ -3,7 +3,7 @@ filename_x = '/Users/alexanderbusser/Food_Security/features/wheat/wheat_daily_vo
 filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
 
 %Set number of features and define how far into the future prediction
-n_feature = 1;
+n_feature = 4;
 pred = 4; 
 
 
@@ -24,8 +24,8 @@ Y_T  = (Y - min(Y)) / ( max(Y) - min(Y) );
 %Y_N = [0.1;0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 0.11; 0.22; 0.33; 0.44; 0.55; 0.66]; 
 
 %%%%%%%%%%%%%%%%%%% Create Index %%%%%%%%%%%%%%%%%%%%%%%%
-i_start = (1+n_feature + pred);
-i_end = size(Y_N) - (n_feature + pred);
+i_start = (1+30);
+i_end = size(Y_N) - (30);
 
 %%%%%%%%%%%%%%%%%%Create Features%%%%%%%%%%%%%%%%%%%%%%%%%
 %{
@@ -46,7 +46,19 @@ chk_data(:, 5) =  Y_N(602:689);
 
 %}
 
-data = window(n_feature, pred, Y_N,i_start, i_end );
+data = window(1, 2, Y_N,i_start, i_end );
+
+test = window(1, 2, Y_N,i_start-7, i_end );
+one_c = test(:, 1);
+m_a = tsmovavg(one_c,'s',7,1);
+f = m_a(7:end);
+new = [f test(7:end,2)];
+
+
+
+
+data_w = tsmovavg(Y(i_start-7:i_end),'s',7,1);
+
 
 %{
 
@@ -89,6 +101,7 @@ for i = 1:size(data_y)
     
     if mod(i-1,28) == 0
         fismat = genfis2(in_dat,out_dat, 0.5);
+        %fismat = genfis3(in_dat,out_dat,'sugeno',3, []);
         [fis,trn_error,stepsize,chkFis,chk_error] = anfis([in_dat out_dat], fismat,[100],[],[in_dat_chk out_dat_chk], 1);
      
     end

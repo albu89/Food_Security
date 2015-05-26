@@ -1,0 +1,146 @@
+
+
+%% Data Collection
+
+%Read File
+filename_y = '/Users/alexanderbusser/Food_Security/features/data_y.csv'
+Y = csvread(filename_y,1,4, [1 4 689 4]);
+
+%Set number of features and define how far into the future prediction
+n_feature = 30;
+pred = 14; 
+
+%Set the range
+i_start = (1+30);
+i_end = size(Y) - (30);
+
+
+%% Data Transformation
+
+%Linear Interpolation 
+Y = fill_zero(Y);
+
+%Normalize [0 1]
+maxVec = max(Y);
+minVec = min(Y);
+Y_T = (Y - min(Y)) / ( max(Y) - min(Y) ) + 0.0000001; 
+
+
+%Smoothing the function 
+[Y_N, gnpcycle16] = hpfilter(Y_T,1600);
+
+
+%% Create Features
+
+
+% Feaures x-1, x-2 .... x-30
+data = window(n_feature, pred, Y_N,i_start, i_end );
+
+
+% 1 week Moving Average
+w = 7;
+base_set = window(1, pred, Y_N,i_start-(w-1), i_end );
+ma_7 = m_avg(base_set, w); 
+
+% 2 week Moving Average
+w = 14;
+base_set = window(1, pred, Y_N,i_start-(w-1), i_end );
+ma_14 = m_avg(base_set, w); 
+
+
+% 1 month Moving Average
+w = 30; 
+base_set = window(1, pred, Y_N,i_start-(w-1), i_end );
+ma_30 = m_avg(base_set, w);
+
+f_space = [data(:, 1:n_feature) ma_7 ma_14 ma_30 data(:,n_feature+1)];
+
+
+%% Feature Selection - Top 10  
+
+[RANKED, WEIGHT] = relieff(f_space(:,1:end-1), f_space(:,end),20);
+
+%Get Index of 10 Best Features
+[r c] = size(f_space);
+F_index = [RANKED(1:10) c];
+reg_model = f_space(:,F_index);
+
+
+%% Online Learning
+[d n_feature] = size(reg_model);
+n_feature = n_feature - 1;
+x = floor(.5 * size(reg_model));
+%Untouched Train Data for Meassurement purposes
+data_m = reg_model(1:x,:);
+%Initial Train Data that will be extended in an online fashion
+data_x = data_m;
+%Test Set
+data_y = reg_model(x+1:end,:);
+pred_results = zeros(1);
+
+
+for i = 1:size(data_y)
+    
+    a = floor(.85 * size(data_x));
+    b = ceil(.15 *size(data_x)); 
+    %Train Set
+    trn_data = data_x(1:a,:);
+    %Validation Set
+    chk_data = data_x(a+1:a+b,:);
+    %Features Train
+    in_dat = trn_data(:,1:n_feature);
+    %Predicted Value Train
+    out_dat = trn_data(:,n_feature+1);
+    %Featuers Validate
+    in_dat_chk = chk_data(:,1:n_feature);
+    %Predicted Value Validate
+    out_dat_chk = chk_data(:,n_feature+1);
+
+    
+    %Retrain every 4 weeks 
+    if mod(i-1,21) == 0
+        %fismat = genfis2(in_dat,out_dat, 0.7);
+        fismat = genfis3(in_dat,out_dat,'sugeno',3, []);
+        [fis,trn_error,stepsize,chkFis,chk_error] = anfis([in_dat out_dat], fismat,[500],[],[in_dat_chk out_dat_chk], 1);  
+    end
+   
+    %One prediction instance
+    pred_value =  evalfis(data_y(i,1:n_feature),chkFis);
+    %All predictions
+    pred_results = [pred_results; pred_value];
+    %Extended Train Data
+    data_x = [data_x; data_y(i,:)];
+    %data_x = [data_x(2:end,:); data_y(i,:)];
+    
+end
+
+%% Evaluation 
+
+%Prediction Results with seen Data
+anfis_train = evalfis(data_m(:, 1:n_feature), chkFis);
+%All prediction results
+anfis_output = [anfis_train; pred_results(2:end)];
+
+your_original_data = minVec + anfis_output.*(maxVec - minVec) - 0.0000001; 
+
+%Index of time series 
+ind = i_start : i_end;
+[o_size, j] = size(pred_results(2:end));
+[b_size, h] = size(anfis_train);
+p_train = [anfis_train; NaN(o_size,1)];
+p_test = [NaN(b_size,1); pred_results(2:end)];
+plot(ind, [Y_N(ind) p_train p_test]);
+xlabel('Time (Days)','fontsize',10);
+ylabel('Normalized Price','fontsize',10);
+dateaxis('x', 2, '02/15/2012') 
+
+%Error Score
+test_RMSE = norm( data_y(:,n_feature+1) - pred_results(2:end)) / sqrt(length(pred_results(2:end)) );
+disp(test_RMSE);
+
+
+
+
+
+
+
