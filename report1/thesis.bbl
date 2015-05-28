@@ -44,6 +44,13 @@ Christopher Chatfield.
 \newblock Texts in statistical science. Chapman \& Hall/CRC, Boca Raton (Fl.),
   2004.
 
+\bibitem{de08}
+Munmun De~Choudhury, Hari Sundaram, Ajita John, and Dor{\'e}e~Duncan Seligmann.
+\newblock Can blog communication dynamics be correlated with stock market
+  activity?
+\newblock In {\em Proceedings of the Nineteenth ACM Conference on Hypertext and
+  Hypermedia}, HT '08, pages 55--60, New York, NY, USA, 2008. ACM.
+
 \bibitem{john2012}
 John D’Errico.
 \newblock Interpolates and extrapolates nan elements in a 2d array, 2012.
@@ -148,6 +155,12 @@ Steve Whittaker, Loren Terveen, Will Hill, and Lynn Cherny.
 \newblock The dynamics of mass interaction.
 \newblock In {\em Proceedings of the 1998 ACM Conference on Computer Supported
   Cooperative Work}, CSCW '98, pages 257--264, New York, NY, USA, 1998. ACM.
+
+\bibitem{wu12}
+Dongrui Wu.
+\newblock Twelve considerations in choosing between gaussian and trapezoidal
+  membership functions in interval type-2 fuzzy logic controllers.
+\newblock In {\em FUZZ-IEEE}, pages 1--8. IEEE, 2012.
 
 \bibitem{Yao00acase}
 Jingtao Yao and Chew~Lim Tan.
