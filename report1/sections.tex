@@ -462,8 +462,7 @@ A smilier correlation analysis has been made by the UN \cite{ungp2013}. They how
  \section{Conversation Drivers}
 
 
-Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor terms such as price) have a much stronger Pearson correlation then the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to Food Security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been entered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food prices spikes and differentiates among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. We annotated our events by following a framework described in the following section.
-
+Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor terms such as price) have a much stronger Pearson correlation then the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to Food Security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been entered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food prices spikes and differentiates among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
 
 
 
@@ -471,11 +470,11 @@ Following our correlation analysis we proceed with a detailed investigation of T
 
 We commence our investigation of the conversation drivers by a visual and manual investigation of the most prominent events. To gain an overview about the social attention of our food topics we plotted the relative distribution of food supply, price poverty and needs in Figure \ref{fig:topic_dist}. By far the highest attention is attributed to food needs with around 70 \% , poverty and supply receive a similar attention distribution with price taking the smallest interest among twitter users. 
 
-To visually categorise the activity Lehman et al. defined three categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Where continues activities are topics that are of daily  interest such as weather, periodic actives reoccur with a fixed pattern such as the release of a new episode of a popular tv shows. The later is event driven and usually occurs once during a very short period such as a national holiday. 
+To visually categorise the activity, Lehman et al. \cite{Lehmann2012} defined three categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Continues activities are topics that are of daily  interest such as weather. On the other hand periodic actives reoccur with a fixed pattern such as the release of a popular tv show. The later is event driven and usually occurs once during a very short period such as a national holiday. 
 
 For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent isolated peak. The activity is concentrated symmetrically around those two events , showing abnormal activities for around 9 days before and after. 
 
- We manually investigated the two isolated peaks to see if we can attribute them to any discussions relevant to price. The content corresponded to a popular Korean pop band \emph{T-ara }. They released a music video on the 10th of September which caused the first anomaly reaching a  global maximum on the 16th when they announced to collaborate with a famous european DJ  \footnote{http://www.kpopstarz.com/articles/112632/20140916/t-ara-sugar-free.htm}. Similarly in our supply conversation the peak was not caused by supply indicators but was driven by topics entered around health \& life style. 
+ We manually investigated the two isolated peaks to see if we can attribute them to any discussions relevant to food price or food supply. Surprisingly, the content in the price discussion corresponds to a popular Korean pop band \emph{T-ara }. \emph{T-ara } released a music video on the 10th of September which caused the first anomaly, reaching a global maximum on the 16th when they announced to collaborate with a famous european DJ  \footnote{http://www.kpopstarz.com/articles/112632/20140916/t-ara-sugar-free.htm}. Similarly, in our supply conversation the peak was not caused by supply indicators but was driven by conversations centered around health \& life style topics. 
 
 The topics needs and poverty do not exhibit any extreme outliers and similar to price and supply can be categorised according to Lehman et al's. framework as of continues interest. 
 
@@ -495,11 +494,7 @@ The topics needs and poverty do not exhibit any extreme outliers and similar to 
 
 \subsection{Methodology} 
 
-
-
-
-As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to Food Security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to market fundamentals or topics concerning Food Security. For this analysis we consider discussion around food supply, price and poverty. Food price and supply are by the definition of \cite{Tadesse2014} exogenous shocks. Poverty and Needs are conditional indicators. 
-
+As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to Food Security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to market fundamentals or topics concerning Food Security. For this analysis we consider discussion around food supply, price, needs and poverty. 
 We investigate the four food categories temporal behaviour on a granularity of one day. This scale was chosen in order to be in accordance with the temporal quotations of the commodity market. 
 To detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. We used a fixed window size of $2m + 1$  where $m = 15$ giving us a month long window. Within the window we identified the median and calculated the mean of the twitter volume. From those values we calculated the Median absolute deviation (MAD) as follows: 
 
@@ -511,7 +506,7 @@ $X_j$ is the set of data points within the fixed window and $X_i \in X_j$
 
 A peak is declared if $v_i$ deviates more then 2 MAD from the mean. For this analysis we only consider positive peaks and ignore anomalies in form of a steep descent. 
 
-The discussion centred around food price showed 82 events. Tweet activities for food supply resulted in 91 spikes. 80 peaks were detected for food needs and lastly 99 for food poverty. 
+The discussion centred around food price showed 82 events. Tweet activities for food supply resulted in 91 peaks. 80 peaks were detected for food needs and lastly 99 for food poverty. 
  
 
 To identify what topics spike the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all tweets occurring during a peak. We then manually investigate the tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more then two events caused the peak we marked it as ambiguous.  
@@ -580,7 +575,11 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
         \label{fig:annotation_dist}
 \end{figure}
 
-fdfdsfdfsdfdf
+
+\section{Discussion}
+
+Wrap up the Analysis part......
+
 
 \chapter {Model Building}
 
@@ -727,20 +726,68 @@ Translating the Equation 4.9 into the fuzzy system a prediction would take the f
 where High, Medium and Increase are Fuzzy Sets. 
 
 
+\section{Parameters}
+
+All experiments have been conducted with the following parameters
+
+
+
+\begin{itemize}
+  \item Input membership function: \indent Gaussian
+  \item Output membership function: \indent Linear
+  \item FIS generator: \indent Fuzzy C-Means 
+  \item Training epochs: 500
+  \item Initial step size: 0.01
+  \item Step size decrease rate: 0.9
+  \item Step size increase rate: 1.1
+  \item Retrain rate: 28 days
+  \item Initial training window size: 50 \%
+  \item Segmentation: 85 \% Training , 15 \% Validation 
+\end{itemize}
+
 
 
 \section{Benchmark Model}
 
-Yao et al. [ref] suggests that the market can be categorised using the major trend the intermediate trend and the minor trend. Where the major trend lasts more then a year, intermediate trends are anything between 3 weeks to three months. We capture such trends by taking the moving average of 1 week, 2 weeks and 1 month respectively to capture minor ant intermediate trends. Given the limited time frame we chose to exclude major trends. 
+\subsection{Input Model}
+
+Yao et al. [ref] suggests that the market can be categorised using the major trend the intermediate trend and the minor trend. Where the major trend lasts more then a year, intermediate trends are anything between 3 weeks to three months. We capture such trends by taking the moving average of 1 week, 2 weeks and 1 month respectively. Given the limited time frame we chose to exclude major trends. We further consider all days preceding the horizon 30 days into the past as potential features. 
 
 
+\begin{table}
+\centering
+\begin{tabular}{ |c|c|c| } 
+
+ input \# & name & value \\ 
+  \hline
+ 1 & D1 & x \\ 
+ 2 & D2 & x -1 \\ 
+ :& : & : \\ 
+  :& : & : \\ 
+  :& : & : \\ 
+  30 & D30 & x - 29\\ 
+  31 & W1 & $\mu(]x-7;x])$ \\ 
+  32 & W2 & $\mu(]x-14;x])$ \\ 
+  33 & M1 & $\mu(]x-30;x])$ \\ 
+ 
+
+\end{tabular}
+\caption{Input Model: Benchmark Prediction}
+\label{tab:abc}
+\end{table}
 
 
+\subsection{Feature Selection}
 
+The objective here is to find the most significant features among the 33 in our input model. To investigate the relevance we used the Relieff algorithm []. We measure the most significant features with respect to the horizon of 4 days, 7 days and 14 days. Furthermore we consider  three different commodities, wheat (w), beef (b) and milk (m). The configuration in the Table \emph{w-4} refers to wheat with a prediction horizon of 4 days. The most significant features are  1.) $\phi_1$ : $D30$ , 2.) $\phi_2$ : $D29$,  3.) $\phi_3$ : $D28$, 4.) $\phi_4$ : $W1$ , 5.) $\phi_5$ : $D27$ and 6.) $\phi_6$ : $D26$.
+
+The numbers in the table refer to the relative importance of the feature for a specific configuration. It is interesting to observe that the Relieff consistently suggested the same features irrespectively of the commodity type and the prediction horizon. We can see that the values follow a clear trend. With an increasing horizon the features lose it's importance as the prediction task becomes more and more challenging. 
+
+
+\begin{table}[H]
+\centering
 \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| }
- \hline
- \multicolumn{10}{|c|}{Benchmark Prediction - $RMSE_{Test}$ $(RMSE_{Train}$) } \\
- \hline
+  \hline
  Feature & w-4 & b-4 & m-4 & w-7 & b-7 & m-7 & w-14 & b-14 & m-14   \\
  \hline
 
@@ -757,8 +804,23 @@ Yao et al. [ref] suggests that the market can be categorised using the major tre
   $\phi_6$ & 0.0378 & 0.0138 & 0.0198 & 0.0324 & 0.0114 & 0.0178 & 0.0231 & 0.0074 & 0.0149 \\
   \hline
  \end{tabular}
+\caption{Feature Selection: Benchmark Prediction}
+\label{tab:abc}
+\end{table}
 
 
+
+\subsection{Results}
+
+ANFIS seemt to perform exceptionally well for day to day predictions
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=1\textwidth ]{img/model/prediction_days}      
+        \caption{Prediction Accuracy - Benchmark }
+        \label{fig:gnn_fuzz}
+\end{figure}
 
 
 
@@ -881,7 +943,7 @@ Wheat \footnote{$https://www.quandl.com/data/OFDP/FUTURE_W1-CBOT-Wheat-Futures-C
 
 Fuzzy logic based modeling techniques are appealing because of their interpretability and potential to address a broad spectrum of problems. In particular, fuzzy inference systems exhibit a combined description and prediction capability a s a consequence of their rule based structure [27, 49]
 
-Non linear system better results in time series predicitons. 
+Non linear system better results in time series predictions. 
 
 M. De Choudhury, H. Sundaram, A. John, and D. D. Seligmann, ?Can blog communication 
 20

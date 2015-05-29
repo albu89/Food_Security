@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  28 MAY 2015 22:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.23)  29 MAY 2015 13:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1180,74 +1180,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen200
 \Gm@dimlist=\toks59
 )
-(./thesis.aux
-
-LaTeX Warning: Label `fig:al_price' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:al_price' multiply defined.
-
-
-LaTeX Warning: Label `fig:al_price' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:al_price' multiply defined.
-
-
-LaTeX Warning: Label `fig:distribution' multiply defined.
-
-
-LaTeX Warning: Label `fig:distribution' multiply defined.
-
-
-LaTeX Warning: Label `tab:abc' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:gaus' multiply defined.
-
-
-LaTeX Warning: Label `eq:solve' multiply defined.
-
-
-LaTeX Warning: Label `fig:u_log' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:u_log' multiply defined.
-
-
-LaTeX Warning: Label `fig:distribution' multiply defined.
-
-
-LaTeX Warning: Label `eq:solve' multiply defined.
-
-
-LaTeX Warning: Label `fig:annotation_dist' multiply defined.
-
-
-LaTeX Warning: Label `fig:annotation_dist' multiply defined.
-
-
-LaTeX Warning: Label `fig:annotation_dist' multiply defined.
-
-
-LaTeX Warning: Label `fig:distribution' multiply defined.
-
-)
+No file thesis.aux.
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
@@ -1266,7 +1199,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Try loading font information for OT1+pplx on input line 100
 .
- (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pplx.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1514,7 +1447,6 @@ LaTeX Info: Redefining \nameref on input line 100.
 LaTeX Info: Redefining \ref on input line 100.
 LaTeX Info: Redefining \pageref on input line 100.
 LaTeX Info: Redefining \nameref on input line 100.
-(./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
@@ -1522,7 +1454,6 @@ LaTeX Info: Redefining \Ref on input line 100.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1557,7 +1488,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<epfl_logo.png, id=205, 945.5325pt x 457.71pt>
+<epfl_logo.png, id=4, 945.5325pt x 457.71pt>
 File: epfl_logo.png Graphic file (type png)
  <use epfl_logo.png>
 Package pdftex.def Info: epfl_logo.png used on input line 108.
@@ -1566,8 +1497,9 @@ Package pdftex.def Info: epfl_logo.png used on input line 108.
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./epfl_
-logo.png>] [2] (./abstract.tex)pdfTeX warning (ext4): destination with the same
- identifier (name{page.i}) has been already used, duplicate ignored
+logo.png>]
+[2] (./abstract.tex)pdfTeX warning (ext4): destination with the same identifier
+ (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.124 \cleartorecto
@@ -1580,58 +1512,53 @@ s been already used, duplicate ignored
 l.124 \cleartorecto
                     [2
 
-] (./thesis.toc
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 3.
+] [3] [4
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlzplm.fd
+] (./introduction.tex [1]) (./sections.tex
+[2
+
+]
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 7.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 7.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 3.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 7.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 3.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 7.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 3.
+(Font)              scaled to size 12.50409pt on input line 7.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 3.
+(Font)              scaled to size 9.37807pt on input line 7.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 3.
+(Font)              scaled to size 7.29405pt on input line 7.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 3.
+(Font)              scaled to size 12.50409pt on input line 7.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 3.
+(Font)              scaled to size 9.37807pt on input line 7.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 3.
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
+(Font)              scaled to size 7.29405pt on input line 7.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 7.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 3.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 7.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-) [3]) [4]
-(./thesis.lof) (./thesis.lot
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
- [1
-
-])
-(./introduction.tex [2]) (./sections.tex [3
-
-]
+)
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 7.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1644,11 +1571,34 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 7.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 7.
+
+
+LaTeX Warning: Citation `lund96' on page 3 undefined on input line 9.
+
 LaTeX Font Info:    Font shape `OT1/pplx/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/pplx/b/n' tried instead on input line 12.
- [4
 
-] [5]
+LaTeX Warning: Citation `lund96' on page 3 undefined on input line 14.
+
+
+LaTeX Warning: Citation `burgess98' on page 3 undefined on input line 16.
+
+
+LaTeX Warning: Reference `tab:halex' on page 3 undefined on input line 16.
+
+[3
+
+]
+
+LaTeX Warning: Citation `burgess98' on page 4 undefined on input line 45.
+
+[4]
+
+LaTeX Warning: Citation `fao13' on page 5 undefined on input line 56.
+
+
+LaTeX Warning: Citation `AbbarMW14' on page 5 undefined on input line 58.
+
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 79.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
@@ -1666,7 +1616,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6] [7] [8] [9]
+
+LaTeX Warning: Citation `fao2008' on page 5 undefined on input line 137.
+
+[5]
+
+LaTeX Warning: Citation `ungp2013' on page 6 undefined on input line 140.
+
+
+LaTeX Warning: Citation `ungp2013' on page 6 undefined on input line 142.
+
+
+LaTeX Warning: Citation `hum14' on page 6 undefined on input line 142.
+
+
+LaTeX Warning: Citation `AbbarMW14' on page 6 undefined on input line 142.
+
+
+LaTeX Warning: Citation `RePEc' on page 6 undefined on input line 142.
+
+
+LaTeX Warning: Citation `hum14' on page 6 undefined on input line 142.
+
+[6]
+
+LaTeX Warning: Reference `tab:pred_lex' on page 7 undefined on input line 174.
+
+[7]
+
+LaTeX Warning: Citation `lund96' on page 8 undefined on input line 190.
+
+[8]
+
+LaTeX Warning: Citation `olt15' on page 9 undefined on input line 198.
+
+
+LaTeX Warning: Reference `fig:price_supply' on page 9 undefined on input line 2
+00.
+
+
+LaTeX Warning: Reference `fig:poverty_needs' on page 9 undefined on input line 
+200.
+
+
+LaTeX Warning: Citation `lund96' on page 9 undefined on input line 200.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 194--201
 
  []
@@ -1681,14 +1676,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--201
 
  []
 
-<img/lex/price_hal.png, id=411, 578.16pt x 433.62pt>
+<img/lex/price_hal.png, id=100, 578.16pt x 433.62pt>
 File: img/lex/price_hal.png Graphic file (type png)
 
 <use img/lex/price_hal.png>
 Package pdftex.def Info: img/lex/price_hal.png used on input line 206.
 (pdftex.def)             Requested size: 226.48395pt x 169.85878pt.
 
-<img/lex/supply_hal.png, id=412, 578.16pt x 433.62pt>
+<img/lex/supply_hal.png, id=101, 578.16pt x 433.62pt>
 File: img/lex/supply_hal.png Graphic file (type png)
 
 <use img/lex/supply_hal.png>
@@ -1699,7 +1694,7 @@ Overfull \hbox (5.30402pt too wide) in paragraph at lines 205--219
  [][]  [] 
  []
 
-<img/lex/needs_hal.png, id=413, 578.16pt x 433.62pt>
+<img/lex/needs_hal.png, id=102, 578.16pt x 433.62pt>
 File: img/lex/needs_hal.png Graphic file (type png)
 
 <use img/lex/needs_hal.png>
@@ -1717,7 +1712,7 @@ Overfull \hbox (7.95602pt too wide) in paragraph at lines 226--240
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./img/lex/price_hal.png> <./img/lex/supply_hal.png>]
+ [9 <./img/lex/price_hal.png> <./img/lex/supply_hal.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 255--255
 []\OT1/pplx/m/n/9 Lexicon
  []
@@ -1730,11 +1725,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--255
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./img/lex/needs_hal.png>]
+[10 <./img/lex/needs_hal.png>]
+
+LaTeX Warning: Citation `Loper2002' on page 11 undefined on input line 296.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13] <img/anal/loglog_users_tweets_1.jpg, id=457, 562.1pt x 421.575pt>
+ [11]
+
+LaTeX Warning: Citation `hum14' on page 12 undefined on input line 300.
+
+
+LaTeX Warning: Citation `hum14' on page 12 undefined on input line 306.
+
+
+LaTeX Warning: Citation `sent10' on page 12 undefined on input line 306.
+
+
+LaTeX Warning: Citation `stanford2011' on page 12 undefined on input line 306.
+
+
+LaTeX Warning: Citation `hum14' on page 12 undefined on input line 306.
+
+
+LaTeX Warning: Citation `hutton14' on page 12 undefined on input line 308.
+
+[12]
+
+LaTeX Warning: Citation `Whittaker:1998' on page 13 undefined on input line 325
+.
+
+
+LaTeX Warning: Reference `fig:u_linear' on page 13 undefined on input line 325.
+
+
+
+LaTeX Warning: Reference `fig:u_log' on page 13 undefined on input line 325.
+
+
+LaTeX Warning: Citation `bild15' on page 13 undefined on input line 325.
+
+
+LaTeX Warning: Reference `fig:no_power' on page 13 undefined on input line 325.
+
+
+<img/anal/loglog_users_tweets_1.jpg, id=137, 562.1pt x 421.575pt>
 File: img/anal/loglog_users_tweets_1.jpg Graphic file (type jpg)
 
 <use img/anal/loglog_users_tweets_1.jpg>
@@ -1742,7 +1778,7 @@ Package pdftex.def Info: img/anal/loglog_users_tweets_1.jpg used on input line
 333.
 (pdftex.def)             Requested size: 226.48395pt x 169.86208pt.
 
-<img/anal/no_power_1.jpg, id=458, 562.1pt x 421.575pt>
+<img/anal/no_power_1.jpg, id=138, 562.1pt x 421.575pt>
 File: img/anal/no_power_1.jpg Graphic file (type jpg)
 
 <use img/anal/no_power_1.jpg>
@@ -1753,16 +1789,25 @@ Overfull \hbox (5.30402pt too wide) in paragraph at lines 332--346
  [][]  [] 
  []
 
-[14
 
-] <img/anal/exp_dist_1.png, id=469, 514.5624pt x 489.9906pt>
+LaTeX Warning: Reference `fig:world' on page 13 undefined on input line 356.
+
+
+LaTeX Warning: Reference `fig:cat' on page 13 undefined on input line 356.
+
+
+LaTeX Warning: Citation `fao2008' on page 13 undefined on input line 356.
+
+[13
+
+] <img/anal/exp_dist_1.png, id=148, 514.5624pt x 489.9906pt>
 File: img/anal/exp_dist_1.png Graphic file (type png)
 
 <use img/anal/exp_dist_1.png>
 Package pdftex.def Info: img/anal/exp_dist_1.png used on input line 363.
 (pdftex.def)             Requested size: 226.48395pt x 215.6713pt.
 
-<img/anal/exp_dist_cat_1.png, id=470, 514.5624pt x 489.9906pt>
+<img/anal/exp_dist_cat_1.png, id=149, 514.5624pt x 489.9906pt>
 File: img/anal/exp_dist_cat_1.png Graphic file (type png)
 
 <use img/anal/exp_dist_cat_1.png>
@@ -1773,12 +1818,15 @@ Overfull \hbox (5.30402pt too wide) in paragraph at lines 362--376
  [][]  [] 
  []
 
+[14 <./img/anal/loglog_users_tweets_1.jpg> <./img/anal/no_power_1.jpg> <./img/a
+nal/exp_dist_1.png> <./img/anal/exp_dist_cat_1.png>]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation `fao2008' on page 15 undefined on input line 386.
 
- [15 <./img/anal/loglog_users_tweets_1.jpg> <./img/anal/no_power_1.jpg> <./img/
-anal/exp_dist_1.png> <./img/anal/exp_dist_cat_1.png>]
-<img/anal/meat_black.jpg, id=481, 1501.61pt x 613.29124pt>
+
+LaTeX Warning: Citation `abbott2009' on page 15 undefined on input line 390.
+
+<img/anal/meat_black.jpg, id=161, 1501.61pt x 613.29124pt>
 File: img/anal/meat_black.jpg Graphic file (type jpg)
 
 <use img/anal/meat_black.jpg>
@@ -1787,8 +1835,11 @@ Package pdftex.def Info: img/anal/meat_black.jpg used on input line 396.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-<img/anal/black_cereals.jpg, id=490, 1501.61pt x 622.325pt>
+ [15]
+
+LaTeX Warning: Citation `fao2008' on page 16 undefined on input line 404.
+
+<img/anal/black_cereals.jpg, id=169, 1501.61pt x 622.325pt>
 File: img/anal/black_cereals.jpg Graphic file (type jpg)
 
 <use img/anal/black_cereals.jpg>
@@ -1797,388 +1848,488 @@ Package pdftex.def Info: img/anal/black_cereals.jpg used on input line 407.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17 <./img/anal/meat_black.jpg> <./img/anal/black_cereals.jpg>] [18]
-<img/anal/topic_dist.png, id=507, 661.9932pt x 489.9906pt>
+ [16 <./img/anal/meat_black.jpg> <./img/anal/black_cereals.jpg>]
+
+LaTeX Warning: Citation `de08' on page 17 undefined on input line 425.
+
+
+LaTeX Warning: Citation `ungp2013' on page 17 undefined on input line 427.
+
+
+LaTeX Warning: Citation `ungp2013' on page 17 undefined on input line 427.
+
+
+LaTeX Warning: Citation `Tadesse2014' on page 17 undefined on input line 465.
+
+[17]
+
+LaTeX Warning: Reference `fig:topic_dist' on page 18 undefined on input line 47
+1.
+
+
+LaTeX Warning: Citation `Lehmann2012' on page 18 undefined on input line 473.
+
+<img/anal/topic_dist.png, id=184, 661.9932pt x 489.9906pt>
 File: img/anal/topic_dist.png Graphic file (type png)
 
 <use img/anal/topic_dist.png>
-Package pdftex.def Info: img/anal/topic_dist.png used on input line 487.
+Package pdftex.def Info: img/anal/topic_dist.png used on input line 486.
 (pdftex.def)             Requested size: 452.9679pt x 335.28265pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-[20 <./img/anal/topic_dist.png>]
-Overfull \hbox (2.76672pt too wide) in paragraph at lines 531--533
+ [18]
+
+LaTeX Warning: Citation `olt15' on page 19 undefined on input line 499.
+
+
+LaTeX Warning: Citation `Lehmann2012' on page 19 undefined on input line 499.
+
+[19 <./img/anal/topic_dist.png>]
+
+LaTeX Warning: Citation `olt15' on page 20 undefined on input line 512.
+
+
+LaTeX Warning: Citation `Tadesse2014' on page 20 undefined on input line 516.
+
+
+LaTeX Warning: Citation `Julian10' on page 20 undefined on input line 523.
+
+
+LaTeX Warning: Citation `fao2008' on page 20 undefined on input line 525.
+
+
+LaTeX Warning: Citation `Tadesse2014' on page 20 undefined on input line 527.
+
+
+Overfull \hbox (2.76672pt too wide) in paragraph at lines 526--528
 \OT1/pplx/m/n/12 The clas-si-fi-ca-tion Gov-ern-ment takes top-ics such as leg-
 is-la-tion and pol-icy changes
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
+
+LaTeX Warning: Citation `fao2008' on page 20 undefined on input line 529.
+
+
+LaTeX Warning: Reference `fig:annotation_dist' on page 20 undefined on input li
+ne 549.
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
 [][] [][][]\OT1/pplx/m/n/10 http://www.theguardian.com/society/2013/dec/17/gove
 rnment-under-fire-eu-funding-food-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 563--563
 [][] [][][]\OT1/pplx/m/n/10 http://www.nytimes.com/2014/09/09/sports/football/r
 ay-rice-video-shows-punch-and-raises-
  []
 
-[22] <img/anal/annotation_dist.png, id=553, 635.976pt x 489.9906pt>
+<img/anal/annotation_dist.png, id=212, 635.976pt x 489.9906pt>
 File: img/anal/annotation_dist.png Graphic file (type png)
 
 <use img/anal/annotation_dist.png>
-Package pdftex.def Info: img/anal/annotation_dist.png used on input line 577.
+Package pdftex.def Info: img/anal/annotation_dist.png used on input line 572.
 (pdftex.def)             Requested size: 317.07614pt x 244.29189pt.
- [23 <./img/anal/annotation_dist.png>]
-[24
+ [21] [22 <./img/anal/annotation_dist.png>]
 
-] [25] <img/model/gnn_fuzz.png, id=584, 1404.24625pt x 576.1525pt>
+LaTeX Warning: Citation `Zadeh65' on page 23 undefined on input line 592.
+
+
+LaTeX Warning: Citation `Jang91' on page 23 undefined on input line 592.
+
+
+LaTeX Warning: Citation `box90' on page 23 undefined on input line 593.
+
+
+LaTeX Warning: Citation `chap04' on page 23 undefined on input line 593.
+
+
+LaTeX Warning: Citation `neil93' on page 23 undefined on input line 593.
+
+[23
+
+]
+
+LaTeX Warning: Citation `wu12' on page 24 undefined on input line 606.
+
+[24] <img/model/gnn_fuzz.png, id=248, 1404.24625pt x 576.1525pt>
 File: img/model/gnn_fuzz.png Graphic file (type png)
 
 <use img/model/gnn_fuzz.png>
-Package pdftex.def Info: img/model/gnn_fuzz.png used on input line 657.
+Package pdftex.def Info: img/model/gnn_fuzz.png used on input line 656.
 (pdftex.def)             Requested size: 452.9679pt x 185.8495pt.
 
 Underfull \vbox (badness 6173) has occurred while \output is active []
 
- [26]
-<img/model/p_increase_n.png, id=597, 578.6418pt x 434.1018pt>
+ [25]
+
+LaTeX Warning: Citation `john2012' on page 26 undefined on input line 667.
+
+
+LaTeX Warning: Citation `edward81' on page 26 undefined on input line 673.
+
+<img/model/p_increase_n.png, id=260, 578.6418pt x 434.1018pt>
 File: img/model/p_increase_n.png Graphic file (type png)
 
 <use img/model/p_increase_n.png>
-Package pdftex.def Info: img/model/p_increase_n.png used on input line 684.
+Package pdftex.def Info: img/model/p_increase_n.png used on input line 683.
 (pdftex.def)             Requested size: 226.48395pt x 169.90842pt.
 
-<img/model/p_increase_w.png, id=598, 578.6418pt x 434.1018pt>
+<img/model/p_increase_w.png, id=261, 578.6418pt x 434.1018pt>
 File: img/model/p_increase_w.png Graphic file (type png)
 
 <use img/model/p_increase_w.png>
-Package pdftex.def Info: img/model/p_increase_w.png used on input line 691.
+Package pdftex.def Info: img/model/p_increase_w.png used on input line 690.
 (pdftex.def)             Requested size: 226.48395pt x 169.90842pt.
 
-Overfull \hbox (5.30402pt too wide) in paragraph at lines 683--697
+Overfull \hbox (5.30402pt too wide) in paragraph at lines 682--696
  [][]  [] 
  []
 
-[27 <./img/model/gnn_fuzz.png>]
+
+LaTeX Warning: Citation `Kaastra96designinga' on page 26 undefined on input lin
+e 707.
+
+
+LaTeX Warning: Citation `Yao00acase' on page 26 undefined on input line 707.
+
+[26 <./img/model/gnn_fuzz.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <./img/model/p_increase_n.png (PNG copy)> <./img/model/p_increase_w.png (P
+ [27 <./img/model/p_increase_n.png (PNG copy)> <./img/model/p_increase_w.png (P
 NG copy)>]
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 736
+.
+LaTeX Font Info:    No file OMSpplx.fd. on input line 736.
+
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 736.
+
+[28]
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0624| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0212| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0310| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0586| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0197| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0300| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0487| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--747
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--794
 []|\OT1/pplx/m/n/12 0.0155| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 747--748
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 794--795
 []|\OT1/pplx/m/n/12 0.0271| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0558| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0193| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0281| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0513| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0175| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0268| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0411| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--749
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--796
 []|\OT1/pplx/m/n/12 0.0132| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 749--750
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 796--797
 []|\OT1/pplx/m/n/12 0.0237| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0495| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0174| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0253| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0444| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0153| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0236| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0343| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--751
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--798
 []|\OT1/pplx/m/n/12 0.0111| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 751--752
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 798--799
 []|\OT1/pplx/m/n/12 0.0205| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0440| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0157| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0227| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0388| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0135| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0209| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0291| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--753
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--800
 []|\OT1/pplx/m/n/12 0.0093| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 753--754
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 800--801
 []|\OT1/pplx/m/n/12 0.0179| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0434| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0156| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0225| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0381| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0133| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0206| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0283| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--755
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--802
 []|\OT1/pplx/m/n/12 0.0091| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 755--756
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 802--803
 []|\OT1/pplx/m/n/12 0.0175| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0378| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0138| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0198| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0324| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0114| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0178| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0231| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--757
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--804
 []|\OT1/pplx/m/n/12 0.0074| 
  []
 
 
-Overfull \hbox (4.54726pt too wide) in paragraph at lines 757--758
+Overfull \hbox (4.54726pt too wide) in paragraph at lines 804--805
 []|\OT1/pplx/m/n/12 0.0149| 
  []
 
+<img/model/prediction_days.jpg, id=286, 562.1pt x 421.575pt>
+File: img/model/prediction_days.jpg Graphic file (type jpg)
 
-Overfull \hbox (38.62337pt too wide) in paragraph at lines 769--796
-[][] 
- []
-
+<use img/model/prediction_days.jpg>
+Package pdftex.def Info: img/model/prediction_days.jpg used on input line 819.
+(pdftex.def)             Requested size: 452.9679pt x 339.72417pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-<img/model/bench_mark.jpg, id=620, 562.1pt x 421.575pt>
+Overfull \hbox (38.62337pt too wide) in paragraph at lines 830--857
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./img/model/prediction_days.jpg>]
+<img/model/bench_mark.jpg, id=300, 562.1pt x 421.575pt>
 File: img/model/bench_mark.jpg Graphic file (type jpg)
 
 <use img/model/bench_mark.jpg>
-Package pdftex.def Info: img/model/bench_mark.jpg used on input line 840.
+Package pdftex.def Info: img/model/bench_mark.jpg used on input line 901.
 (pdftex.def)             Requested size: 452.9679pt x 339.72417pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-<img/model/bench_mark_70_30.jpg, id=625, 562.1pt x 421.575pt>
+ [31]
+<img/model/bench_mark_70_30.jpg, id=307, 562.1pt x 421.575pt>
 File: img/model/bench_mark_70_30.jpg Graphic file (type jpg)
 
 <use img/model/bench_mark_70_30.jpg>
-Package pdftex.def Info: img/model/bench_mark_70_30.jpg used on input line 849.
+Package pdftex.def Info: img/model/bench_mark_70_30.jpg used on input line 910.
 
 (pdftex.def)             Requested size: 452.9679pt x 339.72417pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./img/model/bench_mark.jpg>]
-<img/model/bench_mark_85_15.jpg, id=631, 562.1pt x 421.575pt>
+ [32 <./img/model/bench_mark.jpg>]
+<img/model/bench_mark_85_15.jpg, id=313, 562.1pt x 421.575pt>
 File: img/model/bench_mark_85_15.jpg Graphic file (type jpg)
 
 <use img/model/bench_mark_85_15.jpg>
-Package pdftex.def Info: img/model/bench_mark_85_15.jpg used on input line 859.
+Package pdftex.def Info: img/model/bench_mark_85_15.jpg used on input line 920.
 
 (pdftex.def)             Requested size: 452.9679pt x 339.72417pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./img/model/bench_mark_70_30.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 874--874
+ [33 <./img/model/bench_mark_70_30.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 935--935
 [][] [][][]$\OML/zplm/m/it/10 https \OT1/zplm/m/n/10 : //\OML/zplm/m/it/10 www\
 OT1/pplx/m/n/10 .\OML/zplm/m/it/10 quandl\OT1/pplx/m/n/10 .\OML/zplm/m/it/10 co
 m\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 data\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 OF
@@ -2188,7 +2339,7 @@ DP\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 FUTURE[]\OT1/pplx/m/n/10 1 \OMS/zplm/m/n/
  []
 
 
-Overfull \hbox (36.11224pt too wide) in paragraph at lines 893--894
+Overfull \hbox (36.11224pt too wide) in paragraph at lines 954--955
 []$\OML/zplm/m/it/12 http \OT1/zplm/m/n/12 : //\OML/zplm/m/it/12 www\OT1/pplx/m
 /n/12 .\OML/zplm/m/it/12 cemla\OT1/pplx/m/n/12 .\OML/zplm/m/it/12 org\OT1/zplm/
 m/n/12 /\OML/zplm/m/it/12 red\OT1/zplm/m/n/12 /\OML/zplm/m/it/12 papers\OT1/ppl
@@ -2198,8 +2349,12 @@ x/m/n/12 2002\OT1/zplm/m/n/12 /\OML/zplm/m/it/12 RED[]II[]ANADA \OMS/zplm/m/n/1
 f$
  []
 
-[33 <./img/model/bench_mark_85_15.jpg>]) (./appendix.tex [34]
-<img/abs/hw_model.png, id=653, 562.1pt x 549.05125pt>
+[34 <./img/model/bench_mark_85_15.jpg>]) (./appendix.tex [35]
+
+LaTeX Warning: Reference `fig:dataProcessing' on page 36 undefined on input lin
+e 5.
+
+<img/abs/hw_model.png, id=336, 562.1pt x 549.05125pt>
 File: img/abs/hw_model.png Graphic file (type png)
 
 <use img/abs/hw_model.png>
@@ -2208,33 +2363,24 @@ Package pdftex.def Info: img/abs/hw_model.png used on input line 8.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35
+ [36
 
- <./img/abs/hw_model.png>]
-LaTeX Font Info:    Try loading font information for OMS+pplx on input line 27.
-
-LaTeX Font Info:    No file OMSpplx.fd. on input line 27.
-
-
-LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 27.
-
-[36] [37] [38] <img/anal/dairy_test.jpg, id=672, 1501.61pt x 603.25375pt>
+ <./img/abs/hw_model.png>] [37] [38] [39]
+<img/anal/dairy_test.jpg, id=363, 1501.61pt x 603.25375pt>
 File: img/anal/dairy_test.jpg Graphic file (type jpg)
 
 <use img/anal/dairy_test.jpg>
 Package pdftex.def Info: img/anal/dairy_test.jpg used on input line 177.
 (pdftex.def)             Requested size: 452.9679pt x 181.97165pt.
 
-<img/anal/sugar_black.jpg, id=673, 1501.61pt x 642.4pt>
+<img/anal/sugar_black.jpg, id=364, 1501.61pt x 642.4pt>
 File: img/anal/sugar_black.jpg Graphic file (type jpg)
 
 <use img/anal/sugar_black.jpg>
 Package pdftex.def Info: img/anal/sugar_black.jpg used on input line 186.
 (pdftex.def)             Requested size: 452.9679pt x 193.78012pt.
 
-<img/anal/black_oil.jpg, id=674, 1501.61pt x 632.3625pt>
+<img/anal/black_oil.jpg, id=365, 1501.61pt x 632.3625pt>
 File: img/anal/black_oil.jpg Graphic file (type jpg)
 
 <use img/anal/black_oil.jpg>
@@ -2243,19 +2389,19 @@ Package pdftex.def Info: img/anal/black_oil.jpg used on input line 194.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39
+ [40
 
- <./img/anal/dairy_test.jpg> <./img/anal/sugar_black.jpg>]) [40 <./img/anal/bla
+ <./img/anal/dairy_test.jpg> <./img/anal/sugar_black.jpg>]) [41 <./img/anal/bla
 ck_oil.jpg>] (./thesis.bbl
 bibitemlist
-[41
+[42
 
 
-] [42])
+] [43])
 \tf@thm=\write5
 \openout5 = `thesis.thm'.
 
- [43]
+ [44]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -2270,24 +2416,33 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 53F76D904DC30E0DFDC8EFAC939D35E9;3442.
 
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  B5E1E55C4C65369FCA08D34B44C1D820;1798.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 17346 strings out of 493117
- 251717 string characters out of 6135432
- 438064 words of memory out of 5000000
- 20217 multiletter control sequences out of 15000+600000
+ 17297 strings out of 493117
+ 251100 string characters out of 6135432
+ 432845 words of memory out of 5000000
+ 20170 multiletter control sequences out of 15000+600000
  53888 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,17n,67p,2112b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,17n,67p,2112b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -2301,10 +2456,10 @@ xmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (49 pages, 2268966 bytes).
+Output written on thesis.pdf (50 pages, 2299192 bytes).
 PDF statistics:
- 781 PDF objects out of 1000 (max. 8388607)
- 679 compressed objects within 7 object streams
- 182 named destinations out of 1000 (max. 500000)
- 12799 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 12404 words of extra memory for PDF output out of 14400 (max. 10000000)
 
