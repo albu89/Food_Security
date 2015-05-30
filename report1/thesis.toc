@@ -43,15 +43,16 @@
 \contentsline {section}{\numberline {4.6}Parameters}{28}{section.4.6}
 \contentsline {section}{\numberline {4.7}Benchmark Model}{28}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Input Model}{28}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Significant Feature}{29}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Results}{30}{subsection.4.7.3}
-\contentsline {subsection}{\numberline {4.7.4}Curse of of Dimensionality}{31}{subsection.4.7.4}
-\contentsline {appendix}{\chapternumberline {A}Data}{36}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{36}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{37}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{37}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{37}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{38}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{39}{subsection.A.2.4}
-\contentsline {appendix}{\chapternumberline {B}Price Correlation}{40}{appendix.B}
-\contentsline {chapter}{Bibliography}{42}{section*.29}
+\contentsline {subsection}{\numberline {4.7.2}Feature Selection}{29}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Results}{29}{subsection.4.7.3}
+\contentsline {section}{\numberline {4.8}Social Media Model}{34}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Curse of of Dimensionality}{34}{subsection.4.8.1}
+\contentsline {appendix}{\chapternumberline {A}Data}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}Processing and Storage}{35}{section.A.1}
+\contentsline {section}{\numberline {A.2}Crowd Flower}{36}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{36}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{36}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{37}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{38}{subsection.A.2.4}
+\contentsline {appendix}{\chapternumberline {B}Price Correlation}{39}{appendix.B}
+\contentsline {chapter}{Bibliography}{41}{section*.29}
