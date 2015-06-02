@@ -589,64 +589,70 @@ Intro goes here ......
 
 Compared to other approaches, Fuzzy Logic has seen only a few applications in forcasting despite it's promising results. We hence want to motivate the use of this technique in further detail. 
 
-Fuzzy Logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy Logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathmatical models.\cite{Jang91}.  
-In some areas such as Time Series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us understand the determinants of food security risks in social media. 
+Fuzzy Logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy Logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathmatical models \cite{Jang91}.  
+In some areas such as Time Series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
 
-\section{Adaptive Neuro Fuzzy Inference System }
+\section{Fuzzy Logic}
 
-This subsection presents briefly the concept of an Adaptive Neuro Fuzzy Inference System (ANFIS). Before we commence with explaining the interworking of the network we present some basic terminologies and concepts of Fuzzy Logic. First, we explain the basics of Fuzzy variables and Fuzzy Sets. Then  we explain how Fuzzy Interference is performed traditionally before lastly deriving a neural network with an underlining Fuzzy Interference System. 
+In this section we present the fundamental terminologies and concepts around Fuzzy Logic. More specifically, we explain the basics of Fuzzy Variables and Fuzzy Sets.  Additionally, we explain how Fuzzy Interference is performed before lastly deriving a neural network with an underlining Fuzzy Interference System. 
 
 \subsection {Fuzzy Variables }
 
-Zadeh defined fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects, which fall into a specific wavelength, scope or how it?s commonly labelled a defined fuzzy set. Red or blue describe the object?s colour, but it?s by no means a precise definition. By applying a membership function of the corresponding fuzzy set (red or blue) we can precisely define the colour. With regard to our Fuzzy Logic system we will distinguish between Input variable and Output variable. The Output variable or Crisp Value depends on the Input value?s corresponding membership function and a decision matrix, which we will both describe in more detail in the following sections.
+Zadeh defined fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects, which fall into a specific wavelength, scope or how it's commonly labelled a defined fuzzy set. Red or blue describe the object's colour, but it's by no means a precise definition. By applying a membership function of the corresponding fuzzy set (red or blue) we can precisely define the colour. With regard to our Fuzzy Logic system we will distinguish between Input variable and Output variable. The Output variable or Crisp Value depends on the Input value's corresponding membership function and a decision matrix, which we will both describe in more detail in the following sections.
 
 
 \subsection{Fuzzy Sets}
 
-Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the element can take any value between 0 and 1. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use Gaussian membership function in Equation 4.1 as they are differentiable and for our second part desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set. 
+Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the element can take any value between 0 and 1. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use a Gaussian membership function defined by  Equation \ref{eq:gaus},  as they are differentiable and for our second part desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set. 
 
 
 \begin{equation} \label{eq:gaus}
 \mu_A(x) =  \frac{1}{ 1 + |\frac{x- c_i }{a_i}|^{2b_i}  }\end{equation}
 
 
-\subsection{Fuzzy Interference through a Generalised Neural Network}
+\subsection{Fuzzy Interference System}
 
 We first describe the components of the Fuzzy Interference System (FIS) and then give intuition on how the system can be modelled as a Generalisde Neural Network (GNN). 
 
-FIS evaluates a decision matrix composed of rules in the following semantic: 
+FIS evaluates a decision matrix composed of rules in the following semantic: \\
 
 \centerline {$ \textbf{IF} <  A  > \textbf{AND} <  B  > \textbf{THEN} < Conclusion > $}
 
-The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined as the multiplication of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
- \begin{equation} \label{eq:gaus}
+The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined in Equation \ref{eq:union} as the multiplication of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
+
+
+ \begin{equation} \label{eq:union}
  w_i =  \mu_{A\cup B(x,y)} =   \mu_A (x) \times \mu_B(y)
  \end{equation}
 
-The intersection is defined as the probabilistic or of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ 
-\begin{equation} \label{eq:gaus}
+The intersection is defined in Equation \ref{eq:probor} as the probabilistic or of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ 
+\begin{equation} \label{eq:probor}
  w_i =  \mu_{A\cap B(x,y)} =   \mu_A (x)  + \mu_B(y) -  \mu_A (x)  \times \mu_B(y)
  \end{equation}
 
-The output of the Fuzzy Interference system is computed by Equation 
+The output of one Fuzzy Rule is computed by Equation \ref{eq:output}. 
 
 
-\begin{equation} \label{eq:gaus}
+\begin{equation} \label{eq:output}
  z = dx + ey + f  \end{equation}
 
-The final output of the system is the weighted average of all rules computed by Equation 
+The final output of the system is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
 
-\begin{equation} \label{eq:gaus}
+\begin{equation} \label{eq:finaloutput}
 Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{equation}
 
-where $N$ is the number of rules. We now model this process as a neural network  shown in Figure 4.1. In \textbf{Layer 1} every node maps the input variables x1 and x2 to the membership function described in 4.2.2. The parameter set is optimised to best reflect the train data. \textbf{Layer 2} applies equation 4.2 or 4.3 which multiplies in the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation 
+where $N$ is the number of rules. 
 
-\begin{equation} \label{eq:gaus}
+\subsection{Adaptive Neuro Fuzzy Inference System }
+
+We now model the above described process as a neural network illustrated in Figure \ref{fig:gnn_fuzz}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
+
+\begin{equation} \label{eq:normfuzz}
 \overline{w_i} =  \frac{w_i}{w_1 + w_2}, i = 1,2 \end{equation}
 
- \textbf{Layer 4} applies Equation, which is similar to Equation 4.4 with an added factor from \textbf{Layer 3}. Finally, \textbf{Layer 5 }computes the overall output as the summation of all incoming signals through Equation 4.5. The construction yields a network with 5 layer,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). The parameters are optimised through a hybrid algorithm. In a forward pass the system uses least-squares to find the parameters in \textbf{Layer 4}. In the backward pass the errors are propogated backwards and the parameters in \textbf{Layer 1} are optimised by gradient descent.  
+ \textbf{Layer 4} applies Equation \ref{eq:layer4}, which is similar to Equation \ref{eq:output} but multiplied by the factor obtained in \textbf{Layer 3} from Equation \ref{eq:normfuzz}. Finally, \textbf{Layer 5} computes the overall output as the summation of all incoming signals through Equation \ref{eq:finaloutput}. The construction yields a network with 5 layers,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). The parameters are optimised through a hybrid algorithm. In a forward pass the system uses least-squares to find the parameters in \textbf{Layer 4}. In the backward pass the errors are propogated backwards and the parameters in \textbf{Layer 1} are optimised by gradient descent.  
  
- \begin{equation} \label{eq:gaus}
+ \begin{equation} \label{eq:layer4}
  \overline{w_i} f_i =  \overline{w_i }(dx + ey + f) \end{equation}
 
 

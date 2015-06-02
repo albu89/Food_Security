@@ -33,10 +33,11 @@
 \contentsline {section}{\numberline {3.5}Discussion}{23}{section.3.5}
 \contentsline {chapter}{\chapternumberline {4}Model Building}{24}{chapter.4}
 \contentsline {section}{\numberline {4.1}A fuzzy approach for Time Series Modeling}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Adaptive Neuro Fuzzy Inference System }{24}{section.4.2}
+\contentsline {section}{\numberline {4.2}Fuzzy Logic}{24}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables }{25}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Fuzzy Sets}{25}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Fuzzy Interference through a Generalised Neural Network}{25}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Fuzzy Interference System}{25}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Adaptive Neuro Fuzzy Inference System }{26}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}Data Source and Data Preprocessing}{27}{section.4.3}
 \contentsline {section}{\numberline {4.4}Training the Model}{28}{section.4.4}
 \contentsline {section}{\numberline {4.5}Methodology for forecasting with Fuzzy Logic}{29}{section.4.5}

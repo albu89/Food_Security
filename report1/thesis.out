@@ -31,28 +31,29 @@
 \BOOKMARK [1][-]{section.3.5}{Discussion}{chapter.3}% 31
 \BOOKMARK [0][-]{chapter.4}{Model Building}{}% 32
 \BOOKMARK [1][-]{section.4.1}{A fuzzy approach for Time Series Modeling}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.2}{Adaptive Neuro Fuzzy Inference System }{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Fuzzy Logic}{chapter.4}% 34
 \BOOKMARK [2][-]{subsection.4.2.1}{Fuzzy Variables }{section.4.2}% 35
 \BOOKMARK [2][-]{subsection.4.2.2}{Fuzzy Sets}{section.4.2}% 36
-\BOOKMARK [2][-]{subsection.4.2.3}{Fuzzy Interference through a Generalised Neural Network}{section.4.2}% 37
-\BOOKMARK [1][-]{section.4.3}{Data Source and Data Preprocessing}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.5}{Methodology for forecasting with Fuzzy Logic}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.6}{Parameters}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.7}{Benchmark Model}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.7.1}{Input Model}{section.4.7}% 43
-\BOOKMARK [2][-]{subsection.4.7.2}{Feature Selection}{section.4.7}% 44
-\BOOKMARK [2][-]{subsection.4.7.3}{Results}{section.4.7}% 45
-\BOOKMARK [1][-]{section.4.8}{Social Media Model}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.8.1}{Horizon}{section.4.8}% 47
-\BOOKMARK [2][-]{subsection.4.8.2}{Number of Features}{section.4.8}% 48
-\BOOKMARK [2][-]{subsection.4.8.3}{Curse of of Dimensionality}{section.4.8}% 49
-\BOOKMARK [0][-]{appendix.A}{Data}{}% 50
-\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 51
-\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 52
-\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 53
-\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 54
-\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 55
-\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 56
-\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 57
-\BOOKMARK [0][-]{section*.33}{Bibliography}{}% 58
+\BOOKMARK [2][-]{subsection.4.2.3}{Fuzzy Interference System}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.4}{Adaptive Neuro Fuzzy Inference System }{section.4.2}% 38
+\BOOKMARK [1][-]{section.4.3}{Data Source and Data Preprocessing}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.5}{Methodology for forecasting with Fuzzy Logic}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.6}{Parameters}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.7}{Benchmark Model}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.7.1}{Input Model}{section.4.7}% 44
+\BOOKMARK [2][-]{subsection.4.7.2}{Feature Selection}{section.4.7}% 45
+\BOOKMARK [2][-]{subsection.4.7.3}{Results}{section.4.7}% 46
+\BOOKMARK [1][-]{section.4.8}{Social Media Model}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.8.1}{Horizon}{section.4.8}% 48
+\BOOKMARK [2][-]{subsection.4.8.2}{Number of Features}{section.4.8}% 49
+\BOOKMARK [2][-]{subsection.4.8.3}{Curse of of Dimensionality}{section.4.8}% 50
+\BOOKMARK [0][-]{appendix.A}{Data}{}% 51
+\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 52
+\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 53
+\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 54
+\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 55
+\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 56
+\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 57
+\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 58
+\BOOKMARK [0][-]{section*.33}{Bibliography}{}% 59
