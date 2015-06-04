@@ -48,36 +48,57 @@ HAL gives us a way to study the relationship between words.  More specifically w
 
 
 \section{Food Lexicon}
+\label{food_lex}
 
-Initially we started with a simple list of food related keywords. To avoid ambiguities we will refer to the initial keyword list as $K_i$. As a first source for our set $K_i$ we used the most common traded food commodities as it would easily allow us to verify our results using the price dataset made available by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx}. We further decided to include the ten most important staple foods that feed the world as defined by Allianz\footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. 
+We began the construction of our Food Lexicon by considering  a simple list of food related keywords. To avoid ambiguities we will refer to the initial list of keyword as $K_{initial}$. Words included are the most common traded food commodities as listed by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx} along the ten most important staple foods that feed the world \footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. 
 
-We filtered the archive dataset using exact string matching on $K_i$. The distribution of the food related tweets showed that we need to categorise our lexicon in order to have sufficient data for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. Other than the sparsity of the data we also have the problem of ambiguous keywords. \emph {Soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{Soy} $\to$  \emph{Soy Bean}). 
+We filtered the archive dataset using exact string matching on $K_{initial}$. The distribution of the food related tweets motivated us to structure our lexicon hierarchically as certain commodities were only represented very sparsely and insufficient for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. To circumvent this problem we mimic the hierarchical representation of the FAO   \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. 
 
-To create categories we chose to mimic the categorisation of the FAO  \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index. We additionally created a further category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequently the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. 
+FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index which is an overall measure of the current food condition. We additionally created a further category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequently the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. \emph{Meat, Dairy, Cereals, Vegetable Oil} and \emph{Other Food of Interest} build the top layer of our hierarchical representation as shown in Figure \ref{fig:food_lex}. 
 
-The six subsets  $s$ are $\in K_f$ where $s$ is one of the six categories mentioned above. $C$ is an imaginary set that contains the five categories \emph{meat, dairy products, cereals, vegetable oil, sugar}  each being a subset containing all possible food items belonging to a specific category (e.g. the subset dairy would contain all possible dairy products). If the following relationship holds  $k \in C$, where $k$ is a keyword, for any keyword $k \in K_i$, we consider $k \in K_f$. For all keyword $k \notin C$ the condition of it being frequent is evaluated and if true added to $K_f$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Upon manual examination of the dataset we realised that people are much more likely to talk about a specific food product rather than the raw material. \emph{Cereals} are not a public interest. However products such as \emph{bread} or \emph {flower} occur much more frequently. The set $K_f$  was further enriched by using food products that have been identified by \cite{AbbarMW14} in set $K_f$ only $\forall$ $k   \in K_f$ that are also $\in C$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
+For the second layer we use subcategories. As the name implies  subcategories abstract the categories into different subsets i.e. for meat we would have the subsets \emph{beef, chicken, lamb} and \emph{pork}. 
+
+As the third layer and lowest instance, we consider food products. Each subcategory consists of food items which \textbf{1.)} can simply be the name of a category and subcategory e.g. meat, beef or  \textbf{2.)} be a product that is commonly found in markets and stores  around the world. An example of the later would be \emph{flour} for the subcategory \emph{wheat}. The intuition and motivation to include such products is simple. In the production process of food items most factors that influence the price are static and predictable. The only fluctuating and unknown factor is the price of the raw product or in our case the commodity. Products should hence be just as expressive in explaining the variance of food prices. One however has to be cautious as certain producers hedge themselves against price fluctuations of commodities allowing them to sell the product to the same price despite rising commodity prices. Lastly, we were motivated to include such terms because products are much more likely to capture the social attention then raw items due to their every day use. 
+
+\begin{figure}[H]
+
+\Tree[.{FoodLexicon} [.{Meat} [.Beef \textit{Steak} ]
+               [.Pork  \textit{Ham}  ] ]
+          [.Dairy [.Cheese \textit{Mozzarella} ]
+                [.Milk \textit{Cream}  ]]
+                [.Cereals [.Wheat \textit{Flour} ]
+                [.Corn  \textit{Whisky}  ]     ]]
+
+\caption{Food Lexicon - Hierarchie}\label{fig:food_lex}
+\end{figure}
+
+
+ Other than the sparsity of the data we further faced the problem of ambiguous keywords. \emph {Soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{Soy} $\to$  \emph{Soy Bean}). Terms were added to the Lexicon by following a framework as explained in the following section. 
+
+
 
 \subsection{Candidate Food Term Selection}
 
-We took several  steps in order to improve our detection of the desired food commodities. $K_f$ was created as follows: 
+We initially assume an empty sett $K_{final}$ and structure it hierarchically as mentioned in the previous section. The six categories ($c_1, c_2 ... c_6)$ are $\in K_{final}$ where $c_i$ is one of the six categories mentioned above. For interpretability purposes we introduce an axiom in form of a set $K_{all}$. It only contains five of the above mentioned six categories \emph{meat, dairy products, cereals, vegetable oil, sugar} excluding the category \emph{Other Food of Interest}. We assume that $K_{all}$ is a fully populated Lexicon containing all possible food items for a specific category (e.g. the subset dairy would contain all possible dairy products). It returns $True$ if a term is an element of the set and $False$ otherwise. For all keyword $k_i \in K_{initial}$ we evaluate if $k_i\in K_{all}$. If $True$ we consider $k_i \in K_{final}$. For all keyword $k_i \notin K_{all}$ the condition of it being frequent is evaluated and if $True$ added to the category \emph{Other Food of Interest}  $c_6 \in K_{final}$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Lastly, the set $K_{final}$  was further enriched by using food products $p_i$ that have been identified by \cite{AbbarMW14}  only if $p_i$ $\in K_{all}$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
+
+We summarise our framework as follows: 
+
 \begin{description}
-  \item[1.)] We add all keywords $k \in K_i$ to  $K_f$ only if $k \in C $ or $k$ is frequent 
-  \item[2.)] Further we add all keywords $ k \in K_f$ to $K_f$ only if $k \in C$
-  \item[3.)] We create a HAL space using a random subsample of 10\% from our initial collection with all keywords that occur $> 100$. $\forall c \in C $ we pick the keyword $k\in K_f$ that most frequently occurs over the entire sample and retrieve the top 500 similar terms. We hand select those that are $\in C$.
+  \item[1.)] We add all keywords $k \in K_{initial}$ to  $K_{final}$ only if $k \in K_{all} $ or $k$ is frequent 
+  \item[2.)] Further we add all $p_i$ to $K_{final}$ only if $p_i \in K_{all}$
+  \item[3.)] We create a HAL space using a random subsample of 10\% from our initial collection with all keywords that occur $> 100$. $\forall c_i \in K_{final} $ we pick the keyword $k\in K_{final}$ that most frequently occurs over the entire sample and retrieve the top 500 similar terms. We hand select those that are $\in K_{all}$ and add it to $K_{final}$.
 \end{description}
 
-% We took several  steps in order to improve our detection of the desired food commodities. The first step we took was a simple context analysis. The basic premise our approach relies on is that words with similar meaning repeatedly occur with similar words preceding and following it. We took a sample of 10 \% and counted the frequency of the 500 most occurring nouns and hand selected those unambiguously related to food. Looking at the distribution of the food related tweets \textbf{ \ref{fig:keywordDistribution}} we realised that we would have to categorise our lexicon in order to have sufficient data for further analysis.
+
  
-The keyword set $K_f$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_f$ forms our Food Lexicon.  
-
-
+The keyword set $K_{final}$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_f$ forms our Food Lexicon.  
 
  
 \begin{table}[h]   
 \centering
 \scriptsize 
 \begin{tabular}{p{1.3cm}|p{10.7cm} rlr}\toprule
-\pbox{1.3cm}{Lexicon / \\ Subset $s$\\} & Keywords (i: from initial set, e: from $K_f$ , h: from HAL space )  \\
+\pbox{1.3cm}{Lexicon / \\ Subset $s$\\} & Keywords (i: from initial set, e: from \cite{AbbarMW14} , h: from HAL space )  \\
 \hline
 & & \\
 \pbox{1.3cm}{$K_i$ \\Food } & \pbox{10.7cm}{  meal (i), meals (i) ,food (i), foods (i), wheat (i), rice v, maize (i), carley (i), soybean (i), soy (i), meat (i) , beef (i), cattle (i), chicken (i), poultry (i), lamb (i), swine (i), pork (i), fish (i), seafood (i), shrimp (i), salmon (i), sugar (i), bananas (i), oranges (i), coffee (i), cocoa (i), tea (i), milk (i), yams (i), cassava (i), potatoes (i), sorghum (i), plantain (i), nuts (i), onion (i), salt (i), egg (i), dairy (i), cereals (i)  }    \\
@@ -133,6 +154,7 @@ The keyword set $K_f$ was used to perform exact term matching on the tweets coll
 
 
 \section{Predictor Lexicon}
+\label{pred_lex}
 
 From our basic food lexicon we proceeded to extract features that we can use to explain events around Food Security. The FAO measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of the food and lastly \emph{Stability} is a measure of the other three dimensions over time. For food security objectives to be realised, all four dimensions must be fulfilled simultaneously \cite{fao2008}. 
 
@@ -385,7 +407,8 @@ We observed a general popularity of food in our initial analysis and that certai
 
 For each food category (e.g. meat, dairy ) we correlated the tweet volumes of the subcategories( e.g. beef, chicken for meat), products (e.g. bacon, salami) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater then 10 tweets per day. The internet archive did not contain tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
 
-\subsection{Analysis} 
+\subsection{Results} 
+\label{corr_results}
 
 Between the meat subcategories there is a strong positive linear relationship in the range of 0.7264 and 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three Price Indices. Most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the Price Indices. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports \cite{abbott2009} theory that the commodity markets have a strong influence on the the rising food prices and are a strong factor for quantifying Food Security. 
 
@@ -460,6 +483,7 @@ A smilier correlation analysis has been made by the UN \cite{ungp2013}. They how
 
 
  \section{Conversation Drivers}
+ \label{conversation}
 
 
 Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor terms such as price) have a much stronger Pearson correlation then the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to Food Security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been entered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food prices spikes and differentiates among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
@@ -714,7 +738,7 @@ For training ant testing our model we choose the time period 03.01.2012 - 26.09.
 
 
 
-\section{Methodology for forecasting with Fuzzy Logic}
+\section{Methodology for Forcasting with Fuzzy Logic}
 
 The goal of our research is to predict the price of a commodity in the future. The prediction model takes different features $y_t - y_{t-M+1}$ and an input. The problem of predicting the future value $y_{t_1}$ can be formulated as: 
 
@@ -725,11 +749,20 @@ y_{t + 1} = fp(y_{t}, y_{t-1}, y_{t-M+1})
 
 where M is the number of features and fp is our fuzzy prediction model. Consider the case where we predict $y_{t +4}$ , so four days into the future. A recursive way would be to predicted values $y_{t+2}$ and $y_{t+3}$ and then use them as regressors in predicting $y_{t +4}$. However this approach accumulates prediction errors. The further the prediction value is the more prediction outputs are used as regressors. We deviate from this approach by building a direct prediction model, so for each prediction horizon one direct model. 
 
-Translating the Equation 4.9 into the fuzzy system a prediction would take the following form: 
+Translating the Equation 4.9 into the fuzzy system a prediction would take the following form: \\
 
-\centerline {$ \textbf{IF} <  y_t  \in High> \textbf{AND} < y_{t-1} \in Medium > \textbf{THEN} <  y_{t+1} \in Increase > $}
+\centerline {$ \textbf{IF} <  y_t  \in High> \textbf{AND} < y_{t-1} \in Medium > \textbf{THEN} <  y_{t+1} \in Increase > $} 
 
-where High, Medium and Increase are Fuzzy Sets. 
+
+where High, Medium and Increase are Fuzzy Sets. We measure the difference between the actual value and the predicted value by computing the Root Mean Square Error (RMSE) defined in Equation \ref{eq:rmse}. It is an aggregation of all prediction errors for different time stamps. As RMSE is scaled dependent it is important that the input and output variables among different commodities are normalised to be able compare the results across the different products. 
+
+
+\begin{equation} \label{eq:rmse}
+RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n} (y_i -  \overline{y_i})^2}
+ \end{equation}
+
+
+
 
 
 \section{Parameters}
@@ -785,9 +818,16 @@ Yao et al. [ref] suggests that the market can be categorised using the major tre
 
 \subsection{Feature Selection}
 
-The objective here is to find the most significant features among the 33 in our input model. To investigate the relevance we used the Relieff algorithm []. We measure the most significant features with respect to the horizon of 4 days, 7 days and 14 days. Furthermore we consider  three different commodities, wheat (w), beef (b) and milk (m). The configuration in the Table \emph{w-4} refers to wheat with a prediction horizon of 4 days. The most significant features are  1.) $\phi_1$ : $D30$ , 2.) $\phi_2$ : $D29$,  3.) $\phi_3$ : $D28$, 4.) $\phi_4$ : $W1$ , 5.) $\phi_5$ : $D27$ and 6.) $\phi_6$ : $D26$.
 
-The numbers in the table refer to the relative importance of the feature for a specific configuration. It is interesting to observe that the Relieff consistently suggested the same features irrespectively of the commodity type and the prediction horizon. We can see that the values follow a clear trend. With an increasing horizon the features lose it's importance as the prediction task becomes more and more challenging. 
+
+The objective here is to find the most significant features among the 33 in our input model in order to decrease the complexity and lastly improve the prediction accuracy of our model.  To investigate the relevance we used the Relieff algorithm []. We measure the most significant features with respect to the horizon of 4 days, 7 days and 14 days. Furthermore we consider  three different commodities, wheat (w), beef (b) and milk (m). The configuration in the Table \emph{w-4} refers to wheat with a prediction horizon of 4 days. The most significant features are  1.) $\phi_1$ : $D30$ , 2.) $\phi_2$ : $D29$,  3.) $\phi_3$ : $D28$, 4.) $\phi_4$ : $W1$ , 5.) $\phi_5$ : $D27$ and 6.) $\phi_6$ : $D26$.
+
+The numbers in the table refer to the relative importance of the feature for a specific configuration. It is interesting to observe that the Relieff consistently suggested the same features irrespectively of the commodity type and the prediction horizon. This gives us a strong confidence in the relative importance of the prediction task at hand, as it generalises well over different models i.e. horizons and also different commodities. We can see that the values follow a clear trend. With an increasing horizon the features lose its importance as the prediction task becomes more and more challenging. 
+
+
+For our prediction task we consider the top 10 features. This value was empirically evaluated and is a trade off between computational complexity and accuracy. Better prediction accuracy is expected for values greater the 10 however the search will become too exhaustive.  Those additional feature ($\phi_7 - phi_10$ not displayed in Table \ref{tab:feat_mod1}  are for most commodities and horizons the same but ranked in different orders depending on the prediction task. Interestingly D25, D24, D23 and W2 rank highly along the other values in Table \ref{tab:feat_mod1} which are all placed in the intermediate past. This observation suggests that models based on the intermediate past poses more predictive power and outperform strategies based on features in the recent past. Robert Novy - Marx also observed this effect and investigated the hypothesis in \cite{iuj11}. Indeed models with intermediate variables tend to outperform such only considering recent values. A possible explanation mentioned in the paper is that such variable best captures the momentum of a commodity. 
+
+
 
 
 \begin{table}[H]
@@ -811,14 +851,26 @@ The numbers in the table refer to the relative importance of the feature for a s
   \hline
  \end{tabular}
 \caption{Feature Selection: Benchmark Prediction}
-\label{tab:abc}
+\label{tab:feat_mod1}
 \end{table}
 
 
 
 \subsection{Results}
 
-ANFIS seems to perform exceptionally well for day to day predictions
+The time series prediction results over a range of different horizons are illustrated in Figure \ref{fig:res_1}. To give an example of the interpretation of the model the results are obtained by applying the model describe in Section 4.5. The features used in the form of $y_{t-2}$ are the top 10 obtained from the feature selection process. If the prediction task is to predict $y_{t+3}$ and for illustration purposes we assume today is Monday, then the prediction goal translates to approximating the true value on the following Thursday. Assuming the feature selection process yields $y_{t-1}$  and $y_{t-1}$ this corresponds to using the price on the previous Sunday and Saturday. Finally our model with two membership functions High and Low gives us the following Fuzzy Model. \\
+
+\centerline {$ \textbf{IF} <  Sunday \in High> \textbf{AND} < Saturday \in Low > \textbf{THEN} <  Thursday \in 0.67 > $} 
+
+The output is a numerical value and not a class. 
+
+ Looking at the results ANFIS performs exceptionally well for day to day predictions and as expected decreases its performance as the horizon increases. The commodity beef seems to be the eassiest prediction task and further analysis will clearly show why.   We observe that RMSE linearly increases over the time period until prediction horizon 20. Prediction accuracy rapidly decreases and becomes unstable from then onwards.  
+
+To analyse the results in more detail and to put the RMSE into context  we turn our attention towards Figure \ref{fig:wheat_1} \ref{fig:beef_1} \ref{fig:milk_1}. For all three commodities the predictions within one week are extremely accurate. We can now also observe why beef had the lowest RMSE among the three commodities. Beef follows a clear upwards trend. Such long lasting motions are much easier to predict and as discussed in Section Feature Selection our input variables from the intermediate past perform exceptionally well if there is a clear underlying motion. 
+
+ For the model $y_{t+14}$ and $y_{t+20}$  ANFIS clearly overestimates a decrease and increase in price but still manages to captures the underlining trend. On the other hand Figure \ref{} \ref{} strongly approximates the observed pattern in the training sample explaining the strong deviation from the actual prediction. The only commodity excluded from this behaviour is beef due to it's strong underlying motion. Better predictions can be expected by considering different training samples. 
+
+
 
 
 
@@ -827,7 +879,7 @@ ANFIS seems to perform exceptionally well for day to day predictions
         \centering
          \includegraphics[width=1\textwidth ]{img/model/prediction_days_1}      
         \caption{Prediction Accuracy - Benchmark }
-        \label{fig:gnn_fuzz}
+        \label{fig:res_1}
 \end{figure}
 
 
@@ -847,7 +899,7 @@ ANFIS seems to perform exceptionally well for day to day predictions
         \end{subfigure}%
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/wheat/pred_7}
-                \caption{7 Day Horizon - RMSE 0.0043}
+                \caption{7 Day Horizon - RMSE 0.0047}
                 \label{fig:tiger}
         \end{subfigure}
        
@@ -855,15 +907,16 @@ ANFIS seems to perform exceptionally well for day to day predictions
        
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/wheat/pred_14}
-                \caption{10 Day Horizon - RMSE 0.0111}
+                \caption{14 Day Horizon - RMSE 0.0353}
                 \label{fig:mouse}
         \end{subfigure}%
          \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/wheat/pred_20}
-                \caption{20 Day Horizon - RMSE 0.0856}
+                \caption{20 Day Horizon - RMSE  0.1031}
                 \label{fig:mouse}
         \end{subfigure}
-        \caption{Benchmark Prediction Wheat}\label{fig:animals}
+        \caption{Benchmark Prediction Wheat}
+        \label{fig:wheat_1}
 \end{figure}
 
 
@@ -895,7 +948,8 @@ ANFIS seems to perform exceptionally well for day to day predictions
                 \caption{20 Day Horizon - RMSE 0.1013}
                 \label{fig:mouse}
         \end{subfigure}
-        \caption{Benchmark Prediction Beef}\label{fig:animals}
+        \caption{Benchmark Prediction Beef}
+        \label{fig:beef_1}
 \end{figure}
 
 
@@ -926,7 +980,8 @@ ANFIS seems to perform exceptionally well for day to day predictions
                 \caption{20 Day Horizon - RMSE 0.2039}
                 \label{fig:mouse}
         \end{subfigure}
-        \caption{Benchmark Prediction Milk}\label{fig:animals}
+        \caption{Benchmark Prediction Milk}
+        \label{fig:milk_1}
 \end{figure}
 
 
@@ -942,6 +997,58 @@ ANFIS seems to perform exceptionally well for day to day predictions
 \clearpage
 
 \section{Social Media Model}
+
+\subsection{Input Model }
+
+Xue Zhanga et al. found that twitter conversation correlates and is even predictive of financial market movements. They measured the attention of a given subject by aggregating the daily volume. In Section \ref{corr_results} we investigated if such a correlation is present and concluded that for most commodities no such linear relationship exists. We however still include the social attention as a possible feature since it might prove to be useful in form of a lagged variable (i.e. that the volume 4 days ago  correlates to the commodity price of today). We consider social attention on different granularities  by measuring the volume of the category, subcategory and the product \ref{food_lex}. We further include products which are not part of a subcategory but show a strong linear relationship with the predicted commodity (i.e. we consider goat as a feature for beef despite it not being a related product to beef). 
+
+ Generally speaking microblogs capture one topic due to its 140 keyword limitation. The topics can usually be inferred by capturing 1 or 2 keywords. However certain terms are more intrinsic then others i.e. the keyword \emph{IBM} can unambiguously be related to the company where as the  term \emph{break} has multiple meanings and given the context could be unrelated to a desired topic. We hence introduce the notion of contextual sensitive tweets. Tweets considered contextual sensitive match both a term in the Food Lexicon and the Predictor Lexicon. We consider the context of food price, supply, poverty and needs \ref{pred_lex}. 
+ 
+ 
+ Despite having identified  a significant correlation for contextually sensitive tweets our analysis in Section \ref{conversation} concluded that the attention volatility is mostly driven by unrelated topics. Public mood states or sentiment might hence be a more valuable indicator. This intuition is supported by \cite{} namely that financial decisions are not uncommonly driven by emotions and mood. For the purpose of this analysis we consider different ratios of sentiment, namely the ratio between the numbers of positive and negative tweets \cite{Nguyen12}, the proportion of neutral and total tweets,  the ratio between the numbers of
+non-neutral and total posts \cite{Zhang09}, the ratio between the number of positive and negative discussions and lastly the ratio between the numbers of neutral and non neutral messages. 
+
+Table \ref{tab:socio_feat} conculdes our input model. We measure the sentiment for both twitter buzz and contextually sensitive tweets. The result is an input model with 51 features. 
+ 
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}|p{8cm}| }
+
+ \hline
+ \multicolumn{2}{|c|}{Features } \\
+ \hline
+ Feature Type & Feature Example    \\
+\hline
+Attention & \#Commodity   \\
+\hline
+Context & \#Price f. Commodity   \\
+		& \#Supply f. Commodity  \\
+		& \#Poverty f. Commodity   \\
+		& \#Need f. Commodity  \\
+
+
+
+  \hline
+   Sentiment Ratio & \#positive : \#negative tweets  \\
+      			     & \#positive : \#(positive + negative) tweets   \\
+ 			     & \#negative: \#(positive + negative) tweets  \\
+			     & \#neutral : \#(positive + negative) tweets  \\
+			     & \#(positive+negative) : \#all tweets   \\			     
+			     & \#neutral : \#all tweets \\
+                          
+   \hline
+   
+
+
+\end{tabular}
+\caption{Input Model: Social Media Prediction}
+\label{tab:socio_feat}
+\end{table}
+
+
+
+\
 
 
 
@@ -1038,34 +1145,7 @@ ANFIS seems to perform exceptionally well for day to day predictions
 
 
 
-\begin{tabular}{ |p{3cm}|p{8cm}|p{3cm}|  }
- \hline
- \multicolumn{3}{|c|}{Features } \\
- \hline
- Feature Type & Feature Example & Reference   \\
-\hline
-Attention & \#Commodity  & give ref \\
-\hline
-Context & \#Price f. Commodity   & give re \\
-		& \#Supply f. Commodity   & give ref \\
-		& \#Poverty f. Commodity   & give ref \\
-		& \#Need f. Commodity   & give ref \\
 
-
-
-  \hline
-   Sentiment Ratio & \#positive : \#negative tweets  & give ref\\
-      			     & \#positive : \#(positive + negative) tweets   &  give ref\\
- 			     & \#negative: \#(positive + negative) tweets &  give ref  \\
-			     & \#neutral : \#(positive + negative) tweets & give ref  \\
-			     & \#(positive+negative) : \#all tweets & give  \\			     
-			     & \#neutral : \#all tweets & give ref\\
-                          
-   \hline
-   
-
-
-\end{tabular}
 
 
 
