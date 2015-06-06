@@ -4,26 +4,60 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
 \BOOKMARK [0][-]{chapter.2}{Social Media Data Acquisition}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Hyperspace Analogue to Language}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Food Lexicon}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Predictor Lexicon}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.4}{Experimental Evaluation}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.5}{Filtering}{chapter.2}% 10
-\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 11
-\BOOKMARK [1][-]{section.3.1}{User Distribution}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Food Term Distribution}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Price Correlation}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Conversation Drivers}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.5}{Discussion}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Model Building}{}% 17
-\BOOKMARK [1][-]{section.4.1}{A fuzzy approach for Time Series Modeling}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Fuzzy Logic}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.3}{Data Source and Data Preprocessing}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.5}{Methodology for Forcasting with Fuzzy Logic}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.6}{Parameters}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.7}{Benchmark Model}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.8}{Social Media Model}{chapter.4}% 25
-\BOOKMARK [0][-]{appendix.A}{Data}{}% 26
-\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 27
-\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 28
-\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 29
+\BOOKMARK [2][-]{subsection.2.1.1}{Motivating a Semantic Approach}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Experimental Evaluation}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.3}{HAL Performance Results}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.4}{Discussion}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Food Lexicon}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Candidate Food Term Selection}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Predictor Lexicon}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Candidate Predictor Term Selection}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Annotation and False Positive Removal of HAL Results}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Annotation Results}{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{Filtering}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.4.1}{Food related Tweets}{section.2.4}% 18
+\BOOKMARK [2][-]{subsection.2.4.2}{Predictor related Tweets}{section.2.4}% 19
+\BOOKMARK [2][-]{subsection.2.4.3}{Sentiment Extraction}{section.2.4}% 20
+\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 21
+\BOOKMARK [1][-]{section.3.1}{User Distribution}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Food Term Distribution}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Price Correlation}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Results}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Discussion}{section.3.3}% 26
+\BOOKMARK [1][-]{section.3.4}{Conversation Drivers}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.4.1}{A Visual Analysis of the Social Attention}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.2}{Methodology}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.3}{Event Annotation}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.4}{Results}{section.3.4}% 31
+\BOOKMARK [1][-]{section.3.5}{Discussion}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Model Building}{}% 33
+\BOOKMARK [1][-]{section.4.1}{A fuzzy approach for Time Series Modeling}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Fuzzy Logic}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.2.1}{Fuzzy Variables }{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.2}{Fuzzy Sets}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.3}{Fuzzy Interference System}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.4}{Adaptive Neuro Fuzzy Inference System }{section.4.2}% 39
+\BOOKMARK [1][-]{section.4.3}{Data Preprocessing}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.4}{Training the Model}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.5}{Methodology for Forcasting with Fuzzy Logic}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.6}{Parameters}{chapter.4}% 43
+\BOOKMARK [1][-]{section.4.7}{Benchmark Model}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.7.1}{Input Model}{section.4.7}% 45
+\BOOKMARK [2][-]{subsection.4.7.2}{Feature Selection}{section.4.7}% 46
+\BOOKMARK [2][-]{subsection.4.7.3}{Results}{section.4.7}% 47
+\BOOKMARK [1][-]{section.4.8}{Social Media Model}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.8.1}{Input Model }{section.4.8}% 49
+\BOOKMARK [2][-]{subsection.4.8.2}{Bolstering the Social Media Features}{section.4.8}% 50
+\BOOKMARK [2][-]{subsection.4.8.3}{Feature Selection}{section.4.8}% 51
+\BOOKMARK [2][-]{subsection.4.8.4}{Horizon}{section.4.8}% 52
+\BOOKMARK [2][-]{subsection.4.8.5}{Number of Features}{section.4.8}% 53
+\BOOKMARK [2][-]{subsection.4.8.6}{Curse of of Dimensionality}{section.4.8}% 54
+\BOOKMARK [0][-]{appendix.A}{Data}{}% 55
+\BOOKMARK [1][-]{section.A.1}{Processing and Storage}{appendix.A}% 56
+\BOOKMARK [1][-]{section.A.2}{Crowd Flower}{appendix.A}% 57
+\BOOKMARK [2][-]{subsection.A.2.1}{Categorise: Food Price}{section.A.2}% 58
+\BOOKMARK [2][-]{subsection.A.2.2}{Categorise: Food Supply}{section.A.2}% 59
+\BOOKMARK [2][-]{subsection.A.2.3}{Categorise: Food Poverty}{section.A.2}% 60
+\BOOKMARK [2][-]{subsection.A.2.4}{Categorise: Food Needs}{section.A.2}% 61
+\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 62
+\BOOKMARK [0][-]{section*.38}{Bibliography}{}% 63
