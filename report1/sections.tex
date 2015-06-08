@@ -1135,13 +1135,13 @@ In chapter \ref{dataprocessing} we motivated the use of a smoothing function in 
 \end{table}
 
 
-We further investigated to what extend twitter lags as an indicator. If a casual relationship exists, how fast do prices react to twitter conversations? Graphically this corresponds to shifting the sentiment ratio to the left. For each social media feature (51) we measured the correlation between 1 day and 3 days lag similar to \cite{Si_exploitingtopic}. The experiment was performed on all three commodities. Incase of a disagreement we solved  the tie through a majority voting. A 
- lag clearly favoured the correlation with 44 out of 51 (0.86 \%) features and a 1 day lag for 7 out of 51 (14 \%) features. 
+We further investigated to what extend twitter lags as an indicator. If a casual relationship exists, how fast do prices react to twitter conversations? Graphically this corresponds to shifting the sentiment ratio to the left. For each social media feature (51) we measured the correlation between 1 day and 3 days lag similar to \cite{Si_exploitingtopic}. We choose a window of three days because typical non of the attention spikes showed to last longer then 3 days (Section 3.4).  The experiment was performed on all three commodities. Incase of a disagreement we solved  the tie through a majority voting. A 
+ lag of 3 days clearly favoured the correlation with 44 out of 51 (0.86 \%) features and a 1 day lag for 7 out of 51 (14 \%) features. 
 
 
 \subsection{Feature Selection}
 
-For the purpose of this analysis we repeat the exercise performed in \ref{featSel_bench}. Again we try to find features that generalise well among different commodities and horizons. Unlike the price data the social media features seem to be more specific to a given task and commodity. For the top 16 features we only found 3 features that were present for all commodities and all horizons. Among the three were \textbf{1.)} the attention count of the selected products that showed a high correlation in our analysis (AC50), \textbf{2.)} the first sentiment ratio of poverty (SR32) and \textbf{3.)} the first sentiment of the subcategory (SR15). Other features that generalised well for all prediction tasks of a given commodity were 1.) the second sentiment of the subcategory (SR16), 2.) the 2nd sentiment of poverty (SR33), the fourth sentiment of poverty (SR35), the first sentiment of price (SR38), the second sentiment of supply (SR45), the sixth sentiment of supply and lastly the attention count of another selected product that scored well in our correlation analysis (AC51). The top features for each given commodity are illustrate in Table \ref{tab:feat_mod2}.
+For the purpose of this analysis we repeat the exercise performed in \ref{featSel_bench}. Again we try to find features that generalise well among different commodities and horizons. Unlike the price data the social media features seem to be more specific to a given task and commodity. For the top 16 features we only found 3 features that were present for all commodities and all horizons. Among the three were \textbf{1.)} the attention count of the selected products that showed a high correlation in our analysis (AC50), \textbf{2.)} the first sentiment ratio of poverty (SR32) and \textbf{3.)} the first sentiment of the subcategory (SR15). Other features that generalised well for all prediction tasks of a given commodity were 1.) the second sentiment of the subcategory (SR16), 2.) the 2nd sentiment of poverty (SR33), the fourth sentiment of poverty (SR35), the first sentiment of price (SR38), the second sentiment of supply (SR45), the sixth sentiment of supply(SR49) and lastly the attention count of another selected product that scored well in our correlation analysis (AC51). The top features for each given commodity are illustrate in Table \ref{tab:feat_mod2}.
 
 Sentiment ratios are clearly the favoured features where only the highly selected volume counts seem to have a considerable effect. The sentiment of our contextually sensitive tweets appear to be a strong indicator of the price variance, especially the sentiment for poverty which was captured in the form of three different ratios. In \ref{an_result} we showed the peaks had the highest relevance for  discussion centered around poverty. Admittedly, it's not a decisive indicator for the quality of the feature, however it might explain why poverty features rank so highly. Similarly the three food security indicators, that have been selected by Relieff all showed a degree of relevance in our analysis. Needs had no relevance and hence it doesn't come as a surprise that it was not selected as a potential feature. It appears that Relieff successfully removes redundant features. We would for example expect needs and poverty to be similar likewise supply and price. Non of them overlap in the ratios used. Lastly, the sentiment ratios 1 and 2 seem to be more indicative then others. They only include information about the ratio of positive tweets [why is that the case????]
 
@@ -1168,26 +1168,7 @@ Sentiment ratios are clearly the favoured features where only the highly selecte
 
 \subsection{Results}
 
-
-
-
-
-
-
-
-
-\subsection{Horizon}
-
-
-
-
-\begin{figure}[H]
-        \centering
-         \includegraphics[width=1\textwidth ]{img/model/exp2/result}      
-        \caption{Prediction Accuracy - Social Media Features }
-        \label{fig:gnn_fuzz}
-\end{figure}
-
+Unlike our benchmark paradigm the social media model did not exhibit an increasing error rate with increasing horizon. We hence focused our attention on analysing day to day predictions. From Figure \ref{fig:comp_exp} it is apparent that our bolstering attempts have clearly improved the prediction accuracy across all commodites. However there is a clear difference in the quality of the predictions between the three commodities. For wheat we were able to follow the real price line, not so for milk. Why does the prediction model favour the commodity wheat? Our first attempt was to investigate the linear relationship between the features and the price. The correlation analysis favoured the commodity milk however the difference is negligible. Our 2nd intuition was to check whether the training data generalises well for the entire data set. We observed that the training and test dataset exhibit different behaviours. I.e. we found that certain features showed a negative correlation in the train set, however a positive relationship in the train set. We experimented with various sizes of train sets however non of them notably improved the prediction results. Lastly, we were motivated to examine the content of the tweets. The set of wheat tweets might be more relevant to our given topic then the set of milk tweets. For the purpose of this analysis we computed the top 50 keywords, excluding stop words,  of the tweets containing at least one term of the subcategory wheat or milk. We did this analysis for the conversations centred around price, supply and poverty as the features crafted from these topic constitute the majority in our model. Notably, across all conversation topics, the discussions centred around wheat showed a higher relevance (i.e. the number of keywords retrieved  deemed relevant was higher). For milk the the most frequent keywords were ice, butter,  milk, cream, chocolate and peanut. At a first glance butter and cream seem relevant. The bigrams showed that ice and cream are related (ice cream) as well as peanut and butter (peanut butter). Both bigrams are considered noise as they only have a very distant relationship with milk. On the other hand for wheat the most common terms retrieved were beer, gluten, bread, pasta, wheat, barley and noodles.  Those terms are clearly highly relevant to the subcategory wheat. On the basis of these finding we conclude that the list of keywords we used retained a high number of tweets that were not relevant enough. To circumvent this problem, techniques such as IDF should be explored 
 
 
 
@@ -1200,68 +1181,91 @@ Sentiment ratios are clearly the favoured features where only the highly selecte
                 \caption{1 Day Horizon Wheat - RMSE 0.3580}
                 \label{fig:gull}
         \end{subfigure}%
+           \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/exp2_final/wheat_1}
+                \caption{1 Day Horizon Wheat - RMSE 0.1083}
+                \label{fig:gull}
+        \end{subfigure}%
+              \hfill    
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/exp2/beef/pred_1}
                 \caption{1 Day Horizon Beef - RMSE 0.3209  }
                 \label{fig:tiger}
-        \end{subfigure}
-       
-       \hfill
-       
+        \end{subfigure}%
+              \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/exp2_final/beef_1}
+                \caption{1 Day Horizon Beef  - RMSE 0.2383 }
+                \label{fig:tiger}
+        \end{subfigure}%
+      	 \hfill
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/exp2/milk/pred_1}
                 \caption{1 Day Horizon Milk- RMSE 0.3782}
                 \label{fig:mouse}
         \end{subfigure}%
-    
-        \caption{Social Media Prediction}\label{fig:animals}
-\end{figure}
-
-
-
-
-
-
-
-
-
-\subsection{Number of Features}
-
-
-
-\begin{figure}[H]
-        \centering
-         \includegraphics[width=1\textwidth ]{img/model/exp3/result}      
-        \caption{Prediction Accuracy - Social Media Features }
-        \label{fig:gnn_fuzz}
-\end{figure}
-
-
-
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/exp2/wheat/pred_18}
-                \caption{1 Day Horizon Wheat 18 Features - RMSE 0.2422}
-                \label{fig:gull}
-        \end{subfigure}%
-        \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/exp3/beef/pred_18}
-                \caption{1 Day Horizon Beef 18 Features - RMSE 0.2412  }
-                \label{fig:tiger}
-        \end{subfigure}
-       
-       \hfill
-       
-        \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/exp2/milk/pred_18}
-                \caption{1 Day Horizon Milk 18 Features - RMSE 0.2581}
+            \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/exp2_final/milk_1}
+                \caption{1 Day Horizon Milk - RMSE  0.2960}
                 \label{fig:mouse}
         \end{subfigure}%
     
-        \caption{Social Media Prediction}\label{fig:animals}
+    
+        \caption{Social Media Prediction}\label{fig:comp_exp}
 \end{figure}
 
+
+
+
+\subsection{Combined Model}
+
+
+\subsection{Feature Selection}
+
+	
+40 = 
+
+
+the third sentiment ratio of poverty (SR34), 
+the fith sentiment of the product (SR12), 
+the fourth sentiment of the product(SR11), 
+the fourth sentiment of supply (SR47)
+the third sentiment of supply (SR46)
+the second sentiment of supply(SR45)
+the first sentiment of price (SR38)
+the third sentiment of price (SR40)
+the third sentiment of the category (SR22)
+the fourth sentiment of needs(SR29)
+the fith sentiment of needs(SR30)
+the sixth sentiment of needs(SR31)
+
+
+D24 = (75)
+D25 = (76)
+D26 = (77)
+D27 = (78)
+D28 = (79)
+D29 = (80)
+D30 = (81)
+W1 = (82)
+
+
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| p{1cm}|  }
+\hline
+$milk$ & SR38 & 40 & 45 & 81 & 80 &  34 & 12 & 47 & 46 & 11 \\
+\hline
+$beef$ & 38 & 81 & 80 & 79 & 78 &  82 & 77 & 45 &  76 & 75 \\
+\hline
+$wheat$ & 81 & 80 & 22 & 29 & 30 & 31 & 15 & 16 & 33 & 14 \\
+\hline
+\end{tabular}
+\caption{Feature Selection: Benchmark Prediction}
+\label{tab:feat_mod3}
+\end{table}
 
 
 
