@@ -3,16 +3,16 @@
 \let\cleardoublepage\clearpage
 
 \chapter{Social Media Data Acquisition}
-In this section we describe the filtering process of the tweets and the creation of two lexicons. The food lexicon contains keywords with food related terms (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream} over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.
 
-Firstly, we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} which was used to find relevant keywords for our lexicons. We experimentally evaluate the  different metrics influencing the performance of HAL and lastly present the results. In subsequent chapters we illustrate our framework for retrieving food related keywords that form our food lexicon followed by a chapter describing the framework for creating the predictor lexicon. 
+In this chapter we describe how we filtered for relevant tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.Firstly we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} for candidate term selection. We then  experimentally evaluate the  different metrics influencing the performance of HAL, discuss different frameworks for selecting candidate terms for our food, respectively predictor lexicon and lastly explain the filtering process of the tweets. 
+
 
 
 \section{Hyperspace Analogue to Language}
 
-HAL creates a semantic space from word co-occurrences \cite{lund96}. By using a sliding window parsing mechanism, the frequency of each term co-occurring within a fixed window size is recorded.  It is important to note that HAL only records the terms before the word we wish to analyse the context from. The terms after the word will appear in the column in the matrix that corresponds to that word.  The matrix is created by storing a vector for each word with the number of co-occurrences of every other word in the corpus. Hence, if our corpus contains $N$ different words the resulting HAL space would be an $N \times N$ square matrix of co-occurrences. Every time a specific word appears within the fixed window size the co-occurrence vectors are updated. For each co-occurrence HAL applies a scoring function. Words that appear closer, receive an inversely proportional score to its distance.
+HAL creates a semantic space from word co-occurrences \cite{lund96}. By using a sliding window parsing mechanism, the frequency of each term co-occurring within a fixed window size is recorded.  It is important to note that HAL only records the terms before the word we wish to analyse the context from. The terms after the word will appear in the column in the matrix that corresponds to that word.  The matrix is created by storing a vector for each word with the number of co-occurrences of every other word in the corpus. Hence, if our corpus contains $N$ different words the resulting HAL space would be a $N \times N$ square matrix of co-occurrences. Every time a specific word appears within the fixed window size the co-occurrence vectors are updated. For each co-occurrence HAL applies a scoring function. Words that appear closer, receive an inversely proportional score to its distance.
 
- To illustrate the idea \cite{burgess98} gives an example of a simple sentence \emph {"The horse raced past the barn fell."} in Table \ref{tab:halex} with a sliding window of five. Let's consider the first row.  \emph{"The"} precedes \emph{"Barn"} twice. Once within a distance of five and the other time it directly precedes the word  \emph{"Barn"}. Hence, that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
+ To illustrate the idea \cite{burgess98} gives an example of a simple sentence \emph {The horse raced past the barn fell.} in Table \ref{tab:halex} with a sliding window of five. Let's consider the first row.  \emph{The} precedes \emph{Barn} twice. Once within a distance of five and the other time it directly precedes the word  \emph{Barn}. Hence, that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
 
 Following the creation of the matrix we concatenate both the column and row vector of a word, where the former represents the preceding words and the later the following. To compare the distance of the vectors we used the cosine similarity function. 
 
@@ -41,7 +41,7 @@ Following the creation of the matrix we concatenate both the column and row vect
 \subsection{Motivating a Semantic Approach}
 \label{subsec:hal}
 
-HAL allows us to study the relationship between words. More specifically it's an algorithm that aids our goal of understanding what words are represented in the context of \emph{Food} and topics centered around \emph{Food Security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let's look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It's important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms however the seldom locally co-occur. They do, however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
+HAL allows us to study the relationship between words. More specifically it's an algorithm that aids our goal of understanding what words are represented in the context of \emph{food} and topics centered around \emph{food security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let's look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It's important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms however the seldom locally co-occur. They do, however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
 
 
 
@@ -64,14 +64,14 @@ HAL allows us to study the relationship between words. More specifically it's an
 \subsection{Experimental Evaluation}
 \label{sec:exp_eval}
 
-In order to increase the recall of HAL we evaluated the performance on three different sample sizes (10 \%, 20 \%, 40 \%) constituting a corpus of around 23M, 47M, 93M words respectively. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal business reports or specialised dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
+To increase the recall of HAL we evaluated the performance on three different sample sizes (10 \%, 20 \%, 40 \%) constituting a corpus of around 23M, 47M, 93M words respectively. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal reports or specialized dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
 
-The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. On a test sample of 10 \% we observed that around 10 \% of the tweets contain equal or less then 4 words which could impact the quality of the results. Hence, on the 40 \% sample we further excluded tweets that contain less or equal to 4 words. Using the words $w \in F_c$ we produced a N by N matrix with the co-occurrences for three different window sizes namely five, eight and ten to investigate if the window size has an impact on the result. According to \cite{lund96} a window size of 8 should yield the best results. However the nature of a tweet is very different from a classical text so it remains to see if this observation also holds for microbologs. Since vector similarity measures are sensitive to the magnitude of the vectors we normalised all the vectors to a constant length. Once the HAL space was created we applied the above described Framework 2 to retrieve the desired keywords for our four categories. 
+The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. On a test sample of 10 \% we observed that around 10 \% of the tweets contain equal or less than four words which could impact the quality of the results. Hence, on the 40 \% sample we further excluded tweets that contain less or equal to four terms. Using the words $w \in F_c$ we produced a $N \times N$ matrix with the co-occurrences for three different window sizes namely five, eight and ten to investigate if the window size has an impact on the result. According to \cite{lund96} a window size of eight should yield the best results. However, the nature of a tweet is very different from a classical text so it remains to see if this observation holds for microblogs. Since vector similarity measures are sensitive to the magnitude of the vectors we normalized all the vectors to a constant length. 
 
 \subsection{HAL Performance Results}
 
 
-Looking at Figure \ref{fig:price_supply} and Figure \ref{fig:poverty_needs} we can observe that for all categories HAL performed best for a window size of 10 which contradicts the findings of \cite{lund96}. Additionally we see that the smaller sample sizes consistently produce more relevant keywords then the large sample.  A larger sample sizes increases the likelihood of a keywords occurrence. Since we set a fixed threshold of 100 occurrence across all samples we are more likely to include words with a smaller confidence , which might explain the poor performance. 
+In Figure \ref{fig:price_supply} and Figure \ref{fig:poverty_needs} we can observe that for all categories HAL performed best with a window size of 10 which contradicts the findings of \cite{lund96}. Additionally, we see that the smaller sample sizes consistently produce more relevant keywords than the larger sample sizes.  A larger sample sizes increases the likelihood of a keyword's occurrence. Since we set a fixed threshold of 100 occurrences across all samples we are more likely to include words with a smaller confidence , which might explain the poor performance. 
 
 
 \begin{figure}[H]
@@ -118,9 +118,9 @@ Looking at Figure \ref{fig:price_supply} and Figure \ref{fig:poverty_needs} we c
  
 \subsection{Discussion}
 
-We observed that HAL has a very good precision given a high similarity threshold. For the top 20 keywords we evaluated a precision of 100 \% for food relevant terms. In the top 20 we found other food items building the clear majority of the retrieved words. However the precision varies highly with the window and sample size. These variables, as our evaluation has shown, are very much dependent on the form of the corpus.  
+We observed that HAL has a good precision given a high similarity threshold. For the top 20 keywords we evaluated a precision of 100 \% for food relevant terms. In the top 20 we found other food items building the majority of the retrieved words. However, the precision varies with the window and sample size. These variables, as our evaluation has shown, are very much dependent on the form of the corpus.  
 
-With decreasing similarityt HAL highlighted some topics indirectly associated with food security. For example there was  a high percentage of country names in the retrieved results. Looking more closely at the retrieved countries we could see that most of them had a clear association to food. Where the majority of the retrieved countries such as Thailand, Bali \footnote{http://www.nomad4ever.com/2008/08/24/top-10-popular-foods-of-asia-explained/} or the cities Singapore and Paris \footnote{http://www.hellotravel.com/stories/best-food-cities-in-world} are considered to be famous holiday destinations for food lovers other retrieved countries such as Pakistan, Syria, Jakarta India or the Philippines \footnote{http://foodsecurityindex.eiu.com/Country} are cities with a clear history of food insecurity and political unrest. 
+With decreasing similarity HAL highlighted some topics indirectly associated with food security. For example there was a high percentage of country names that showed a clear association with food. Where the majority of the retrieved countries such as Thailand, Bali \footnote{http://www.nomad4ever.com/2008/08/24/top-10-popular-foods-of-asia-explained/} or the cities Singapore and Paris \footnote{http://www.hellotravel.com/stories/best-food-cities-in-world} are considered to be famous holiday destinations for food lovers other retrieved countries such as Pakistan, Syria, Jakarta India or the Philippines \footnote{http://foodsecurityindex.eiu.com/Country} are cities with a history of food insecurity and political unrest. 
 
 
 
@@ -129,15 +129,15 @@ With decreasing similarityt HAL highlighted some topics indirectly associated wi
 \section{Food Lexicon}
 \label{food_lex}
 
-We began the construction of our Food Lexicon by considering  a simple list of food related keywords. To avoid ambiguities we will refer to the initial list of keyword as $K_{initial}$. Words included are the most common traded food commodities as listed by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx} along the ten most important staple foods that feed the world \footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. 
+We began the construction of our Food Lexicon by considering  a simple list of food related keywords. To avoid ambiguities we will refer to the initial list of keywords as $K_{initial}$. Words included are the most common traded food commodities as listed by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx} along the ten most important staple foods that feed the world \footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. 
 
 We filtered the archive dataset using exact string matching on $K_{initial}$. The distribution of the food related tweets motivated us to structure our lexicon hierarchically as certain commodities were only represented very sparsely and insufficient for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. To circumvent this problem we mimic the hierarchical representation of the FAO   \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. 
 
-FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index which is an overall measure of the current food condition. We additionally created a further category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequently the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. \emph{Meat, Dairy, Cereals, Vegetable Oil} and \emph{Other Food of Interest} build the top layer of our hierarchical representation as shown in Figure \ref{fig:food_lex}. 
+FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. We further created a category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequent,  the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. \emph{meat, dairy, cereals, vegetable oil} and \emph{other food of interest} build the top layer of our hierarchical representation as shown in Figure \ref{fig:food_lex}. 
 
 For the second layer we use subcategories. As the name implies  subcategories abstract the categories into different subsets i.e. for meat we would have the subsets \emph{beef, chicken, lamb} and \emph{pork}. 
 
-As the third layer and lowest instance, we consider food products. Each subcategory consists of food items which \textbf{1.)} can simply be the name of a category and subcategory e.g. meat, beef or  \textbf{2.)} be a product that is commonly found in markets and stores  around the world. An example of the later would be \emph{flour} for the subcategory \emph{wheat}. The intuition and motivation to include such products is simple. In the production process of food items most factors that influence the price are static and predictable. The only fluctuating and unknown factor is the price of the raw product or in our case the commodity. Products should hence be just as expressive in explaining the variance of food prices. One however has to be cautious as certain producers hedge themselves against price fluctuations of commodities allowing them to sell the product to the same price despite rising commodity prices. Lastly, we were motivated to include such terms because products are much more likely to capture the social attention then raw items due to their every day use. 
+As the third layer and lowest instance, we consider food products. Each subcategory consists of food items which \textbf{1.)} can simply be the name of a category and subcategory (e.g. \emph{meat, beef}) or  \textbf{2.)} be a product that is commonly found in markets and stores around the world. An example of the later would be \emph{flour} for the subcategory \emph{wheat}. The intuition and motivation to include such products is simple. In the production process of food items most factors that influence the price are static and predictable. The only fluctuating and unknown factor is the price of the raw product or in our case the commodity. Products should hence be just as expressive in explaining the variance of food prices. One however has to be cautious as certain producers hedge themselves against price fluctuations of commodities allowing them to sell the product to the same price despite rising commodity prices. Lastly, we were motivated to include such terms because products are more likely to capture the social attention then raw items due to their every day use. 
 
 \begin{figure}[H]
 
@@ -152,15 +152,15 @@ As the third layer and lowest instance, we consider food products. Each subcateg
 \end{figure}
 
 
- Other than the sparsity of the data we further faced the problem of ambiguous keywords. \emph {Soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{Soy} $\to$  \emph{Soy Bean}). Terms were added to the Lexicon by following a framework as explained in the following section. 
+ Other than the sparsity of the data we further faced the problem of ambiguous keywords. \emph {soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{soy} $\to$  \emph{soy bean}). Terms were added to the lexicon by following a framework as explained in the following section. 
 
 
 
 \subsection{Candidate Food Term Selection}
 
-We initially assume an empty sett $K_{final}$ and structure it hierarchically as mentioned in the previous section. The six categories ($c_1, c_2 ... c_6)$ are $\in K_{final}$ where $c_i$ is one of the six categories mentioned above. For interpretability purposes we introduce an axiom in form of a set $K_{all}$. It only contains five of the above mentioned six categories \emph{meat, dairy products, cereals, vegetable oil, sugar} excluding the category \emph{Other Food of Interest}. We assume that $K_{all}$ is a fully populated Lexicon containing all possible food items for a specific category (e.g. the subset dairy would contain all possible dairy products). It returns $True$ if a term is an element of the set and $False$ otherwise. For all keyword $k_i \in K_{initial}$ we evaluate if $k_i\in K_{all}$. If $True$ we consider $k_i \in K_{final}$. For all keyword $k_i \notin K_{all}$ the condition of it being frequent is evaluated and if $True$ added to the category \emph{Other Food of Interest}  $c_6 \in K_{final}$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Lastly, the set $K_{final}$  was further enriched by using food products $p_i$ that have been identified by \cite{AbbarMW14}  only if $p_i$ $\in K_{all}$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
+We initially assume an empty set $K_{final}$ and structure it hierarchically as mentioned in the previous section. The six categories ($c_1, c_2 ... c_6)$ are $\in K_{final}$ where $c_i$ is one of the six categories mentioned above. For interpretability purposes we introduce an axiom in form of a set $K_{all}$. It only contains five of the above mentioned six categories \emph{meat, dairy products, cereals, vegetable oil, sugar} excluding the category \emph{other food of interest}. We assume that $K_{all}$ is a fully populated Lexicon containing all possible food items for a specific category (e.g. the subset dairy would contain all possible dairy products). It returns $True$ if a term is an element of the set and $False$ otherwise. For all keywords $k_i \in K_{initial}$ we evaluate if $k_i\in K_{all}$. If $True$ we consider $k_i \in K_{final}$. For all keywords $k_i \notin K_{all}$ the condition of it being frequent is evaluated and if $True$ added to the category \emph{0ther food of interest}  $c_6 \in K_{final}$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Lastly, the set $K_{final}$  was further enriched by using food products $p_i$ that have been identified by \cite{AbbarMW14}  only if $p_i$ $\in K_{all}$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
 
-We summarise our framework as follows: 
+We summarize our framework as follows: 
 
 \begin{description}
   \item[1.)] Add all keywords $k \in K_{initial}$ to  $K_{final}$ only if $k \in K_{all} $ or $k$ is frequent 
@@ -170,7 +170,7 @@ We summarise our framework as follows:
 
 
  
-The keyword set $K_{final}$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_f$ forms our Food Lexicon.  
+The keyword set $K_{final}$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_{final}$ forms our Food Lexicon.  
 
  
 \begin{table}[H]   
@@ -235,7 +235,7 @@ The keyword set $K_{final}$ was used to perform exact term matching on the tweet
 \section{Predictor Lexicon}
 \label{pred_lex}
 
-From our basic food lexicon we proceeded to extract features that we can use to explain events around Food Security and later use for our price prediction task. We structured our predictor Lexicon into categories that capture the main food security objective . The FAO measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of food and lastly \emph{Stability} is a measure of the other three dimensions over time. For food security objectives to be realised, all four dimensions must be fulfilled simultaneously \cite{fao2008}. We mimic FAO's classification in our Predictor Lexicon. 
+From our basic food lexicon we proceeded to extract features that we can use to explain events around Food Security and later use for our price prediction task. We structured our predictor Lexicon into categories that capture the main food security objective . The FAO measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of food and lastly \emph{Stability} is a measure of the other three dimensions over time. For food security objectives to be realised, all four dimensions must be fulfilled simultaneously \cite{fao2008}. We mimic FAO's classification in our predictor lexicon. 
 
 To capture tweets associated with the category \emph{Access} we filter for the term price as in \cite{ungp2013} but improve the recall by including synonyms and contextually similar words (e.g. \emph{expensive, bill, cost, affordable}). We filter \emph{Availability} related tweets in similar fashion by matching keywords that are synonyms of the word supply (e.g. \emph{available, amount, stock}) as in \cite{hum14}. Unlike \cite{AbbarMW14} we don't measure food \emph{Utilisation} by observing the exact diet but by filtering for terms that capture the people's food needs (e.g. \emph{love, want, yum}). As a measure of \emph{Stability} we focused our attention on economic stability. Keywords in the context of poverty were selected similar to \cite{RePEc} \cite{hum14} (e.g. \emph{starving, donation, help}).
 
@@ -269,28 +269,28 @@ The high-level intuition of this procedure is as follows. \textbf{1.)} will give
 
 Instead of finding a keyword that is a synonym of a predictor category as in Framework 1 we simply use our predefined category names as a base to retrieve contextually similar words. 
 
-For the discovery of predictor terms we used Framework 2 for three reasons. Firstly, Framework 1 did not retrieve us the desired keywords for all categories. Secondly, between the results of Framework 1 and 2 there was a substantial overlap and lastly Framework 2 is more efficient to execute. This is particularly important since creating the HAL space is computationally very expensive. The final lexicon was further enriched by including synonyms from thesaurus  for supply, need, poverty, and price. The terms of the final predictor lexicon are presented in Table \ref{tab:pred_lex} along the source of the keyword. 
+For the discovery of predictor terms we used Framework 2 for three reasons. \textbf{1.)}  Framework 1 did not retrieve us the desired keywords for all categories. \textbf{2.)} between the results of Framework 1 and 2 there was a substantial overlap and \textbf{3.)}  Framework 2 is more efficient to execute. This is particularly important since creating the HAL space is computationally expensive. The final lexicon was further enriched by including synonyms from thesaurus  for supply, need, poverty, and price. The terms of the final predictor lexicon are presented in Table \ref{tab:pred_lex} along the source of the keyword. 
 
 
-Unlike the annotation of our food related terms, allocating a term to a specific category was a much more challenging task due to the ambiguous meaning of certain terms. In the following section we explain in detail how we assigned a keyword to a given category by using crowdflower. 
+Unlike the annotation of our food related terms, allocating a term to a specific category was a more challenging task due to the ambiguous meaning of certain terms. In the following section we explain in more detail how we assigned a keyword to a given category by using crowdflower. 
 
 
 
 
 \subsection{Annotation and False Positive Removal of HAL Results}
 
-To annotate the term results of HAL we presented the workers with four different tasks, one for each food security objective. For every task we asked the workers to classify the term as A. Relevant, B. Likely, C. Unlikely and D. Not in English. Since overlaps may occur, particularly between the category price and supply as well as poverty and needs we asked the workers to classify those ambiguous terms  as likely in order to detect to which category the word has a stronger association. 
+To annotate the term results of HAL we presented the workers with four different tasks, one for each food security objective. For every task we asked the workers to classify the term as \textbf{A.} Relevant,\textbf{B.} Likely, \textbf{C.} Unlikely and \textbf{D.}  Not in English. Since overlaps may occur, particularly between the category price and supply as well as poverty and needs we asked the workers to classify those ambiguous terms as \textbf{B.} Likely in order to detect to which category the word has a stronger association. 
 
-The crowd task presented a number of challenges. In our first test run we counted a false positive rate of around 40 \%. This was due to the lack of quality control we imposed on the workers. We observed a large amount of random guesses and a poor level of english among some workers. Hence we selected workers from commonwealth countries and regions where the majority are native english speakers. We further created test questions which were manually selected to  avoid inattentive workers. Lastly, we collected 3 independent annotations for every word and applied a majority vote to resolve disagreements. Due to the imposed additional costs through the multiple annotations per term we restricted our search for relevant keywords to the top 140 terms suggested by HAL.
+The crowd task presented a number of challenges. In our first test run we counted a false positive rate of around 40 \%. This was due to the lack of quality control we imposed on the workers. We observed a large amount of random guesses and a poor level of English among some workers. Hence, we selected workers from commonwealth countries and regions where the majority are native English speakers. We further created test questions which were manually selected to  avoid inattentive workers. Lastly, we collected three independent annotations for every word and applied a majority vote to resolve disagreements. Due to the imposed additional costs through the multiple annotations per term we restricted our search for relevant keywords to the top 140 terms suggested by HAL.
 
 
 \subsection{Annotation Results}
 
-We manually assed the annotations produced by crowd flower to check for disagreements between the crowd workers an ourselves. For the category supply we rejected 26 from 69 (39\%), for price 4 (12.5\%) from 32, for needs 8 (7\%) from 113 and for poverty 14 (\%) from 106. \\
+We manually assed the annotations produced by crowd flower to check for disagreements between the crowd workers and ourselves. For the category supply we rejected 26 from 69 (39\%), for price 4 (12.5\%) from 32, for needs 8 (7\%) from 113 and for poverty 14 (\%) from 106. \\
 \\
 The high disagreement for the supply category was due to the ambiguous design of our question in the crowd task. We asked workers to accept words that can be both indicative for supply and price (e.g. rise, high) which unfortunately was misunderstood as to include words that can be only indicative of price (e.g. expensive). \\
 \\
-Similar to \cite{olt15} we observe that crowdsource annotators applied a more narrow definition of the predictor categories overlooking some keywords associated with the cateogries. For example the term market was missed as a price keyword. Tweets containing the word market could provide valuable information regarding the state of food security as it's commonly used to describe the price  mood of a commodity. \\
+Similar to \cite{olt15} we observe that crowdsource annotators applied a more narrow definition of the predictor categories overlooking some keywords associated with the categories. For example the term market was missed as a price keyword. Tweets containing the word market could provide valuable information regarding the state of food security as it is commonly used to describe the price  mood of a commodity. \\
 \\
 
 
@@ -337,25 +337,25 @@ abundance (t), affluence (t), bounty (t), myriad (t),plenty (t), plethora (t), p
 
 \section{Filtering}
 
-The filtering of the tweets was performed in three rounds. First we filtered for food relevant tweets. In a second round we applied our feature lexiconon the retrieved set of tweets obtained in the first step. Lastly we filter by sentiment. 
+The filtering of the tweets was performed in three rounds. First we filtered for food relevant tweets. In a second round we applied our feature lexicon on the retrieved set of tweets obtained in the first step. Lastly, we filter by sentiment. 
 
 \subsection{Food related Tweets} 
 
-The food related tweets were retrieved through exact term matching, i.e. a tweet containing the term \emph{foods} would not match on the keyword \emph {food} where the reverse is also true. We mimic the term matching twitter performs. In the initial round we optimised for coverage and hence avoided further filtering steps. Given the large size of the dataset efficiency was also a concern. We experimented with both string.split() and a tokenizer provided by the Natural Language Toolkit \cite{Loper2002}. String.split() proved to be more tweekable. The result was a collection of 5.6 M tweets posted by 4.2 M users. 
+The food related tweets were retrieved through exact term matching, i.e. a tweet containing the term \emph{foods} would not match on the keyword \emph {food} where the reverse is also true. We mimic the term matching twitter performs. In the initial round we optimized for coverage and hence avoided further filtering steps. Given the large size of the dataset efficiency was also a concern. We experimented with both string.split() and a tokenizer provided by the Natural Language Toolkit \cite{Loper2002}. String.split() proved to be more \emph{tweetable}. The result was a collection of 29 M tweets posted by 4.2 M users. 
 
 \subsection{Predictor related Tweets}
 
 The first round  drastically reduced our dataset to around 90 GB of tweets. This allowed us to perform a more involved filtering mechanism similar to \cite{hum14}. 
 
-For every word in a tweet and for every word in our feature lexicon$K_p$ the stem was computed. This was necessary to capture tweets that may contain a predictor term that is not in its base form. Fore example a tweet containing the word \emph{pricey} would not match the term \emph{price}. Furthermore the framework also accounts for misspelt words. To do this in a computationally efficient way the algorithm computes the edit distance between a given word and terms from the predictor set D. If the error is within a fixed threshold the predictor term with the minimal edit distance is returned. 
+For every word in a tweet and for every word in our feature lexicon$K_p$ the stem was computed. This was necessary to capture tweets that may contain a predictor term that is not in its base form. For example a tweet containing the word \emph{pricey} would not match the term \emph{price}. Furthermore the framework also accounts for missspelt words. To do this in a computationally efficient way the algorithm computes the edit distance between a given word and terms from the predictor set D. If the error is within a fixed threshold the predictor term with the minimal edit distance is returned. 
 
 \subsection{Sentiment Extraction}
 
 Experiments in \cite{hum14} showed that sentiment analysers such as SentiStrength \cite{sent10} or Stanford CoreNLP \cite{stanford2011} performed  poorly on microblog content. Hence in \cite{hum14} the decision was made to extract the sentiment by having specific terms for each sentiment (polarity). In addition one had to account for changes in polarity through negations such as \emph{never} and \emph{not} which inverted the polarity of a predictor category term. 
 
-We however choose to deviate from this approach and use a sentiment analyser despite the bad results. We give two reasons for doing so. 1.) Hutto et. al recently published a new sentiment analyser VADER \cite{hutton14} with an F1 Classification Accuracy = 0.96 which  outperformed human evaluators. 2.) Often keywords can not be manually assigned to a polarity without knowing it's context. 
+We choose to deviate from this approach and use a sentiment analyser despite the bad results. We give two reasons for doing so. \textbf{1.)} Hutto et. al recently published a new sentiment analyser VADER \cite{hutton14} with an F1 Classification Accuracy = 0.96 which  outperformed human evaluators. \textbf{2.)} Often keywords can not be manually assigned to a polarity without knowing its context. 
 
-Besides the above mentioned benefits VADER allows us to obtain a degree of sentiment by analysing grammatical and syntactical conventions that humans use when expressing sentiment intensity. For example it accounts for emoticons which are commonly used to express a sentiment or even acronyms such as \emph{LOL, WTF}. It's further worth mentioning that VADER is an unsupervised approach and is well suited for streaming data. 
+Besides the above mentioned benefits VADER allows us to obtain a degree of sentiment by analysing grammatical and syntactical conventions that humans use when expressing sentiment intensity. For example it accounts for emoticons which are commonly used to express a sentiment or even acronyms such as \emph{LOL, WTF}. It is further worth mentioning that VADER is an unsupervised approach and is well suited for streaming data. 
 
 
 
@@ -364,8 +364,9 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 
 \chapter{Analysis}
 
-The following chapter will investigate if and to what extent Social Media data can be found
-to correlate with the international Food Price Index and the Commodity price quotes. This is accomplished by analysing 30 M tweets related to food. By drawing some basic statistics we want to emphasis the general popularity of food among the twitter users and describe the term distribution. In the analysis we aim to show how food terms related to each other and how they compare to Indices which are intrinsic food security indicators. Lastly we investigate to what extent Food Security and market fundamentals are present in social media discussion. 
+This chapter will investigate if and to what extent social media data can be found to correlate with the international food price index and the commodity price quotes. This is accomplished by analysing 29 M tweets related to food. 
+
+By drawing some basic statistics we want to emphasis the general popularity of food among the twitter users and describe the term distribution of our different commodities. In the analysis we aim to show how food terms relate to each other and how they compare to indices which are intrinsic food security indicators (e.g. \emph {affordability and availability of food}). Lastly, we investigate to what extent food security and market fundamentals are present in social media discussion. 
 
 
 \section {User Distribution}
@@ -401,7 +402,7 @@ Twitter is a social network and in general such networks follow a power law dist
 
 \section {Food Term Distribution}
 
-Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 13.7 M tweets we raised the entire volume by 110\% to a total of 29.9 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in orange the added volume alongside the initial size in blue. The most popular food terms on twitter are general terms such as food, dinner and lunch. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{others} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords has the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% Vegetable Oils. Interestingly the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and empty	{chocolate} which caused alone 70 \% of the sugar related tweets. 
+Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 13.7 M tweets we raised the entire volume by 110\% to a total of 29.9 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in light grey the added volume alongside the initial size in dark grey. The most popular food terms on twitter are general terms such as \emph{food, dinner and lunch}. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{other food of interest} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords have the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% vegetable oils. We would like to note that the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and {chocolate} which caused alone 70 \% of the sugar related tweets. 
 
 
 
@@ -428,15 +429,16 @@ Our framework for the data acquisition successfully increased the total volume o
 
 \section{Price Correlation}
 
+%The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index which is an overall measure of the current food condition. 
 
-We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence then others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of our correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Index and a universal Food Price Index. The Category Index is specific to a food category (e.g. meat, cereals) so different among all categories, where as the Food Price Index is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
+We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence than others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of our correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Index and a universal Food Price Index. The Category Index is specific to a food category (e.g. meat, cereals) so different among all categories, where as the Food Price Index is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
 
-For each food category (e.g. meat, dairy ) we correlated the tweet volumes of the subcategories( e.g. beef, chicken for meat), products (e.g. bacon, salami) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater then 10 tweets per day. The internet archive did not contain tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
+For each food category (e.g. \emph{meat, dairy} ) we correlated the tweet volumes of the subcategories( e.g. \emph{beef, chicken for meat}), products (e.g. \emph{bacon, salami}) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater than 10 tweets per day. The internet archive did not contain tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
 
 \subsection{Results} 
 \label{corr_results}
 
-Between the meat subcategories there is a strong positive linear relationship in the range of 0.7264 and 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three Price Indices. Most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the Price Indices. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports \cite{abbott2009} theory that the commodity markets have a strong influence on the the rising food prices and are a strong factor for quantifying Food Security. 
+Between the meat subcategories there is a  positive linear relationship in the range of 0.7264 to 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three price indices. Incase of a slight correlation most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the price quotes. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports \cite{abbott2009} theory that the commodity markets have a strong influence on the rising food prices and are a strong factor for quantifying Food Security. 
 
 
 
@@ -450,7 +452,7 @@ Between the meat subcategories there is a strong positive linear relationship in
 
 
 
-For cereals similar to meat we likewise see a high correlation in volume of around 0.82 between the different cereal categories. The products beer, barley, bread, alta and pasta show a strong positive relationship to the cereal categories.   Unlike meat,  the cereal category price index and the commodity price show a strong positive relationship with the universal Food Price Index. This is somewhat surprising as meat prices have a stronger influence on the universal Food Price Index then Cereals do \cite{fao2008}. Furthermore the  product pasta has a strong linear relationship with the commodity price of 0.7212.
+For cereals similar to meat we likewise see a high correlation in volume of around 0.82 between the different cereal categories. The products \emph{beer, barley, bread, atta and pasta} show a strong positive relationship to the cereal categories. Unlike meat, the cereal category price index and the commodity price show a strong positive relationship with the universal food price index. This is somewhat surprising as meat prices have a stronger influence on the universal food price index then cereals do \cite{fao2008}. Furthermore the product pasta has a strong linear relationship with the commodity price of 0.7212.
 \begin{figure}[H]
         \centering
          \includegraphics[width=1\textwidth ]{img/anal/black_cereals}
@@ -460,20 +462,18 @@ For cereals similar to meat we likewise see a high correlation in volume of arou
 \end{figure}
  
 
-The heat plots of dairy, sugar and oil shows yet again no clear linear relationship between the twitter volume and the food price indices. More so then in other Food Categories the subcategories of dairy can be clearly distinguished between it's correlation. I.e. morzarela has a very strong relationship with the category cheese and only a weak correlation with milk products. The heat plot for dairy, sugar and oil have been added to the appendix.
+The heat plots of dairy, sugar and oil show yet again no clear linear relationship between the twitter volume and the food price indices. More so than in other food categories the subcategories of dairy can be clearly distinguished through its strong correlation with the different products (i.e. mozzarella has a strong relationship with the category cheese and only a weak correlation with milk products). The heat plot for dairy, sugar and oil have been added to the appendix \ref{pCorr}.
 
 
 
 \subsection{Discussion} 
 
-
-
-Our analysis did not show any significant correlation between the raw attention on food and the price quotes.
+Our analysis did not show a significant correlation between the raw attention on food and the price quotes.
 Nonetheless the insights gained from this analysis will help us improve our features. For example the category meat shows a number of products that have a strong negative correlations. By only including such terms we are hoping to strengthen the relationship between the meat category and the price quotes.
 
- Although we can not provide any scientific evidence there might be a nonlinear relationship between social media and the commodity market. We hence will experiment with a non-linear model to predict price quotes in further sections. According to \cite{de08} such models are better suited to utilise social media for predictions. 
+ Although we can not provide any scientific evidence there might be a nonlinear relationship between social media and the commodity market. We hence will experiment with a non-linear model to predict price quotes in Chapter \ref{model}. According to \cite{de08} such models are better suited to utilise social media for predictions. 
 
-A smilier correlation analysis has been made by the UN \cite{ungp2013}. They however used contextual sensitive tweets i.e. instead of only using tweets containing food they performed an n-match on different criteria. The tweet had to contain a food item, the word price and a quantification such as high or low. Overall a pearson correlation of around 0.42 was detected with a significance of 0.04. By exploiting our feature lexiconto filter tweets that contain keywords such as supply and price we were able to improve the linear relationship and found similar results as in \cite{ungp2013}. Although the UN concluded a linear relationship they simply provided assumptions about what might have caused the volatility of price conversations. We hence explore the conversation drivers in the next section. 
+A smilier correlation analysis has been made by the UN \cite{ungp2013}. They however used contextual sensitive tweets i.e. instead of only using tweets containing food they performed an n-match on different criteria. The tweet had to contain a food item, the word price and a quantification such as high or low. Overall a Pearson correlation of around 0.42 was detected with a significance of 0.04. By exploiting our predictor lexicon to filter tweets that contain keywords such as supply and price we were able to improve the linear relationship and found similar results as in \cite{ungp2013}. Although the UN concluded a linear relationship they simply provided assumptions about what might have caused the volatility of price conversations. We hence explore the conversation drivers in the next section. 
  
 
  
@@ -512,7 +512,7 @@ A smilier correlation analysis has been made by the UN \cite{ungp2013}. They how
  \label{conversation}
 
 
-Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor terms such as price) have a much stronger Pearson correlation then the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to Food Security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been entered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food prices spikes and differentiates among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
+Following our correlation analysis we proceed with a detailed investigation of twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor term such as price) have a stronger Pearson correlation than the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to food security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been centered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food price spikes and differentiate among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
 
 
 
@@ -520,13 +520,13 @@ Following our correlation analysis we proceed with a detailed investigation of T
 
 We commence our investigation of the conversation drivers by a visual and manual investigation of the most prominent events. To gain an overview about the social attention of our food topics we plotted the relative distribution of food supply, price poverty and needs in Figure \ref{fig:topic_dist}. By far the highest attention is attributed to food needs with around 70 \% , poverty and supply receive a similar attention distribution with price taking the smallest interest among twitter users. 
 
-To visually categorise the activity, Lehman et al. \cite{Lehmann2012} defined three categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Continues activities are topics that are of daily  interest such as weather. On the other hand periodic actives reoccur with a fixed pattern such as the release of a popular tv show. The later is event driven and usually occurs once during a very short period such as a national holiday. 
+To visually categorise the activity, Lehman et al. \cite{Lehmann2012} defined three categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Continues activities are topics that are of daily interest such as weather. On the other hand periodic actives reoccur with a fixed pattern such as the release of a popular Tv show. The latter is event driven and usually occurs once during a very short period such as a national holiday. 
 
 For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent isolated peak. The activity is concentrated symmetrically around those two events , showing abnormal activities for around 9 days before and after. 
 
- We manually investigated the two isolated peaks to see if we can attribute them to any discussions relevant to food price or food supply. Surprisingly, the content in the price discussion corresponds to a popular Korean pop band \emph{T-ara }. \emph{T-ara } released a music video on the 10th of September which caused the first anomaly, reaching a global maximum on the 16th when they announced to collaborate with a famous european DJ  \footnote{http://www.kpopstarz.com/articles/112632/20140916/t-ara-sugar-free.htm}. Similarly, in our supply conversation the peak was not caused by supply indicators but was driven by conversations centered around health \& life style topics. 
+ We manually investigated the two isolated peaks to see if we can attribute them to any discussions relevant to food price or food supply. Surprisingly, the content in the price discussion corresponds to a popular Korean pop band \emph{T-ara }. \emph{T-ara } released a music video on the 10th of September which caused the first anomaly, reaching a global maximum on the 16th when they announced to collaborate with a famous European DJ  \footnote{http://www.kpopstarz.com/articles/112632/20140916/t-ara-sugar-free.htm}. Similarly, in our supply conversation the peak was not caused by supply indicators but was driven by conversations centered around health \& life style topics. 
 
-The topics needs and poverty do not exhibit any extreme outliers and similar to price and supply can be categorised according to Lehman et al's. framework as of continues interest. 
+The topics needs and poverty do not exhibit any extreme outliers and similar to price and supply can be categorised according to Lehman et al's. framework as of continuoes interest. 
 
 
 
@@ -546,20 +546,20 @@ The topics needs and poverty do not exhibit any extreme outliers and similar to 
 
 As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to Food Security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to market fundamentals or topics concerning Food Security. For this analysis we consider discussion around food supply, price, needs and poverty. 
 We investigate the four food categories temporal behaviour on a granularity of one day. This scale was chosen in order to be in accordance with the temporal quotations of the commodity market. 
-To detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. We used a fixed window size of $2m + 1$  where $m = 15$ giving us a month long window. Within the window we identified the median and calculated the mean of the twitter volume. From those values we calculated the Median absolute deviation (MAD) as follows: 
+To detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. We used a fixed window size of $2m + 1$  where $m = 15$ giving us a month long window. Within the window we identified the median and calculated the mean of the twitter volume. From those values we calculated the Median absolute deviation (MAD) as in Equation \ref{eq:mad}: 
 
-\begin{equation} \label{eq:solve}
+\begin{equation} \label{eq:mad}
 \overline{ MAD } = median_i (|X_i - median_j(X_j)|)\end{equation}
 
 
 $X_j$ is the set of data points within the fixed window and $X_i \in X_j$
 
-A peak is declared if $v_i$ deviates more then 2 MAD from the mean. For this analysis we only consider positive peaks and ignore anomalies in form of a steep descent. 
+A peak is declared if $v_i$ deviates more than 2 MAD from the mean. For this analysis we only consider positive peaks and ignore anomalies in form of a steep descent. 
 
-The discussion centred around food price showed 82 events. Tweet activities for food supply resulted in 91 peaks. 80 peaks were detected for food needs and lastly 99 for food poverty. 
+The discussion centered around food price showed 82 events. Tweet activities for food supply resulted in 91 peaks. 80 peaks were detected for food needs and lastly 99 for food poverty. 
  
 
-To identify what topics spike the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all tweets occurring during a peak. We then manually investigate the tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more then two events caused the peak we marked it as ambiguous.  
+To identify what topics spike the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all tweets occurring during a peak. We then manually investigate the tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more than two events caused the peak we marked it as ambiguous.  
 
 \subsection{Event Annotation}
 
@@ -603,15 +603,15 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
 
 \begin{description}
   \item[Food Supply ] \hfill \\
- Topics that caught the social media audience were especially safety threats to the food supply. In April 2012 a newly discovered case of cow disease threatened the safety of america's beef supply and heavy import restrictions were imposed from major beef importers such as South Korea \footnote{http://www.theguardian.com/science/2012/apr/25/mad-cow-disease-us-mutation}.
+ Topics that caught the social media audience were especially safety threats to the food supply. In April 2012 a newly discovered case of cow disease threatened the safety of America's beef supply and heavy import restrictions were imposed from major beef importers such as South Korea \footnote{http://www.theguardian.com/science/2012/apr/25/mad-cow-disease-us-mutation}.
   \item[Economic Access] \hfill \\
   In 2014 sharp rising food prices caused a lot of discussion on twitter. Wholesale prices were suffering due to a severe drought in the previous year, which thinned the cattle herds and increased consumer prices \footnote{http://www.cnbc.com/id/101588110}. As a consequence there was also a sharp increase in discussion around food banks. The UK observed a 51 \% increase in food bank users \footnote{http://www.bbc.com/news/business-27032642}. 
   \item[Government] \hfill \\
   Most discussions around legislation changes were focused on Food Bank reforms. A high amount of attention can be attributed to the UK rejecting the European Union food bank funding. The population heavily criticised the British government to deny EU fund to be spent on the poor \footnote{http://www.theguardian.com/society/2013/dec/17/government-under-fire-eu-funding-food-banks}
     \item[Stability] \hfill \\
-  Discussion around stability were usually headlined by extreme poverty causing riots. A food program that provided free lunch to underprivileged school kids used poisened crops in their dishes. 20 children died as a consequence causing riots and closed shops all over the city. \footnote{http://www.usatoday.com/story/news/world/2013/07/17/india-children-deaths/2523727/}
+  Discussions around stability were usually headlined by extreme poverty causing riots. A food program that provided free lunch to underprivileged school kids used poisoned crops in their dishes. 20 children died as a consequence causing riots and closed shops all over the city. \footnote{http://www.usatoday.com/story/news/world/2013/07/17/india-children-deaths/2523727/}
    \item[Unrelated] \hfill \\
-   Unrelated topics cover a vast amount of domains. Most often peaks are caused by viral tweets posted by online celeberaties that contain a food term. Public holidays, such as Easter, Thanks Giving are also frequently captured. Furthermore public figures such as Ray Rice, a famous footballplayer, caused a lot of hype in the social media community \footnote{http://www.nytimes.com/2014/09/09/sports/football/ray-rice-video-shows-punch-and-raises-new-questions-for-nfl.html}. Often it was very hard to extract the conversation drivers in the unrelated topics. There is a considerable amount of noise in our conversations centered around Food Security, making it very challenging to extrapolate meaning from an event. This might be attributed to the general popularity of food we identified in previous chapters. 
+   Unrelated topics cover a vast amount of domains. Most often peaks are caused by viral tweets posted by online celebrities that contain a food term. Public holidays, such as Easter, Thanks Giving are also frequently captured. Furthermore public figures such as Ray Rice, a famous football player, caused a lot of hype in the social media community \footnote{http://www.nytimes.com/2014/09/09/sports/football/ray-rice-video-shows-punch-and-raises-new-questions-for-nfl.html}. Often it was very hard to extract the conversation drivers in the unrelated topics. There is a considerable amount of noise in our conversations centered around Food Security, making it very challenging to extrapolate meaning from an event. This might be attributed to the general popularity of food we identified in previous chapters. 
 
 \end{description}
 
@@ -627,12 +627,15 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
 \end{figure}
 
 
-\section{Discussion}
+\subsection{Discussion}
 
-Wrap up the Analysis part......
+Extracting information from noisy and unstructured text has shown to be a very difficult task. Despite our various filtering attempts there is still a substantial amount of noise in our food security discussions. As most of the volatility was attributed to unrelated topics we will have to rethink the way we use the twitter data as a feature in our model. Unrelated does not necessarily mean irrelevant. Even twitter discussion outside our food security objectives can provide valuable information. Most commonly this is achieved by analysing the attitude of a tweet's author. We will hence explore the entropy of sentiment in explaining volatile food prices. 
+
+
 
 
 \chapter {Model Building}
+\label{model}
 
 Intro goes here ......
 
@@ -1030,7 +1033,7 @@ To analyse the results in more detail and to put the RMSE into context  we turn 
 
 Xue Zhanga et al. found that twitter conversation correlates and is even predictive of financial market movements. They measured the attention of a given subject by aggregating the daily volume. In Section \ref{corr_results} we investigated if such a correlation is present and concluded that for most commodities no such linear relationship exists. We however still include the social attention as a possible feature since it might prove to be useful in form of a lagged variable (i.e. that the volume 4 days ago  correlates to the commodity price of today). We consider social attention on different granularities  by measuring the volume of the category, subcategory and the product \ref{food_lex}. We further include products which are not part of a subcategory but show a strong linear relationship with the predicted commodity (i.e. we consider goat as a feature for beef despite it not being a related product to beef). 
 
- Generally speaking microblogs capture one topic due to its 140 keyword limitation. The topics can usually be inferred by capturing 1 or 2 keywords. However certain terms are more intrinsic then others i.e. the keyword \emph{IBM} can unambiguously be related to the company where as the  term \emph{break} has multiple meanings and given the context could be unrelated to a desired topic. We hence introduce the notion of contextual sensitive tweets. Tweets considered contextual sensitive match both a term in the Food Lexicon and the Predictor Lexicon. We consider the context of food price, supply, poverty and needs \ref{pred_lex}. 
+ Generally speaking microblogs capture one topic due to its 140 keyword limitation. The topics can usually be inferred by capturing one or two keywords. However certain terms are more intrinsic then others i.e. the keyword \emph{IBM} can unambiguously be related to the company where as the  term \emph{break} has multiple meanings and given the context could be unrelated to a desired topic. We hence introduce the notion of contextual sensitive tweets. Tweets considered contextual sensitive match both a term in the Food Lexicon and the Predictor Lexicon. We consider the context of food price, supply, poverty and needs \ref{pred_lex}. 
  
  
  Despite having identified  a significant correlation for contextually sensitive tweets our analysis in Section \ref{conversation} concluded that the attention volatility is mostly driven by unrelated topics. Public mood states or sentiment might hence be a more valuable indicator. This intuition is supported by \cite{nofsinger05} namely that financial decisions are not uncommonly driven by emotions and mood. For the purpose of this analysis we consider different ratios of sentiment, namely the ratio between the numbers of positive and negative tweets \cite{Nguyen12}, the proportion of neutral and total tweets,  the ratio between the numbers of non-neutral and total posts \cite{Zhang09}, the ratio between the number of positive and negative discussions and lastly the ratio between the numbers of neutral and non neutral messages. 
@@ -1221,8 +1224,7 @@ Unlike our benchmark paradigm the social media model did not exhibit an increasi
 
 \subsection{Feature Selection}
 
-	
-40 = 
+Combining the price and social media features we want to investigate if Relieff proposes as similar set as for the separate models or if the combined model favours a different group of input variables. Only a few features generalised well over all commodities which is why we focuses our search of finding input variables that are specific to beef, milk and wheat but generalise well over different prediction models. As in our price model, days in the intermediate past were proposed for all three commodities. The ratio varies very strongly between the commodities. Beef favours price variables where milk and wheat have a majority of social media features. We observe an interesting trend, namely that all commodities favour supply and needs feature over price and poverty which is very different to the pure social media model. We assume that the price data made the conversations about price more obsolete. 
 
 
 the third sentiment ratio of poverty (SR34), 
@@ -1237,6 +1239,7 @@ the third sentiment of the category (SR22)
 the fourth sentiment of needs(SR29)
 the fith sentiment of needs(SR30)
 the sixth sentiment of needs(SR31)
+the first sentiment of the subcategory (SR15)
 
 
 D24 = (75)
@@ -1256,11 +1259,11 @@ W1 = (82)
 \centering
 \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| p{1cm}|  }
 \hline
-$milk$ & SR38 & 40 & 45 & 81 & 80 &  34 & 12 & 47 & 46 & 11 \\
+$milk$ & SR38 & SR40 & SR45 & D30 & D29 &  SR34 & SR12 & SR47 & SR46 & SR11 \\
 \hline
-$beef$ & 38 & 81 & 80 & 79 & 78 &  82 & 77 & 45 &  76 & 75 \\
+$beef$ & SR38 & D30 & D29 & D28 & D27 &  W1 & D26 & SR45 & D25 & D24 \\
 \hline
-$wheat$ & 81 & 80 & 22 & 29 & 30 & 31 & 15 & 16 & 33 & 14 \\
+$wheat$ & D30 & D29 & SR22 & SR29 & SR30 & SR31 & SR15 & SR16 & SR33 & SR14 \\
 \hline
 \end{tabular}
 \caption{Feature Selection: Benchmark Prediction}
