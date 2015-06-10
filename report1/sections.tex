@@ -644,7 +644,7 @@ Intro goes here ......
 Compared to other approaches, Fuzzy logic has seen only a few applications in forecasting despite its promising results. We hence want to motivate the use of this technique in further detail. 
 
 Fuzzy logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on Bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathematical models \cite{Jang91}.  
-In some areas such as time series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
+In some areas such as time series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as Adaptive Neuro Fuzzy Inference System (ANFIS), have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
 
 \section{Fuzzy Logic}
 
@@ -706,7 +706,7 @@ The output of one Fuzzy Rule is computed by Equation \ref{eq:output}
 \begin{equation} \label{eq:output}
  z = dx + ey + f  \end{equation}
  
-Incase a constant output is preferred over a linear we set $d$ and $e$ to zero and the constant  $f$ to the desired output of our system. The final output is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
+Incase the output is preferred to be constant rather then linear we set $d$ and $e$ to zero and the constant  $f$ to the desired output of our system. The final output is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
 
 \begin{equation} \label{eq:finaloutput}
 Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{equation}
@@ -715,7 +715,7 @@ Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{
 
 \subsection{Adaptive Neuro Fuzzy Inference System }
 
-We now model the above described process as a Neural network illustrated in Figure \ref{fig:gnn_fuzz}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
+We now model the above described process as a Neural network illustrated in Figure \ref{fig:gnn_fuzz}  \footnote{Image credit to: http://pubs.rsc.org/en/content/articlehtml/2014/ra/c4ra02392g}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
 
 \begin{equation} \label{eq:normfuzz}
 \overline{w_i} =  \frac{w_i}{w_1 + w_2}, i = 1,2 \end{equation}
@@ -738,7 +738,7 @@ We now model the above described process as a Neural network illustrated in Figu
 \begin{figure}[H]
         \centering
          \includegraphics[width=1\textwidth ]{img/model/gnn_fuzz}      
-        \caption{Annotation Distribution - Relevant to Food Security}
+        \caption{Adaptive Neuro Fuzzy Inference System }
         \label{fig:gnn_fuzz}
 \end{figure}
 
