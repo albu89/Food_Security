@@ -31,36 +31,35 @@
 \contentsline {subsection}{\numberline {3.4.2}Methodology}{21}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Event Annotation}{22}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Results}{23}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Discussion}{24}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.5}Discussion}{24}{subsection.3.4.5}
 \contentsline {chapter}{\chapternumberline {4}Model Building}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}A fuzzy approach for Time Series Modeling}{25}{section.4.1}
+\contentsline {section}{\numberline {4.1}A fuzzy approach for Time Series Modelling}{25}{section.4.1}
 \contentsline {section}{\numberline {4.2}Fuzzy Logic}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables }{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Fuzzy Sets}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Fuzzy Interference System}{26}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Adaptive Neuro Fuzzy Inference System }{27}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables and Fuzzy Sets }{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Fuzzy Interference System}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Adaptive Neuro Fuzzy Inference System }{27}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Data Preprocessing}{28}{section.4.3}
 \contentsline {section}{\numberline {4.4}Training the Model}{29}{section.4.4}
 \contentsline {section}{\numberline {4.5}Methodology for Forcasting with Fuzzy Logic}{30}{section.4.5}
-\contentsline {section}{\numberline {4.6}Parameters}{30}{section.4.6}
+\contentsline {section}{\numberline {4.6}Parameters}{31}{section.4.6}
 \contentsline {section}{\numberline {4.7}Benchmark Model}{31}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Input Model}{31}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Feature Selection}{31}{subsection.4.7.2}
 \contentsline {subsection}{\numberline {4.7.3}Results}{32}{subsection.4.7.3}
-\contentsline {section}{\numberline {4.8}Social Media Model}{37}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Input Model }{37}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Bolstering the Social Media Features}{38}{subsection.4.8.2}
-\contentsline {subsection}{\numberline {4.8.3}Feature Selection}{39}{subsection.4.8.3}
-\contentsline {subsection}{\numberline {4.8.4}Results}{40}{subsection.4.8.4}
-\contentsline {subsection}{\numberline {4.8.5}Combined Model}{42}{subsection.4.8.5}
-\contentsline {subsection}{\numberline {4.8.6}Feature Selection}{42}{subsection.4.8.6}
-\contentsline {subsection}{\numberline {4.8.7}Curse of of Dimensionality}{42}{subsection.4.8.7}
-\contentsline {appendix}{\chapternumberline {A}Data}{44}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{44}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{45}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{45}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{45}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{46}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{47}{subsection.A.2.4}
-\contentsline {appendix}{\chapternumberline {B}Price Correlation}{48}{appendix.B}
-\contentsline {chapter}{Bibliography}{50}{section*.36}
+\contentsline {section}{\numberline {4.8}Social Media Model}{38}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Input Model }{38}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Bolstering the Social Media Features}{39}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3}Feature Selection}{40}{subsection.4.8.3}
+\contentsline {subsection}{\numberline {4.8.4}Results}{41}{subsection.4.8.4}
+\contentsline {subsection}{\numberline {4.8.5}Combined Model}{43}{subsection.4.8.5}
+\contentsline {subsection}{\numberline {4.8.6}Feature Selection}{43}{subsection.4.8.6}
+\contentsline {subsection}{\numberline {4.8.7}Curse of of Dimensionality}{43}{subsection.4.8.7}
+\contentsline {appendix}{\chapternumberline {A}Data}{45}{appendix.A}
+\contentsline {section}{\numberline {A.1}Processing and Storage}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}Crowd Flower}{46}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{46}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{46}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{47}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{48}{subsection.A.2.4}
+\contentsline {appendix}{\chapternumberline {B}Price Correlation}{49}{appendix.B}
+\contentsline {chapter}{Bibliography}{51}{section*.37}

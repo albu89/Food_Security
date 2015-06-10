@@ -4,7 +4,9 @@
 
 \chapter{Social Media Data Acquisition}
 
-In this chapter we describe how we filtered for relevant tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.Firstly we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} for candidate term selection. We then  experimentally evaluate the  different metrics influencing the performance of HAL, discuss different frameworks for selecting candidate terms for our food, respectively predictor lexicon and lastly explain the filtering process of the tweets. 
+In this chapter we describe how we filtered for relevant tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.
+
+Firstly we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} for candidate term selection. We then  experimentally evaluate the  different metrics influencing the performance of HAL, discuss different frameworks for selecting candidate terms for our food, respectively predictor lexicon and lastly explain the filtering process of the tweets. 
 
 
 
@@ -41,7 +43,7 @@ Following the creation of the matrix we concatenate both the column and row vect
 \subsection{Motivating a Semantic Approach}
 \label{subsec:hal}
 
-HAL allows us to study the relationship between words. More specifically it's an algorithm that aids our goal of understanding what words are represented in the context of \emph{food} and topics centered around \emph{food security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let's look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It's important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms however the seldom locally co-occur. They do, however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
+HAL allows us to study the relationship between words. More specifically it's an algorithm that aids our goal of understanding what words are represented in the context of \emph{food} and topics centered around \emph{food security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let us look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It is important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms, however the seldom locally co-occur. They do however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
 
 
 
@@ -148,7 +150,7 @@ As the third layer and lowest instance, we consider food products. Each subcateg
                 [.Cereals [.Wheat \textit{Flour} ]
                 [.Corn  \textit{Whisky}  ]     ]]
 
-\caption{Food Lexicon - Hierarchie}\label{fig:food_lex}
+\caption{Food Lexicon - Hierarchy}\label{fig:food_lex}
 \end{figure}
 
 
@@ -167,8 +169,6 @@ We summarize our framework as follows:
   \item[2.)] Include all $p_i$ to $K_{final}$ only if $p_i \in K_{all}$
   \item[3.)] Create a HAL space using a random subsample of 10\% from $K_{initial}$ with all keywords that occur $> 100$. $\forall c_i \in K_{final} $  pick the keyword $k\in K_{final}$ that most frequently occurs over the entire sample and retrieve the top 500 similar terms. Hand select those that are $\in K_{all}$ and add it to $K_{final}$.
 \end{description}
-
-
  
 The keyword set $K_{final}$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_{final}$ forms our Food Lexicon.  
 
@@ -364,7 +364,7 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 
 \chapter{Analysis}
 
-This chapter will investigate if and to what extent social media data can be found to correlate with the international food price index and the commodity price quotes. This is accomplished by analysing 29 M tweets related to food. 
+This chapter will investigate if and to what extent social media data can be found to correlate with the international Food Price Index (FPI) and the commodity price quotes. This is accomplished by analysing 29 M tweets related to food. 
 
 By drawing some basic statistics we want to emphasis the general popularity of food among the twitter users and describe the term distribution of our different commodities. In the analysis we aim to show how food terms relate to each other and how they compare to indices which are intrinsic food security indicators (e.g. \emph {affordability and availability of food}). Lastly, we investigate to what extent food security and market fundamentals are present in social media discussion. 
 
@@ -431,7 +431,7 @@ Our framework for the data acquisition successfully increased the total volume o
 
 %The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index which is an overall measure of the current food condition. 
 
-We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence than others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of our correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Index and a universal Food Price Index. The Category Index is specific to a food category (e.g. meat, cereals) so different among all categories, where as the Food Price Index is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
+We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence than others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of this correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Food Price Index (CFPI) and a universal FPI. The CFPI is specific to a food category (e.g. meat, cereals) so different among all categories, where as the FPI is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
 
 For each food category (e.g. \emph{meat, dairy} ) we correlated the tweet volumes of the subcategories( e.g. \emph{beef, chicken for meat}), products (e.g. \emph{bacon, salami}) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater than 10 tweets per day. The internet archive did not contain tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
 
@@ -452,7 +452,7 @@ Between the meat subcategories there is a  positive linear relationship in the r
 
 
 
-For cereals similar to meat we likewise see a high correlation in volume of around 0.82 between the different cereal categories. The products \emph{beer, barley, bread, atta and pasta} show a strong positive relationship to the cereal categories. Unlike meat, the cereal category price index and the commodity price show a strong positive relationship with the universal food price index. This is somewhat surprising as meat prices have a stronger influence on the universal food price index then cereals do \cite{fao2008}. Furthermore the product pasta has a strong linear relationship with the commodity price of 0.7212.
+For cereals similar to meat we likewise see a high correlation in volume of around 0.82 between the different cereal categories. The products \emph{beer, barley, bread, atta and pasta} show a strong positive relationship to the cereal categories. Unlike meat, the cereal category price index and the commodity price show a strong positive relationship with the universal FPI. This is somewhat surprising as meat prices have a stronger influence on the universal FPI then cereals do \cite{fao2008}. Furthermore the product pasta has a strong linear relationship with the commodity price of 0.7212.
 \begin{figure}[H]
         \centering
          \includegraphics[width=1\textwidth ]{img/anal/black_cereals}
@@ -639,75 +639,99 @@ Extracting information from noisy and unstructured text has shown to be a very d
 
 Intro goes here ......
 
-\section{A fuzzy approach for Time Series Modeling}
+\section{A fuzzy approach for Time Series Modelling}
 
-Compared to other approaches, Fuzzy Logic has seen only a few applications in forcasting despite it's promising results. We hence want to motivate the use of this technique in further detail. 
+Compared to other approaches, Fuzzy logic has seen only a few applications in forecasting despite its promising results. We hence want to motivate the use of this technique in further detail. 
 
-Fuzzy Logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy Logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathmatical models \cite{Jang91}.  
-In some areas such as Time Series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
+Fuzzy logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on Bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathematical models \cite{Jang91}.  
+In some areas such as time series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as ANFIS, have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
 
 \section{Fuzzy Logic}
 
-In this section we present the fundamental terminologies and concepts around Fuzzy Logic. More specifically, we explain the basics of Fuzzy Variables and Fuzzy Sets.  Additionally, we explain how Fuzzy Interference is performed before lastly deriving a neural network with an underlining Fuzzy Interference System. 
 
-\subsection {Fuzzy Variables }
+In this section we present the terminologies and concepts around Fuzzy logic, focusing on the basics of Fuzzy variables, and Fuzzy sets, as well as how a Neural network is derived with a Fuzzy interference system (FIS). 
 
-Zadeh defined fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects, which fall into a specific wavelength, scope or how it's commonly labelled a defined fuzzy set. Red or blue describe the object's colour, but it's by no means a precise definition. By applying a membership function of the corresponding fuzzy set (red or blue) we can precisely define the colour. With regard to our Fuzzy Logic system we will distinguish between Input variable and Output variable. The Output variable or Crisp Value depends on the Input value's corresponding membership function and a decision matrix, which we will both describe in more detail in the following sections.
+\subsection {Fuzzy Variables and Fuzzy Sets }
 
-
-\subsection{Fuzzy Sets}
-
-Fuzzy Logic is based on fuzzy sets where the requirements for membership are not precisely defined. By introducing the concept of partial membership, the fuzzy set definition accounts for imprecise requirement for the membership of an element in a set. This means the element can take any value between 0 and 1. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use a Gaussian membership function defined by  Equation \ref{eq:gaus},  as they are differentiable and for our second part desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set. 
-
+Zadeh \cite{Zadeh65}  defined Fuzzy variables as attributes that distinguish between elements of some universe of discourse ( this is achieved by mapping input variables to a unit interval). He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects (e.g. red, blue, green), which fall into the scope of a specific wavelength or how it is commonly referred to in Fuzzy logic,  a Fuzzy set. Red or blue describe the object's colour, but it is by no means a precise definition. By applying a membership function we can precisely define the colour in a range between zero and one. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use a Gaussian membership function defined by Equation \ref{eq:gaus},  as they are differentiable and desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set.  
 
 \begin{equation} \label{eq:gaus}
 \mu_A(x) =  \frac{1}{ 1 + |\frac{x- c_i }{a_i}|^{2b_i}  }\end{equation}
 
 
+With regard to our Fuzzy logic system we will distinguish between input variable and output variable. The output variable depends on the input value's corresponding membership function and a decision matrix, where the later will be explained in the following sections. 
+
+ To illustrate the two concepts Fuzzy logic and Fuzzy sets at a concrete example, consider Figure \ref{fuzz_example}. The scope of each colour object (red, green, blue) is precisely defined by the three triangular functions. The colour object green is precisely green at the point $x_2$ and partly green between $x_1$ and $x_2$ and likewise $x_2$ and $x_3$. 
+ 
+For this exercise we classify the colour object of a tangerine which is orange.  We define orange to be a little red (where little is a value between 0 and 1) corresponding to $y_r$ and very green corresponding to $y_g$.  The membership function would map those two input variables to $x_i$, where $x_i$ is our output value and a precise numerical definition of the colour object orange. This toy example generalises to any other object. The object price would be modelled with the triangular functions high, medium low sentiment on the other hand would use positive, negative or neutral instead. 
+
+
+
+
+
+
+\begin{figure}[H]
+        \centering
+         \includegraphics[width=0.7\textwidth ]{img/model/fuzz_example}
+              
+        \caption{Fuzzy Variables and Fuzzy Sets - A Colour Object Example}
+        \label{fig:fuzz_example}
+\end{figure}
+
+
+
 \subsection{Fuzzy Interference System}
 
-We first describe the components of the Fuzzy Interference System (FIS) and then give intuition on how the system can be modelled as a Generalisde Neural Network (GNN). 
+We first describe the components of the Fuzzy interference system (FIS) and then give intuition on how the system can be modelled as a Generalised Neural Network (GNN). 
 
 FIS evaluates a decision matrix composed of rules in the following semantic: \\
 
 \centerline {$ \textbf{IF} <  A  > \textbf{AND} <  B  > \textbf{THEN} < Conclusion > $}
 
-The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined in Equation \ref{eq:union} as the multiplication of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
+The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined in Equation \ref{eq:union} as the \emph{multiplication} of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
 
 
  \begin{equation} \label{eq:union}
  w_i =  \mu_{A\cup B(x,y)} =   \mu_A (x) \times \mu_B(y)
  \end{equation}
 
-The intersection is defined in Equation \ref{eq:probor} as the probabilistic or of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ 
+The intersection is defined in Equation \ref{eq:probor} as the \emph{probabilistic OR} of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ 
 \begin{equation} \label{eq:probor}
  w_i =  \mu_{A\cap B(x,y)} =   \mu_A (x)  + \mu_B(y) -  \mu_A (x)  \times \mu_B(y)
  \end{equation}
 
-The output of one Fuzzy Rule is computed by Equation \ref{eq:output}. 
+The output of one Fuzzy Rule is computed by Equation \ref{eq:output}
 
 
 \begin{equation} \label{eq:output}
  z = dx + ey + f  \end{equation}
-
-The final output of the system is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
+ 
+Incase a constant output is preferred over a linear we set $d$ and $e$ to zero and the constant  $f$ to the desired output of our system. The final output is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
 
 \begin{equation} \label{eq:finaloutput}
 Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{equation}
 
-where $N$ is the number of rules. 
+,where $N$ is the number of rules. 
 
 \subsection{Adaptive Neuro Fuzzy Inference System }
 
-We now model the above described process as a neural network illustrated in Figure \ref{fig:gnn_fuzz}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
+We now model the above described process as a Neural network illustrated in Figure \ref{fig:gnn_fuzz}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
 
 \begin{equation} \label{eq:normfuzz}
 \overline{w_i} =  \frac{w_i}{w_1 + w_2}, i = 1,2 \end{equation}
 
- \textbf{Layer 4} applies Equation \ref{eq:layer4}, which is similar to Equation \ref{eq:output} but multiplied by the factor obtained in \textbf{Layer 3} from Equation \ref{eq:normfuzz}. Finally, \textbf{Layer 5} computes the overall output as the summation of all incoming signals through Equation \ref{eq:finaloutput}. The construction yields a network with 5 layers,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). The parameters are optimised through a hybrid algorithm. In a forward pass the system uses least-squares to find the parameters in \textbf{Layer 4}. In the backward pass the errors are propogated backwards and the parameters in \textbf{Layer 1} are optimised by gradient descent.  
+ \textbf{Layer 4} applies Equation \ref{eq:layer4}, which is similar to Equation \ref{eq:output} but multiplied by the factor obtained in \textbf{Layer 3} from Equation \ref{eq:normfuzz}. 
  
- \begin{equation} \label{eq:layer4}
+  \begin{equation} \label{eq:layer4}
  \overline{w_i} f_i =  \overline{w_i }(dx + ey + f) \end{equation}
+ 
+ Finally, \textbf{Layer 5} computes the overall output as the summation of all incoming signals through Equation \ref{eq:finaloutput}. The construction yields a network with 5 layers,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). 
+ 
+ 
+ ANFIS optimises the parameters through a hybrid algorithm with respect to a given input, output training data pattern. While the  network calculates the output value in a forward pass the system uses least-squares to find the best parameter values in \textbf{Layer 4}. In the backward pass the errors are propagated backwards and the parameters in \textbf{Layer 1} are changed by gradient descent to best reflect the input, output data.
+ 
+  
+
 
 
 
@@ -889,7 +913,7 @@ For our prediction task we consider the top 10 features. This value was empirica
 
 \subsection{Results}
 
-The time series prediction results over a range of different horizons are illustrated in Figure \ref{fig:res_1}. To give an example of the interpretation of the model the results are obtained by applying the model describe in Section 4.5. The features used in the form of $y_{t-2}$ are the top 10 obtained from the feature selection process. If the prediction task is to predict $y_{t+3}$ and for illustration purposes we assume today is Monday, then the prediction goal translates to approximating the true value on the following Thursday. Assuming the feature selection process yields $y_{t-1}$  and $y_{t-1}$ this corresponds to using the price on the previous Sunday and Saturday. Finally our model with two membership functions High and Low gives us the following Fuzzy Model. \\
+The prediction results across different time horizons are highlighted in Figure \ref{fig:res_1}. To give an example of the interpretation of the model the results are obtained by applying the model describe in Section 4.5. The features used in the form of $y_{t-2}$ are the top 10 obtained from the feature selection process. If the prediction task is to predict $y_{t+3}$ and for illustration purposes we assume today is Monday, then the prediction goal translates to approximating the true value on the following Thursday. Assuming the feature selection process yields $y_{t-1}$  and $y_{t-1}$ this corresponds to using the price on the previous Sunday and Saturday. Finally our model with two membership functions High and Low gives us the following Fuzzy Model. \\
 
 \centerline {$ \textbf{IF} <  Sunday \in High> \textbf{AND} < Saturday \in Low > \textbf{THEN} <  Thursday \in 0.67 > $} 
 
