@@ -728,7 +728,7 @@ We now model the above described process as a Neural network illustrated in Figu
  Finally, \textbf{Layer 5} computes the overall output as the summation of all incoming signals through Equation \ref{eq:finaloutput}. The construction yields a network with 5 layers,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). 
  
  
- ANFIS optimises the parameters through a hybrid algorithm with respect to a given input, output training data pattern. While the  network calculates the output value in a forward pass the system uses least-squares to find the best parameter values in \textbf{Layer 4}. In the backward pass the errors are propagated backwards and the parameters in \textbf{Layer 1} are changed by gradient descent to best reflect the input, output data.
+ ANFIS optimises the parameters through a hybrid algorithm (least-squares \& gradient descent) with respect to a given input, output training data pattern. While the  network calculates the output value in a forward pass, the system uses least-squares to find the best parameter values in \textbf{Layer 4}. In the backward pass the errors are propagated backwards and the parameters in \textbf{Layer 1} are changed by gradient descent to best reflect the input, output data.
  
   
 
