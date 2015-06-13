@@ -2,7 +2,44 @@
 
 \let\cleardoublepage\clearpage
 
+
+\chapter{Introduction}
+
+Despite living in a highly developed world, Food Security is still a prevailing issue. Around 842 million people are estimated to be experiencing malnourishment and hunger. Especially global soaring food prices seem to have a negative effect by transmitting into rising food inflation rates in domestic markets. The recent food crisis in 2011 has driven 100 of millions into extreme poverty causing riots, falling markets and collapsing governments as experienced during the 2011 revolution that swept the middle east. Such suffering is likely going to increase in the future as our population grows and our richer diets call for more resources. However producing more resources is an extremely challenging task as we face rising energy prices and global warming . The consequences of rising food prices differ among developed and developing countries. Developing countries struggle with accessibility due to poor infrastructure and affordability as most of their income is spent on food. Developed countries on the other hand face increased malnourishment and as a consequent an increase of health related diseases such as obesity or diabetes. The diversity between and within different countries calls for improved approach in effectively tracking long-term development trends to aid the development of safer policies and ultimately a world where everybody has enough food. 
+
+Food security assessments are typically done through household surveys, which are timely and expensive to execute. It takes years to analyse validate and release. As a result it is mostly an exercises in history, they fail to provide real time information which hinders an early response. Every second people generate large amounts of data. Partly voluntarily , partly involuntarily through their mobile phones and social media. As people use those services they leave traces in the data and if their lives change for the better or the worse so do those traces. Twitter is considered to be one of the largest social media platforms and among one of the most consistent and prevalent topics on the platform is food \footnote{http://www.businessinsider.com/most-discussed-topics-on-social-media-2013-5}. Cleaned and aggregate this provides a valuable opportunity for \emph{studying food security indicators on Twitter}. Understanding if and how price fluctuations are perceived by the population and whether the information is predictive for future price changes or even indicative of the next food crisis is the focus of this work. 
+
+\newpage 
+
+
+\textbf{How do people talk about Food Security Indicators on Twitter? - Can we quantify the Semantics of indicative Words?} 
+
+Food Security Objects are well defined, but how do we capture tweets that fall into these segments and how do we distinguish them from irelevant discussions? This inherently comes down to finding contextually similar words to our given food security objectives. Most frequently a local co-ccurece analysis is performed, however in this work we make a case that these approaches fail to capture a lot of indicative terms. Hence \emph{we quantitatively analyse the semantics of a word by using HAL.} Tweets have characteristics that are very different from classical text. As a result \emph{we extensively evaluate the performance of HAL and propose a set of metrics for analysing the semantics of social media}. Lastly, certain raw products are only very sparsely represented in twitter conversations. To circumvent this problem \emph{ we introduce a methodology to increase the coverage of our lexicon.} 
+
+\textbf{Can Social Media Data provide insight into rising Food Prices or Price Instability?  - Are Food Security Objectives even discussed on Social Media? }
+
+To address these questions we performed a large scale analysis of 29M tweets distributed over 15.5 million users. \emph {We investigate to what extent the volume of food discussions can be correlated to the international Food Price Index and commodity price quotes}. We found that on an aggregated level no real correlation exists however on a finer granularity  certain products exhibit a strong linear relationship of up to 0.7369. We also apply a methodology introduced by \cite{olt15} to automatically detect events and \emph{investigate the relevance to our desired food security objectives}. The results showed that up to 13 \% of the peaks can be attributed to discussions around food supply, price and poverty. 
+
+
+\textbf{Is it possible to use Social Media to model Commodity Prices? Can we predict the Price of a specific Commodity at some point in the Future?}
+
+It is widely assumed that  the food crisis in 2008 was accelerated by speculative actions on the commodity future markets \cite{foodwatch}. The prices of U.S. corn tripled from \$94 to \$281 during a period of only 3 years. Those basics goods constitute the diet and the currency of the poorest two billion people \cite{Tadesse2014} strongly affecting their household incomes and purchasing power. With a Pearson correlation of 0.8436 there is a strong correlation with the Food Security Index making it an important indicator. We hence monitor volatile commodity prices by \emph{ introducing an Adaptive neuro fuzzy inference system for time series modelling }. \emph{We show that social media features by itself are not informative enough of explaining the price variance. However coupled with  price data we are able to accurately predict a trend 4 weeks into the future with a RMSE as low as 0.0683 on normalised price data}. 
+
+
+\textbf{The rest of this document is structured as follows: } In the next Chapter \ref{2} we present similar work to ours. In Chapter \ref{3} we perform an investigation of the word semantics and detail a framework for creating our lexicons.  In Chapter \ref{4} we perform a correlation analysis between the tweet volume and the international Food Price Index. Chapter \ref{5} details the time series modelling of different commodities. Lastly, in Chapter \ref{6} we conclude our finding and give directions for future work. 
+
+
+
+
+
+\chapter{Literature Review}
+\label{2}
+
+Literature review goes here....
+
+
 \chapter{Social Media Data Acquisition}
+\label{3}
 
 In this chapter we describe how we filtered for relevant tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.
 
@@ -363,6 +400,7 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 
 
 \chapter{Analysis}
+\label{4}
 
 This chapter will investigate if and to what extent social media data can be found to correlate with the international Food Price Index (FPI) and the commodity price quotes. This is accomplished by analysing 29 M tweets related to food. 
 
@@ -438,7 +476,7 @@ For each food category (e.g. \emph{meat, dairy} ) we correlated the tweet volume
 \subsection{Results} 
 \label{corr_results}
 
-Between the meat subcategories there is a  positive linear relationship in the range of 0.7264 to 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three price indices. Incase of a slight correlation most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the price quotes. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports \cite{abbott2009} theory that the commodity markets have a strong influence on the rising food prices and are a strong factor for quantifying Food Security. 
+Between the meat subcategories there is a  positive linear relationship in the range of 0.7264 to 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three price indices. Incase of a slight correlation most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the price quotes. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports Abbott et al's theory \cite{abbott2009}  that the commodity markets have a strong influence on the rising food prices and are a strong indicator for measuring Food Security. 
 
 
 
@@ -923,7 +961,7 @@ The output is a numerical value and not a class.
 
 To analyse the results in more detail and to put the RMSE into context  we turn our attention towards Figure \ref{fig:wheat_1} \ref{fig:beef_1} \ref{fig:milk_1}. For all three commodities the predictions within one week are extremely accurate. We can now also observe why beef had the lowest RMSE among the three commodities. Beef follows a clear upwards trend. Such long lasting motions are much easier to predict and as discussed in Section Feature Selection our input variables from the intermediate past perform exceptionally well if there is a clear underlying motion. 
 
- For the model $y_{t+14}$ and $y_{t+20}$  ANFIS clearly overestimates a decrease and increase in price but still manages to captures the underlining trend. On the other hand Figure \ref{} \ref{} strongly approximates the observed pattern in the training sample explaining the strong deviation from the actual prediction. The only commodity excluded from this behaviour is beef due to it's strong underlying motion. Better predictions can be expected by considering different training samples. 
+ For the model $y_{t+20}$  ANFIS clearly overestimates a decrease and increase in price but still manages to captures the underlining trend. The overestimation seen in Figure \ref{fig:long_wheat_price} and Figure \ref{fig:long_milk_price} strongly approximates the observed pattern in the training sample explaining the deviation from the actual prediction. The only commodity excluded from this behaviour is beef due to it's strong underlying motion. Better predictions can be expected by considering different training samples. 
 
 
 
@@ -940,35 +978,30 @@ To analyse the results in more detail and to put the RMSE into context  we turn 
 
 
 
-
-
-
-
-
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/pred_4}
-                \caption{4 Day Horizon - RMSE 0.0012 }
+                \includegraphics[width=\textwidth]{img/model/wheat/model1/pred_4}
+                \caption{4 Day Horizon - RMSE 0.0015948 }
                 \label{fig:gull}
         \end{subfigure}%
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/pred_7}
-                \caption{7 Day Horizon - RMSE 0.0047}
+                \includegraphics[width=\textwidth]{img/model/wheat/model1/pred_7}
+                \caption{7 Day Horizon - RMSE 0.0030423}
                 \label{fig:tiger}
         \end{subfigure}
        
        \hfill
        
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/pred_14}
-                \caption{14 Day Horizon - RMSE 0.0353}
+                \includegraphics[width=\textwidth]{img/model/wheat/model1/pred_14}
+                \caption{14 Day Horizon - RMSE 0.015192}
                 \label{fig:mouse}
         \end{subfigure}%
          \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/pred_20}
-                \caption{20 Day Horizon - RMSE  0.1031}
-                \label{fig:mouse}
+                \includegraphics[width=\textwidth]{img/model/wheat/model1/pred_21}
+                \caption{21 Day Horizon - RMSE  0.105}
+                \label{fig:long_wheat_price}
         \end{subfigure}
         \caption{Benchmark Prediction Wheat}
         \label{fig:wheat_1}
@@ -981,26 +1014,26 @@ To analyse the results in more detail and to put the RMSE into context  we turn 
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/beef/pred_4}
-                \caption{4 Day Horizon - RMSE 0.0027 }
+                \includegraphics[width=\textwidth]{img/model/beef/model1/pred_4}
+                \caption{4 Day Horizon - RMSE 0.00086578 }
                 \label{fig:gull}
         \end{subfigure}%
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/beef/pred_7}
-                \caption{7 Day Horizon - RMSE 0.0066}
+                \includegraphics[width=\textwidth]{img/model/beef/model1/pred_7}
+                \caption{7 Day Horizon - RMSE 0.0059255}
                 \label{fig:tiger}
         \end{subfigure}
        
        \hfill
        
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/beef/pred_14}
-                \caption{14 Day Horizon - RMSE 0.0508}
+                \includegraphics[width=\textwidth]{img/model/beef/model1/pred_14}
+                \caption{14 Day Horizon - RMSE 0.017041}
                 \label{fig:mouse}
         \end{subfigure}%
          \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/beef/pred_20}
-                \caption{20 Day Horizon - RMSE 0.1013}
+                \includegraphics[width=\textwidth]{img/model/beef/model1/pred_21}
+                \caption{21 Day Horizon - RMSE 0.040397}
                 \label{fig:mouse}
         \end{subfigure}
         \caption{Benchmark Prediction Beef}
@@ -1013,27 +1046,27 @@ To analyse the results in more detail and to put the RMSE into context  we turn 
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/milk/pred_4}
-                \caption{4 Day Horizon - RMSE 0.0088}
+                \includegraphics[width=\textwidth]{img/model/milk/model1/pred_4}
+                \caption{4 Day Horizon - RMSE 0.0015964}
                 \label{fig:gull}
         \end{subfigure}%
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/milk/pred_7}
-                \caption{7 Day Horizon - RMSE 0.0286 }
+                \includegraphics[width=\textwidth]{img/model/milk/model1/pred_7}
+                \caption{7 Day Horizon - RMSE 0.0049564 }
                 \label{fig:tiger}
         \end{subfigure}
        
        \hfill
        
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/milk/pred_14}
+                \includegraphics[width=\textwidth]{img/model/milk/model1/pred_14}
                 \caption{14 Day Horizon - RMSE 0.1185}
                 \label{fig:mouse}
         \end{subfigure}%
          \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/milk/pred_20}
-                \caption{20 Day Horizon - RMSE 0.2039}
-                \label{fig:mouse}
+                \includegraphics[width=\textwidth]{img/model/milk/model1/pred_21}
+                \caption{21 Day Horizon - RMSE 0.023702}
+                \label{fig:long_milk_price}
         \end{subfigure}
         \caption{Benchmark Prediction Milk}
         \label{fig:milk_1}
@@ -1248,33 +1281,7 @@ Unlike our benchmark paradigm the social media model did not exhibit an increasi
 
 \subsection{Feature Selection}
 
-Combining the price and social media features we want to investigate if Relieff proposes as similar set as for the separate models or if the combined model favours a different group of input variables. Only a few features generalised well over all commodities which is why we focuses our search of finding input variables that are specific to beef, milk and wheat but generalise well over different prediction models. As in our price model, days in the intermediate past were proposed for all three commodities. The ratio varies very strongly between the commodities. Beef favours price variables where milk and wheat have a majority of social media features. We observe an interesting trend, namely that all commodities favour supply and needs feature over price and poverty which is very different to the pure social media model. We assume that the price data made the conversations about price more obsolete. 
-
-
-the third sentiment ratio of poverty (SR34), 
-the fith sentiment of the product (SR12), 
-the fourth sentiment of the product(SR11), 
-the fourth sentiment of supply (SR47)
-the third sentiment of supply (SR46)
-the second sentiment of supply(SR45)
-the first sentiment of price (SR38)
-the third sentiment of price (SR40)
-the third sentiment of the category (SR22)
-the fourth sentiment of needs(SR29)
-the fith sentiment of needs(SR30)
-the sixth sentiment of needs(SR31)
-the first sentiment of the subcategory (SR15)
-
-
-D24 = (75)
-D25 = (76)
-D26 = (77)
-D27 = (78)
-D28 = (79)
-D29 = (80)
-D30 = (81)
-W1 = (82)
-
+Combining the price and social media features we want to investigate if Relieff proposes as similar set as for the separate models or if the combined model favours a different group of input variables. Only a few features generalised well over all commodities which is why we focus our search of finding input variables that are specific to beef, milk and wheat but generalise well over different prediction models. As in our price model, days in the intermediate past were proposed for all three commodities. The ratio varies very strongly between the commodities. Beef favours price variables where milk and wheat have a majority of social media features. We observe an interesting trend, namely that all commodities favour supply and needs feature over price and poverty which is very different to the pure social media model. We assume that the price data made the conversations about price more obsolete. To conclude the proposed features are the fourth and the fifth sentiment ratio of the product (SR11, SR12), the fourth, fifth, sixth sentiment ratio of needs (SR29, SR30, SR31), the third sentiment ratio of poverty (SR34), the first, third sentiment ratio of price (SR38, SR40) and lastly the second, third sentiment ratio of supply (SR45, SR46). The price features are all days of the last week i.e. (D24, D25, D26, D27, D28, D29, D30) and the moving average of the past week (W1). 
 
 
 
@@ -1298,7 +1305,75 @@ $wheat$ & D30 & D29 & SR22 & SR29 & SR30 & SR31 & SR15 & SR16 & SR33 & SR14 \\
 
 
 
+\subsection{Results}
 
+
+% Combined Model 
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_4}
+                \caption{4 Day Horizon Wheat - RMSE 0.0084}
+                \label{fig:gull}
+        \end{subfigure}%
+           \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_7}
+                \caption{7 Day Horizon Wheat - RMSE 0.0281}
+                \label{fig:gull}
+        \end{subfigure}%
+              \hfill    
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_14}
+                \caption{14 Day Horizon Wheat - RMSE 0.0557  }
+                \label{fig:tiger}
+        \end{subfigure}%
+              \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_21}
+                \caption{21 Day Horizon Wheat  - RMSE 0.0673 }
+                \label{fig:tiger}
+        \end{subfigure}%
+        \caption{Social Media Prediction}\label{fig:comp_exp}
+\end{figure}
+
+
+
+\subsection{Performance Comparison}
+
+
+As our mixture model exhibits similar behaviours to the price model we show the exact predictions for each commodity in the Appendix \ref{}. Instead we focus our attention on the performance evaluation of the three different models (e.g. price, social and mixture model) wen. Figure \ref{fig:final_res} summarises our results and compares the three models. For all commodities the social media model performs rather baldy. We can hence conclude that a model soly based on social media feature will yield no accurate predictions.  From the wheat forcasts we can see that both the mixture and price model have comparable results. Across all horizons we recorded an average error of 0.0669 for the price model and an average error of 0.07315808 for the mixture model. It seems like the price models favours the intermediate future where as the mixture model allows for more accurate predictions in the far foresight. To test this hypothesis we extended the analysis to $y_{t+50}$, however rejected it as we could not record any clear performance improvements compared to the price model.  
+
+Similar patterns apply to the commodity beef. Since beef exhibits a strong and long lasting trend the prediction accuracy is very high for both models and a difference is hardly observable. At the end of the prediction horizon the mixture model performs slightly better. Indeed for the price model we observe an average error of 0.02816 where as for the mixture model an error of 0.02814. For the commodity milk the price predictions are clearly more accurate then the ones of the mixture model. This can be attributed to the social media's high-level of noise and a lack of focus that we observed for the commodity milk.  
+
+
+
+%wheat price : avg 0.0669  milk price : avg 0.04048 beef price : avg 0.028160 beef mix: avg 0.02814 milk mix: avg 0.09770191 wheat mix avg: 0.07315808
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/results/result_wheat}
+                \caption{Model Comparison Wheat- RMSE 0.016061}
+                \label{fig:gull}
+        \end{subfigure}%
+           \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/results/result_beef}
+                \caption{7 Day Horizon Milk - RMSE 0.031539}
+                \label{fig:gull}
+        \end{subfigure}%
+    
+    
+              \hfill    
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{img/model/results/result_milk}
+                \caption{14 Day Horizon Milk - RMSE 0.11321  }
+                \label{fig:tiger}
+         \end{subfigure}%
+         
+        \caption{Social Media Prediction}\label{fig:final_res}
+\end{figure}
 
 
 
@@ -1337,6 +1412,12 @@ dynamics be correlated with stock market activity?,? in Proceedings of the ninet
 
 
 $http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
+
+
+
+\chapter{Conclusion}
+\label{6}
+
 
 
  

@@ -4,62 +4,65 @@
 \contentsline {chapter}{List of Figures}{1}{section*.2}
 \contentsline {chapter}{List of Tables}{2}{section*.3}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{3}{chapter.1}
-\contentsline {chapter}{\chapternumberline {2}Social Media Data Acquisition}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Hyperspace Analogue to Language}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Motivating a Semantic Approach}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Experimental Evaluation}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}HAL Performance Results}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Discussion}{7}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Food Lexicon}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Candidate Food Term Selection}{9}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}Predictor Lexicon}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Candidate Predictor Term Selection}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Annotation and False Positive Removal of HAL Results}{12}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Annotation Results}{12}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Filtering}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Food related Tweets}{14}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Predictor related Tweets}{14}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Sentiment Extraction}{14}{subsection.2.4.3}
-\contentsline {chapter}{\chapternumberline {3}Analysis}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}User Distribution}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Food Term Distribution}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Price Correlation}{17}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Results}{17}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Discussion}{19}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Conversation Drivers}{19}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}A Visual Analysis of the Social Attention}{20}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Methodology}{21}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Event Annotation}{22}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Results}{23}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Discussion}{24}{subsection.3.4.5}
-\contentsline {chapter}{\chapternumberline {4}Model Building}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}A fuzzy approach for Time Series Modelling}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}Fuzzy Logic}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Fuzzy Variables and Fuzzy Sets }{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Fuzzy Interference System}{27}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Adaptive Neuro Fuzzy Inference System }{27}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Data Preprocessing}{28}{section.4.3}
-\contentsline {section}{\numberline {4.4}Training the Model}{29}{section.4.4}
-\contentsline {section}{\numberline {4.5}Methodology for Forcasting with Fuzzy Logic}{30}{section.4.5}
-\contentsline {section}{\numberline {4.6}Parameters}{31}{section.4.6}
-\contentsline {section}{\numberline {4.7}Benchmark Model}{31}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Input Model}{31}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Feature Selection}{31}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Results}{32}{subsection.4.7.3}
-\contentsline {section}{\numberline {4.8}Social Media Model}{38}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Input Model }{38}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Bolstering the Social Media Features}{39}{subsection.4.8.2}
-\contentsline {subsection}{\numberline {4.8.3}Feature Selection}{40}{subsection.4.8.3}
-\contentsline {subsection}{\numberline {4.8.4}Results}{41}{subsection.4.8.4}
-\contentsline {subsection}{\numberline {4.8.5}Combined Model}{43}{subsection.4.8.5}
-\contentsline {subsection}{\numberline {4.8.6}Feature Selection}{43}{subsection.4.8.6}
-\contentsline {subsection}{\numberline {4.8.7}Curse of of Dimensionality}{43}{subsection.4.8.7}
-\contentsline {appendix}{\chapternumberline {A}Data}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}Processing and Storage}{45}{section.A.1}
-\contentsline {section}{\numberline {A.2}Crowd Flower}{46}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Categorise: Food Price}{46}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Categorise: Food Supply}{46}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Categorise: Food Poverty}{47}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Categorise: Food Needs}{48}{subsection.A.2.4}
-\contentsline {appendix}{\chapternumberline {B}Price Correlation}{49}{appendix.B}
-\contentsline {chapter}{Bibliography}{51}{section*.37}
+\contentsline {chapter}{\chapternumberline {2}Literature Review}{5}{chapter.2}
+\contentsline {chapter}{\chapternumberline {3}Social Media Data Acquisition}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hyperspace Analogue to Language}{6}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Motivating a Semantic Approach}{7}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Experimental Evaluation}{7}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}HAL Performance Results}{8}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Discussion}{9}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Food Lexicon}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Candidate Food Term Selection}{11}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Predictor Lexicon}{12}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Candidate Predictor Term Selection}{13}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Annotation and False Positive Removal of HAL Results}{14}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Annotation Results}{14}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Filtering}{16}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Food related Tweets}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Predictor related Tweets}{16}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Sentiment Extraction}{16}{subsection.3.4.3}
+\contentsline {chapter}{\chapternumberline {4}Analysis}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}User Distribution}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Food Term Distribution}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Price Correlation}{19}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Results}{19}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Discussion}{21}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Conversation Drivers}{21}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}A Visual Analysis of the Social Attention}{22}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Methodology}{23}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Event Annotation}{24}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Results}{25}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Discussion}{26}{subsection.4.4.5}
+\contentsline {chapter}{\chapternumberline {5}Model Building}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}A fuzzy approach for Time Series Modelling}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Fuzzy Logic}{27}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Fuzzy Variables and Fuzzy Sets }{28}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Fuzzy Interference System}{29}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Adaptive Neuro Fuzzy Inference System }{29}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Data Preprocessing}{30}{section.5.3}
+\contentsline {section}{\numberline {5.4}Training the Model}{31}{section.5.4}
+\contentsline {section}{\numberline {5.5}Methodology for Forcasting with Fuzzy Logic}{32}{section.5.5}
+\contentsline {section}{\numberline {5.6}Parameters}{33}{section.5.6}
+\contentsline {section}{\numberline {5.7}Benchmark Model}{33}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Input Model}{33}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Feature Selection}{33}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Results}{34}{subsection.5.7.3}
+\contentsline {section}{\numberline {5.8}Social Media Model}{40}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Input Model }{40}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Bolstering the Social Media Features}{41}{subsection.5.8.2}
+\contentsline {subsection}{\numberline {5.8.3}Feature Selection}{42}{subsection.5.8.3}
+\contentsline {subsection}{\numberline {5.8.4}Results}{43}{subsection.5.8.4}
+\contentsline {subsection}{\numberline {5.8.5}Combined Model}{45}{subsection.5.8.5}
+\contentsline {subsection}{\numberline {5.8.6}Feature Selection}{45}{subsection.5.8.6}
+\contentsline {subsection}{\numberline {5.8.7}Results}{45}{subsection.5.8.7}
+\contentsline {subsection}{\numberline {5.8.8}Performance Comparison}{45}{subsection.5.8.8}
+\contentsline {subsection}{\numberline {5.8.9}Curse of of Dimensionality}{46}{subsection.5.8.9}
+\contentsline {chapter}{\chapternumberline {6}Conclusion}{49}{chapter.6}
+\contentsline {appendix}{\chapternumberline {A}Data}{50}{appendix.A}
+\contentsline {section}{\numberline {A.1}Crowd Flower}{50}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Categorise: Food Price}{50}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Categorise: Food Supply}{51}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Categorise: Food Poverty}{51}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Categorise: Food Needs}{52}{subsection.A.1.4}
+\contentsline {appendix}{\chapternumberline {B}Price Correlation}{54}{appendix.B}
+\contentsline {chapter}{Bibliography}{57}{section*.40}
