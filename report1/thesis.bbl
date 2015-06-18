@@ -55,9 +55,9 @@ Munmun De~Choudhury, Hari Sundaram, Ajita John, and Dor{\'e}e~Duncan Seligmann.
 John D’Errico.
 \newblock Interpolates and extrapolates nan elements in a 2d array, 2012.
 
-\bibitem{fao13}
-Food and Agriculture~Organisation of~the United~Nations.
-\newblock Faos food price index revisited, 2013.
+\bibitem{foodwatch}
+Food and Water watch.
+\newblock Casino of hunger, 2009.
 
 \bibitem{iuj11}
 Qiang Gong, Ming Liu, and Qianqiu Liu.
@@ -97,6 +97,18 @@ Iebeling Kaastra and Milton Boyd.
 \newblock Designing a neural network for forecasting financial and economic
   time series, 1996.
 
+\bibitem{kira92}
+Kenji Kira and Larry~A. Rendell.
+\newblock A practical approach to feature selection.
+\newblock In {\em Proceedings of the Ninth International Workshop on Machine
+  Learning}, ML92, pages 249--256, San Francisco, CA, USA, 1992. Morgan
+  Kaufmann Publishers Inc.
+
+\bibitem{kono94}
+Igor Kononenko.
+\newblock Estimating attributes: Analysis and extensions of relief.
+\newblock pages 171--182. Springer Verlag, 1994.
+
 \bibitem{Lehmann2012}
 Janette Lehmann, Bruno Gon\c{c}alves, Jos{\'e}~J. Ramasco, and Ciro Cattuto.
 \newblock Dynamical classes of collective attention in twitter.
@@ -118,6 +130,11 @@ K.~{LUND} and C.~{BURGESS}.
 \newblock {\em Behavior research methods, instruments \& computers},
   28(2):203--208, 1996.
 
+\bibitem{mowbray10}
+Miranda Mowbray.
+\newblock The twittering machine.
+\newblock In {\em WEBIST (2)'10}, pages 299--304, 2010.
+
 \bibitem{Nguyen12}
 Le~T. Nguyen, Pang Wu, William Chan, Wei Peng, and Ying Zhang.
 \newblock Predicting collective sentiment dynamics from time-series social
@@ -134,6 +151,10 @@ J.~Nofsinger.
 \bibitem{fao2008}
 EC~FAO Food~Security Programme.
 \newblock An introduction to the basic concepts of food security, 2008.
+
+\bibitem{Robnik97}
+Marko Robnik-Sikonja and Igor Kononenko.
+\newblock An adaptation of relief for attribute estimation in regression, 1997.
 
 \bibitem{RePEc}
 Pavel Savor and Mungo Wilson.

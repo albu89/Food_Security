@@ -5,28 +5,28 @@
 
 \chapter{Introduction}
 
-Despite living in a highly developed world, Food Security is still a prevailing issue. Around 842 million people are estimated to be experiencing malnourishment and hunger. Especially global soaring food prices seem to have a negative effect by transmitting into rising food inflation rates in domestic markets. The recent food crisis in 2011 has driven 100 of millions into extreme poverty causing riots, falling markets and collapsing governments as experienced during the 2011 revolution that swept the middle east. Such suffering is likely going to increase in the future as our population grows and our richer diets call for more resources. However producing more resources is an extremely challenging task as we face rising energy prices and global warming . The consequences of rising food prices differ among developed and developing countries. Developing countries struggle with accessibility due to poor infrastructure and affordability as most of their income is spent on food. Developed countries on the other hand face increased malnourishment and as a consequent an increase of health related diseases such as obesity or diabetes. The diversity between and within different countries calls for improved approach in effectively tracking long-term development trends to aid the development of safer policies and ultimately a world where everybody has enough food. 
+Despite living in a highly developed world, food security is still a prevailing issue. Around 842 million people are estimated to be experiencing malnourishment and hunger. Especially global soaring food prices seem to have a negative effect by transmitting into rising food inflation rates in domestic markets. The recent food crisis in 2011 has driven 100 of millions into extreme poverty causing riots, falling markets and collapsing governments as experienced during the 2011 revolution that swept the middle east. Such suffering is likely going to increase in the future as our population grows and our richer diets call for more resources. However producing more resources is an extremely challenging task as we face rising energy prices and global warming. The consequences of rising food prices differ among developed and developing countries. Developing countries struggle with accessibility due to poor infrastructure and affordability as most of their income is spent on food. Developed countries on the other hand face increased malnourishment and as a consequence an increase of health-related diseases such as obesity or diabetes. The diversity between and within different countries calls for an improved approach in effectively tracking long-term development trends to aid the development of safer policies and ultimately a world where everybody has enough food. 
 
-Food security assessments are typically done through household surveys, which are timely and expensive to execute. It takes years to analyse validate and release. As a result it is mostly an exercises in history, they fail to provide real time information which hinders an early response. Every second people generate large amounts of data. Partly voluntarily , partly involuntarily through their mobile phones and social media. As people use those services they leave traces in the data and if their lives change for the better or the worse so do those traces. Twitter is considered to be one of the largest social media platforms and among one of the most consistent and prevalent topics on the platform is food \footnote{http://www.businessinsider.com/most-discussed-topics-on-social-media-2013-5}. Cleaned and aggregate this provides a valuable opportunity for \emph{studying food security indicators on Twitter}. Understanding if and how price fluctuations are perceived by the population and whether the information is predictive for future price changes or even indicative of the next food crisis is the focus of this work. 
+Food security assessments are typically done through household surveys, which are timely and expensive to execute. It takes years to analyse, validate and release. As a result, it is mostly an exercise in history, they fail to provide real time information which hinders an early response. Every second people generate large amounts of data. Partly voluntarily, partly involuntarily through their mobile phones and social media. As people use those, services they leave traces in the data and if their lives change for the better or the worse so do those traces. Twitter is considered to be one of the largest social media platforms and among one of the most consistent and prevalent topics on the platform is food \footnote{http://www.businessinsider.com/most-discussed-topics-on-social-media-2013-5}. Cleaned and aggregated this provides a valuable opportunity for \emph{studying food security indicators on Twitter}. Understanding if and how price fluctuations are perceived by the population and whether the information is predictive of future price changes or even indicative of the next food crisis is the focus of this work. 
 
 \newpage 
 
 
 \textbf{How do people talk about Food Security Indicators on Twitter? - Can we quantify the Semantics of indicative Words?} 
 
-Food Security Objects are well defined, but how do we capture tweets that fall into these segments and how do we distinguish them from irelevant discussions? This inherently comes down to finding contextually similar words to our given food security objectives. Most frequently a local co-ccurece analysis is performed, however in this work we make a case that these approaches fail to capture a lot of indicative terms. Hence \emph{we quantitatively analyse the semantics of a word by using HAL.} Tweets have characteristics that are very different from classical text. As a result \emph{we extensively evaluate the performance of HAL and propose a set of metrics for analysing the semantics of social media}. Lastly, certain raw products are only very sparsely represented in twitter conversations. To circumvent this problem \emph{ we introduce a methodology to increase the coverage of our lexicon.} 
+Food security Objects are well defined, but how do we capture Tweets that fall into these segments and how do we distinguish them from irrelevant discussions? This inherently comes down to finding contextually similar words to our given food security objectives. Most frequently a local co-occurece analysis is performed, however in this work we make a case that these approaches fail to capture a lot of indicative terms. Hence, \emph{we quantitatively analyse the semantics of a word by using HAL.} Tweets have characteristics that are very different from classical text. As a result, \emph{we extensively evaluate the performance of HAL and propose a set of metrics for analysing the semantics of social media}. Lastly, certain raw products are only very sparsely represented in Twitter conversations. To circumvent this problem \emph{ we introduce a methodology to increase the coverage of our lexicon.} 
 
 \textbf{Can Social Media Data provide insight into rising Food Prices or Price Instability?  - Are Food Security Objectives even discussed on Social Media? }
 
-To address these questions we performed a large scale analysis of 29M tweets distributed over 15.5 million users. \emph {We investigate to what extent the volume of food discussions can be correlated to the international Food Price Index and commodity price quotes}. We found that on an aggregated level no real correlation exists however on a finer granularity  certain products exhibit a strong linear relationship of up to 0.7369. We also apply a methodology introduced by \cite{olt15} to automatically detect events and \emph{investigate the relevance to our desired food security objectives}. The results showed that up to 13 \% of the peaks can be attributed to discussions around food supply, price and poverty. 
+To address these questions we performed a large-scale analysis of 29M Tweets distributed over 15.5 million users. \emph {We investigate to what extent the volume of food discussions can be correlated to the international Food Price Index and commodity price quotes}. We found that on an aggregated level (e.g. meat) no real correlation exists however on a finer granularity (e.g. Sirloin steak )  certain products exhibit a strong linear relationship of up to 0.7369. We also apply a methodology introduced by \cite{olt15} to automatically detect events and \emph{investigate the relevance to our desired food security objectives}. The results showed that up to 13 \% of the peaks can be attributed to discussions around food supply, price and poverty. 
 
 
 \textbf{Is it possible to use Social Media to model Commodity Prices? Can we predict the Price of a specific Commodity at some point in the Future?}
 
-It is widely assumed that  the food crisis in 2008 was accelerated by speculative actions on the commodity future markets \cite{foodwatch}. The prices of U.S. corn tripled from \$94 to \$281 during a period of only 3 years. Those basics goods constitute the diet and the currency of the poorest two billion people \cite{Tadesse2014} strongly affecting their household incomes and purchasing power. With a Pearson correlation of 0.8436 there is a strong correlation with the Food Security Index making it an important indicator. We hence monitor volatile commodity prices by \emph{ introducing an Adaptive neuro fuzzy inference system for time series modelling }. \emph{We show that social media features by itself are not informative enough of explaining the price variance. However coupled with  price data we are able to accurately predict a trend 4 weeks into the future with a RMSE as low as 0.0683 on normalised price data}. 
+It is widely assumed that  the food crisis in 2008 was accelerated by speculative actions on the commodity future markets \cite{foodwatch}. The prices of U.S. corn tripled from \$94 to \$281 during a period of only 3 years. Those basic goods constitute the diet and the currency of the poorest two billion people \cite{Tadesse2014} strongly affecting their household income and purchasing power. With a Pearson correlation of 0.8436 there is a strong correlation with the Food Security Index making it an important indicator. We hence monitor volatile commodity prices by \emph{ introducing an Adaptive neuro-fuzzy inference system for time series modelling}. \emph{We show that social media features by itself are not informative enough of explaining the price variance. However, coupled with price data we are able to accurately predict a trend four weeks into the future with an RMSE as low as 0.0683 on normalised price data}. 
 
 
-\textbf{The rest of this document is structured as follows: } In the next Chapter \ref{2} we present similar work to ours. In Chapter \ref{3} we perform an investigation of the word semantics and detail a framework for creating our lexicons.  In Chapter \ref{4} we perform a correlation analysis between the tweet volume and the international Food Price Index. Chapter \ref{5} details the time series modelling of different commodities. Lastly, in Chapter \ref{6} we conclude our finding and give directions for future work. 
+\textbf{The rest of this document is structured as follows: } In the next Chapter \ref{2} we present similar work to ours. In Chapter \ref{3} we perform an investigation of the word semantics and detail a framework for creating our lexicons.  In Chapter \ref{4} we perform a correlation analysis between the tweet volume and the international Food Price Index. Chapter \ref{5} details the time series modelling of different commodities. Lastly, in Chapter \ref{6} we conclude our findings and give directions for future work. 
 
 
 
@@ -41,17 +41,17 @@ Literature review goes here....
 \chapter{Social Media Data Acquisition}
 \label{3}
 
-In this chapter we describe how we filtered for relevant tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant tweets.
+In this chapter, we describe how we filtered for relevant Tweets using two different lexicons. The food lexicon contains keywords with food related terms  (e.g. \emph {rice, wheat, milk}) where the predictor lexicon contains terms with factors influencing the price and supply of the goods (e.g. \emph{pricey}, \emph {cheap}, \emph{available}). We downloaded 2 TB of Tweets from the internet archive \footnote{https://archive.org/details/archiveteam-json-Twitterstream}  over a span of October 2011 - September 2014.  The filtering process resulted with 29 M food relevant Tweets.
 
-Firstly we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} for candidate term selection. We then  experimentally evaluate the  different metrics influencing the performance of HAL, discuss different frameworks for selecting candidate terms for our food, respectively predictor lexicon and lastly explain the filtering process of the tweets. 
+Firstly we motivate and detail an algorithm Hyperspace Analogue to Language (HAL)  \cite{lund96} for candidate term selection. We then  experimentally evaluate the  different metrics influencing the performance of HAL, discuss different frameworks for selecting candidate terms for our food, respectively predictor lexicon and lastly explain the filtering process of the Tweets. 
 
 
 
 \section{Hyperspace Analogue to Language}
 
-HAL creates a semantic space from word co-occurrences \cite{lund96}. By using a sliding window parsing mechanism, the frequency of each term co-occurring within a fixed window size is recorded.  It is important to note that HAL only records the terms before the word we wish to analyse the context from. The terms after the word will appear in the column in the matrix that corresponds to that word.  The matrix is created by storing a vector for each word with the number of co-occurrences of every other word in the corpus. Hence, if our corpus contains $N$ different words the resulting HAL space would be a $N \times N$ square matrix of co-occurrences. Every time a specific word appears within the fixed window size the co-occurrence vectors are updated. For each co-occurrence HAL applies a scoring function. Words that appear closer, receive an inversely proportional score to its distance.
+\say{HAL creates a semantic space from word co-occurrences} \footnote{https://code.google.com/p/airhead-research/wiki/HyperspaceAnalogueToLanguage}. By using a sliding window parsing mechanism, the frequency of each term co-occurring within a fixed window size is recorded.  It is important to note that HAL only records the terms before the word we wish to analyse the context from. The terms after the word will appear in the column in the matrix that corresponds to that word.  The matrix is created by storing a vector for each word with the number of co-occurrences of every other word in the corpus. Hence, if our corpus contains $N$ different words the resulting HAL space would be a $N \times N$ square matrix of co-occurrences. Every time a specific word appears in the fixed window size the co-occurrence vectors are updated. For each co-occurrence, HAL applies a scoring function. Words that appear closer receive an inversely proportional score to its distance.
 
- To illustrate the idea \cite{burgess98} gives an example of a simple sentence \emph {The horse raced past the barn fell.} in Table \ref{tab:halex} with a sliding window of five. Let's consider the first row.  \emph{The} precedes \emph{Barn} twice. Once within a distance of five and the other time it directly precedes the word  \emph{Barn}. Hence, that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
+ To illustrate the idea \cite{burgess98} gives an example of a simple sentence \emph {The horse raced past the barn fell.} in Table \ref{tab:halex} with a sliding window of five. Let us consider the first row.  \emph{The} precedes \emph{Barn} twice. Once within a distance of five and the other time it directly precedes the word  \emph{Barn}. Hence, that cell receives a score of five for the proximate one and a score of one for the word further away resulting in a final score of six. 
 
 Following the creation of the matrix we concatenate both the column and row vector of a word, where the former represents the preceding words and the later the following. To compare the distance of the vectors we used the cosine similarity function. 
 
@@ -80,7 +80,7 @@ Following the creation of the matrix we concatenate both the column and row vect
 \subsection{Motivating a Semantic Approach}
 \label{subsec:hal}
 
-HAL allows us to study the relationship between words. More specifically it's an algorithm that aids our goal of understanding what words are represented in the context of \emph{food} and topics centered around \emph{food security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at contextual similarity. For example, let us look at the word \emph {mold} and \emph {available}. Those two words seem unrelate, but given the context of food they express the same thing.  Namely an abundance of food. Through the context they posses elements of items similarity but by themselves they would never be considered words with similar meaning. It is important to stress that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. Burgess et al. \cite{burgess98} argues that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms, however the seldom locally co-occur. They do however occur in the same context. This observation motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
+HAL allows us to study the relationship between words. More specifically it is an algorithm that aids our goal of understanding what words are represented in the context of \emph{food} and topics targeted around \emph{food security}. To achieve this target we need a methodology for representing the meaning of a word. We analyse the context of a word to identify new words that have a similar meaning or given an identical context express the same thing. The later is concerned with identifying synonyms where as the former looks at the contextual similarity. For example, let us look at the word \emph {mould} and \emph {available}. Those two words seem unrelated, but given the context of food they express the same thing.  Namely an abundance of food. Burgess and Lund \cite{burgess98} motivate that through the context,  they possess elements of item's similarity but by themselves they would never be considered words with similar meaning. They further note that they are not similar because they occur frequently locally, but because they occur frequently in similar sentential context. They further argue  that a simple local co-occurrence analysis misses to capture a lot of relationships. For example the word street and road are basically synonyms, however the seldom locally co-occur. They do however occur in the same context. Those observations motivated us to deviate from the commonly used co-occurrence analysis and take a step further to improve the precision of our filtering framework. 
 
 
 
@@ -103,14 +103,14 @@ HAL allows us to study the relationship between words. More specifically it's an
 \subsection{Experimental Evaluation}
 \label{sec:exp_eval}
 
-To increase the recall of HAL we evaluated the performance on three different sample sizes (10 \%, 20 \%, 40 \%) constituting a corpus of around 23M, 47M, 93M words respectively. Our corpus of food related tweets has a number of appealing properties as it covers a large vocabulary centered around food. Unlike most corpora that represent formal reports or specialized dictionaries our food corpus represents everyday speech. This gives us a closer approximation on how people would talk in the context of our predictor categories. 
+To increase the recall of HAL we evaluated the performance on three different sample sizes (10 \%, 20 \%, 40 \%) constituting a corpus of around 23M, 47M, 93M words from food related Tweets respectively. Twitter is particularly suited for studying the meaning of words. Not only does it cover a wide vocabulary targeted around food but is further a close approximation of every day speech. This is very different from normal corpora which are usually based on specialised dictionaries \cite{burgess98}. 
 
-The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. On a test sample of 10 \% we observed that around 10 \% of the tweets contain equal or less than four words which could impact the quality of the results. Hence, on the 40 \% sample we further excluded tweets that contain less or equal to four terms. Using the words $w \in F_c$ we produced a $N \times N$ matrix with the co-occurrences for three different window sizes namely five, eight and ten to investigate if the window size has an impact on the result. According to \cite{lund96} a window size of eight should yield the best results. However, the nature of a tweet is very different from a classical text so it remains to see if this observation holds for microblogs. Since vector similarity measures are sensitive to the magnitude of the vectors we normalized all the vectors to a constant length. 
+The initial set of words in our corpus was filtered only to contain those words that appear at least 100 times. Words occurring infrequent were discarded as well as stop words and punctuations. On a test sample of 10 \% we observed that around 10 \% of the Tweets contain equal or less than four words which could impact the quality of the results. Hence, on the 40 \% sample we further excluded Tweets that contain less or equal to four terms. Using the words in the Twitter corpus we produced a $N \times N$ matrix with the co-occurrences for three different window sizes namely five, eight and ten to investigate if the window size has an impact on the result. According to \cite{lund96} a window size of eight should yield the best results. However, the nature of a tweet is very different from a classical text so it remains to see if this observation holds for microblogs. Since vector similarity measures are sensitive to the magnitude of the vectors we normalized all the vectors to a constant length. 
 
 \subsection{HAL Performance Results}
 
 
-In Figure \ref{fig:price_supply} and Figure \ref{fig:poverty_needs} we can observe that for all categories HAL performed best with a window size of 10 which contradicts the findings of \cite{lund96}. Additionally, we see that the smaller sample sizes consistently produce more relevant keywords than the larger sample sizes.  A larger sample sizes increases the likelihood of a keyword's occurrence. Since we set a fixed threshold of 100 occurrences across all samples we are more likely to include words with a smaller confidence , which might explain the poor performance. 
+In Figure \ref{fig:price_supply} and Figure \ref{fig:poverty_needs} we observe that for all categories HAL performed best with a window size of 10 which contradicts the findings of \cite{lund96}. Additionally, we see that the smaller sample sizes (10\%, 20\%) consistently produce more relevant keywords than the large sample size (40\%). A large sample size increases the likelihood of a keyword's occurrence. Since we set a fixed threshold of 100 occurrences across all samples we are more likely to include words with a smaller confidence as the sample size increases, which might explain the poor performance. 
 
 
 \begin{figure}[H]
@@ -170,13 +170,13 @@ With decreasing similarity HAL highlighted some topics indirectly associated wit
 
 We began the construction of our Food Lexicon by considering  a simple list of food related keywords. To avoid ambiguities we will refer to the initial list of keywords as $K_{initial}$. Words included are the most common traded food commodities as listed by IMF \footnote{http://www.imf.org/external/np/res/commod/index.aspx} along the ten most important staple foods that feed the world \footnote{http://knowledge.allianz.com/demography/health/?767/the-worlds-staple-foods}. 
 
-We filtered the archive dataset using exact string matching on $K_{initial}$. The distribution of the food related tweets motivated us to structure our lexicon hierarchically as certain commodities were only represented very sparsely and insufficient for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. To circumvent this problem we mimic the hierarchical representation of the FAO   \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. 
+We filtered the archive dataset using exact string matching on $K_{initial}$. The distribution of the food related Tweets motivated us to structure our lexicon hierarchically as certain commodities were only represented very sparsely and insufficient for further analysis. Where global keywords such as \emph{food} are highly represented, more specific keywords such as \emph{beef} occur infrequently. To circumvent this problem, we mimic the hierarchical representation of the FAO   \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/}. 
 
-FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. We further created a category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequent,  the set of tweets containing the keyword needs to be $> 1\%$ of the total sample. \emph{meat, dairy, cereals, vegetable oil} and \emph{other food of interest} build the top layer of our hierarchical representation as shown in Figure \ref{fig:food_lex}. 
+FAO tries to measure the overall food fluctuation by five different food categories namely \emph{meat, dairy products, cereals, vegetable oil} and \emph {sugar}. We further created a category named \emph{Other Food of Interest}. This category contains general keywords (e.g. \emph{food, dinner or lunch}) and food keywords that cannot be assigned to one of the five categories, but frequently occur (e.g. \emph {coffee, tea}). To be considered frequent,  the set of Tweets containing the keyword needs to be $> 1\%$ of the total sample. \emph{meat, dairy, cereals, vegetable oil} and \emph{other food of interest} build the top layer of our hierarchical representation as shown in Figure \ref{fig:food_lex}. 
 
-For the second layer we use subcategories. As the name implies  subcategories abstract the categories into different subsets i.e. for meat we would have the subsets \emph{beef, chicken, lamb} and \emph{pork}. 
+For the second layer we use subcategories. As the name implies  subcategories abstract the categories into different subsets i.e. for \emph{meat} we would have the subsets \emph{beef, chicken, lamb} and \emph{pork}. 
 
-As the third layer and lowest instance, we consider food products. Each subcategory consists of food items which \textbf{1.)} can simply be the name of a category and subcategory (e.g. \emph{meat, beef}) or  \textbf{2.)} be a product that is commonly found in markets and stores around the world. An example of the later would be \emph{flour} for the subcategory \emph{wheat}. The intuition and motivation to include such products is simple. In the production process of food items most factors that influence the price are static and predictable. The only fluctuating and unknown factor is the price of the raw product or in our case the commodity. Products should hence be just as expressive in explaining the variance of food prices. One however has to be cautious as certain producers hedge themselves against price fluctuations of commodities allowing them to sell the product to the same price despite rising commodity prices. Lastly, we were motivated to include such terms because products are more likely to capture the social attention then raw items due to their every day use. 
+As the third layer and lowest instance, we consider food products. Each subcategory consists of food items which \textbf{1.)} can simply be the name of a category and subcategory (e.g. \emph{meat, beef}) or  \textbf{2.)} be a product that is commonly found in markets and stores around the world. An example of the later would be \emph{flour} for the subcategory \emph{wheat}. The intuition and motivation to include such products is simple. In the production process of food items most factors that influence the price are static and predictable. One of the only fluctuating and unknown factors is the price of the raw product or in our case the commodity. Products should hence be just as expressive in explaining the variance of food prices. One however has to be cautious as certain producers hedge themselves against price fluctuations of commodities allowing them to sell the product to the same price despite rising commodity prices. Lastly, we were motivated to include such terms because products are more likely to capture the social attention than raw items due to their every day use. 
 
 \begin{figure}[H]
 
@@ -191,13 +191,13 @@ As the third layer and lowest instance, we consider food products. Each subcateg
 \end{figure}
 
 
- Other than the sparsity of the data we further faced the problem of ambiguous keywords. \emph {soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{soy} $\to$  \emph{soy bean}). Terms were added to the lexicon by following a framework as explained in the following section. 
+ Other than the sparsity of the data we further faced the problem of ambiguous keywords. \emph {Soy} is such a keyword that refers in English to the \emph{bean} and in Spanish to the verb \emph{to be}. To avoid such ambiguity we extended the term to make it distinct (e.g. \emph{soy} $\to$  \emph{soy bean}). Terms were added to the lexicon by following a framework as explained in the following section. 
 
 
 
 \subsection{Candidate Food Term Selection}
 
-We initially assume an empty set $K_{final}$ and structure it hierarchically as mentioned in the previous section. The six categories ($c_1, c_2 ... c_6)$ are $\in K_{final}$ where $c_i$ is one of the six categories mentioned above. For interpretability purposes we introduce an axiom in form of a set $K_{all}$. It only contains five of the above mentioned six categories \emph{meat, dairy products, cereals, vegetable oil, sugar} excluding the category \emph{other food of interest}. We assume that $K_{all}$ is a fully populated Lexicon containing all possible food items for a specific category (e.g. the subset dairy would contain all possible dairy products). It returns $True$ if a term is an element of the set and $False$ otherwise. For all keywords $k_i \in K_{initial}$ we evaluate if $k_i\in K_{all}$. If $True$ we consider $k_i \in K_{final}$. For all keywords $k_i \notin K_{all}$ the condition of it being frequent is evaluated and if $True$ added to the category \emph{0ther food of interest}  $c_6 \in K_{final}$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Lastly, the set $K_{final}$  was further enriched by using food products $p_i$ that have been identified by \cite{AbbarMW14}  only if $p_i$ $\in K_{all}$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
+We initially assume an empty set $K_{final}$ and structure it hierarchically as mentioned in the previous section. The six categories ($c_1, c_2 ... c_6)$ are $\in K_{final}$ where $c_i$ is one of the six categories mentioned above. For interpretability purposes we introduce an axiom in form of a set $K_{all}$. It only contains five of the above mentioned six categories \emph{meat, dairy products, cereals, vegetable oil, sugar} excluding the category \emph{other food of interest}. We assume that $K_{all}$ is a fully populated lexicon containing all possible food items for a specific category (e.g. the subset dairy would contain all possible dairy products). It returns $True$ if a term is an element of the set and $False$ otherwise. For all keywords $k_i \in K_{initial}$ we evaluate if $k_i\in K_{all}$. If $True$ we consider $k_i \in K_{final}$. For all keywords $k_i \notin K_{all}$ the condition of it being frequent is evaluated and if $True$ added to the category \emph{0ther food of interest}  $c_6 \in K_{final}$.  Food commodities that could not be assigned to any of the six categories were discarded (e.g. \emph {orange, cocoa, onion}). Lastly, the set $K_{final}$  was further enriched by using food products $p_i$ that have been identified by \cite{AbbarMW14}  only if $p_i$ $\in K_{all}$ . To further improve our coverage of the six food categories we filtered for synonyms and contextual similar words using HAL. 
 
 We summarize our framework as follows: 
 
@@ -207,7 +207,7 @@ We summarize our framework as follows:
   \item[3.)] Create a HAL space using a random subsample of 10\% from $K_{initial}$ with all keywords that occur $> 100$. $\forall c_i \in K_{final} $  pick the keyword $k\in K_{final}$ that most frequently occurs over the entire sample and retrieve the top 500 similar terms. Hand select those that are $\in K_{all}$ and add it to $K_{final}$.
 \end{description}
  
-The keyword set $K_{final}$ was used to perform exact term matching on the tweets collected from the internet archive. The resulting set of keywords in $K_{final}$ forms our Food Lexicon.  
+The keyword set $K_{final}$ was used to perform exact term matching on the Tweets collected from the internet archive. The resulting set of keywords in $K_{final}$ forms our Food Lexicon.  
 
  
 \begin{table}[H]   
@@ -272,15 +272,15 @@ The keyword set $K_{final}$ was used to perform exact term matching on the tweet
 \section{Predictor Lexicon}
 \label{pred_lex}
 
-From our basic food lexicon we proceeded to extract features that we can use to explain events around Food Security and later use for our price prediction task. We structured our predictor Lexicon into categories that capture the main food security objective . The FAO measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of food and lastly \emph{Stability} is a measure of the other three dimensions over time. For food security objectives to be realised, all four dimensions must be fulfilled simultaneously \cite{fao2008}. We mimic FAO's classification in our predictor lexicon. 
+From our food lexicon $K_{final}$ we proceeded to extract features that we can use to explain events around food security and later use for our price prediction task. We structured our predictor lexicon into categories that capture the main food security objectives. The Food and Agriculture Organization of the United Nations (FAO) measures food security based on four dimensions namely \emph{Access, Availability, Stability} and \emph{Utilisation}. Where \emph{Access} mostly captures the supply of food, \emph{Availability} is concerned with the affordability of the basic goods. \emph{Utilisation} captures the nutritional value of food and lastly \emph{Stability} is a measure of the other three dimensions over time. \say{For food security objectives to be realised, all four dimensions must be fulfilled simultaneously} \cite{fao2008}. We mimic FAO's classification in our predictor lexicon. 
 
-To capture tweets associated with the category \emph{Access} we filter for the term price as in \cite{ungp2013} but improve the recall by including synonyms and contextually similar words (e.g. \emph{expensive, bill, cost, affordable}). We filter \emph{Availability} related tweets in similar fashion by matching keywords that are synonyms of the word supply (e.g. \emph{available, amount, stock}) as in \cite{hum14}. Unlike \cite{AbbarMW14} we don't measure food \emph{Utilisation} by observing the exact diet but by filtering for terms that capture the people's food needs (e.g. \emph{love, want, yum}). As a measure of \emph{Stability} we focused our attention on economic stability. Keywords in the context of poverty were selected similar to \cite{RePEc} \cite{hum14} (e.g. \emph{starving, donation, help}).
+To capture Tweets associated with the category \emph{Access} we filter for the term price as in \cite{ungp2013} but improve the recall by including synonyms and contextually similar words (e.g. \emph{expensive, bill, cost, affordable}). We filter \emph{Availability} related Tweets in a similar fashion by matching keywords that are synonyms of the word supply (e.g. \emph{available, amount, stock}) as in \cite{hum14}. Unlike \cite{AbbarMW14} we do not measure food \emph{Utilisation} by observing the exact diet but by filtering for terms that capture the people's food needs (e.g. \emph{love, want, yum}). As a measure of \emph{Stability}, we focused our attention on economic stability. Keywords in the context of poverty were selected similar to \cite{RePEc} \cite{hum14} (e.g. \emph{starving, donation, help}).
 
 
 
 \subsection{Candidate Predictor Term Selection}
 
-HAL, to the best of our knowledge, has not been used in previous work for term selection. Hence we drafted two different frameworks for our evaluation. As a reminder $K_{final}$ refers to the set of terms in our Food Lexicon. $F_c$ on the other hand refers to a corpus drafted from all food relevant tweets. Finally, the manual selection of the keywords was done through crowd flower \footnote{http://www.crowdflower.com/}. 
+HAL, to the best of our knowledge, has not been used in previous work for term selection. Hence, we drafted two different frameworks for our evaluation. As a reminder $K_{final}$ refers to the set of terms in our Food Lexicon. $F_c$, on the other hand, refers to a corpus drafted from all food relevant Tweets. Finally, the manual selection of the keywords was done through crowd flower \footnote{http://www.crowdflower.com/}. 
 
 
 \textbf{Framework 1}
@@ -288,7 +288,7 @@ HAL, to the best of our knowledge, has not been used in previous work for term s
 \begin{description}
   \item[1.)] $\forall k \in K_{final}$ choose the keyword $k$ with the highest occurrence form the entire sample $F_c$. Let's call it $k_{max}$  
   \item[2.)] $\forall w \in F_c $ perform a similarity measure with $k_{max}$
-  \item[3.)] Retrieve the 500 most similar words and hand select the words that occurs in the synonym lexicon thesaurus \footnote{http://www.thesaurus.com/} for supply, price, poverty and needs. 
+  \item[3.)] Retrieve the 500 most similar words and hand-select the words that occurs in the synonym lexicon thesaurus \footnote{http://www.thesaurus.com/} for supply, price, poverty and needs. 
     \item[4.)] For each of those hand-selected words  apply HAL 
   \item[5.)] For each predictor category retrieve the 500 most similar words and let crowd workers select the relevant terms. 
     \end{description}
@@ -306,7 +306,7 @@ The high-level intuition of this procedure is as follows. \textbf{1.)} will give
 
 Instead of finding a keyword that is a synonym of a predictor category as in Framework 1 we simply use our predefined category names as a base to retrieve contextually similar words. 
 
-For the discovery of predictor terms we used Framework 2 for three reasons. \textbf{1.)}  Framework 1 did not retrieve us the desired keywords for all categories. \textbf{2.)} between the results of Framework 1 and 2 there was a substantial overlap and \textbf{3.)}  Framework 2 is more efficient to execute. This is particularly important since creating the HAL space is computationally expensive. The final lexicon was further enriched by including synonyms from thesaurus  for supply, need, poverty, and price. The terms of the final predictor lexicon are presented in Table \ref{tab:pred_lex} along the source of the keyword. 
+For the discovery of predictor terms, we used Framework 2 for three reasons. \textbf{1.)}  Framework 1 did not retrieve us the desired keywords for all categories. \textbf{2.)} between the results of Framework 1 and 2 there was a substantial overlap and \textbf{3.)}  Framework 2 is more efficient to execute. This is particularly important since creating the HAL space is computationally expensive. The final lexicon was further enriched by including synonyms from thesaurus  for supply, need, poverty, and price. The terms of the final predictor lexicon are presented in Table \ref{tab:pred_lex} along the source of the keyword. 
 
 
 Unlike the annotation of our food related terms, allocating a term to a specific category was a more challenging task due to the ambiguous meaning of certain terms. In the following section we explain in more detail how we assigned a keyword to a given category by using crowdflower. 
@@ -316,18 +316,18 @@ Unlike the annotation of our food related terms, allocating a term to a specific
 
 \subsection{Annotation and False Positive Removal of HAL Results}
 
-To annotate the term results of HAL we presented the workers with four different tasks, one for each food security objective. For every task we asked the workers to classify the term as \textbf{A.} Relevant,\textbf{B.} Likely, \textbf{C.} Unlikely and \textbf{D.}  Not in English. Since overlaps may occur, particularly between the category price and supply as well as poverty and needs we asked the workers to classify those ambiguous terms as \textbf{B.} Likely in order to detect to which category the word has a stronger association. 
+To annotate the term results of HAL we presented the workers with four different tasks, one for each food security objective. For every task, we asked the workers to classify the term as \textbf{A.} Relevant, \textbf{B.} Likely, \textbf{C.} Unlikely and \textbf{D.}  Not in English. Since overlaps may occur, particularly between the category price and supply as well as poverty and needs we asked the workers to classify those ambiguous terms as \textbf{B.} Likely in order to detect to which category the word has a stronger association. 
 
-The crowd task presented a number of challenges. In our first test run we counted a false positive rate of around 40 \%. This was due to the lack of quality control we imposed on the workers. We observed a large amount of random guesses and a poor level of English among some workers. Hence, we selected workers from commonwealth countries and regions where the majority are native English speakers. We further created test questions which were manually selected to  avoid inattentive workers. Lastly, we collected three independent annotations for every word and applied a majority vote to resolve disagreements. Due to the imposed additional costs through the multiple annotations per term we restricted our search for relevant keywords to the top 140 terms suggested by HAL.
+The crowd task presented a number of challenges. In our first test run, we counted a false positive rate of around 40 \%. This was due to the lack of quality control we imposed on the workers. We observed a large amount of random guesses and a poor level of English among some workers. Hence, we selected workers from commonwealth countries and regions where the majority are native English speakers. We further created test questions which were manually selected to avoid inattentive workers. Lastly, we collected three independent annotations for every word and applied a majority vote to resolve disagreements. Due to the imposed additional costs through the multiple annotations per term we restricted our search for relevant keywords to the top 140 terms suggested by HAL.
 
 
 \subsection{Annotation Results}
 
-We manually assed the annotations produced by crowd flower to check for disagreements between the crowd workers and ourselves. For the category supply we rejected 26 from 69 (39\%), for price 4 (12.5\%) from 32, for needs 8 (7\%) from 113 and for poverty 14 (\%) from 106. \\
+We manually assessed the annotations produced by crowd flower to check for disagreements between the crowd workers and ourselves. For the category supply we rejected 26 from 69 (39\%), for price 4 (12.5\%) from 32, for needs 8 (7\%) from 113 and for poverty 14 (\%) from 106. \\
 \\
-The high disagreement for the supply category was due to the ambiguous design of our question in the crowd task. We asked workers to accept words that can be both indicative for supply and price (e.g. rise, high) which unfortunately was misunderstood as to include words that can be only indicative of price (e.g. expensive). \\
+The high disagreement for the supply category was due to the ambiguous design of our question in the crowd task. We asked workers to accept words that can be both indicative for supply and price (e.g. \emph{rise, high}) which unfortunately was misunderstood as to include words that can be only indicative of price (e.g. \emph{expensive}). \\
 \\
-Similar to \cite{olt15} we observe that crowdsource annotators applied a more narrow definition of the predictor categories overlooking some keywords associated with the categories. For example the term market was missed as a price keyword. Tweets containing the word market could provide valuable information regarding the state of food security as it is commonly used to describe the price  mood of a commodity. \\
+Similar to \cite{olt15} we observe that crowdsource annotators applied a more narrow definition of the predictor categories overlooking some keywords associated with the categories. For example the term \emph{market} was missed as a price keyword. Tweets containing the word \emph{market} could provide valuable information regarding the state of food security as it is commonly used to describe the price  mood of a commodity. \\
 \\
 
 
@@ -374,25 +374,25 @@ abundance (t), affluence (t), bounty (t), myriad (t),plenty (t), plethora (t), p
 
 \section{Filtering}
 
-The filtering of the tweets was performed in three rounds. First we filtered for food relevant tweets. In a second round we applied our feature lexicon on the retrieved set of tweets obtained in the first step. Lastly, we filter by sentiment. 
+The filtering of the Tweets was performed in three rounds. First we filtered for relevant food Tweets. In a second round, we applied our predictor lexicon on the retrieved set of Tweets obtained in the first step. Lastly, we filter by sentiment. 
 
-\subsection{Food related Tweets} 
+\subsection{Food Related Tweets} 
 
-The food related tweets were retrieved through exact term matching, i.e. a tweet containing the term \emph{foods} would not match on the keyword \emph {food} where the reverse is also true. We mimic the term matching twitter performs. In the initial round we optimized for coverage and hence avoided further filtering steps. Given the large size of the dataset efficiency was also a concern. We experimented with both string.split() and a tokenizer provided by the Natural Language Toolkit \cite{Loper2002}. String.split() proved to be more \emph{tweetable}. The result was a collection of 29 M tweets posted by 4.2 M users. 
+The food related Tweets were retrieved through exact term matching, i.e. a tweet containing the term \emph{foods} would not match on the keyword \emph {food} where the reverse is also true. We mimic the term matching Twitter performs. In the initial round we optimized for coverage and hence avoided further filtering steps. Given the large size of the dataset efficiency was also a concern. We experimented with both string.split() and a tokenizer provided by the Natural Language Toolkit \cite{Loper2002}. String.split() proved to be more \emph{tweetable}. The result was a collection of 29 M Tweets posted by 4.2 M users. 
 
-\subsection{Predictor related Tweets}
+\subsection{Predictor Related Tweets}
 
-The first round  drastically reduced our dataset to around 90 GB of tweets. This allowed us to perform a more involved filtering mechanism similar to \cite{hum14}. 
+The first round  drastically reduced our dataset to around 90 GB of Tweets. With a smaller dataset we were able to perform a more involved filtering mechanism similar to \cite{hum14}. 
 
-For every word in a tweet and for every word in our feature lexicon$K_p$ the stem was computed. This was necessary to capture tweets that may contain a predictor term that is not in its base form. For example a tweet containing the word \emph{pricey} would not match the term \emph{price}. Furthermore the framework also accounts for missspelt words. To do this in a computationally efficient way the algorithm computes the edit distance between a given word and terms from the predictor set D. If the error is within a fixed threshold the predictor term with the minimal edit distance is returned. 
+For every word in a tweet and every word in our predictor lexicon the stem was computed. This was necessary to capture Tweets that may contain a predictor term that is not in its base form. For example, a Tweet containing the word \emph{pricey} would not match the term \emph{price}. Furthermore the framework also accounts for miss spelt words. To do this efficiently the algorithm computes the edit distance between a given word and terms from the predictor lexicon. We return the  predictor term with the minimal edit distance if the error is in a fixed threshold 
 
 \subsection{Sentiment Extraction}
 
-Experiments in \cite{hum14} showed that sentiment analysers such as SentiStrength \cite{sent10} or Stanford CoreNLP \cite{stanford2011} performed  poorly on microblog content. Hence in \cite{hum14} the decision was made to extract the sentiment by having specific terms for each sentiment (polarity). In addition one had to account for changes in polarity through negations such as \emph{never} and \emph{not} which inverted the polarity of a predictor category term. 
+Experiments in \cite{hum14} showed that sentiment analysers such as SentiStrength \cite{sent10} or Stanford CoreNLP \cite{stanford2011} performed  poorly on microblog content. Hence in \cite{hum14} the decision was made to extract the sentiment by having specific terms for each sentiment (polarity). Besides one had to account for changes in polarity through negations such as \emph{never} and \emph{not} which inverted the polarity of a predictor category term. 
 
-We choose to deviate from this approach and use a sentiment analyser despite the bad results. We give two reasons for doing so. \textbf{1.)} Hutto et. al recently published a new sentiment analyser VADER \cite{hutton14} with an F1 Classification Accuracy = 0.96 which  outperformed human evaluators. \textbf{2.)} Often keywords can not be manually assigned to a polarity without knowing its context. 
+We choose to deviate from this approach and use a sentiment analyser despite the bad results. We give two reasons for doing so. \textbf{1.)} Hutto et. al recently published a new sentiment analyser VADER \cite{hutton14} with an F1 Classification Accuracy = 0.96 which outperformed human evaluators. \textbf{2.)} Often keywords can not be manually assigned to a polarity without knowing its context. 
 
-Besides the above mentioned benefits VADER allows us to obtain a degree of sentiment by analysing grammatical and syntactical conventions that humans use when expressing sentiment intensity. For example it accounts for emoticons which are commonly used to express a sentiment or even acronyms such as \emph{LOL, WTF}. It is further worth mentioning that VADER is an unsupervised approach and is well suited for streaming data. 
+Besides the above-mentioned benefits \say{VADER allows us to obtain a degree of sentiment by analysing grammatical and syntactical conventions that humans use when expressing sentiment intensity} \cite{hutton14}. For example it accounts for emoticons which are commonly used to express a sentiment or even acronyms such as \emph{LOL, WTF}. It is further worth mentioning that VADER is an unsupervised approach and is well suited for streaming data. 
 
 
 
@@ -402,14 +402,14 @@ Besides the above mentioned benefits VADER allows us to obtain a degree of senti
 \chapter{Analysis}
 \label{4}
 
-This chapter will investigate if and to what extent social media data can be found to correlate with the international Food Price Index (FPI) and the commodity price quotes. This is accomplished by analysing 29 M tweets related to food. 
+This chapter will investigate if and to what extent social media data can be found to correlate with the international Food Price Index (FPI) and the commodity price quotes. This is accomplished by analysing 29 M Tweets related to food. 
 
-By drawing some basic statistics we want to emphasis the general popularity of food among the twitter users and describe the term distribution of our different commodities. In the analysis we aim to show how food terms relate to each other and how they compare to indices which are intrinsic food security indicators (e.g. \emph {affordability and availability of food}). Lastly, we investigate to what extent food security and market fundamentals are present in social media discussion. 
+By drawing some basic statistics we want to emphasis the general popularity of food among the Twitter users and describe the term distribution of our different commodities. In the analysis we aim to show how food terms relate to each other and how they compare to indices which are intrinsic food security indicators (e.g. \emph {affordability and availability of food}). Lastly, we investigate to what extent food security and market fundamentals are present in social media discussion. 
 
 
 \section {User Distribution}
 
-Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of tweets per user deviates from a normal power law. A lot of individuals  send only a few tweets about the subject and only a small number of users transmit a large amount of tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to tweets about food. In Figure \ref{fig:no_power} we can see that the curve is almost linear. About 50 \% of the tweets are caused by 50 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
+Twitter is a social network and in general such networks follow a power law distribution \cite{Whittaker:1998}. We see in the bellow Figure \textbf{\ref{fig:u_linear}} and Figure \textbf{\ref{fig:u_log}}  that the distribution of the number of Tweets per user deviates from a normal power law. A lot of individuals  send only a few Tweets about the subject and only a small number of users transmit a large amount of Tweets. Unlike \cite{bild15} suggest the contribution participation level of  80 \%, 20 \%   does not seem to apply to Tweets about food. In Figure \ref{fig:no_power} we can see that the curve is almost linear. About 50 \% of the Tweets are caused by 50 \% of the users. This deviates highly form the normally observed 80 \%, 20 \% ratio. We assume that this is due to the wide spread interest of the topic.
 
 
 
@@ -417,7 +417,7 @@ Twitter is a social network and in general such networks follow a power law dist
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/anal/loglog_users_tweets_1}
+                \includegraphics[width=\textwidth]{img/anal/loglog_users_Tweets_1}
                 \caption{LogLog: Number of Tweets per User}
                  \label{fig:u_log}
         \end{subfigure}%
@@ -440,7 +440,7 @@ Twitter is a social network and in general such networks follow a power law dist
 
 \section {Food Term Distribution}
 
-Our framework for the data acquisition successfully increased the total volume of food related tweets. From an initial 13.7 M tweets we raised the entire volume by 110\% to a total of 29.9 M food related tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in light grey the added volume alongside the initial size in dark grey. The most popular food terms on twitter are general terms such as \emph{food, dinner and lunch}. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{other food of interest} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords have the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% vegetable oils. We would like to note that the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and {chocolate} which caused alone 70 \% of the sugar related tweets. 
+Our framework for the data acquisition successfully increased the total volume of food related Tweets. From an initial 13.7 M Tweets we raised the entire volume by 110\% to a total of 29.9 M food related Tweets. The distribution of the volume per food term is displayed in Figure \ref{fig:world}. We illustrate in light grey the added volume alongside the initial size in dark grey. The most popular food terms on Twitter are general terms such as \emph{food, dinner and lunch}. Within the 10 most popular terms we found that three beverages (coffee, beer, tea) were represented. The most popular traded commodity term on social media is chicken.  We further show the distribution of the categories in \ref{fig:cat}. By far the highest contribution has the category \emph{other food of interest} due to general food related keywords such as \emph{dinner} or \emph{food}. It builds the absolute majority with 51 \%. Meat related keywords have the second highest contribution with around 15 \% followed by 12\% sugar, 11\%  cereals, 10 \% dairy  and lastly 0.2 \% vegetable oils. We would like to note that the volume roughly follows the economic importance of the different categories with the only outlier being sugar \cite{fao2008}. We assume this is due to the highly popular products \emph{coca cola} and {chocolate} which caused alone 70 \% of the sugar related Tweets. 
 
 
 
@@ -469,14 +469,14 @@ Our framework for the data acquisition successfully increased the total volume o
 
 %The weighted average of those five categories as illustrated in \cite{fao13}  defines the international food price index which is an overall measure of the current food condition. 
 
-We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence than others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of this correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Food Price Index (CFPI) and a universal FPI. The CFPI is specific to a food category (e.g. meat, cereals) so different among all categories, where as the FPI is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
+We observed a general popularity of food in our initial analysis and that certain food categories have a much stronger presence than others. There is however still a concern on whether the sampled data is useful to detect difference in price fluctuation and lastly can  be used as medium to determine food security. For the purpose of this correlation analysis we used the price quotations of the Food and Argriculture Organisation of the United Nations \footnote{http://www.fao.org/worldfoodsituation/foodpricesindex/en/} and commodity quotes from candle \footnote{https://www.quandl.com/}. FAO differentiates between a Category Food Price Index (CFPI) and a universal FPI. The CFPI is specific to a food category (e.g. meat, cereals) so different among all categories, whereas the FPI is a general indicator and  the same for all categories. Unfortunately daily commodity quotes could only be obtained for meat, dairy and cereals. 
 
-For each food category (e.g. \emph{meat, dairy} ) we correlated the tweet volumes of the subcategories( e.g. \emph{beef, chicken for meat}), products (e.g. \emph{bacon, salami}) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater than 10 tweets per day. The internet archive did not contain tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
+For each food category (e.g. \emph{meat, dairy} ) we correlated the tweet volumes of the subcategories( e.g. \emph{beef, chicken for meat}), products (e.g. \emph{bacon, salami}) and the price quotes for each category. These subcategories mirror the categorisation of the FAO \cite{fao2008}. Since the price quotes of the FAO are based on a monthly average, we aggregated the daily tweet volumes per food term over a month and calculated the daily average volume. We only included food terms that have an average of greater than 10 Tweets per day. The internet archive did not contain Tweets for certain months. We approximated those values by taking the average of the previous and the following month. 
 
 \subsection{Results} 
 \label{corr_results}
 
-Between the meat subcategories there is a  positive linear relationship in the range of 0.7264 to 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three price indices. Incase of a slight correlation most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the price quotes. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports Abbott et al's theory \cite{abbott2009}  that the commodity markets have a strong influence on the rising food prices and are a strong indicator for measuring Food Security. 
+Between the meat subcategories there is a  positive linear relationship in the range of 0.7264 to 0.9361.This means if chicken increases in volume so does beef and pork. A $p$ value of 0.0001 suggest that we can reject the idea that the correlation is due to random sampling. No clear relationship exists between the tweet volume of the meat categories and the three price indices. Incase of a slight correlation most of the categories are negatively correlated to price quotes meaning that if the volume increases the price will most likely decrease. Only a few sub products showed a significant correlation with the price quotes. A positive relationship can be seen between the term goat and the commodity price with a correlation of 0.7369 and a p value of 0.0001. A possible explanation might be its popularity among developing countries. People consuming goat meat would be more sensitive towards price fluctuation making it potentially a valuable feature in measuring food prices. By correlating the price indices we see that there is a strong positive relationship between the FAO meat price index and the commodity quotes. This analysis supports Abbott et al's theory \cite{abbott2009}  that the commodity markets have a strong influence on the rising food prices and are a strong indicator for measuring food security. 
 
 
 
@@ -500,7 +500,7 @@ For cereals similar to meat we likewise see a high correlation in volume of arou
 \end{figure}
  
 
-The heat plots of dairy, sugar and oil show yet again no clear linear relationship between the twitter volume and the food price indices. More so than in other food categories the subcategories of dairy can be clearly distinguished through its strong correlation with the different products (i.e. mozzarella has a strong relationship with the category cheese and only a weak correlation with milk products). The heat plot for dairy, sugar and oil have been added to the appendix \ref{pCorr}.
+The heat plots of dairy, sugar and oil show yet again no clear linear relationship between the Twitter volume and the food price indices. More so than in other food categories the subcategories of dairy can be clearly distinguished through its strong correlation with the different products (i.e. mozzarella has a strong relationship with the category cheese and only a weak correlation with milk products). The heat plot for dairy, sugar and oil have been added to the appendix \ref{pCorr}.
 
 
 
@@ -511,7 +511,7 @@ Nonetheless the insights gained from this analysis will help us improve our feat
 
  Although we can not provide any scientific evidence there might be a nonlinear relationship between social media and the commodity market. We hence will experiment with a non-linear model to predict price quotes in Chapter \ref{model}. According to \cite{de08} such models are better suited to utilise social media for predictions. 
 
-A smilier correlation analysis has been made by the UN \cite{ungp2013}. They however used contextual sensitive tweets i.e. instead of only using tweets containing food they performed an n-match on different criteria. The tweet had to contain a food item, the word price and a quantification such as high or low. Overall a Pearson correlation of around 0.42 was detected with a significance of 0.04. By exploiting our predictor lexicon to filter tweets that contain keywords such as supply and price we were able to improve the linear relationship and found similar results as in \cite{ungp2013}. Although the UN concluded a linear relationship they simply provided assumptions about what might have caused the volatility of price conversations. We hence explore the conversation drivers in the next section. 
+A smilier correlation analysis has been made by the UN \cite{ungp2013}. They however used contextual sensitive Tweets i.e. instead of only using Tweets containing food they performed an n-match on different criteria. The tweet had to contain a food item, the word price and a quantification such as high or low. Overall a Pearson correlation of around 0.42 was detected with a significance of 0.04. By exploiting our predictor lexicon to filter Tweets that contain keywords such as supply and price we were able to improve the linear relationship and found similar results as in \cite{ungp2013}. Although the UN concluded a linear relationship they simply provided assumptions about what might have caused the volatility of price conversations. We hence explore the conversation drivers in the next section. 
  
 
  
@@ -550,15 +550,15 @@ A smilier correlation analysis has been made by the UN \cite{ungp2013}. They how
  \label{conversation}
 
 
-Following our correlation analysis we proceed with a detailed investigation of twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive tweets (i.e. such tweet that contain a food term and a predictor term such as price) have a stronger Pearson correlation than the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to food security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been centered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food price spikes and differentiate among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
+Following our correlation analysis we proceed with a detailed investigation of Twitter conversations relevant to food security to uncover events that trigger conversations. We found that our contextual sensitive Tweets (i.e. such tweet that contain a food term and a predictor term such as price) have a stronger Pearson correlation than the raw volume. Encouraged by this observation we want to investigate further to which extent the tweet content is related to food security. More specifically we want to know if the conversations can be related to market fundamentals that cause soaring food prices. Following the two recent food crises in 2007 and 2010 a lot of research has been centered around defining causes of volatile food prices.  In \cite{Tadesse2014} they define a taxonomy for drivers of  international food price spikes and differentiate among three different causes namely exogenous shocks, conditional causes and internal causes. Examples of exogenous shocks are extreme weather events, oil price shocks, economic and demand/supply growth, and lastly economic shocks. Conditional causes can originate through political conflict or market conditions. Internal causes on the other hand are speculative activities(driven by price expectations) and declines in world food stocks. This taxonomy will serve us as a baseline in annotating our events. 
 
 
 
 \subsection{A Visual Analysis of the Social Attention}
 
-We commence our investigation of the conversation drivers by a visual and manual investigation of the most prominent events. To gain an overview about the social attention of our food topics we plotted the relative distribution of food supply, price poverty and needs in Figure \ref{fig:topic_dist}. By far the highest attention is attributed to food needs with around 70 \% , poverty and supply receive a similar attention distribution with price taking the smallest interest among twitter users. 
+We commence our investigation of the conversation drivers by a visual and manual investigation of the most prominent events. To gain an overview about the social attention of our food topics we plotted the relative distribution of food supply, price poverty and needs in Figure \ref{fig:topic_dist}. By far the highest attention is attributed to food needs with around 70 \% , poverty and supply receive a similar attention distribution with price taking the smallest interest among Twitter users. 
 
-To visually categorise the activity, Lehman et al. \cite{Lehmann2012} defined three categories of temporal behaviours. Continuous activity, periodic activity or activity concentrated around an isolated peak. Continues activities are topics that are of daily interest such as weather. On the other hand periodic actives reoccur with a fixed pattern such as the release of a popular Tv show. The latter is event driven and usually occurs once during a very short period such as a national holiday. 
+To visually categorise the activity, Lehman et al. \cite{Lehmann2012} defined three categories of temporal behaviours. \say{Continuous activity, periodic activity or activity concentrated around an isolated peak}. Continues activities are topics that are of daily interest such as weather. On the other hand periodic actives reoccur with a fixed pattern such as the release of a popular Tv show. The latter is event driven and usually occurs once during a very short period such as a national holiday. 
 
 For price and supply we observe a similar temporal pattern. Both show a continuous activity with one extremely prominent isolated peak. The activity is concentrated symmetrically around those two events , showing abnormal activities for around 9 days before and after. 
 
@@ -582,9 +582,9 @@ The topics needs and poverty do not exhibit any extreme outliers and similar to 
 
 \subsection{Methodology} 
 
-As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to Food Security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to market fundamentals or topics concerning Food Security. For this analysis we consider discussion around food supply, price, needs and poverty. 
+As described in the previous section the prominent peaks could not be attributed to any discussion around indicators that are relevant to food security. In this subsection we investigate in detail what topics cause the attention peaks and whether they can be attributed to market fundamentals or topics concerning food security. For this analysis we consider discussion around food supply, price, needs and poverty. 
 We investigate the four food categories temporal behaviour on a granularity of one day. This scale was chosen in order to be in accordance with the temporal quotations of the commodity market. 
-To detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. We used a fixed window size of $2m + 1$  where $m = 15$ giving us a month long window. Within the window we identified the median and calculated the mean of the twitter volume. From those values we calculated the Median absolute deviation (MAD) as in Equation \ref{eq:mad}: 
+To detect anomalies in our food topics we applied a similar approach as in \cite{olt15} \cite{Lehmann2012}. We used a fixed window size of $2m + 1$  where $m = 15$ giving us a month long window. Within the window we identified the median and calculated the mean of the Twitter volume. From those values we calculated the Median absolute deviation (MAD) as in Equation \ref{eq:mad}: 
 
 \begin{equation} \label{eq:mad}
 \overline{ MAD } = median_i (|X_i - median_j(X_j)|)\end{equation}
@@ -597,18 +597,18 @@ A peak is declared if $v_i$ deviates more than 2 MAD from the mean. For this ana
 The discussion centered around food price showed 82 events. Tweet activities for food supply resulted in 91 peaks. 80 peaks were detected for food needs and lastly 99 for food poverty. 
  
 
-To identify what topics spike the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all tweets occurring during a peak. We then manually investigate the tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more than two events caused the peak we marked it as ambiguous.  
+To identify what topics spike the attention we used a similar approach as in \cite{olt15}. We computed the top 50 unigrams and top 10 bigrams of all Tweets occurring during a peak. We then manually investigate the Tweets that contain the most frequent n-grams. Some peaks could be attributed to multiple events. If two could be identified, both of them were used to label the peak. Else, if most likely more than two events caused the peak we marked it as ambiguous.  
 
 \subsection{Event Annotation}
 
-We annotate each peak according to the definitions given bellow. Our classification mostly mimics the main dimensions of Food Security but also includes categories from the taxonomy of Tadesse et al\cite{Tadesse2014}. There is a strong overlap between the two taxonomies where the later naturally focuses more on Economic Access and the former has a stronger orientation towards Food Utilisation. This categorisation is not extensive i.e. there are a range of further categories we could consider. However given the sparsity of relevant events this classification gives a good overview of the discussed topics. 
+We annotate each peak according to the definitions given bellow. Our classification mostly mimics the main dimensions of food security but also includes categories from the taxonomy of Tadesse et al\cite{Tadesse2014}. There is a strong overlap between the two taxonomies where the later naturally focuses more on Economic Access and the former has a stronger orientation towards Food Utilisation. This categorisation is not extensive i.e. there are a range of further categories we could consider. However given the sparsity of relevant events this classification gives a good overview of the discussed topics. 
 
 Some events show causal relationships i.e. a breach in the food supply can be a cause for riots and political unrests. In such cases we annotated both. 
 
 
 \begin{description}
   \item[Food Supply ] \hfill \\
- Events entered around the food supply chain are considered including indicators of food waste. We define Food Loss and Food waste according to Parfitt et al. 's \cite{Julian10} definition. Food Waste refers to Food Loss that occurs at the retailers and consumers side where as the term Food Loss refers to the decrease in food volume that leads to edible food for consumption.
+ Events entered around the food supply chain are considered including indicators of food waste. We define Food Loss and Food waste according to Parfitt et al. 's \cite{Julian10} definition. Food Waste refers to Food Loss that occurs at the retailers and consumers side whereas the term Food Loss refers to the decrease in food volume that leads to edible food for consumption.
   \item[Economic Access] \hfill \\
   We define Economic Access according to FAO's \cite{fao2008} definition. Price, expenditure or market indicators fall into this domain.   
   \item[Government] \hfill \\
@@ -635,7 +635,7 @@ Our findings showed that for price only 7 (8.5 \%) out of 82 fell into the above
 \subsection{Results}
 \label{an_result}
 
-The distribution of the annotations is visualised in Figure \ref{fig:annotation_dist}. Surprisingly the conversations mostly peaked outside their domain, i.e. the price conversation was more intrinsic for supply indicators then for economic access indicators. We now give examples to each annotation topic of events that we classified as Food Security relevant to illustrate what kind of discussion caused a peak . 
+The distribution of the annotations is visualised in Figure \ref{fig:annotation_dist}. Surprisingly the conversations mostly peaked outside their domain, i.e. the price conversation was more intrinsic for supply indicators then for economic access indicators. We now give examples to each annotation topic of events that we classified as food security relevant to illustrate what kind of discussion caused a peak . 
 
 
 
@@ -643,13 +643,13 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
   \item[Food Supply ] \hfill \\
  Topics that caught the social media audience were especially safety threats to the food supply. In April 2012 a newly discovered case of cow disease threatened the safety of America's beef supply and heavy import restrictions were imposed from major beef importers such as South Korea \footnote{http://www.theguardian.com/science/2012/apr/25/mad-cow-disease-us-mutation}.
   \item[Economic Access] \hfill \\
-  In 2014 sharp rising food prices caused a lot of discussion on twitter. Wholesale prices were suffering due to a severe drought in the previous year, which thinned the cattle herds and increased consumer prices \footnote{http://www.cnbc.com/id/101588110}. As a consequence there was also a sharp increase in discussion around food banks. The UK observed a 51 \% increase in food bank users \footnote{http://www.bbc.com/news/business-27032642}. 
+  In 2014 sharp rising food prices caused a lot of discussion on Twitter. Wholesale prices were suffering due to a severe drought in the previous year, which thinned the cattle herds and increased consumer prices \footnote{http://www.cnbc.com/id/101588110}. As a consequence there was also a sharp increase in discussion around food banks. The UK observed a 51 \% increase in food bank users \footnote{http://www.bbc.com/news/business-27032642}. 
   \item[Government] \hfill \\
   Most discussions around legislation changes were focused on Food Bank reforms. A high amount of attention can be attributed to the UK rejecting the European Union food bank funding. The population heavily criticised the British government to deny EU fund to be spent on the poor \footnote{http://www.theguardian.com/society/2013/dec/17/government-under-fire-eu-funding-food-banks}
     \item[Stability] \hfill \\
   Discussions around stability were usually headlined by extreme poverty causing riots. A food program that provided free lunch to underprivileged school kids used poisoned crops in their dishes. 20 children died as a consequence causing riots and closed shops all over the city. \footnote{http://www.usatoday.com/story/news/world/2013/07/17/india-children-deaths/2523727/}
    \item[Unrelated] \hfill \\
-   Unrelated topics cover a vast amount of domains. Most often peaks are caused by viral tweets posted by online celebrities that contain a food term. Public holidays, such as Easter, Thanks Giving are also frequently captured. Furthermore public figures such as Ray Rice, a famous football player, caused a lot of hype in the social media community \footnote{http://www.nytimes.com/2014/09/09/sports/football/ray-rice-video-shows-punch-and-raises-new-questions-for-nfl.html}. Often it was very hard to extract the conversation drivers in the unrelated topics. There is a considerable amount of noise in our conversations centered around Food Security, making it very challenging to extrapolate meaning from an event. This might be attributed to the general popularity of food we identified in previous chapters. 
+   Unrelated topics cover a vast amount of domains. Most often peaks are caused by viral Tweets posted by online celebrities that contain a food term. Public holidays, such as Easter, Thanks Giving are also frequently captured. Furthermore public figures such as Ray Rice, a famous football player, caused a lot of hype in the social media community \footnote{http://www.nytimes.com/2014/09/09/sports/football/ray-rice-video-shows-punch-and-raises-new-questions-for-nfl.html}. Often it was very hard to extract the conversation drivers in the unrelated topics. There is a considerable amount of noise in our conversations centered around food security, making it very challenging to extrapolate meaning from an event. This might be attributed to the general popularity of food we identified in previous chapters. 
 
 \end{description}
 
@@ -667,41 +667,45 @@ The distribution of the annotations is visualised in Figure \ref{fig:annotation_
 
 \subsection{Discussion}
 
-Extracting information from noisy and unstructured text has shown to be a very difficult task. Despite our various filtering attempts there is still a substantial amount of noise in our food security discussions. As most of the volatility was attributed to unrelated topics we will have to rethink the way we use the twitter data as a feature in our model. Unrelated does not necessarily mean irrelevant. Even twitter discussion outside our food security objectives can provide valuable information. Most commonly this is achieved by analysing the attitude of a tweet's author. We will hence explore the entropy of sentiment in explaining volatile food prices. 
+Extracting information from noisy and unstructured text has shown to be a very difficult task. Despite our various filtering attempts there is still a substantial amount of noise in our food security discussions. As most of the volatility was attributed to unrelated topics we will have to rethink the way we use the Twitter data as a feature in our model. Unrelated does not necessarily mean irrelevant. Even Twitter discussion outside our food security objectives can provide valuable information. Most commonly this is achieved by analysing the attitude of a tweet's author. We will hence explore the entropy of sentiment in explaining volatile food prices. 
+
 
 
 
 
 \chapter {Model Building}
 \label{model}
+This chapter applies the insights gained in Chapter \ref{4} and makes a practical case on how we can use Twitter as an early warning system for food security threats by means of time series forecasting. 
 
-Intro goes here ......
+First we would like to lay out some basic concepts that will aid the reader in understanding the dynamics of the predictions and ultimately help to comprehend the results. We do not intend to give a thorough introduction as this is out to the scope of this dissertation. We further highlight details towards the data preprocessing, how we train our model, outline the methodology of our time series prediction and lastly discuss how we tackle the problem of high-dimensional data through clustering and feature selection. The later part of this chapter focuses on motivating the choice of features and lays out a performance comparison of a price data model, a social media model and lastly a mixture model.  
 
-\section{A fuzzy approach for Time Series Modelling}
+
+
+\section{A Fuzzy Approach for Time Series Modelling}
 
 Compared to other approaches, Fuzzy logic has seen only a few applications in forecasting despite its promising results. We hence want to motivate the use of this technique in further detail. 
 
-Fuzzy logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomenas that do not have precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on Bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy logic everything is a matter of degree, which is ultimately how we perceive the real world. This form of reasoning allowed the development and analysis of  systems by expressing the qualitative aspects of human reasoning without using any complex mathematical models \cite{Jang91}.  
-In some areas such as time series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as Adaptive Neuro Fuzzy Inference System (ANFIS), have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This make ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule based design it allows for interpretability of the predictions. This is particularly important as the results might help us better understand the determinants of food security risks in social media. 
+Fuzzy logic was initially proposed to provide a framework for imprecise reasoning. Zadeh \cite{Zadeh65} introduced the concept to describe real world phenomena that do not have a precise description of a membership class. Another branch of mathematics that deals with uncertainty is the field of probability. However, there is a distinct difference between the two. Probability theory is based on Bivalent logic, which means every proposition is either true or false. Only certainty is a matter of degree, which brings us to an important distinction. In Fuzzy logic, everything is a matter of degree, which is ultimately how we perceive the real world. \say{This form of reasoning allowed the development and analysis of systems by expressing the qualitative aspects of human reasoning without using any complex mathematical models} \cite{Jang91}.  
+In some areas such as time series prediction techniques such as ARMA and AR, have shown clear limitations \cite{box90}. Nonlinear approaches, such as Adaptive Neuro Fuzzy Inference System (ANFIS), have proven to be more successful \cite{chap04}. Prediction accuracy is however not the only concern in forecasting models. Understanding the behaviour and gaining insight into the underlying dynamics is equally important \cite{neil93}. This makes ANIFS especially appealing. Not only does it poses strong predictive capability but as a consequence of its rule-based design it allows for interpretability of the predictions. The interpretability is particularly important as the results might help us better understand the determinants of food security risks in social media. 
 
 \section{Fuzzy Logic}
 
 
-In this section we present the terminologies and concepts around Fuzzy logic, focusing on the basics of Fuzzy variables, and Fuzzy sets, as well as how a Neural network is derived with a Fuzzy interference system (FIS). 
+In this section, we present the terminologies and concepts around Fuzzy logic, focusing on the basics of Fuzzy variables and Fuzzy sets. We further derive a Neural network with a Fuzzy interference system (FIS). 
 
 \subsection {Fuzzy Variables and Fuzzy Sets }
 
-Zadeh \cite{Zadeh65}  defined Fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour is defined by its wavelength, which is a precise numerical definition. In natural language we tend to classify colours not by its numerical value, but by colour objects (e.g. red, blue, green), which fall into the scope of a specific wavelength or how it is commonly referred to in Fuzzy logic,  a Fuzzy set. Red or blue describe the object's colour, but it is by no means a precise definition. By applying a membership function we can precisely define the colour in a range between zero and one. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use a Gaussian membership function defined by Equation \ref{eq:gaus},  as they are differentiable and desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set.  
+Zadeh \cite{Zadeh65}  defined Fuzzy variables as attributes that distinguish between elements of some universe of discourse. He uses the colour of an object as an example. Each colour has a wavelength, which is a precise numerical definition. In natural language, we tend to classify colours not by its numerical value, but by colour objects (e.g. red, blue, green). Colour objects fall within the scope of a specific wavelength or how it is commonly referred to in Fuzzy logic,  a Fuzzy set. Red or blue describe the object's colour, but it is by no means a precise definition. By applying a membership function, we can precisely define the colour in a range between zero and one. The most common membership functions are Gauss function, Trapezium function and the Triangle function. We choose to use a Gaussian membership function defined by Equation \ref{eq:gaus},  as they are differentiable and desirable for optimisation purposes \cite{wu12}. We will refer to $a_i, b_i, c_i$ as the parameter set.  
 
 \begin{equation} \label{eq:gaus}
 \mu_A(x) =  \frac{1}{ 1 + |\frac{x- c_i }{a_i}|^{2b_i}  }\end{equation}
 
 
-With regard to our Fuzzy logic system we will distinguish between input variable and output variable. The output variable depends on the input value's corresponding membership function and a decision matrix, where the later will be explained in the following section. 
+Concerning our Fuzzy logic system, we will distinguish between an input variable and output variable. The output variable depends on the input value's corresponding membership function and a decision matrix, where we will explain the later in the following section. 
 
- To illustrate the two concepts Fuzzy logic and Fuzzy sets let us consider Figure \ref{fuzz_example}. The scope of each colour object (red, green, blue) is precisely defined by the three triangular functions. The colour object green is precisely green at the point $x_2$ and partly green between $x_1$ and $x_2$ and likewise $x_2$ and $x_3$. 
+ To illustrate the two concepts Fuzzy logic and Fuzzy sets let us consider Figure \ref{fig:fuzz_example}. The three triangular functions precisely define the scope of each colour object (red, green, blue). The colour object green is exactly green at the point $x_2$ and partly green between $x_1$ and $x_2$ and likewise $x_2$ and $x_3$. 
  
-For this exercise we classify the colour object of a tangerine which is orange.  We define orange to be a little red (where little is a value between 0 and 1) corresponding to $y_r$ and very green corresponding to $y_g$.  The membership function would map those two input variables to $x_i$, where $x_i$ is our output value and a precise numerical definition of the colour object orange. This toy example generalises to any other object. The object price would be modelled with the triangular functions high, medium low. Sentiment on the other hand would use positive, negative or neutral instead. 
+For this exercise, we classify the colour object of a tangerine that is orange.  We define orange to be a little red (where little is a value between 0 and 1) corresponding to $y_r$ and very green corresponding to $y_g$.  The membership function would map those two input variables to $x_i$, where $x_i$ is our output value and a precise numerical definition of the colour object orange. This toy example generalises to any other object. The object price can be modelled with the triangular functions high, medium low. Sentiment, on the other hand, would use positive, negative or neutral instead. 
 
 
 
@@ -720,13 +724,13 @@ For this exercise we classify the colour object of a tangerine which is orange. 
 
 \subsection{Fuzzy Interference System}
 
-We first describe the components of the Fuzzy interference system (FIS) and then give intuition on how the system can be modelled as a Generalised Neural Network (GNN). 
+We first describe the components of the Fuzzy interference system (FIS) and then give intuition on how the system is modelled as a Generalised Neural Network (GNN). 
 
 FIS evaluates a decision matrix composed of rules in the following semantic: \\
 
 \centerline {$ \textbf{IF} <  A  > \textbf{AND} <  B  > \textbf{THEN} < Conclusion > $}
 
-The rule base grows exponentially with the number of variables. Hence, we have to carefully consider the input variables in order to minimize the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined in Equation \ref{eq:union} as the \emph{multiplication} of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$
+The rule base grows exponentially with the number of variables. Hence, we have to consider carefully the input variables to minimise the complexity and to make the inference reliable. A multivariable system uses two different kinds of connectives to combine the fuzzified values. The union is defined in Equation \ref{eq:union} as the \emph{multiplication} of the membership function of set A $\mu_A(x)$ and B $\mu_B(x).$ The result is a weight $w_i$.
 
 
  \begin{equation} \label{eq:union}
@@ -738,22 +742,22 @@ The intersection is defined in Equation \ref{eq:probor} as the \emph{probabilist
  w_i =  \mu_{A\cap B(x,y)} =   \mu_A (x)  + \mu_B(y) -  \mu_A (x)  \times \mu_B(y)
  \end{equation}
 
-The output of one Fuzzy Rule is computed by Equation \ref{eq:output}
+The output of one Fuzzy Rule is computed by Equation \ref{eq:output}.
 
 
 \begin{equation} \label{eq:output}
  z = dx + ey + f  \end{equation}
  
-Incase the output is preferred to be constant rather then linear we set $d$ and $e$ to zero and the constant  $f$ to the desired output of our system. The final output is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
+In case the output is preferred to be constant rather than linear we set $d$ and $e$ to zero and the constant  $f$ to the desired output of our system. The final output is the weighted average of all rules computed by Equation \ref{eq:finaloutput}.
 
 \begin{equation} \label{eq:finaloutput}
 Output = \frac { \sum\limits_{i=1}^N  w_i z_i} {\sum\limits_{i=1}^N  w_i } \end{equation}
 
-,where $N$ is the number of rules. 
+, where $N$ is the number of rules. 
 
 \subsection{Adaptive Neuro Fuzzy Inference System }
 
-We now model the above described process as a Neural network illustrated in Figure \ref{fig:gnn_fuzz}  \footnote{Image credit to: http://pubs.rsc.org/en/content/articlehtml/2014/ra/c4ra02392g}. In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
+We now model the above-described process as a Neural network illustrated in Figure \ref{fig:gnn_fuzz}.  In \textbf{Layer 1} every node maps the input variables x1 and x2 via the membership function in Equation \ref{eq:gaus} to a Fuzzy Set.  \textbf{Layer 2} applies Equation \ref{eq:union} or Equation \ref{eq:probor} which multiplies the incoming signals and forward the product to the next layer. \textbf {Layer 3} calculates the ratio of the rule's strength to the sum of all rule's strength. We apply the normalisation Equation \ref{eq:normfuzz} in this Layer. 
 
 \begin{equation} \label{eq:normfuzz}
 \overline{w_i} =  \frac{w_i}{w_1 + w_2}, i = 1,2 \end{equation}
@@ -766,7 +770,7 @@ We now model the above described process as a Neural network illustrated in Figu
  Finally, \textbf{Layer 5} computes the overall output as the summation of all incoming signals through Equation \ref{eq:finaloutput}. The construction yields a network with 5 layers,  16 nodes and 24 parameters (12 in Layer 1, 12 in Layer 4). 
  
  
- ANFIS optimises the parameters through a hybrid algorithm (least-squares \& gradient descent) with respect to a given input, output training data pattern. While the  network calculates the output value in a forward pass, the system uses least-squares to find the best parameter values in \textbf{Layer 4}. In the backward pass the errors are propagated backwards and the parameters in \textbf{Layer 1} are changed by gradient descent to best reflect the input, output data.
+ ANFIS optimises the parameters through a hybrid algorithm (least-squares \& gradient descent) with respect to a given input, output training data pattern. While the network calculates the output value in a forward pass, the system uses least-squares to find the best parameter values in \textbf{Layer 4}. In the backwards pass the errors are propagated backwards and the parameters in \textbf{Layer 1} are changed by gradient descent to reflect best the input, output data.
  
   
 
@@ -775,10 +779,15 @@ We now model the above described process as a Neural network illustrated in Figu
 
 \begin{figure}[H]
         \centering
-         \includegraphics[width=1\textwidth ]{img/model/gnn_fuzz}      
-        \caption{Adaptive Neuro Fuzzy Inference System }
+         \includegraphics[width=1\textwidth ]{img/model/gnn_fuzz}
+         \begin{minipage}{\linewidth}
+\caption[Caption for LOF]{Real caption\footnotemark}
+\end{minipage}      
+       
         \label{fig:gnn_fuzz}
 \end{figure}
+
+\footnotetext{ Image credit to: http://pubs.rsc.org/en/content/articlehtml/2014/ra/c4ra02392g}
 
 
 
@@ -787,13 +796,13 @@ We now model the above described process as a Neural network illustrated in Figu
 \section{Data Preprocessing}
 \label{dataprocessing}
 
-Before feeding the data to the Fuzzy Interfere System we analysed and cleaned the data. The representation of the data is of great importance in order to assist ANFIS in learning the relevant patterns. In a first instance we had to mach both the time series of the twitter data with the time series of the price data. The markets are closed during weekends and national holidays, hence we had to remove such instances from the twitter data. Given the sparsity of the datasets available for commodities we were forced to hand selected quotes from different markets. We observed that some of them had different closing days i.e. some markets considered a day a holiday, some others not. For wheat and cattle we removed the 12/11/12 and the 8/10/12 which are the veteran day and the columbus day respectively in order to match the price data of milk.  Secondly, we proceeded to interpolate zero values. Some of the price data-sets showed values of zero on days which were neither weekends nor holidays. Similarly, the twitter archive did not contain  twitter data for some time periods. We linearly interpolated such missing values by solving and approximation to the partial differential equations \cite{john2012}.  Fuzzy Interference Systems expect an input of a unit interval i.e. between 0 and 1. We hence normalised the data as illustrated in Equation 4.1. Min and Max are the lower and upper bounds of data set where $\alpha$ is a small constant we introduced to avoid zero divisions. It is is generally advised to normalise the data else the training algorithm might loose its sensitivity towards smaller scaled features. 
+Before feeding the data to the Fuzzy Interfere System, we analysed and cleaned the data. The representation of the data is of great importance to assist ANFIS in learning the relevant patterns. In a first instance, we had to match both the time series of the Twitter data with the time series of the price data. During weekends and national holidays the markets are closed, hence we had to remove such instances from the Twitter data. Given the sparsity of the datasets available for commodities we were forced to hand selected quotes from different markets. We observed that some of them had different closing days i.e. some markets considered a day a holiday, some others not. For wheat and cattle we removed the 12/11/12 and the 8/10/12 which are the Veteran day and the Columbus day respectively to match the price data of milk.  Secondly, we proceeded to interpolate zero values. Some of the price data sets showed values of zero on days that were neither weekends nor holidays. Similarly, the Twitter archive did not contain  Twitter data for some time periods. We linearly interpolated such missing values by solving and approximation to the partial differential equations \cite{john2012}.  Fuzzy Interference Systems expect an input of a unit interval i.e. between 0 and 1. We hence normalised the data as illustrated in Equation 4.1. Min and Max are the lower and upper bounds of data set where $\alpha$ is a small constant we introduced to avoid zero divisions. The Fuzzy system expects a unit interval to avoid losing its sensitivity towards smaller scaled features. 
 
 \begin{equation} \label{eq:solve}
 \overline{ y } = \frac{x - min}{max - min}  + \alpha \end{equation}
 
 
-Lastly we performed a scaling of the data which is in accordance of our objective, namely to be more sensitive to long-term than to short-term fluctuations. As we can see in Figure 4.1 a) there are some extreme price increases and drops. By applying the Hodrick-Prescott decomposition \cite{edward81} filter we receive a distribution which is more normal by avoiding such outliers. Additionally the Figure 4.1 illustrates nicely the characteristics of commodities, namely that it's mostly driven by small price changes. 
+Lastly, we performed a scaling of the data which is in agreement with our objective, namely to be more sensitive to long-term than to short-term fluctuations. As we can see in Figure \ref{ig:u_linear} there are some extreme price increases and drops. By applying the Hodrick-Prescott decomposition \cite{edward81} filter, we receive a distribution that is more normal by avoiding such outliers. Additionally the Figure \ref{fig:distribution_com} illustrates nicely the characteristics of commodities, namely that it is mostly driven by small price changes. 
 
 
 
@@ -818,7 +827,7 @@ Lastly we performed a scaling of the data which is in accordance of our objectiv
           %(or a blank line to force the subfigure onto a new line)
 
       
-        \caption{Volume of Tweets per Keyword and per Category}\label{fig:distribution}
+        \caption{Volume of Tweets per Keyword and per Category}\label{fig:distribution_com}
 \end{figure}
 
 
@@ -827,27 +836,27 @@ Lastly we performed a scaling of the data which is in accordance of our objectiv
 
 \section{Training the Model}
 
-For training ant testing our model we choose the time period 03.01.2012 - 26.09.2014. We thought of numerous ways to test and train our model. Different approaches have been suggested by Ibeling Kaastra \cite{Kaastra96designinga}. Most commonly the data is split into a train set, validation set and lastly a test set. The model is trained once in a batch fashion and used for all future predictions. Such an approach can be dangerous particularly when one considers historical data reaching far into the past. Market conditions might have been different then and might not apply for future predictions. Choosing a particular time frame can be a bad idea as well. Consider the training data only exhibiting an upwards trend the model will then not generalise well for declining prices. Yao et al. \cite{Yao00acase} proposed to use statistical methods to investigate the best time period for training the network. However to make any statistically significant claims we need more then 2.5 years of historical data. Lastly Ibeling Kaastra describes a method called the walk-forward or sliding window approach. This approach involves creating overlapping sets of train and test data. Each set is moved forward through the time series to test the robustness of the model. This framework addresses the concern raised regarding including data form far in the past that might not reflect the current market conditions and is widely used for commodity predictions. We decided to apply a variant of the sliding window approach and train or model in an online fashion. Given the limited amount of data we choose not to exclude any data from future prediction, however to be able to adapt to new market conditions we increase the training and validation window as we move along the time line. To achieve a good generalisation the proportion of train and validation set always remain the same as we add additional data. We used the first 50 \% of the data to train the model. From that set we excluded 15 \% for validation purposes. These values were obtained empirically. 
+For training ant testing our model, we choose the period 03.01.2012 - 26.09.2014. We thought of numerous ways to test and train our model. Different approaches have been suggested by Ibeling Kaastra \cite{Kaastra96designinga}. Most commonly the data is split into a train set, validation set and lastly a test set. The model is trained once in a batch fashion and used for all future predictions. Such an approach can be dangerous particularly when one considers historical data reaching far into the past. Market conditions might have been different then and might not apply to future predictions. Choosing a particular time frame can be a bad idea as well. Consider the training data only exhibiting an upwards trend the model will then not generalise well for declining prices. Yao et al. \cite{Yao00acase} proposed to use statistical methods to investigate the best period for training the network. However to make any statistically significant claims we need more than 2.5 years of historical data. Lastly, Ibeling Kaastra describes a method called the walk-forward or sliding window approach. This approach involves creating overlapping sets of a train and test data. Each set is moved forward through the time series to test the robustness of the model. This framework addresses the concern raised regarding including data from far in the past that might not reflect the current market conditions and is widely used for commodity predictions. We decided to apply a variant of the sliding window approach and train or model in an online fashion. Given the limited amount of data we choose not to exclude any data from future prediction. However, to be able to adapt to new market conditions we increase the training and validation window as we move along the timeline. We used the first 50 \% of the data to train the model. 
 
 
-
-\section{Methodology for Forcasting with Fuzzy Logic}
+\section{Methodology for Forecasting with Fuzzy Logic}
+\label{5.5}
 
 The goal of our research is to predict the price of a commodity in the future. The prediction model takes different features $y_t - y_{t-M+1}$ and an input. The problem of predicting the future value $y_{t_1}$ can be formulated as: 
 
 
-\begin{equation} \label{eq:solve}
+\begin{equation} \label{eq:solve_model}
 y_{t + 1} = fp(y_{t}, y_{t-1}, y_{t-M+1})
  \end{equation}
 
-where M is the number of features and fp is our fuzzy prediction model. Consider the case where we predict $y_{t +4}$ , so four days into the future. A recursive way would be to predicted values $y_{t+2}$ and $y_{t+3}$ and then use them as regressors in predicting $y_{t +4}$. However this approach accumulates prediction errors. The further the prediction value is the more prediction outputs are used as regressors. We deviate from this approach by building a direct prediction model, so for each prediction horizon one direct model. 
+where M is the number of features and fp is our fuzzy prediction model. Consider the case where we predict $y_{t +4}$ , so four days into the future. A recursive way would be to predicted values $y_{t+2}$ and $y_{t+3}$ and then use them as regressors in predicting $y_{t +4}$. However, this approach accumulates prediction errors. The further the prediction value is the more prediction outputs are used as regressors. We deviate from this approach by building a direct prediction model, so for each prediction horizon one direct model. 
 
-Translating the Equation 4.9 into the fuzzy system a prediction would take the following form: \\
+Translating the Equation \ref{eq:solve_model} into the fuzzy system a prediction would take the following form: \\
 
 \centerline {$ \textbf{IF} <  y_t  \in High> \textbf{AND} < y_{t-1} \in Medium > \textbf{THEN} <  y_{t+1} \in Increase > $} 
 
 
-where High, Medium and Increase are Fuzzy Sets. We measure the difference between the actual value and the predicted value by computing the Root Mean Square Error (RMSE) defined in Equation \ref{eq:rmse}. It is an aggregation of all prediction errors for different time stamps. As RMSE is scaled dependent it is important that the input and output variables among different commodities are normalised to be able compare the results across the different products. 
+Where High, Medium and Increase are Fuzzy Sets. We measure the difference between the actual value and the predicted value by computing the Root Mean Square Error (RMSE) defined in Equation \ref{eq:rmse}. It is an aggregation of all prediction errors for different time stamps. As RMSE is scaled dependent it is important that the input and output variables among different commodities are normalised to be able to compare the results across the different products. 
 
 
 \begin{equation} \label{eq:rmse}
@@ -856,34 +865,71 @@ RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n} (y_i -  \overline{y_i})^2}
 
 
 
-
-
-\section{Parameters}
-
-All experiments have been conducted with the following parameters
+For all experiments, we use the parameters in Table \ref{tab:abcde} unless otherwise noted.
 
 
 
-\begin{itemize}
-  \item Input membership function: \indent Gaussian
-  \item Output membership function: \indent Linear
-  \item FIS generator: \indent Fuzzy C-Means 
-  \item Training epochs: 500
-  \item Initial step size: 0.01
-  \item Step size decrease rate: 0.9
-  \item Step size increase rate: 1.1
-  \item Retrain rate: 28 days
-  \item Initial training window size: 50 \%
-  \item Segmentation: 85 \% Training , 15 \% Validation 
-\end{itemize}
+\begin{table}[H]
+\centering
+\begin{tabular}{ |c|c| } 
 
+ name & value \\ 
+  \hline
+ Input membership function & Gaussian \\ 
+ Output membership function & Linear \\ 
+ FIS generator& Fuzzy C-Means \\ 
+ Training epochs & 500 \\ 
+ Initial step size & 0.01 \\ 
+ Step size decrease rate & 0.9\\ 
+ Retrain rate & 28 days \\ 
+ Initial training window size & 50 \\ 
+
+\end{tabular}
+\caption{Parameter Settings}
+\label{tab:abcde}
+\end{table}
+
+
+\section{Adapting to High Dimensional Data}
+\label{high_dim}
+
+
+ANFIS does not work well for high dimensional data as it generates rules by enumerating all possible combinations of membership functions. For three membership functions and $x$ features this leads to $3^x$ possible combinations. Instead of enumerating all possible rules we use Fuzzy c-means clustering. The number of centroids is indicative of the number of membership functions. Each data point has a degree of membership to every centroid in the space. The summation of the membership degrees equals one for every data point. Each point is assigned through optimising an objective function which is defined in Equation \ref{eq:obj_f} where $d_{ij} = ||x_i - v_j||$ is the Euclidian distance between the data point $i$ and the cluster centre $j$. $m$ on the other hand, is a variable to determine the fuzziness of the clusters. In other words, how much the clusters overlap. If we set m = 1 the membership $\mu_{ij}$ would correspond to 0 or 1 implying a strict partitioning.
+
+\begin{equation} \label{eq:obj_f}
+J(U,V) = \sum\limits_{i=1} ^n \sum\limits_{j=1} ^c (\mu_{ij})^m ||x_i - v_j||^2
+ \end{equation}
+
+$\mu_{ij}$ corresponds to the degree of membership of data point $i$ to cluster centre $j$. This is captured by Equation \ref{eq:d_fuzz}. This involves taking the fractional distance from the point to the cluster centre raising the fraction to the inverse fuzzification parameter. We divide it by the sum of all fractional distances to ensure the sum of all memberships is 1. 
+
+
+\begin{equation} \label{eq:d_fuzz}
+\mu_{ij} = \frac { \frac {1} {d_{ij}} ^{ \frac{1}{m-1}} } { \sum\limits_{k=1} ^c (\frac {1} {d_{ik}  } ) ^ { \frac{1}{m-1}} }
+ \end{equation}
+
+
+
+The fuzzy center on the other hand is computed by Equation \ref{eq:d_center} $\forall_j = 1,2....c$.
+
+\begin{equation} \label{eq:d_center}
+v_j = (\sum\limits_{j=1} ^n (\mu_{ij})^m x_i ) / (\sum\limits_{j=1} ^n (\mu_{ij})^m)
+ \end{equation}
+
+Other then reducing the membership functions we can directly reduce the number of features used. For that purpose, we used a feature selection algorithm Relief that allows us to distinguish relevant from irrelevant features were relevance is measured on how much influence a feature has on the output value. Relief \cite{kira92} \cite{kono94} \cite{Robnik97} find relevant features using a heuristic where the evaluation is performed on a distance measure. The data instances of the features belong to different classes. We measure the relevance of a feature $f_x$ by measuring the distance from the nearest neighbour of each class to $f_x$. The nearest neighbour of the same class (same class as $f_x$) is called nearest hit, and the nearest miss is the closest neighbour of a different class.  The heuristic is computed for each feature in Equation \ref{eq:heuristic_new}.
+
+\begin{equation} \label{eq:heuristic_new}
+W_i = W_i  - (x_i - nearestHit_i)^2 + (x_i - nearestMiss_i)^2
+\end{equation}
+
+A feature is considered irrelevant or redundant if $W_i <= 0$, that is if the difference between the same class is higher than the one of a different class.  
 
 
 \section{Benchmark Model}
 
 \subsection{Input Model}
 
-Yao et al. [ref] suggests that the market can be categorised using the major trend the intermediate trend and the minor trend. Where the major trend lasts more then a year, intermediate trends are anything between 3 weeks to three months. We capture such trends by taking the moving average of 1 week, 2 weeks and 1 month respectively. Given the limited time frame we chose to exclude major trends. We further consider all days preceding the horizon 30 days into the past as potential features. Moving averages are known to remove the day to day instability and extract the underlying trend.
+Yao et al. [ref] suggests that the market can be categorised using the major trends, the intermediate trends and the minor trends. 
+Here by major trends we refer to trends that last more than a year, and by intermediate trends anything between three weeks to three months. We capture such trends by taking the moving average of one week, two weeks and one month respectively. Given the limited time frame we chose to exclude major trends. We further consider all days preceding the horizon 30 days into the past as potential features. Moving averages are used to remove the day to day instability and extract the underlying trend\cite{armstrong01}. The bellow Table \ref{tab:inputModel} illustrates the values assigned to each feature. $x$ is the value of today and $x-1$ is a value one day in the past. $\mu(]x-y;x])$ symbolises the moving average of the past $y$ days. 
 
 
 \begin{table}[H]
@@ -905,7 +951,7 @@ Yao et al. [ref] suggests that the market can be categorised using the major tre
 
 \end{tabular}
 \caption{Input Model: Benchmark Prediction}
-\label{tab:abc}
+\label{tab:inputModel}
 \end{table}
 
 
@@ -913,12 +959,12 @@ Yao et al. [ref] suggests that the market can be categorised using the major tre
 \label{featSel_bench}
 
 
-The objective here is to find the most significant features among the 33 in our input model in order to decrease the complexity and lastly improve the prediction accuracy of our model.  To investigate the relevance we used the Relieff algorithm []. We measure the most significant features with respect to the horizon of 4 days, 7 days and 14 days. Furthermore we consider  three different commodities, wheat (w), beef (b) and milk (m). The configuration in the Table \emph{w-4} refers to wheat with a prediction horizon of 4 days. The most significant features are  1.) $\phi_1$ : $D30$ , 2.) $\phi_2$ : $D29$,  3.) $\phi_3$ : $D28$, 4.) $\phi_4$ : $W1$ , 5.) $\phi_5$ : $D27$ and 6.) $\phi_6$ : $D26$.
+The objective here is to find the most significant features among the 33 in our input model to decrease the complexity and lastly improve the prediction accuracy.  To determine the most predictive features, we use the Relief algorithm described in Section \ref{high_dim}. We measure the most significant features with respect to the horizon of four days, seven days and 14 days. Furthermore, we consider three different commodities, wheat (w), beef (b) and milk (m). Initially, we were hoping to cover all five food categories. Unfortunately, we were unable to get access to daily commodity prices of oil and sugar. We further took care to capture different price dynamics. The prices of milk and wheat move in all directions. Beef on the other hand is characterised by a long-lasting trend. The configuration \emph{w-4} in the Table \ref{tab:feat_mod1} refers to wheat with a prediction horizon of four days. The most predictive features are  1.) $\phi_1$ : $D30$ , 2.) $\phi_2$ : $D29$,  3.) $\phi_3$ : $D28$, 4.) $\phi_4$ : $W1$ , 5.) $\phi_5$ : $D27$ and 6.) $\phi_6$ : $D26$.
 
-The numbers in the table refer to the relative importance of the feature for a specific configuration. It is interesting to observe that the Relieff consistently suggested the same features irrespectively of the commodity type and the prediction horizon. This gives us a strong confidence in the relative importance of the prediction task at hand, as it generalises well over different models i.e. horizons and also different commodities. We can see that the values follow a clear trend. With an increasing horizon the features lose its importance as the prediction task becomes more and more challenging. 
+The numbers in the Table \ref{tab:feat_mod1} refer to the relative importance of the feature for a specific configuration. The higher the value, the more predictive the feature is considered to be. It is interesting to observe that Relief consistently suggested the same features irrespectively of the commodity type and the prediction horizon. This gives us a strong confidence in the relative importance of the prediction task at hand, as it generalises well over different models i.e. horizons and also different commodities. We can see that the values follow a clear trend. With an increasing horizon, the features lose its importance as the prediction task becomes more and more challenging. 
 
 
-For our prediction task we consider the top 10 features. This value was empirically evaluated and is a trade off between computational complexity and accuracy. Better prediction accuracy is expected for values greater the 10 however the search will become too exhaustive.  Those additional feature ($\phi_7 - phi_10$ not displayed in Table \ref{tab:feat_mod1}  are for most commodities and horizons the same but ranked in different orders depending on the prediction task. Interestingly D25, D24, D23 and W2 rank highly along the other values in Table \ref{tab:feat_mod1} which are all placed in the intermediate past. This observation suggests that models based on the intermediate past poses more predictive power and outperform strategies based on features in the recent past. Robert Novy - Marx also observed this effect and investigated the hypothesis in \cite{iuj11}. Indeed models with intermediate variables tend to outperform such only considering recent values. A possible explanation mentioned in the paper is that such variable best captures the momentum of a commodity. 
+For our prediction task, we consider the top 10 features \footnote{We performed experiments with five,10 and 20 features and found that 10 features yield the highest prediction accuracy. A better predictions can be expected with more than 10 features however at some point the model will overfit. We leave an extensive search of the optimal number of features for future work.}.Those additional features ($\phi_7 - phi_10$ not displayed in Table \ref{tab:feat_mod1}  are for most commodities and horizons the same but ranked in different orders depending on the prediction task. Interestingly D25, D24, D23 and W2 rank highly along the other values in Table \ref{tab:feat_mod1} which are all placed in the intermediate past. This observation suggests that models based on the intermediate past poses more predictive power and outperform strategies based on features in the recent past. Robert Novy - Marx also observed this effect and investigated the hypothesis in \cite{iuj11}. His conclusion was that models with intermediate variables tend to outperform such only considering recent values. A possible explanation mentioned in the paper is that such variable best captures the momentum of a commodity price. 
 
 
 
@@ -951,17 +997,18 @@ For our prediction task we consider the top 10 features. This value was empirica
 
 \subsection{Results}
 
-The prediction results across different time horizons are highlighted in Figure \ref{fig:res_1}. To give an example of the interpretation of the model the results are obtained by applying the model describe in Section 4.5. The features used in the form of $y_{t-2}$ are the top 10 obtained from the feature selection process. If the prediction task is to predict $y_{t+3}$ and for illustration purposes we assume today is Monday, then the prediction goal translates to approximating the true value on the following Thursday. Assuming the feature selection process yields $y_{t-1}$  and $y_{t-1}$ this corresponds to using the price on the previous Sunday and Saturday. Finally our model with two membership functions High and Low gives us the following Fuzzy Model. \\
+The prediction results across different time horizons are highlighted in Figure \ref{fig:res_1}. These results are obtained using the model described in Section \ref{5.5} with the top 10 features obtained through the feature selection procedure explained in the previous section. The features used in the form of $y_{t-2}$ are the top 10 obtained from the feature selection process. If the prediction task is to predict $y_{t+3}$ and for illustration purposes we assume today is Monday, then the prediction goal translates to approximating the true value on the following Thursday. Assuming the feature selection process yields $y_{t-1}$  and $y_{t-1}$ this corresponds to using the price on the previous Sunday and Saturday. Finally our model with two membership functions High and Low gives us the following Fuzzy Model. \\
+
 
 \centerline {$ \textbf{IF} <  Sunday \in High> \textbf{AND} < Saturday \in Low > \textbf{THEN} <  Thursday \in 0.67 > $} 
 
 The output is a numerical value and not a class. 
 
- Looking at the results ANFIS performs exceptionally well for day to day predictions and as expected decreases its performance as the horizon increases. The commodity beef seems to be the eassiest prediction task and further analysis will clearly show why.   We observe that RMSE linearly increases over the time period until prediction horizon 20. Prediction accuracy rapidly decreases and becomes unstable from then onwards.  
+ Looking at the results ANFIS performs exceptionally well for day to day predictions and as expected decreases its performance as the horizon increases. The commodity beef seems to be the easiest prediction task and further analysis will clearly show why.   We observe that RMSE linearly increases over the period until prediction horizon 20. Prediction accuracy rapidly decreases and becomes unstable from then onwards.  
 
-To analyse the results in more detail and to put the RMSE into context  we turn our attention towards Figure \ref{fig:wheat_1} \ref{fig:beef_1} \ref{fig:milk_1}. For all three commodities the predictions within one week are extremely accurate. We can now also observe why beef had the lowest RMSE among the three commodities. Beef follows a clear upwards trend. Such long lasting motions are much easier to predict and as discussed in Section Feature Selection our input variables from the intermediate past perform exceptionally well if there is a clear underlying motion. 
+To analyse the results in more detail and to put the RMSE into context  we turn our attention towards Figure \ref{fig:wheat_1} \ref{fig:beef_1} \ref{fig:milk_1}. For all three commodities, the predictions within one week are extremely accurate. We can now also observe why beef had the lowest RMSE among the three commodities. Beef follows a clear upwards trend. Such long lasting motions are much easier to predict and as discussed in Section \ref{featSel_bench} our input variables from the intermediate past perform exceptionally well if there is a clear underlying motion. 
 
- For the model $y_{t+20}$  ANFIS clearly overestimates a decrease and increase in price but still manages to captures the underlining trend. The overestimation seen in Figure \ref{fig:long_wheat_price} and Figure \ref{fig:long_milk_price} strongly approximates the observed pattern in the training sample explaining the deviation from the actual prediction. The only commodity excluded from this behaviour is beef due to it's strong underlying motion. Better predictions can be expected by considering different training samples. 
+ For the model $y_{t+20}$  ANFIS clearly overestimates a decrease and increase in price but still manages to captures the underlining trend. The overestimation seen in Figure \ref{fig:long_wheat_price} and Figure \ref{fig:long_milk_price} strongly approximates the observed pattern in the training sample explaining the deviation from the actual prediction. The only commodity excluded from this behaviour is beef due to its strong underlying motion. Better predictions can be expected by considering different training samples. 
 
 
 
@@ -1074,28 +1121,19 @@ To analyse the results in more detail and to put the RMSE into context  we turn 
 
 
 
-
-
-
-
-
-
-
-
 \clearpage
 
 \section{Social Media Model}
 
 \subsection{Input Model }
 
-Xue Zhanga et al. found that twitter conversation correlates and is even predictive of financial market movements. They measured the attention of a given subject by aggregating the daily volume. In Section \ref{corr_results} we investigated if such a correlation is present and concluded that for most commodities no such linear relationship exists. We however still include the social attention as a possible feature since it might prove to be useful in form of a lagged variable (i.e. that the volume 4 days ago  correlates to the commodity price of today). We consider social attention on different granularities  by measuring the volume of the category, subcategory and the product \ref{food_lex}. We further include products which are not part of a subcategory but show a strong linear relationship with the predicted commodity (i.e. we consider goat as a feature for beef despite it not being a related product to beef). 
-
- Generally speaking microblogs capture one topic due to its 140 keyword limitation. The topics can usually be inferred by capturing one or two keywords. However certain terms are more intrinsic then others i.e. the keyword \emph{IBM} can unambiguously be related to the company where as the  term \emph{break} has multiple meanings and given the context could be unrelated to a desired topic. We hence introduce the notion of contextual sensitive tweets. Tweets considered contextual sensitive match both a term in the Food Lexicon and the Predictor Lexicon. We consider the context of food price, supply, poverty and needs \ref{pred_lex}. 
+Xue Zhanga et al. \cite{xue12} found that Twitter conversation correlates and is even predictive of financial market movements. They measured the attention of a given subject by aggregating the daily volume. In Section \ref{corr_results} we investigated if such a correlation is present and concluded that for most commodities no such linear relationship exists. Nonetheless we include the social attention as a possible feature as it might prove to be useful in the form of a lagged variable (i.e. that the volume three days ago correlates to the commodity price of today). We consider social attention on different granularities by measuring the volume of the category, subcategory and the product \ref{food_lex}. We further include products that are not specific to a commodity but show a strong linear relationship with the commodity price (i.e. we consider goat as a feature for beef despite it not being a beef product). 
+In general microblogs capture one topic due to its 140 keyword limitation. The topics can usually be inferred by capturing one or two keywords. However certain terms are more intrinsic than others i.e. the keyword \emph{IBM} can unambiguously be related to the company whereas the  term \emph{break} has multiple meanings and given the context, could be unrelated to a desired topic. We hence introduce the notion of contextual sensitive Tweets. Tweets considered contextual sensitive match both a term in the Food Lexicon and the Predictor Lexicon. We consider the context of food price, supply, poverty and needs \ref{pred_lex}. 
  
  
- Despite having identified  a significant correlation for contextually sensitive tweets our analysis in Section \ref{conversation} concluded that the attention volatility is mostly driven by unrelated topics. Public mood states or sentiment might hence be a more valuable indicator. This intuition is supported by \cite{nofsinger05} namely that financial decisions are not uncommonly driven by emotions and mood. For the purpose of this analysis we consider different ratios of sentiment, namely the ratio between the numbers of positive and negative tweets \cite{Nguyen12}, the proportion of neutral and total tweets,  the ratio between the numbers of non-neutral and total posts \cite{Zhang09}, the ratio between the number of positive and negative discussions and lastly the ratio between the numbers of neutral and non neutral messages. 
+ Despite having identified a significant correlation for contextually sensitive Tweets our analysis in Section \ref{conversation} concluded that unrelated topics mostly drive the attention volatility. Public mood states or sentiment might hence be a more valuable indicator. This intuition is supported by \cite{nofsinger05} namely that emotions and mood do not uncommonly drive financial decisions. For the purpose of this analysis, we consider different ratios of sentiment. The ratio between the numbers of positive and negative Tweets \cite{Nguyen12}, the proportion of neutral and total Tweets,  the ratio between the numbers of non-neutral and total posts \cite{Zhang09}, the ratio between the number of positive and negative discussions and lastly the ratio between the numbers of neutral and non-neutral messages. 
 
-Table \ref{tab:socio_feat} conculdes our input model. We measure the sentiment for both twitter buzz and contextually sensitive tweets. The result is an input model with 51 features. 
+Table \ref{tab:socio_feat} concludes our input model. We measure the sentiment for both Twitter buzz and contextually sensitive Tweets. The result is an input model with 51 features. 
  
 
 \begin{table}[H]
@@ -1109,19 +1147,19 @@ Table \ref{tab:socio_feat} conculdes our input model. We measure the sentiment f
 Attention & AC\# & \#Commodity   \\
 \hline
 Context & CP\# & \#Price f. Commodity   \\
-		& CS\# & \#Supply f. Commodity  \\
-		&CP\# & \#Poverty f. Commodity   \\
-		&CN\# &\#Need f. Commodity  \\
+        & CS\# & \#Supply f. Commodity  \\
+        &CP\# & \#Poverty f. Commodity   \\
+        &CN\# &\#Need f. Commodity  \\
 
 
 
   \hline
-   Sentiment Ratio & SR\#& \#positive : \#negative tweets  \\
-      			    & SR\# & \#positive : \#(positive + negative) tweets   \\
- 			    & SR\#  & \#negative: \#(positive + negative) tweets  \\
-			   &SR\#   & \#neutral : \#(positive + negative) tweets  \\
-			    &SR\#  & \#(positive+negative) : \#all tweets   \\			     
-			    &SR\#  & \#neutral : \#all tweets \\
+   Sentiment Ratio & SR\#& \#positive : \#negative Tweets  \\
+                      & SR\# & \#positive : \#(positive + negative) Tweets   \\
+                 & SR\#  & \#negative: \#(positive + negative) Tweets  \\
+               &SR\#   & \#neutral : \#(positive + negative) Tweets  \\
+                &SR\#  & \#(positive+negative) : \#all Tweets   \\                 
+                &SR\#  & \#neutral : \#all Tweets \\
                           
 
    
@@ -1133,9 +1171,13 @@ Context & CP\# & \#Price f. Commodity   \\
 \end{table}
 
 
-\subsection{Bolstering the Social Media Features}
 
-In chapter \ref{dataprocessing} we motivated the use of a smoothing function in order to aid our goal of predicting a trend. This kind of preprocessing becomes especially important for social media data as it's characterised by an extreme day to day volatility as illustrated in Figure \ref{fig:inc_dist} . We experimented with three different smoothing techniques 1.) the weekly moving average , 2.) the monthly moving average and 3.) the Hodrick-Prescott decomposition which we previously used to smothen our price data. The effect of the smoothing functions is displayed in Figure \ref{fig:s_effect}. Where the moving average seems to have a delayed approximation of the true trend  Hodrick-Prescott decomposition shows a much exacter approximation of the underlying motion. We compared the different smoothing techniques by measuring the correlation increase of the respective smoothing functions in Table \ref{tab:smoothing_corr}. Hodrick-Prescott decomposition significantly improved the correlation between the commodity price and the sentiment features and was able to increase the correlation more then the moving average approach. 
+
+
+\subsection{Strengthening Social Media Features\\}
+
+\hfill
+In Chapter \ref{dataprocessing} we motivated the use of a smoothing function to aid our goal of predicting a trend. This kind of preprocessing becomes especially important for social media data as it is characterised by an extreme day to day volatility as illustrated in Figure \ref{fig:inc_dist}. We experimented with three different smoothing techniques 1.) the weekly moving average, 2.) the monthly moving average and 3.) the Hodrick-Prescott decomposition which we previously used to smoothen our price data. The effect of the smoothing functions is displayed in Figure \ref{fig:s_effect}. Where the moving average seems to have, a delayed approximation of the true trend Hodrick-Prescott decomposition shows an exacter approximation of the underlying motion. We compared the different smoothing techniques by measuring the correlation increase of the respective smoothing functions in Table \ref{tab:smoothing_corr}. Hodrick-Prescott decomposition improved the correlation between the commodity price and the sentiment features and was able to increase the correlation more than the moving average approaches. 
 
 
 
@@ -1167,7 +1209,7 @@ In chapter \ref{dataprocessing} we motivated the use of a smoothing function in 
 \begin{table}[h]   
 \centering
  \begin{tabular}{  c  | c  | c | c }
-			
+            
     \textbf{Smoothing}  & \textbf{S1 Product} & \textbf{S2 Subcategory} &\textbf{S5 Poverty} \\
   \hline 
   &&& \\
@@ -1195,15 +1237,15 @@ In chapter \ref{dataprocessing} we motivated the use of a smoothing function in 
 \end{table}
 
 
-We further investigated to what extend twitter lags as an indicator. If a casual relationship exists, how fast do prices react to twitter conversations? Graphically this corresponds to shifting the sentiment ratio to the left. For each social media feature (51) we measured the correlation between 1 day and 3 days lag similar to \cite{Si_exploitingtopic}. We choose a window of three days because typical non of the attention spikes showed to last longer then 3 days (Section 3.4).  The experiment was performed on all three commodities. Incase of a disagreement we solved  the tie through a majority voting. A 
- lag of 3 days clearly favoured the correlation with 44 out of 51 (0.86 \%) features and a 1 day lag for 7 out of 51 (14 \%) features. 
+We further investigated to what extent Twitter lags as an indicator. If a casual relationship exists, how fast do prices react to Twitter conversations? Graphically this corresponds to shifting the sentiment ratio to the left. For each social media feature (51) we measured the correlation between one day and three days lag similar to \cite{Si_exploitingtopic}. We choose a window of three days because  none of the attention spikes showed to last longer than three days (Section 4.4).  The experiment was performed on all three commodities. In case of a disagreement, we solved the tie through a majority voting. A 
+ lag of three days clearly favoured the correlation with 44 out of 51 (0.86 \%) features and a one day lag for 7 out of 51 (14 \%) features. 
 
 
 \subsection{Feature Selection}
 
-For the purpose of this analysis we repeat the exercise performed in \ref{featSel_bench}. Again we try to find features that generalise well among different commodities and horizons. Unlike the price data the social media features seem to be more specific to a given task and commodity. For the top 16 features we only found 3 features that were present for all commodities and all horizons. Among the three were \textbf{1.)} the attention count of the selected products that showed a high correlation in our analysis (AC50), \textbf{2.)} the first sentiment ratio of poverty (SR32) and \textbf{3.)} the first sentiment of the subcategory (SR15). Other features that generalised well for all prediction tasks of a given commodity were 1.) the second sentiment of the subcategory (SR16), 2.) the 2nd sentiment of poverty (SR33), the fourth sentiment of poverty (SR35), the first sentiment of price (SR38), the second sentiment of supply (SR45), the sixth sentiment of supply(SR49) and lastly the attention count of another selected product that scored well in our correlation analysis (AC51). The top features for each given commodity are illustrate in Table \ref{tab:feat_mod2}.
+For the purpose of this analysis, we repeat the exercise performed in \ref{featSel_bench}. Again we try to find features that generalise well among different commodities and horizons. Unlike the price data, the social media features seem to be more specific to a given task and commodity. For the top 16 features, we only found three features that were present in all commodities and all horizons. Among the three were \textbf{1.)} the attention count of the selected products that showed a high correlation in our analysis (AC50), \textbf{2.)} the first sentiment ratio of poverty (SR32) and \textbf{3.)} the first sentiment of the subcategory (SR15). Other features that generalised well for all prediction tasks of a given commodity were 1.) the second sentiment of the subcategory (SR16), 2.) the 2nd sentiment of poverty (SR33), the fourth sentiment of poverty (SR35), the first sentiment of price (SR38), the second sentiment of supply (SR45), the sixth sentiment of supply(SR49) and lastly the attention count of another selected product that scored well in our correlation analysis (AC51). The top features for each given commodity are illustrate in Table \ref{tab:feat_mod2}.
 
-Sentiment ratios are clearly the favoured features where only the highly selected volume counts seem to have a considerable effect. The sentiment of our contextually sensitive tweets appear to be a strong indicator of the price variance, especially the sentiment for poverty which was captured in the form of three different ratios. In \ref{an_result} we showed the peaks had the highest relevance for  discussion centered around poverty. Admittedly, it's not a decisive indicator for the quality of the feature, however it might explain why poverty features rank so highly. Similarly the three food security indicators, that have been selected by Relieff all showed a degree of relevance in our analysis. Needs had no relevance and hence it doesn't come as a surprise that it was not selected as a potential feature. It appears that Relieff successfully removes redundant features. We would for example expect needs and poverty to be similar likewise supply and price. Non of them overlap in the ratios used. Lastly, the sentiment ratios 1 and 2 seem to be more indicative then others. They only include information about the ratio of positive tweets [why is that the case????]
+Sentiment ratios are clearly the favoured features where only the highly selected volume counts seem to have a considerable effect. The sentiment of our contextually sensitive Tweets appears to be a strong indicator of the price variance, especially the sentiment for poverty that we capture in the form of three different ratios. In \ref{an_result} we showed the peaks had the highest relevance for the discussions centred around poverty. Admittedly, it is not a decisive indicator of the quality of the feature. However, it might explain why poverty features rank so highly. Similarly the three food security indicators, which have been selected by Relief all showed a degree of relevance in our analysis. Needs had no relevance and hence it does not come as a surprise that it was not selected as a potential feature. It appears that Relief successfully removes redundant features. We would, for example, expect needs and poverty to be similar likewise supply and price. None of them overlaps in the ratios used. Lastly, the sentiment ratios 1 and 2 seem to be more indicative than others. 
 
 
 \begin{table}[H]
@@ -1227,14 +1269,15 @@ Sentiment ratios are clearly the favoured features where only the highly selecte
 
 
 \subsection{Results}
+\label{result_m2}
 
-Unlike our benchmark paradigm the social media model did not exhibit an increasing error rate with increasing horizon. We hence focused our attention on analysing day to day predictions. From Figure \ref{fig:comp_exp} it is apparent that our bolstering attempts have clearly improved the prediction accuracy across all commodites. However there is a clear difference in the quality of the predictions between the three commodities. For wheat we were able to follow the real price line, not so for milk. Why does the prediction model favour the commodity wheat? Our first attempt was to investigate the linear relationship between the features and the price. The correlation analysis favoured the commodity milk however the difference is negligible. Our 2nd intuition was to check whether the training data generalises well for the entire data set. We observed that the training and test dataset exhibit different behaviours. I.e. we found that certain features showed a negative correlation in the train set, however a positive relationship in the train set. We experimented with various sizes of train sets however non of them notably improved the prediction results. Lastly, we were motivated to examine the content of the tweets. The set of wheat tweets might be more relevant to our given topic then the set of milk tweets. For the purpose of this analysis we computed the top 50 keywords, excluding stop words,  of the tweets containing at least one term of the subcategory wheat or milk. We did this analysis for the conversations centred around price, supply and poverty as the features crafted from these topic constitute the majority in our model. Notably, across all conversation topics, the discussions centred around wheat showed a higher relevance (i.e. the number of keywords retrieved  deemed relevant was higher). For milk the the most frequent keywords were ice, butter,  milk, cream, chocolate and peanut. At a first glance butter and cream seem relevant. The bigrams showed that ice and cream are related (ice cream) as well as peanut and butter (peanut butter). Both bigrams are considered noise as they only have a very distant relationship with milk. On the other hand for wheat the most common terms retrieved were beer, gluten, bread, pasta, wheat, barley and noodles.  Those terms are clearly highly relevant to the subcategory wheat. On the basis of these finding we conclude that the list of keywords we used retained a high number of tweets that were not relevant enough. To circumvent this problem, techniques such as IDF should be explored 
-
-
-
+Unlike our benchmark paradigm, the social media model did not exhibit an increasing error rate with increasing horizon. We hence focused our attention on analysing day to day predictions. From Figure \ref{fig:social_results} it is apparent that our strengthening attempts have improved the prediction accuracy across all commodities. However, there is a clear difference in the quality of the predictions between the three commodities. For wheat, we were able to follow the real price line, not so for milk. Why does the prediction model favour the commodity wheat? Our first attempt was to investigate the linear relationship between the features and the price. The correlation analysis favoured the commodity milk however the difference is negligible. Our 2nd intuition was to check whether the training data generalises well for the entire data set. We observed that the training and test dataset exhibited different behaviours. More specifically we found that certain features showed a negative correlation in the train set, however, a positive relationship in the test set. We experimented with various sizes of train sets but none of them notably improved the prediction results. Lastly, we were motivated to examine the content of the Tweets. The set of wheat Tweets might be more relevant to our given topic then the set of milk Tweets. For the purpose of this analysis, we computed the top 50 keywords, excluding stop words, of the Tweets containing at least one term of the subcategory wheat or milk. We did this analysis for the conversations centred around price, supply and poverty as the features crafted from these topics constitute the majority in our model. Notably, across all conversation topics, the discussions centred around wheat showed a higher relevance (i.e. the number of keywords retrieved  deemed relevant was higher). For milk the most frequent keywords were ice, butter,  milk, cream, chocolate and peanut. At a first glance, butter and cream seem relevant. The bigrams showed that ice and cream are related (ice cream) as well as peanut and butter (peanut butter). Both bigrams are considered noise as they only have a very distant relationship with milk. On the other hand for wheat, the most common terms retrieved were beer, gluten, bread, pasta, wheat, barley and noodles.  Those terms are clearly highly relevant to the subcategory wheat. On the basis of these finding, we conclude that the list of keywords we used retained a high number of Tweets that were not relevant enough. 
 
 
-\begin{figure}
+
+
+
+\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/exp2/wheat/pred_1}
@@ -1257,7 +1300,10 @@ Unlike our benchmark paradigm the social media model did not exhibit an increasi
                 \caption{1 Day Horizon Beef  - RMSE 0.2383 }
                 \label{fig:tiger}
         \end{subfigure}%
-      	 \hfill
+        \end{figure}
+        
+        \begin{figure}[H]
+        \centering
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/exp2/milk/pred_1}
                 \caption{1 Day Horizon Milk- RMSE 0.3782}
@@ -1270,18 +1316,18 @@ Unlike our benchmark paradigm the social media model did not exhibit an increasi
         \end{subfigure}%
     
     
-        \caption{Social Media Prediction}\label{fig:comp_exp}
+        \caption{Social Media Prediction}\label{fig:social_results}
 \end{figure}
 
 
 
 
-\subsection{Combined Model}
+\section{Combined Model}
 
 
 \subsection{Feature Selection}
 
-Combining the price and social media features we want to investigate if Relieff proposes as similar set as for the separate models or if the combined model favours a different group of input variables. Only a few features generalised well over all commodities which is why we focus our search of finding input variables that are specific to beef, milk and wheat but generalise well over different prediction models. As in our price model, days in the intermediate past were proposed for all three commodities. The ratio varies very strongly between the commodities. Beef favours price variables where milk and wheat have a majority of social media features. We observe an interesting trend, namely that all commodities favour supply and needs feature over price and poverty which is very different to the pure social media model. We assume that the price data made the conversations about price more obsolete. To conclude the proposed features are the fourth and the fifth sentiment ratio of the product (SR11, SR12), the fourth, fifth, sixth sentiment ratio of needs (SR29, SR30, SR31), the third sentiment ratio of poverty (SR34), the first, third sentiment ratio of price (SR38, SR40) and lastly the second, third sentiment ratio of supply (SR45, SR46). The price features are all days of the last week i.e. (D24, D25, D26, D27, D28, D29, D30) and the moving average of the past week (W1). 
+Combining the price and social media features we want to investigate if Relief proposes as similar set as for the separate models or if the combined model favours a different group of input variables. Only a few features generalised well over all commodities which is why we focus our search for finding input variables that are specific to beef, milk and wheat but generalise well over different prediction models. As in our price model, days in the intermediate past were proposed for all three commodities. The ratio varies strongly among the commodities. Beef favours price variables where milk and wheat have a majority of social media features. We observe an interesting trend, namely that all commodities favour supply and needs feature over price and poverty which is very different to the pure social media model. We assume that the price data made the conversations about price more obsolete. To conclude the proposed features are the fourth and the fifth sentiment ratio of the product (SR11, SR12), the fourth, fifth, sixth sentiment ratio of needs (SR29, SR30, SR31), the third sentiment ratio of poverty (SR34), the first, third sentiment ratio of price (SR38, SR40) and lastly the second, third sentiment ratio of supply (SR45, SR46). The price features are all days of the last week i.e. (D24, D25, D26, D27, D28, D29, D30) and the moving average of the past week (W1). 
 
 
 
@@ -1304,46 +1350,12 @@ $wheat$ & D30 & D29 & SR22 & SR29 & SR30 & SR31 & SR15 & SR16 & SR33 & SR14 \\
 
 
 
-
-\subsection{Results}
-
-
-% Combined Model 
-
-\begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_4}
-                \caption{4 Day Horizon Wheat - RMSE 0.0084}
-                \label{fig:gull}
-        \end{subfigure}%
-           \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_7}
-                \caption{7 Day Horizon Wheat - RMSE 0.0281}
-                \label{fig:gull}
-        \end{subfigure}%
-              \hfill    
-        \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_14}
-                \caption{14 Day Horizon Wheat - RMSE 0.0557  }
-                \label{fig:tiger}
-        \end{subfigure}%
-              \begin{subfigure}[b]{0.5\textwidth}
-                \includegraphics[width=\textwidth]{img/model/wheat/model3_3/pred_21}
-                \caption{21 Day Horizon Wheat  - RMSE 0.0673 }
-                \label{fig:tiger}
-        \end{subfigure}%
-        \caption{Social Media Prediction}\label{fig:comp_exp}
-\end{figure}
-
-
-
 \subsection{Performance Comparison}
 
 
-As our mixture model exhibits similar behaviours to the price model we show the exact predictions for each commodity in the Appendix \ref{}. Instead we focus our attention on the performance evaluation of the three different models (e.g. price, social and mixture model) wen. Figure \ref{fig:final_res} summarises our results and compares the three models. For all commodities the social media model performs rather baldy. We can hence conclude that a model soly based on social media feature will yield no accurate predictions.  From the wheat forcasts we can see that both the mixture and price model have comparable results. Across all horizons we recorded an average error of 0.0669 for the price model and an average error of 0.07315808 for the mixture model. It seems like the price models favours the intermediate future where as the mixture model allows for more accurate predictions in the far foresight. To test this hypothesis we extended the analysis to $y_{t+50}$, however rejected it as we could not record any clear performance improvements compared to the price model.  
+As our mixture model exhibits similar behaviours to the price model, we show the exact predictions for each commodity in the Appendix \ref{ts_model}. Instead we focus our attention on the performance comparison of the three different models (e.g. price, social and mixture model). Figure \ref{fig:final_res} summarises our results and compares the three models. For all commodities, the social media model performs rather badly. We can hence conclude that a model solely based on social media feature will yield no accurate predictions.  From the wheat forecasts we can see that both the mixture and price model have comparable results. Across all horizons, we recorded an average error of 0.0669 for the price model and an average error of 0.07315808 for the mixture model. It seems like the price models favour the intermediate future whereas the mixture model allows for more accurate predictions in the far foresight. To test this hypothesis we extended the analysis to $y_{t+50}$, however, rejected it as we could not record any clear performance improvements compared to the price model.  
 
-Similar patterns apply to the commodity beef. Since beef exhibits a strong and long lasting trend the prediction accuracy is very high for both models and a difference is hardly observable. At the end of the prediction horizon the mixture model performs slightly better. Indeed for the price model we observe an average error of 0.02816 where as for the mixture model an error of 0.02814. For the commodity milk the price predictions are clearly more accurate then the ones of the mixture model. This can be attributed to the social media's high-level of noise and a lack of focus that we observed for the commodity milk.  
+Similar patterns apply to the commodity beef. Since beef exhibits a strong and long lasting trend, the prediction accuracy is high for both models and a difference is hardly observable. At the end of the prediction horizon, the mixture model performs slightly better. For the price model, we observe an average error of 0.02816 whereas for the mixture model an error of 0.02814. For the commodity milk, the price predictions are clearly more accurate than the ones of the mixture model. This is attributed to the social media's high-level of noise and a lack of focus that we observed for the commodity milk.  
 
 
 
@@ -1363,8 +1375,6 @@ Similar patterns apply to the commodity beef. Since beef exhibits a strong and l
                 \caption{7 Day Horizon Milk - RMSE 0.031539}
                 \label{fig:gull}
         \end{subfigure}%
-    
-    
               \hfill    
         \begin{subfigure}[b]{0.5\textwidth}
                 \includegraphics[width=\textwidth]{img/model/results/result_milk}
@@ -1375,7 +1385,7 @@ Similar patterns apply to the commodity beef. Since beef exhibits a strong and l
         \caption{Social Media Prediction}\label{fig:final_res}
 \end{figure}
 
-
+\begin{comment}
 
 \subsection{Curse of of Dimensionality}
 
@@ -1413,10 +1423,27 @@ dynamics be correlated with stock market activity?,? in Proceedings of the ninet
 
 $http://www.cemla.org/red/papers2002/RED_VII_CANADA-Lalonde-Zhu-Demers.pdf$ This reference showd prediction for commodities in rang of 0.06 and 0.08 for 4 days. we are within acceptable range. 
 
-
+\end{comment}
 
 \chapter{Conclusion}
 \label{6}
+
+
+
+Food security has been shown to be a critical problem. A growing population and climate warming are making this a real threat not just for developing countries but developed countries alike. Although the topic receives a lot of attention from researchers, our observations have shown that monitoring attempts are mostly restricted to household surveys that fail to provide real-time information. Opinions, fears and expectations are increasingly represented in Social Media making it a valuable source of information for stronger policies that are inherently more evidence-based and provide accountability.
+
+In this dissertation, we provide a semantic analysis of words indicative of food security. By extensively evaluating a word semantic analyser HAL we identified that a large window size of 10  and a small to middle sized corpus yielded the highest precision. The sparsity of certain commodities motivated us to structure our lexicon hierarchically. By considering categories (e.g. cereals), subcategories (e.g. wheat) and products (e.g. bread) we improved the recall by 110 \%. 
+
+In our correlation analysis we show that on an aggregated level (e.g. meat)  no real correlation exists however on a finer granularity (e.g. Sirloin steak) certain products exhibit a strong linear relationship of up to 0.7369 with the international Food price index.  Or investigations of Twitter discussions showed that up to 13 \% of the attention spikes can be attributed to food security objectives. The most discussed topic that we considered relevant to food security are concerns regarding the safety of food supply (e.g. mad cow disease). 
+
+In our time series analysis, we construct an Adaptive neuro fuzzy inference system to forecast a commodity price at some point in the future. Our results showed that the degree of attention and Twitter sentiment only explain a certain amount of the price variance. The success of a prediction is highly dependent on the quality of the keywords used to retrieve the Tweets. In other words, irreverent Tweets can render predictions useless making it  sensitive towards noise. On the other hand mixture models prove to be more reliable (e.g. historical price data and social media features) allowing us to accurately predict a trend four weeks into the future with a RMSE as low as 0.0683 on normalised price data.
+
+\section{Future Work }
+
+Our approach suffers from a bias towards English-speaking countries and countries that are highly developed. We would like to include different languages such as Spanish or Bahasa (Indonesia) as in \cite{ungp2013} to capture a more diverse set of nations. Particularly Indonesia would provide and interesting case as it is the third most active country on Twitter and food security issues are extremely prevalent with close to 20 million Indonesians being malnourished \footnote{http://www.insideindonesia.org/food-security-in-indonesia-2}. Language barriers would make it hard to select appropriate Tweets and further challenges are expected with gaining access to historical Twitter data. This extended analysis would shed some light on the different topics discussed between developed and developing countries and furthermore show if such Tweets are more indicative toward the global Food price index. 
+
+In Section \ref{result_m2} we identified that our Twitter data suffers from a lot of noise. Improvements could be achieved by using meta-data such as the number of followers to identify influential users or the field $statuses \underline{} count$ to identify potential spammers \cite{mowbray10}. Further improvements are expected by training a classifier as in \cite{AbbarMW14}. This would involve an additional crowd task to distinguish relevant Tweets from Tweets that are off topic. 
+
 
 
 

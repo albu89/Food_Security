@@ -3,32 +3,33 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces HAL Evaluation for Price and Supply\relax }}{8}{figure.caption.5}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces HAL Evaluation for Poverty and Needs\relax }}{9}{figure.caption.6}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces HAL Evaluation for Poverty and Needs\relax }}{8}{figure.caption.6}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Food Lexicon - Hierarchy\relax }}{10}{figure.caption.7}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{18}{figure.caption.10}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{18}{figure.caption.11}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Heatplot Meat: Volume of Tweets per Keyword and per Category\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Heatplot Cereals: Volume of Tweets per Keyword and per Category\relax }}{20}{figure.caption.13}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Topic Distribution - Food Security\relax }}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Annotation Distribution - Relevant to Food Security\relax }}{26}{figure.caption.16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Heatplot Meat: Volume of Tweets per Keyword and per Category\relax }}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Heatplot Cereals: Volume of Tweets per Keyword and per Category\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Topic Distribution - Food Security\relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Annotation Distribution - Relevant to Food Security\relax }}{24}{figure.caption.16}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Fuzzy Variables and Fuzzy Sets - A Colour Object Example\relax }}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Adaptive Neuro Fuzzy Inference System \relax }}{30}{figure.caption.18}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{31}{figure.caption.19}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Prediction Accuracy - Benchmark \relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Benchmark Prediction Wheat\relax }}{37}{figure.caption.23}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Benchmark Prediction Beef\relax }}{38}{figure.caption.24}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Benchmark Prediction Milk\relax }}{39}{figure.caption.25}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{42}{figure.caption.27}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Social Media Prediction\relax }}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Social Media Prediction\relax }}{46}{figure.caption.32}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Social Media Prediction\relax }}{47}{figure.caption.33}
-\addvspace {10pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Fuzzy Variables and Fuzzy Sets - A Colour Object Example\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Caption for LOF}}{28}{figure.caption.18}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{29}{figure.caption.19}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Prediction Accuracy - Benchmark \relax }}{34}{figure.caption.23}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Benchmark Prediction Wheat\relax }}{35}{figure.caption.24}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Benchmark Prediction Beef\relax }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Benchmark Prediction Milk\relax }}{37}{figure.caption.26}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Volume of Tweets per Keyword and per Category\relax }}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Social Media Prediction\relax }}{42}{figure.caption.32}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Social Media Prediction\relax }}{43}{figure.caption.34}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Heatplot Dairy: Volume of Tweets per Keyword and per Category\relax }}{54}{figure.caption.34}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Heatplot Sugar: Volume of Tweets per Keyword and per Category\relax }}{54}{figure.caption.35}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Social Media Prediction\relax }}{55}{figure.caption.37}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Heatplot Oil: Volume of Tweets per Keyword and per Category\relax }}{55}{figure.caption.36}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Social Media Prediction\relax }}{56}{figure.caption.38}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Heatplot Dairy: Volume of Tweets per Keyword and per Category\relax }}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Heatplot Sugar: Volume of Tweets per Keyword and per Category\relax }}{50}{figure.caption.36}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Heatplot Oil: Volume of Tweets per Keyword and per Category\relax }}{51}{figure.caption.37}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Social Media Prediction\relax }}{52}{figure.caption.39}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Social Media Prediction\relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Social Media Prediction\relax }}{54}{figure.caption.40}

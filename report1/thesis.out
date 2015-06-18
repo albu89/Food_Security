@@ -16,8 +16,8 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Annotation and False Positive Removal of HAL Results}{section.3.3}% 16
 \BOOKMARK [2][-]{subsection.3.3.3}{Annotation Results}{section.3.3}% 17
 \BOOKMARK [1][-]{section.3.4}{Filtering}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.4.1}{Food related Tweets}{section.3.4}% 19
-\BOOKMARK [2][-]{subsection.3.4.2}{Predictor related Tweets}{section.3.4}% 20
+\BOOKMARK [2][-]{subsection.3.4.1}{Food Related Tweets}{section.3.4}% 19
+\BOOKMARK [2][-]{subsection.3.4.2}{Predictor Related Tweets}{section.3.4}% 20
 \BOOKMARK [2][-]{subsection.3.4.3}{Sentiment Extraction}{section.3.4}% 21
 \BOOKMARK [0][-]{chapter.4}{Analysis}{}% 22
 \BOOKMARK [1][-]{section.4.1}{User Distribution}{chapter.4}% 23
@@ -32,35 +32,35 @@
 \BOOKMARK [2][-]{subsection.4.4.4}{Results}{section.4.4}% 32
 \BOOKMARK [2][-]{subsection.4.4.5}{Discussion}{section.4.4}% 33
 \BOOKMARK [0][-]{chapter.5}{Model Building}{}% 34
-\BOOKMARK [1][-]{section.5.1}{A fuzzy approach for Time Series Modelling}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.1}{A Fuzzy Approach for Time Series Modelling}{chapter.5}% 35
 \BOOKMARK [1][-]{section.5.2}{Fuzzy Logic}{chapter.5}% 36
 \BOOKMARK [2][-]{subsection.5.2.1}{Fuzzy Variables and Fuzzy Sets }{section.5.2}% 37
 \BOOKMARK [2][-]{subsection.5.2.2}{Fuzzy Interference System}{section.5.2}% 38
 \BOOKMARK [2][-]{subsection.5.2.3}{Adaptive Neuro Fuzzy Inference System }{section.5.2}% 39
 \BOOKMARK [1][-]{section.5.3}{Data Preprocessing}{chapter.5}% 40
 \BOOKMARK [1][-]{section.5.4}{Training the Model}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.5}{Methodology for Forcasting with Fuzzy Logic}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.6}{Parameters}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.5}{Methodology for Forecasting with Fuzzy Logic}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.6}{Adapting to High Dimensional Data}{chapter.5}% 43
 \BOOKMARK [1][-]{section.5.7}{Benchmark Model}{chapter.5}% 44
 \BOOKMARK [2][-]{subsection.5.7.1}{Input Model}{section.5.7}% 45
 \BOOKMARK [2][-]{subsection.5.7.2}{Feature Selection}{section.5.7}% 46
 \BOOKMARK [2][-]{subsection.5.7.3}{Results}{section.5.7}% 47
 \BOOKMARK [1][-]{section.5.8}{Social Media Model}{chapter.5}% 48
 \BOOKMARK [2][-]{subsection.5.8.1}{Input Model }{section.5.8}% 49
-\BOOKMARK [2][-]{subsection.5.8.2}{Bolstering the Social Media Features}{section.5.8}% 50
+\BOOKMARK [2][-]{subsection.5.8.2}{Strengthening Social Media Features}{section.5.8}% 50
 \BOOKMARK [2][-]{subsection.5.8.3}{Feature Selection}{section.5.8}% 51
 \BOOKMARK [2][-]{subsection.5.8.4}{Results}{section.5.8}% 52
-\BOOKMARK [2][-]{subsection.5.8.5}{Combined Model}{section.5.8}% 53
-\BOOKMARK [2][-]{subsection.5.8.6}{Feature Selection}{section.5.8}% 54
-\BOOKMARK [2][-]{subsection.5.8.7}{Results}{section.5.8}% 55
-\BOOKMARK [2][-]{subsection.5.8.8}{Performance Comparison}{section.5.8}% 56
-\BOOKMARK [2][-]{subsection.5.8.9}{Curse of of Dimensionality}{section.5.8}% 57
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 58
-\BOOKMARK [0][-]{appendix.A}{Data}{}% 59
-\BOOKMARK [1][-]{section.A.1}{Crowd Flower}{appendix.A}% 60
-\BOOKMARK [2][-]{subsection.A.1.1}{Categorise: Food Price}{section.A.1}% 61
-\BOOKMARK [2][-]{subsection.A.1.2}{Categorise: Food Supply}{section.A.1}% 62
-\BOOKMARK [2][-]{subsection.A.1.3}{Categorise: Food Poverty}{section.A.1}% 63
-\BOOKMARK [2][-]{subsection.A.1.4}{Categorise: Food Needs}{section.A.1}% 64
-\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 65
-\BOOKMARK [0][-]{section*.40}{Bibliography}{}% 66
+\BOOKMARK [1][-]{section.5.9}{Combined Model}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.9.1}{Feature Selection}{section.5.9}% 54
+\BOOKMARK [2][-]{subsection.5.9.2}{Performance Comparison}{section.5.9}% 55
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 56
+\BOOKMARK [1][-]{section.6.1}{Future Work }{chapter.6}% 57
+\BOOKMARK [0][-]{appendix.A}{Data}{}% 58
+\BOOKMARK [1][-]{section.A.1}{Crowd Flower}{appendix.A}% 59
+\BOOKMARK [2][-]{subsection.A.1.1}{Categorise: Food Price}{section.A.1}% 60
+\BOOKMARK [2][-]{subsection.A.1.2}{Categorise: Food Supply}{section.A.1}% 61
+\BOOKMARK [2][-]{subsection.A.1.3}{Categorise: Food Poverty}{section.A.1}% 62
+\BOOKMARK [2][-]{subsection.A.1.4}{Categorise: Food Needs}{section.A.1}% 63
+\BOOKMARK [0][-]{appendix.B}{Price Correlation}{}% 64
+\BOOKMARK [0][-]{appendix.C}{Time Series Modeling}{}% 65
+\BOOKMARK [0][-]{section*.42}{Bibliography}{}% 66
