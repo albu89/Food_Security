@@ -23,11 +23,36 @@ Gabriel Grill Joseph Boyd Stefan~Mihaila Alexander Buesser Anton Ovchinnikov
 \newblock A monitoring and prediction toolset for volatile commodity prices in
   developing countries, 2014.
 
+\bibitem{armstrong01}
+Jon~Scott Armstrong.
+\newblock {\em Principles of forecasting: a handbook for researchers and
+  practitioners}, volume~30.
+\newblock Springer Science \& Business Media, 2001.
+
+\bibitem{Asur10}
+Sitaram Asur and Bernardo~A. Huberman.
+\newblock Predicting the future with social media.
+\newblock In {\em Proceedings of the 2010 IEEE/WIC/ACM International Conference
+  on Web Intelligence and Intelligent Agent Technology - Volume 01}, WI-IAT
+  '10, pages 492--499, Washington, DC, USA, 2010. IEEE Computer Society.
+
+\bibitem{benson2013language}
+C.~Benson and K.~Kosonen.
+\newblock {\em Language Issues in Comparative Education: Inclusive Teaching and
+  Learning in Non-Dominant Languages and Cultures}.
+\newblock Comparative and International Education: A Diversity of Voices.
+  SensePublishers, 2013.
+
 \bibitem{bild15}
 David~R. Bild, Yue Liu, Robert~P. Dick, Z.~Morley Mao, and Dan~S. Wallach.
 \newblock Aggregate characterization of user behavior in twitter and analysis
   of the retweet graph.
 \newblock {\em ACM Trans. Internet Technol.}, 15(1):4:1--4:24, March 2015.
+
+\bibitem{john11}
+Johan Bollen, Huina Mao, and Xiao{-}Jun Zeng.
+\newblock Twitter mood predicts the stock market.
+\newblock {\em J. Comput. Science}, 2(1):1--8, 2011.
 
 \bibitem{box90}
 George Edward~Pelham Box and Gwilym Jenkins.
@@ -44,12 +69,29 @@ Christopher Chatfield.
 \newblock Texts in statistical science. Chapman \& Hall/CRC, Boca Raton (Fl.),
   2004.
 
+\bibitem{deCastro91}
+John~M. de~Castro.
+\newblock Seasonal rhythms of human nutrient intake and meal pattern, 1991.
+
 \bibitem{de08}
 Munmun De~Choudhury, Hari Sundaram, Ajita John, and Dor{\'e}e~Duncan Seligmann.
 \newblock Can blog communication dynamics be correlated with stock market
   activity?
 \newblock In {\em Proceedings of the Nineteenth ACM Conference on Hypertext and
   Hypermedia}, HT '08, pages 55--60, New York, NY, USA, 2008. ACM.
+
+\bibitem{adeline14}
+Adeline Decuyper, Alex Rutherford, Amit Wadhwa, Jean{-}Martin Bauer, Gautier
+  Krings, Thoralf Gutierrez, Vincent~D. Blondel, and Miguel~A. Luengo{-}Oroz.
+\newblock Estimating food consumption and poverty indices with mobile phone
+  data.
+\newblock {\em CoRR}, abs/1412.2595, 2014.
+
+\bibitem{dixon}
+Natalie Dixon, Ekaterina Yudin, Bruno Jakic, and Mark Mooij.
+\newblock {Food Mood: Measuring Global Food Sentiment One Tweet at a Time}.
+\newblock In {\em Proceedings of the Designing Interactive Systems Conference},
+  DIS '12, pages 793--794, New York, NY, USA, 2012. ACM.
 
 \bibitem{john2012}
 John D’Errico.
@@ -58,6 +100,13 @@ John D’Errico.
 \bibitem{foodwatch}
 Food and Water watch.
 \newblock Casino of hunger, 2009.
+
+\bibitem{Gaspar14}
+Rui Gaspar, Sara Gorj\~{a}o, Beate Seibt, Luisa Lima, Julie Barnett, Adrian
+  Moss, and Josephine Wills.
+\newblock Tweeting during food crises: A psychosocial analysis of threat coping
+  expressions in spain, during the 2011 european ehec outbreak.
+\newblock {\em Int. J. Hum.-Comput. Stud.}, 72(2):239--254, February 2014.
 
 \bibitem{iuj11}
 Qiang Gong, Ming Liu, and Qianqiu Liu.
@@ -74,6 +123,13 @@ C.~J. Hutto and Eric Gilbert.
 \newblock {VADER:} {A} parsimonious rule-based model for sentiment analysis of
   social media text.
 \newblock 2014.
+
+\bibitem{irwin}
+Scott~H. Irwin, Dwight~R. Sanders, and Robert~P. Merrin.
+\newblock {Devil or Angel? The Role of Speculation in the Recent Commodity
+  Price Boom (and Bust)}.
+\newblock {\em Journal of Agricultural and Applied Economics}, 41(02), August
+  2009.
 
 \bibitem{ungp2013}
 Pulse~Lab Jakarta.
@@ -109,19 +165,25 @@ Igor Kononenko.
 \newblock Estimating attributes: Analysis and extensions of relief.
 \newblock pages 171--182. Springer Verlag, 1994.
 
+\bibitem{Kwak10}
+Haewoon Kwak, Changhyun Lee, Hosung Park, and Sue Moon.
+\newblock What is twitter, a social network or a news media?
+\newblock In {\em Proceedings of the 19th International Conference on World
+  Wide Web}, WWW '10, pages 591--600, New York, NY, USA, 2010. ACM.
+
 \bibitem{Lehmann2012}
 Janette Lehmann, Bruno Gon\c{c}alves, Jos{\'e}~J. Ramasco, and Ciro Cattuto.
 \newblock Dynamical classes of collective attention in twitter.
 \newblock In {\em Proceedings of the 21st International Conference on World
   Wide Web}, WWW '12, pages 251--260, New York, NY, USA, 2012. ACM.
 
-\bibitem{Loper2002}
-Edward Loper and Steven Bird.
-\newblock Nltk: The natural language toolkit.
-\newblock In {\em Proceedings of the ACL-02 Workshop on Effective Tools and
-  Methodologies for Teaching Natural Language Processing and Computational
-  Linguistics - Volume 1}, ETMTNLP '02, pages 63--70, Stroudsburg, PA, USA,
-  2002. Association for Computational Linguistics.
+\bibitem{sentiment2014}
+Abby Levenberg, Stephen Pulman, Karo Moilanen, Edwin Simpson, and Stephen
+  Roberts.
+\newblock Predicting economic indicators from web text using sentiment
+  composition.
+\newblock In {\em International Journal of Computer and Communication
+  Engineering}, Barcelona, Spain, February 2014. IACSIT Press.
 
 \bibitem{lund96}
 K.~{LUND} and C.~{BURGESS}.
@@ -129,6 +191,12 @@ K.~{LUND} and C.~{BURGESS}.
   {CO-OCCURRENCE}.
 \newblock {\em Behavior research methods, instruments \& computers},
   28(2):203--208, 1996.
+
+\bibitem{manuelbeyond}
+M.R.M.T. Manuel A.~Hernandez.
+\newblock {\em Beyond the numbers: How urban households in Central America
+  responded to the recent global crises}.
+\newblock Intl Food Policy Res Inst.
 
 \bibitem{mowbray10}
 Miranda Mowbray.
@@ -148,6 +216,11 @@ J.~Nofsinger.
 \newblock Social mood and financial economics.
 \newblock In {\em The Journal of Behavioral Finance}, 144--160, 2005.
 
+\bibitem{alexandra15}
+Alexandra Olteanu, Sarah Vieweg, and Carlos Castillo.
+\newblock What to {E}xpect {W}hen the {U}nexpected {H}appens: {S}ocial {M}edia
+  {C}ommunications {A}cross {C}rises, 2015.
+
 \bibitem{fao2008}
 EC~FAO Food~Security Programme.
 \newblock An introduction to the basic concepts of food security, 2008.
@@ -155,6 +228,12 @@ EC~FAO Food~Security Programme.
 \bibitem{Robnik97}
 Marko Robnik-Sikonja and Igor Kononenko.
 \newblock An adaptation of relief for attribute estimation in regression, 1997.
+
+\bibitem{so90610}
+P.~{Rutsaert}, Z.~{Pieniak}, A.~{Regan}, A.~{McConnon}, Dr.~M. {Kuttschreuter},
+  M.~{Lores}, N.~{Lozano}, A.~{Guzzon}, D~{Santare}, and W.~{Verbeke}.
+\newblock Social media as a useful tool in food risk and benefit communication?
+  a strategic orientation approach, 2014.
 
 \bibitem{RePEc}
 Pavel Savor and Mungo Wilson.
@@ -184,6 +263,20 @@ Mike Thelwall, Kevan Buckley, Georgios Paltoglou, Di~Cai, and Arvid Kappas.
 \newblock {\em J. Am. Soc. Inf. Sci. Technol.}, 61(12):2544--2558, December
   2010.
 
+\bibitem{tumasjan2010}
+A.~Tumasjan, T.O. Sprenger, P.G. Sandner, and I.M. Welpe.
+\newblock Predicting elections with twitter: What 140 characters reveal about
+  political sentiment, 2010.
+
+\bibitem{twitter13}
+Twitter, 2013.
+
+\bibitem{van2012conversation}
+S.~Van~Belleghem.
+\newblock {\em The Conversation Company: Boost Your Business Through Culture,
+  People and Social Media}.
+\newblock Kogan Page, 2012.
+
 \bibitem{neil93}
 Andreas~S. Weigend and Neil~A. Gershenfeld, editors.
 \newblock {\em Time series prediction : forecasting the future and
@@ -191,6 +284,11 @@ Andreas~S. Weigend and Neil~A. Gershenfeld, editors.
   on comparative Time series analysis held in Santa Fe, New Mexico, May, 1992},
   Santa Fe Institute studies in the sciences of complexity. Proceedings
   volumes, 1992, Santa Fe, 1993. Addison-Wesley.
+
+\bibitem{west2013}
+Robert West, Ryen~W. White, and Eric Horvitz.
+\newblock From cookies to cooks: Insights on dietary patterns via analysis of
+  web usage logs, 2013.
 
 \bibitem{Whittaker:1998}
 Steve Whittaker, Loren Terveen, Will Hill, and Lynn Cherny.
@@ -220,5 +318,9 @@ Wenbin Zhang and Steven Skiena.
 \newblock In {\em Proceedings of the 2009 IEEE/WIC/ACM International Joint
   Conference on Web Intelligence and Intelligent Agent Technology - Volume 01},
   WI-IAT '09, pages 301--304, Washington, DC, USA, 2009. IEEE Computer Society.
+
+\bibitem{xue12}
+Xue Zhang, Hauke Fuehres, and PeterA. Gloor.
+\newblock Predicting asset value through twitter buzz, 2012.
 
 \end{thebibliography}
